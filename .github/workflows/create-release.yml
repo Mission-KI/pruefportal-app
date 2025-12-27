@@ -1,0 +1,92 @@
+name: Create Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      version_type:
+        description: 'Version bump type'
+        required: true
+        type: choice
+        options:
+          - patch
+          - minor
+          - major
+        default: 'patch'
+      release_notes:
+        description: 'Release notes (optional)'
+        required: false
+        default: ''
+
+jobs:
+  create_release:
+    runs-on: ubuntu-latest
+    environment: release
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Configure git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Bump version in package.json
+        id: bump_version
+        run: |
+          # Disable git tag creation by npm
+          npm config set git-tag-version false
+          npm config set sign-git-tag false
+
+          # Bump version
+          npm version ${{ github.event.inputs.version_type }}
+
+          # Extract new version
+          NEW_VERSION=$(node -p "require('./package.json').version")
+          echo "new_version=$NEW_VERSION" >> $GITHUB_OUTPUT
+          echo "📦 New version: $NEW_VERSION"
+
+      - name: Commit and push version bump
+        run: |
+          git add package.json package-lock.json
+          git commit -m "Bump version to ${{ steps.bump_version.outputs.new_version }}"
+          git push origin ${{ github.ref_name }}
+
+      - name: Create GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          VERSION="v${{ steps.bump_version.outputs.new_version }}"
+
+          # Prepare release notes
+          if [ -n "${{ github.event.inputs.release_notes }}" ]; then
+            NOTES="${{ github.event.inputs.release_notes }}"
+          else
+            NOTES="Release version ${{ steps.bump_version.outputs.new_version }}"
+          fi
+
+          # Create release
+          gh release create "$VERSION" \
+            --title "$VERSION" \
+            --notes "$NOTES" \
+            --target ${{ github.ref_name }}
+
+          echo "✅ Release created: $VERSION"
+
+      - name: Output summary
+        run: |
+          echo "### 🎉 Release Created Successfully!" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Version:** v${{ steps.bump_version.outputs.new_version }}" >> $GITHUB_STEP_SUMMARY
+          echo "**Type:** ${{ github.event.inputs.version_type }}" >> $GITHUB_STEP_SUMMARY
+          echo "**Branch:** ${{ github.ref_name }}" >> $GITHUB_STEP_SUMMARY
