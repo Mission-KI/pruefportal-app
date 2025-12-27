@@ -18,7 +18,11 @@ on:
         default: ''
 
 jobs:
+  build:
+    uses: ./.github/workflows/build.yml
+
   create_release:
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: write
