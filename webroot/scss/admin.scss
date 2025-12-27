@@ -1,0 +1,541 @@
+/* Milligram overrides */
+:root {
+    /* The following are official CakePHP colors */
+    --color-cakephp-mki-lila: #3c0483;
+    --color-cakephp-gray: #404041;
+    --color-cakephp-blue: #2f85ae;
+    --color-cakephp-lightblue: #34bdd7;
+
+    /* These are additional colors */
+    --color-lightgray: #606c76;
+    --color-white: #fff;
+
+    --color-main-bg: #f5f7fa;
+    --color-links: var(--color-cakephp-blue);
+    --color-links-active: #2a6496;
+    --color-headings: #363637;
+
+    --color-message-success-bg: #e3fcec;
+    --color-message-success-text: #1f9d55;
+    --color-message-success-border: #51d88a;
+
+    --color-message-warning-bg: #fffabc;
+    --color-message-warning-text: #8d7b00;
+    --color-message-warning-border: #d3b800;
+
+    --color-message-error-bg: #fcebea;
+    --color-message-error-text: #cc1f1a;
+    --color-message-error-border: #ef5753;
+
+    --color-message-info-bg: #eff8ff;
+    --color-message-info-text: #2779bd;
+    --color-message-info-border: #6cb2eb;
+}
+
+.button, button, input[type='button'], input[type='reset'], input[type='submit'] {
+    background-color: var(--color-cakephp-mki-lila);
+    border-color: var(--color-cakephp-mki-lila);
+}
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    background: var(--color-main-bg);
+}
+@keyframes animateright{from{opacity:0;} to{opacity:1}}
+.w3-animate-right {
+    animation: animateright 0.3s ease-in-out;
+}
+
+nav {
+    padding: 0.5rem 0;
+    position: relative;
+    #check {
+        margin-bottom: 0;
+        right: 20px;
+        position: absolute;
+    }
+    .checkbtn {
+        cursor: pointer;
+        &:after {
+            content: "≡";
+            top: 10px;
+            right: 20px;
+            font-weight: 100;
+            font-size: 3rem;
+            position: absolute;
+            color: var(--color-cakephp-mki-lila);
+            background-color: #f5f7fa;
+        }
+    }
+    .nav-mobile {
+        display: none;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background-color: var(--color-lightgray);
+        z-index: 1;
+        border-radius: 0 0 0.4rem 0.4rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        a {
+            color: #fff;
+            padding: 1rem 1.5rem;
+            display: block;
+        }
+    }
+    #check:checked ~ .nav-mobile {
+        display: block;
+    }
+    #check:checked + .checkbtn:after {
+        content: "✕";
+        color: #f5f7fa;
+        background-color: var(--color-lightgray);
+        z-index: 2;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .checkbtn {
+        display: block;
+        font-size: 5rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .nav-mobile {
+        top: 160px;
+        width: 100%;
+    }
+    .nav-mobile a {
+        font-size: 2rem;
+        padding: 2rem 3rem;
+    }
+}
+
+.top-nav-links,
+.side-nav,
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Raleway", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+    color: var(--color-headings);
+}
+
+a {
+    color: var(--color-links);
+    transition: color 0.2s linear;
+}
+
+a:hover,
+a:focus,
+a:active {
+    color: var(--color-links-active);
+    transition: color 0.2s ease-out;
+}
+
+.side-nav a,
+.top-nav-links a,
+th a,
+.actions a {
+    color: var(--color-lightgray);
+}
+
+.side-nav a:hover,
+.side-nav a:focus,
+.actions a:hover,
+.actions a:focus {
+    color: var(--color-links-active);
+}
+
+/* Utility */
+.table-responsive {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+/* Main */
+.content {
+    padding: 2rem;
+    background: var(--color-white);
+    border-radius: 0.4rem;
+    /* Thanks Stripe */
+    box-shadow: 0 7px 14px 0 rgba(60, 66, 87, 0.1),
+    0 3px 6px 0 rgba(0, 0, 0, 0.07);
+}
+.content form {
+    margin: 0;
+}
+.content form legend {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+.actions a {
+    font-weight: bold;
+    padding: 0 0.4rem;
+}
+.actions a:first-child {
+    padding-left: 0;
+}
+
+th {
+    white-space: nowrap;
+}
+
+.icon {
+    color: var(--color-cakephp-mki-lila);
+    font-size: 3rem;
+}
+
+.truncate {
+    display: inline-block;
+    width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Nav bar */
+.top-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 112rem;
+    padding: 2rem;
+    margin: 0 auto;
+}
+.top-nav-title a {
+    font-size: 2.4rem;
+    color: var(--color-cakephp-mki-lila);
+}
+.top-nav-title span {
+    color: var(--color-cakephp-gray);
+    margin-right: 0.5rem;
+}
+.top-nav-links a {
+    margin: 0 0.5rem;
+}
+.top-nav-title a,
+.top-nav-links a {
+    font-weight: bold;
+}
+.side-nav-item {
+    display: block;
+    padding: 0.5rem 0;
+}
+
+/* View action */
+.view.content .text {
+    margin-top: 1.2rem;
+}
+.related {
+    margin-top: 2rem;
+}
+
+/* Flash messages */
+.alert {
+    padding: .5rem 1rem;
+    background: var(--color-message-info-bg);
+    color: var(--color-message-info-text);
+    border-color: var(--color-message-info-border);
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    cursor: pointer;
+
+    &.hidden {
+        display: none;
+    }
+
+    &.alert-success {
+        background: var(--color-message-success-bg);
+        color: var(--color-message-success-text);
+        border-color: var(--color-message-success-border);
+    }
+
+    &.alert-warning {
+        background: var(--color-message-warning-bg);
+        color: var(--color-message-warning-text);
+        border-color: var(--color-message-warning-border);
+    }
+
+    &.alert-danger,
+    &.alert-error {
+        background: var(--color-message-error-bg);
+        color: var(--color-message-error-text);
+        border-color: var(--color-message-error-border);
+    }
+}
+
+/* Forms */
+.input {
+    margin-bottom: 1.5rem;
+
+    &.error input,
+    &.error select,
+    &.error textarea {
+        background-color: var(--color-message-error-bg);
+        border-color: var(--color-message-error-border);
+    }
+}
+.input input,
+.input select,
+.input textarea {
+    margin-bottom: 0;
+}
+.input label:has(input[type='checkbox']),
+.input label:has(input[type='radio']) {
+    display: flex;
+    align-items: center;
+}
+.input label:has(~ label),
+.input label:has(input[type='radio']) {
+    margin-bottom: 0;
+}
+.input label > input[type='checkbox'],
+.input label > input[type='radio'] {
+    margin-right: 1.0rem;
+}
+input[type='color'] {
+    max-width: 4rem;
+    padding: 0.3rem .5rem 0.3rem;
+}
+.error-message {
+    color: var(--color-message-error-text);
+}
+
+
+/* Paginator */
+.paginator {
+    text-align: right;
+}
+.paginator p {
+    margin-bottom: 0;
+}
+.pagination {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0 0 1rem 0;
+    padding: 0;
+}
+.pagination li {
+    display: inline-block;
+    margin: 0.25em;
+    text-align: center;
+}
+.pagination a {
+    color: var(--color-cakephp-mki-lila);
+    display: inline-block;
+    font-size: 1.25rem;
+    line-height: 3rem;
+    min-width: 3rem;
+    padding: 0;
+    position: relative;
+    text-decoration: none;
+    transition: background .3s,color .3s;
+}
+.pagination li.active a,
+.pagination a:hover {
+    text-decoration: underline;
+}
+.pagination .disabled a {
+    cursor: not-allowed;
+    color: var(--color-lightgray);
+    text-decoration: none;
+}
+.first a,
+.prev a,
+.next a,
+.last a {
+    padding: 0 .75rem;
+}
+.disabled a:hover {
+    background: initial;
+    color: initial;
+}
+.asc:after {
+    content: " \2193";
+}
+.desc:after {
+    content: " \2191";
+}
+
+/* Error in non debug mode */
+.error-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+}
+
+@media screen and (max-width: 640px) {
+    /* Fix milligram not having a responsive column system */
+    .row .column[class*='column-'] {
+        flex: 0 0 100%;
+        max-width: 100%
+    }
+    .top-nav {
+        margin: 0 auto;
+    }
+    .side-nav {
+        margin-bottom: 1rem;
+    }
+    .heading {
+        margin-bottom: 1rem;
+    }
+    .side-nav-item {
+        display: inline;
+        margin: 0 1.5rem 0 0;
+    }
+    .asc:after {
+        content: " \2192";
+    }
+    .desc:after {
+        content: " \2190";
+    }
+}
+
+
+.tree {
+    width: 100%;
+    max-width: 800px;
+    overflow-x: auto;
+    ul {
+        padding-top: 20px;
+        margin: 0;
+        position: relative;
+        transition: all 0.5s;
+        display: flex;
+        justify-content: center;
+
+        li {
+            float: left;
+            text-align: center;
+            list-style-type: none;
+            position: relative;
+            padding: 20px 5px 0 5px;
+            transition: all 0.5s;
+
+            &:before,
+            &:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 50%;
+                border-top: 2px solid var(--color-cakephp-mki-lila);
+                width: 50%;
+                height: 20px;
+            }
+            &:after {
+                right: auto;
+                left: 50%;
+                border-left: 2px solid var(--color-cakephp-mki-lila);
+            }
+            &:only-child::after,
+            &:only-child::before {
+                display: none;
+            }
+            &:only-child {
+                padding-top: 0;
+            }
+            &:first-child::before,
+            &:last-child::after {
+                border: 0 none;
+            }
+            &:last-child::before {
+                border-right: 2px solid var(--color-cakephp-mki-lila);
+                border-radius: 0 5px 0 0;
+            }
+            &:first-child::after {
+                border-radius: 5px 0 0 0;
+            }
+
+            div {
+                padding: 10px 15px;
+                text-decoration: none;
+                border: 2px solid var(--color-cakephp-mki-lila);
+                border-radius: 5px;
+                display: inline-block;
+                transition: all 0.3s;
+                min-width: 100px;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            }
+        }
+
+        ul::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            border-left: 2px solid var(--color-cakephp-mki-lila);
+            width: 0;
+            height: 20px;
+        }
+    }
+}
+
+.tree li div:hover, .tree li div:hover+ul li div {
+    background: #e1f0fa;
+    border-color: #2980b9;
+}
+
+.tree li div:hover+ul li::after,
+.tree li div:hover+ul li::before,
+.tree li div:hover+ul::before,
+.tree li div:hover+ul ul::before {
+    border-color: #2980b9;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .tree {
+        font-size: 14px;
+        li {
+            padding: 20px 2px 0 2px;
+            div {
+                padding: 8px 10px;
+                min-width: 80px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 640px) {
+    /* Fix milligram not having a responsive column system */
+    .row .column[class*='column-'] {
+        flex: 0 0 100%;
+        max-width: 100%
+    }
+    .top-nav {
+        margin: 0 auto;
+    }
+    .side-nav {
+        margin-bottom: 1rem;
+    }
+    .heading {
+        margin-bottom: 1rem;
+    }
+    .side-nav-item {
+        display: inline;
+        margin: 0 1.5rem 0 0;
+    }
+    .asc:after {
+        content: " \2192";
+    }
+    .desc:after {
+        content: " \2190";
+    }
+}

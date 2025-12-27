@@ -1,0 +1,124 @@
+<?php
+/**
+ * @var \App\View\AppView $this
+ * @var array $relevances
+ * @var \App\Model\Entity\Process $process
+ * @var \App\Controller\AppController $currentLanguage
+ * @var \App\Controller\AppController $criterionTypes
+ * @var \App\Controller\CriteriaController $protectionNeedsAnalysis
+ */
+$title_for_layout = __('Process') . ': ' . $process->title . ' - ' . __('Schutzbedarfsanalyse');
+$this->assign('title', $title_for_layout);
+?>
+
+<h1 class="text-primary display-xs uppercase"><?= $process->title ?></h1>
+<p class="text-gray-600 mb-6"><?= __('Schutzbedarfsanalyse') ?></p>
+
+<?= $this->element('process_status', ['process' => $process]); ?>
+
+<?= $this->element('molecules/primary_card', [
+    'title' => __('Ergebnis der Schutzbedarfsanalyse'),
+    'subtitle' => __('Schutzbedarfsanalyse'),
+    'body' => __('Die Schutzbedarfsanalyse dient der Identifizierung und Bewertung von Qualitätsanforderungen für ein KI-System. Dabei werden die relevanten Qualitätsmerkmale für den jeweiligen Anwendungsfall ermittelt und ein Zielwert für deren Erreichung festgelegt.'),
+]) ?>
+
+    <div class="bg-white rounded-lg shadow overflow-hidden">
+        <table class="w-full">
+            <thead class="bg-gray-50 border-b border-gray-200">
+                <tr>
+                    <th class="px-6 py-3 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">
+                        <?= __('Kriterium') ?>
+                    </th>
+                    <th class="px-6 py-3 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">
+                        <?= __('Name') ?>
+                    </th>
+                    <th class="px-6 py-3 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">
+                        <?= __('Schutzbedarf') ?>
+                    </th>
+                </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-200">
+                <?php
+                foreach($protectionNeedsAnalysis as $qd_id => $qualityDimension):
+                    $quality_dimension_id = $qualityDimension['quality_dimension_id'];
+
+                    if (!isset($relevances[$quality_dimension_id]) || empty($relevances[$quality_dimension_id])) {
+                        continue;
+                    }
+                ?>
+                    <tr class="bg-gray-100">
+                        <td colspan="3" class="px-6 py-4">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0">
+                                    <?= $this->element('atoms/icon', [
+                                        'name' => $qualityDimension['icon'],
+                                        'size' => 'md',
+                                        'options' => ['class' => 'text-primary']
+                                    ]) ?>
+                                </div>
+                                <h3 class="text-lg font-semibold text-brand">
+                                    <?= h($qualityDimension['title'][$currentLanguage]) ?> <span title="<?= $quality_dimension_id ?>">(<?= h($qd_id) ?>)</span>
+                                </h3>
+                            </div>
+                        </td>
+                    </tr>
+                    <?php foreach($relevances[$quality_dimension_id] as $criterion_type_id => $relevanceValue):
+                        // TODO: This is a temporary fix for the criterion short name
+                        $criterionShortName = '';
+                        switch($criterion_type_id) {
+                            case 10: $criterionShortName = 'DA1'; break;
+                            case 11: $criterionShortName = 'DA2'; break;
+                            case 12: $criterionShortName = 'DA3'; break;
+                            case 20: $criterionShortName = 'ND1'; break;
+                            case 30: $criterionShortName = 'TR1'; break;
+                            case 31: $criterionShortName = 'TR2'; break;
+                            case 40: $criterionShortName = 'MA1'; break;
+                            case 41: $criterionShortName = 'MA2'; break;
+                            case 50: $criterionShortName = 'VE1'; break;
+                            case 51: $criterionShortName = 'VE2'; break;
+                            case 60: $criterionShortName = 'CY1'; break;
+                            case 61: $criterionShortName = 'CY2'; break;
+                        }
+
+                        if ($relevanceValue === false) {
+                            $protectionLevel = __('N/A');
+                            $bgClass = 'bg-gray-100';
+                            $textClass = 'text-gray-600';
+                        } elseif ($relevanceValue === true) {
+                            $protectionLevel = __('N/A');
+                            $bgClass = 'bg-gray-100';
+                            $textClass = 'text-gray-600';
+                        } elseif ($relevanceValue === 1) {
+                            $protectionLevel = __('gering');
+                            $bgClass = 'bg-success-100';
+                            $textClass = 'text-success-700';
+                        } elseif ($relevanceValue === 2) {
+                            $protectionLevel = __('moderat');
+                            $bgClass = 'bg-warning-100';
+                            $textClass = 'text-warning-700';
+                        } elseif ($relevanceValue >= 3) {
+                            $protectionLevel = __('hoch');
+                            $bgClass = 'bg-error-100';
+                            $textClass = 'text-error-700';
+                        } else {
+                            $protectionLevel = __('N/A');
+                            $bgClass = 'bg-gray-100';
+                            $textClass = 'text-gray-600';
+                        }
+                    ?>
+                    <tr class="m-0 p-0">
+                        <td class="px-6 py-4 whitespace-nowrap text-md font-medium text-gray-900">
+                            <span class="mki-form-field-index-badge"><?= h($criterionShortName) ?></span>
+                        </td>
+                        <td class="px-6 py-4 text-md text-gray-700">
+                            <?= h($criterionTypes[$criterion_type_id]) ?>
+                        </td>
+                        <td class="px-6 py-4 text-center whitespace-nowrap text-md font-semibold <?= $textClass ?> <?= $bgClass ?>">
+                            <?= h($protectionLevel) ?>
+                        </td>
+                    </tr>
+                    <?php endforeach; ?>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
+    </div>

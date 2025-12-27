@@ -1,0 +1,35 @@
+@layer components {
+  .btn {
+    /* === BUTTON SIZES === */
+    &-xs {
+      padding: 4px var(--spacing-btn-padding-horizontal-xs);
+      font-size: var(--font-size-xs);
+      border-radius: var(--radius-xs);
+
+      &.btn-tertiary {
+        border-radius: var(--radius-xs);
+      }
+    }
+
+    &-sm {
+      padding: 4px var(--spacing-btn-padding-horizontal-sm);
+      font-size: var(--font-size-sm);
+      border-radius: var(--radius-sm);
+
+      &.btn-tertiary {
+        border-radius: var(--radius-sm);
+      }
+    }
+
+    &-md {
+      padding: var(--spacing-btn-padding-vertical) var(--spacing-btn-padding-horizontal-md);
+      font-size: var(--font-size-md);
+      border-radius: var(--radius-btn-round);
+
+      &.btn-tertiary {
+        padding: 4px 16px;
+        border-radius: var(--radius-sm);
+      }
+    }
+  }
+}

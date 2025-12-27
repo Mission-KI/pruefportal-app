@@ -1,0 +1,116 @@
+name: mission-ki
+
+services:
+  mailpit:
+    image: axllent/mailpit:latest
+    container_name: mission-ki-mailpit
+    restart: always
+    ports:
+      - "8025:8025"
+      - "1025:1025"
+    networks:
+      - mission-ki-network
+
+  db:
+    image: postgres:17.5
+    container_name: mission-ki-db
+    restart: always
+    ports:
+      - "5642:5432"
+    volumes:
+      - mission_ki_postgres_data:/var/lib/postgresql/data
+      - ./docker/postgres/init:/docker-entrypoint-initdb.d
+    environment:
+      - POSTGRES_DB=mission_ki_db
+      - POSTGRES_USER=mission_ki_user
+      - POSTGRES_PASSWORD=mission_ki_password
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -d mission_ki_db -U mission_ki_user"]
+      interval: 1s
+      timeout: 5s
+      retries: 10
+    networks:
+      - mission-ki-network
+
+  minio:
+    profiles: ["minio"]
+    image: minio/minio:latest
+    container_name: mission-ki-minio
+    command: server /data --console-address ":9001"
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    environment:
+      - MINIO_ROOT_USER=minioadmin
+      - MINIO_ROOT_PASSWORD=minioadmin
+    volumes:
+      - mission_ki_minio_data:/data
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    networks:
+      - mission-ki-network
+
+  minio-init:
+    profiles: ["minio"]
+    image: minio/mc:latest
+    container_name: mission-ki-minio-init
+    depends_on:
+      minio:
+        condition: service_healthy
+    entrypoint: >
+      /bin/sh -c "
+      mc alias set myminio http://minio:9000 minioadmin minioadmin;
+      mc mb --ignore-existing myminio/pruefportal-attachments-dev;
+      exit 0;
+      "
+    networks:
+      - mission-ki-network
+
+  server:
+    build: .
+    container_name: mission-ki-php
+    ports:
+      - "8070:8070"
+    volumes:
+      - .:/app
+      - mission_ki_vendor:/app/vendor
+      - mission_ki_storage:/app/storage
+      - ./docker/php/php.ini:/usr/local/etc/php/php.ini
+    working_dir: /app/webroot
+    networks:
+      - mission-ki-network
+    depends_on:
+      db:
+        condition: service_healthy
+    env_file:
+      - .env
+    environment:
+      - PHP_CLI_SERVER_WORKERS=4
+      - DB_NAME=mission_ki_db
+      - DB_USER=mission_ki_user
+      - DB_PASSWORD=mission_ki_password
+      - DB_HOST=db
+      - DB_PORT=5432
+      - SECURITY_SALT=your-secret-salt-key-change-this-in-production-environment
+      - DEBUG=true
+      - STORAGE_DRIVER=local
+      - EMAIL_DRIVER=smtp
+      - SMTP_HOST=mailpit
+      - SMTP_PORT=1025
+      - EMAIL_SENDER_EMAIL=noreply@localhost
+      - EMAIL_SENDER_NAME=Pruefportal
+      - EMAIL_NOREPLY_EMAIL=no-reply@localhost
+      - EMAIL_NOREPLY_NAME=Pruefportal
+
+networks:
+  mission-ki-network:
+    driver: bridge
+
+volumes:
+  mission_ki_postgres_data:
+  mission_ki_vendor:
+  mission_ki_minio_data:
+  mission_ki_storage:

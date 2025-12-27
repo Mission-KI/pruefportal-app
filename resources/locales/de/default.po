@@ -1,0 +1,2685 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2025-11-21 20:35+0000\n"
+"PO-Revision-Date: 2025-11-23 23:02+0100\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.8\n"
+
+#: src/Controller/Admin/CriteriaController.php:45
+msgid "The process is not ready for calculation."
+msgstr "Die Berechnung kann noch nicht gestartet werden."
+
+#: src/Controller/AppController.php:100
+msgid "allgemein"
+msgstr "allgemein"
+
+#: src/Controller/AppController.php:101
+msgid "Leib und Leben"
+msgstr "Leib und Leben"
+
+#: src/Controller/AppController.php:102
+msgid "Gesundheit"
+msgstr "Gesundheit"
+
+#: src/Controller/AppController.php:103
+msgid "Grundrechte"
+msgstr "Grundrechte"
+
+#: src/Controller/AppController.php:104
+msgid "Schutz personenbezogener Daten"
+msgstr "Schutz personenbezogener Daten"
+
+#: src/Controller/AppController.php:105
+msgid "Eigentum und Sachen"
+msgstr "Eigentum und Sachen"
+
+#: src/Controller/AppController.php:106
+msgid "Nichtdiskriminierung"
+msgstr "Nichtdiskriminierung"
+
+#: src/Controller/AppController.php:107
+msgid "Menschenwürde"
+msgstr "Menschenwürde"
+
+#: src/Controller/AppController.php:108
+msgid "Umwelt"
+msgstr "Umwelt"
+
+#: src/Controller/AppController.php:109
+msgid "AF"
+msgstr "AF"
+
+#: src/Controller/AppController.php:114 src/Controller/UiDemoController.php:95
+#: templates/Criteria/index.php:52
+msgid "Applikationsfragen"
+msgstr "Applikationsfragen"
+
+#: src/Controller/AppController.php:115 src/Controller/UiDemoController.php:96
+msgid "Grundfragen"
+msgstr "Grundfragen"
+
+#: src/Controller/AppController.php:116 src/Controller/UiDemoController.php:97
+msgid "Erweiterungsfragen"
+msgstr "Erweiterungsfragen"
+
+#: src/Controller/AppController.php:121
+msgid "Schutzbedarf Kriterium: Datenqualität"
+msgstr "Schutzbedarf Kriterium: Datenqualität"
+
+#: src/Controller/AppController.php:122
+msgid "Schutzbedarf Kriterium: Schutz personenbezogener Daten"
+msgstr "Schutzbedarf Kriterium: Schutz personenbezogener Daten"
+
+#: src/Controller/AppController.php:123
+msgid "Schutzbedarf Kriterium: Schutz proprietärer Daten"
+msgstr "Schutzbedarf Kriterium: Schutz proprietärer Daten"
+
+#: src/Controller/AppController.php:124
+msgid ""
+"Schutzbedarf Kriterium: Vermeidung von ungerechtfertigter Diskriminierung "
+"und Verzerrung"
+msgstr ""
+"Schutzbedarf Kriterium: Vermeidung von ungerechtfertigter Diskriminierung "
+"und Verzerrung"
+
+#: src/Controller/AppController.php:125
+msgid "Schutzbedarf Kriterium: Rückverfolgbarkeit & Dokumentation"
+msgstr "Schutzbedarf Kriterium: Rückverfolgbarkeit & Dokumentation"
+
+#: src/Controller/AppController.php:126
+msgid "Schutzbedarf Kriterium: Erklärbarkeit & Interpretierbarkeit"
+msgstr "Schutzbedarf Kriterium: Erklärbarkeit & Interpretierbarkeit"
+
+#: src/Controller/AppController.php:127
+msgid "Schutzbedarf Kriterium: Menschliche Handlungsfähigkeit"
+msgstr "Schutzbedarf Kriterium: Menschliche Handlungsfähigkeit"
+
+#: src/Controller/AppController.php:128
+msgid "Schutzbedarf Kriterium: Menschliche Aufsicht"
+msgstr "Schutzbedarf Kriterium: Menschliche Aufsicht"
+
+#: src/Controller/AppController.php:129
+msgid "Schutzbedarf Kriterium: Leistungsfähigkeit und Robustheit"
+msgstr "Schutzbedarf Kriterium: Leistungsfähigkeit und Robustheit"
+
+#: src/Controller/AppController.php:130
+msgid "Schutzbedarf Kriterium: Rückfallpläne und funktionale Sicherheit"
+msgstr "Schutzbedarf Kriterium: Rückfallpläne und funktionale Sicherheit"
+
+#: src/Controller/AppController.php:131
+msgid "Schutzbedarf Kriterium: Allgemeine KI-spezifische Cybersicherheit"
+msgstr "Schutzbedarf Kriterium: Allgemeine KI-spezifische Cybersicherheit"
+
+#: src/Controller/AppController.php:132
+msgid ""
+"Schutzbedarf Kriterium: Widerstandsfähigkeit gegen KI-spezifische Angriffe"
+msgstr ""
+"Schutzbedarf Kriterium: Widerstandsfähigkeit gegen KI-spezifische Angriffe"
+
+#: src/Controller/BugReportsController.php:32
+msgid "Please log in to report bugs."
+msgstr "Bitte melden Sie sich an um Fehler zu melden."
+
+#: src/Controller/BugReportsController.php:62
+msgid "You must be logged in to report bugs."
+msgstr "Sie müssen angemeldet sein, um Fehler zu melden."
+
+#: src/Controller/BugReportsController.php:81
+msgid "Bug reporting is not configured. Please contact an administrator."
+msgstr ""
+"Es können momentan keine Fehler gemeldet werden. Bitte kontaktieren Sie den "
+"Administrator."
+
+#: src/Controller/BugReportsController.php:118
+msgid "Title is required."
+msgstr "Es muss ein Titel angegeben werden."
+
+#: src/Controller/BugReportsController.php:120
+msgid "Title must be 256 characters or less."
+msgstr "Der Titel darf maximal 256 Zeichen lang sein."
+
+#: src/Controller/BugReportsController.php:124
+msgid "Description is required."
+msgstr "Bitte geben Sie eine Beschreibung an."
+
+#: src/Controller/BugReportsController.php:126
+msgid "Description is too long."
+msgstr "Die Beschreibung ist zu lang."
+
+#: src/Controller/BugReportsController.php:160
+msgid "Bug report submitted successfully."
+msgstr "Der Fehler wurde erfolgreich gemeldet."
+
+#: src/Controller/BugReportsController.php:168
+msgid "Failed to create bug report."
+msgstr "Die Fehlermeldung konnte nicht gespeichert werden."
+
+#: src/Controller/BugReportsController.php:173
+msgid "An error occurred while submitting the bug report."
+msgstr "Bei der Meldung des Fehlers ist ein Fehler aufgetreten (d'oh!)."
+
+#: src/Controller/CommentsController.php:35
+#: src/Controller/CommentsController.php:112
+msgid "The Comment has been saved."
+msgstr "Der Kommentar wurde gespeichert."
+
+#: src/Controller/CommentsController.php:43
+#: src/Controller/CommentsController.php:117
+msgid "The Comment could not be saved. Please, try again."
+msgstr ""
+"Der Kommentar konnte nicht gespeichert werden. Bitte versuchen Sie es erneut."
+
+#: src/Controller/CommentsController.php:107
+msgid "Comment saved, but some files failed to upload: {0}"
+msgstr ""
+"Der Kommentar wurde gespeichert. Beim Hochladen von Dateien kam es jedoch zu "
+"Fehlern: {0}"
+
+#: src/Controller/CommentsController.php:142
+msgid "A new comment for the process \"{0}\" has been added."
+msgstr "Dem Prüfprozess \"{0}\" wurde ein neuer Kommentar hinzugefügt."
+
+#: src/Controller/CommentsController.php:143
+msgid "Notification: Comment added"
+msgstr "Benachrichtigung: Kommentar hinzugefügt"
+
+#: src/Controller/CriteriaController.php:122
+#: src/Controller/UiDemoController.php:34
+msgid "The Criteria has been saved."
+msgstr "Das Kriterium wurde gespeichert."
+
+#: src/Controller/CriteriaController.php:163
+msgid ""
+"The Protection Needs Analysis for the process \"{0}\" is completed by the "
+"examiner. Please start the VCIO."
+msgstr ""
+"Die Schutzbedarfsanalyse im Prozess \"{0}\" wurde fertiggestellt. Bitte "
+"starten Sie die VCIO-Einstufung."
+
+#: src/Controller/CriteriaController.php:164
+msgid "Notification: PNA Completed"
+msgstr "Benachrichtigung: Schutzbedarfsanalyse abgeschlossen"
+
+#: src/Controller/CriteriaController.php:166
+msgid ""
+"The Protection Needs Analysis has been completed and the candidate will be "
+"notified."
+msgstr ""
+"Die Schutzbedarfsanalyse wurde abgeschlossen. Die anderen Prozessteilnehmer "
+"werden informiert."
+
+#: src/Controller/IndicatorsController.php:105
+msgid "The Indicators has been saved."
+msgstr "Die Einstufungen wurden gespeichert."
+
+#: src/Controller/IndicatorsController.php:108
+msgid "The Indicators could not be saved. Please, try again."
+msgstr ""
+"Die Einstufungen konnten nicht gespeichert werden. Bitte versuchen Sie es "
+"erneut."
+
+#: src/Controller/IndicatorsController.php:133
+msgid ""
+"The VCIO Self-assessment for the process \"{0}\" is completed by the "
+"candidate. Please start the Validation."
+msgstr ""
+"Die VCIO-Einstufung im Prüfprozess \"{0}\" wurde abgeschlossen. Bitte "
+"starten Sie die Validierung."
+
+#: src/Controller/IndicatorsController.php:134
+msgid "Notification: VCIO Self-assessment"
+msgstr "Benachrichtigung: VCIO-Einstufung"
+
+#: src/Controller/IndicatorsController.php:136
+msgid ""
+"The VCIO Self-assessment has been completed and the examiner will be "
+"notified."
+msgstr ""
+"Die VCIO-Einstufung wurde abgeschlossen. Die anderen Teilnehmer werden "
+"informiert."
+
+#: src/Controller/IndicatorsController.php:184
+msgid "The Validation has been saved."
+msgstr "Die Validierung wurde gespeichert."
+
+#: src/Controller/IndicatorsController.php:187
+msgid "The Validation could not be saved. Please, try again."
+msgstr ""
+"Die Validierung konnte nicht gespeichert werden. Bitte probieren Sie es "
+"erneut."
+
+#: src/Controller/IndicatorsController.php:217
+msgid ""
+"The VCIO Validation for the process \"{0}\" has been completed by the "
+"examiner."
+msgstr ""
+"Die Validierung der VCIO-Einstufung im Prüfprozesses \"{0}\" wurde durch den/"
+"die PrüferIn abgeschlossen."
+
+#: src/Controller/IndicatorsController.php:218
+msgid "Notification: VCIO Validation completed"
+msgstr "Benachrichtigung: Validierung abgeschlossen"
+
+#: src/Controller/IndicatorsController.php:220
+#: src/Controller/IndicatorsController.php:248
+msgid ""
+"The VCIO Validation has been completed and the candidate will be notified."
+msgstr ""
+"Die Validierung wurde abgeschlossen. Die anderen Teilnehmer werden "
+"informiert."
+
+#: src/Controller/IndicatorsController.php:245
+msgid ""
+"The VCIO Validation for the process \"{0}\" has been accepted by the "
+"candidate."
+msgstr ""
+"Die Validierung der VCIO-Einstufung im Prüfprozesses \"{0}\" wurde durch den "
+"Prüfling akzeptiert."
+
+#: src/Controller/IndicatorsController.php:246
+msgid "Notification: VCIO Validation accepted"
+msgstr "Benachrichtigung: Validierung akzeptiert"
+
+#: src/Controller/ProcessesController.php:166
+#: src/Controller/ProcessesController.php:200
+msgid "The Process has been saved."
+msgstr "Der Prüfprozess wurde gespeichert."
+
+#: src/Controller/ProcessesController.php:169
+#: src/Controller/ProcessesController.php:202
+#: src/Controller/ProcessesController.php:386
+#: src/Controller/ProjectsController.php:101
+msgid "The Process could not be saved. Please, try again."
+msgstr ""
+"Der Prüfprozess konnte nicht gespeichert werden. Bitte versuchen Sie es "
+"erneut."
+
+#: src/Controller/ProcessesController.php:220
+#: src/Controller/ProjectsController.php:130
+msgid "Invite Candidate user Subject from Project Owner: {0} for Project: {1}"
+msgstr "Einladung als Prüfling zur Prüfung im Projekt {1} von {0}"
+
+#: src/Controller/ProcessesController.php:226
+#: src/Controller/ProjectsController.php:136
+msgid "Invite Examiner user Subject from Project Owner: {0} for Project: {1}"
+msgstr "Einladung als Prüfer zur Prüfung im Projekt {1} von {0}"
+
+#: src/Controller/ProcessesController.php:249
+msgid "Process ID is required"
+msgstr "Die Prozess-Id muss angegeben werden"
+
+#: src/Controller/ProcessesController.php:265
+msgid "Ungültige Rolle"
+msgstr "Ungültige Rolle"
+
+#: src/Controller/ProcessesController.php:272
+msgid "Rolle ist für diesen Prozess bereits vergeben"
+msgstr "Die Rolle ist für diesen Prozess bereits vergeben"
+
+#: src/Controller/ProcessesController.php:282
+msgid "Prüfling und Prüfer dürfen nicht dieselbe E-Mail-Adresse haben"
+msgstr ""
+
+#: src/Controller/ProcessesController.php:287
+msgid "Invite {0} user Subject from Project Owner: {1} for Project: {2}"
+msgstr "Einladung {0} von {1} im Projekt {2}"
+
+#: src/Controller/ProcessesController.php:299
+msgid "Prozessbeteiligte*r wurde hinzugefügt"
+msgstr "Prozessbeteiligte*r wurde hinzugefügt"
+
+#: src/Controller/ProcessesController.php:301
+msgid ""
+"Prozessbeteiligte*r konnte nicht hinzugefügt werden. Bitte versuchen Sie es "
+"später noch einmal."
+msgstr ""
+
+#: src/Controller/ProcessesController.php:321
+msgid ""
+"Sie haben nicht die notwendige Berechtigung, um Beteiligte aus diesem "
+"Prozess zu entfernen"
+msgstr ""
+
+#: src/Controller/ProcessesController.php:326
+msgid "Bei einem laufenden Prozess dürfen Beteiligte nicht entfernt werden"
+msgstr ""
+
+#: src/Controller/ProcessesController.php:337
+msgid "The User has been removed from the Process."
+msgstr "Der Nutzer wurde aus dem Prüfprozess entfernt."
+
+#: src/Controller/ProcessesController.php:356
+msgid "The Process has been deleted."
+msgstr "Der Prüfprozess wurde gelöscht."
+
+#: src/Controller/ProcessesController.php:358
+msgid "The Process could not be deleted. Please, try again."
+msgstr ""
+"Der Prüfprozess konnte nicht gelöscht werden. Bitte versuchen Sie es erneut."
+
+#: src/Controller/ProcessesController.php:380
+msgid ""
+"The UCD for the process \"{0}\" is requested by the examiner. Please add the "
+"UCD."
+msgstr ""
+"Für den Prüfprozess \"{0}\" wurde eine Anwendungsfallbeschreibung angefragt. "
+"Bitte hinzufügen."
+
+#: src/Controller/ProcessesController.php:381
+msgid "Notification: UCD Requested"
+msgstr "Benachrichtigung: Anwendungsfallbeschreibung benötigt"
+
+#: src/Controller/ProcessesController.php:384
+msgid "The Candidate can start now with the Use Case Description."
+msgstr "Der Prüfling kann nun mit der Anwendungsfallbeschreibung starten."
+
+#: src/Controller/ProjectsController.php:96
+msgid "The Project and Process have been saved."
+msgstr "Das Projekt und der Prüfprozess wurden gespeichert."
+
+#: src/Controller/ProjectsController.php:104
+#: src/Controller/ProjectsController.php:163
+msgid "The Project could not be saved. Please, try again."
+msgstr ""
+"Das Projekt konnte nicht gespeichert werden. Bitte versuchen Sie es erneut."
+
+#: src/Controller/ProjectsController.php:160
+msgid "The Project has been saved."
+msgstr "Das Projekt wurde gespeichert."
+
+#: src/Controller/ProjectsController.php:183
+msgid "The Project has been deleted."
+msgstr "Das Projekt wurde gelöscht."
+
+#: src/Controller/ProjectsController.php:185
+msgid "The Project could not be deleted. Please, try again."
+msgstr ""
+"Das Projekt konnte nicht gelöscht werden. Bitte versuchen Sie es erneut."
+
+#: src/Controller/UiDemoController.php:35
+msgid "The User could not be saved. Please, try again."
+msgstr ""
+"Der Nutzer konnte nicht gespeichert werden. Bitte versuchen Sie es erneut."
+
+#: src/Controller/UiDemoController.php:36
+msgid "This action may have unintended consequences."
+msgstr "Diese Aktion könnte unbeabsichtigten Folgen nach sich ziehen."
+
+#: src/Controller/UiDemoController.php:37
+msgid "Your session will expire in 10 minutes."
+msgstr "Ihre Sitzung läuft in 10 Minuten ab."
+
+#: src/Controller/UiDemoController.php:83
+msgid "Qualitätsdimension Menschliche Aufsicht und Kontrolle"
+msgstr "Qualitätsdimension Menschliche Aufsicht und Kontrolle"
+
+#: src/Controller/UiDemoController.php:84
+msgid "Qualitätsdimension Verlässlichkeit"
+msgstr "Qualitätsdimension Verlässlichkeit"
+
+#: src/Controller/UiDemoController.php:85
+msgid "Qualitätsdimension Transparenz"
+msgstr "Qualitätsdimension Transparenz"
+
+#: src/Controller/UsecaseDescriptionsController.php:53
+#: src/Controller/UsecaseDescriptionsController.php:109
+msgid "The current UCD Step has been saved."
+msgstr "Der aktuelle Schritt der Anwendungsfallbeschreibung wurde gespeichert."
+
+#: src/Controller/UsecaseDescriptionsController.php:56
+#: src/Controller/UsecaseDescriptionsController.php:113
+msgid "The current UCD Step could not be saved. Please, try again."
+msgstr ""
+"Der aktuelle Schritt der Anwendungsfallbeschreibung konnte nicht gespeichert "
+"werden. Bitte versuchen Sie es erneut."
+
+#: src/Controller/UsecaseDescriptionsController.php:103
+msgid ""
+"The UCD for the process \"{0}\" is completed by the candidate. Please review "
+"the UCD."
+msgstr ""
+"Die Anwendungsfallbeschreibung des Prüfprozesses \"{0}\" wurde durch den "
+"Prüfling abgeschlossen. Bitte überprüfen Sie sie."
+
+#: src/Controller/UsecaseDescriptionsController.php:104
+msgid "Notification: UCD Completed"
+msgstr "Benachrichtigung: Anwendungsfallbeschreibung abgeschlossen"
+
+#: src/Controller/UsecaseDescriptionsController.php:106
+msgid "The UCD has been saved and the examiner will be notified."
+msgstr ""
+"Die Anwendungsfallbeschreibung wurde gespeichert und der Prüfer wird "
+"benachrichtigt."
+
+#: src/Controller/UsecaseDescriptionsController.php:181
+msgid ""
+"The UCD for the process \"{0}\" has been accepted by the examiner. Please "
+"wait for the Analysis of the Protection Needs."
+msgstr ""
+"Die Anwendungsfallbeschreibung des Prüfprozesses \"{0}\" wurde durch den "
+"Prüfer akzeptiert. Bitte warten Sie auf den Abschluss der "
+"Schutzbedarfsanalyse."
+
+#: src/Controller/UsecaseDescriptionsController.php:182
+msgid "Notification: UCD Accepted"
+msgstr "Benachrichtigung: Anwendungsfallbeschreibung akzeptiert"
+
+#: src/Controller/UsecaseDescriptionsController.php:185
+msgid "The UCD has been marked as accepted and the candidate will be notified."
+msgstr ""
+"Die Anwendungsfallbeschreibung wurde akzeptiert und der Prüfling wird "
+"benachrichtigt."
+
+#: src/Controller/UsecaseDescriptionsController.php:187
+msgid "The UCD could not be marked as accepted. Please, try again."
+msgstr ""
+"Die Anwendungsfallbeschreibung konnte nicht auf akzeptiert gesetzt werden. "
+"Bitte versuchen Sie es erneut."
+
+#: src/Controller/UsecaseDescriptionsController.php:215
+msgid ""
+"The UCD for the process \"{0}\" has been rejected by the examiner. Please "
+"review the UCD."
+msgstr ""
+"Die Anwendungsfallbeschreibung des Prüfprozesses \"{0}\" wurde durch den "
+"Prüfer abgelehnt. Bitte überprüfen Sie die Anwendungsfallbeschreibung."
+
+#: src/Controller/UsecaseDescriptionsController.php:216
+msgid "Notification: UCD Rejected"
+msgstr "Benachrichtigung: Anwendungsfallbeschreibung abgelehnt"
+
+#: src/Controller/UsecaseDescriptionsController.php:239
+msgid "The UCD has been marked as rejected and the candidate will be notified."
+msgstr ""
+"Die Anwendungsfallbeschreibung wurde abgelehnt, der Prüfling wird "
+"benachrichtigt."
+
+#: src/Controller/UsecaseDescriptionsController.php:241
+msgid "The UCD could not be rejected. Please, try again."
+msgstr ""
+"Die Anwendungsfallbeschreibung konnte nicht auf abgelehnt gesetzt werden. "
+"Bitte versuchen Sie es erneut."
+
+#: src/Controller/UsersController.php:54
+msgid "Login successful"
+msgstr "Anmeldung erfolgreich"
+
+#: src/Controller/UsersController.php:61
+msgid "Invalid username or password"
+msgstr "Falscher Nutzername und/oder Passwort"
+
+#: src/Controller/UsersController.php:85
+msgid "Logout successful"
+msgstr "Erfolgreich abgemeldet"
+
+#: src/Controller/UsersController.php:106
+msgid "The new password has been saved"
+msgstr "Das neue Passwort wurde gespeichert"
+
+#: src/Controller/UsersController.php:109
+msgid "The new password could not be saved. Please, try again."
+msgstr ""
+"Das neue Passwort konnte nicht gespeichert werden. Bitte versuchen Sie es "
+"erneut."
+
+#: src/Controller/UsersController.php:123
+msgid "Your username is incorrect. Please contact the MISSION KI team."
+msgstr "Ihr Nutzername ist nicht korrekt. Bitte kontaktieren Sie den Support."
+
+#: src/Controller/UsersController.php:136
+msgid "An email with your reset password link is on its way to you."
+msgstr ""
+"Ihnen wurde eine E-Mail mit einem Link zum Zurücksetzen des Passworts "
+"zugesendet."
+
+#: src/Controller/UsersController.php:139
+msgid "Error sending password email. Please try again."
+msgstr ""
+"Die E-Mail zum Zurücksetzen des Passworts konnte nicht versendet werden. "
+"Bitte versuchen Sie es erneut."
+
+#: src/Controller/UsersController.php:166
+msgid "Please open the link in your email to activate your account."
+msgstr ""
+"Bitte öffnen Sie den Link in der Ihnen zugesendeten E-Mail, um Ihr Konto zu "
+"aktivieren."
+
+#: src/Controller/UsersController.php:169
+#: src/Controller/UsersController.php:192
+#: src/Controller/UsersController.php:214
+#: src/Controller/UsersController.php:237
+msgid "Your Account Data could not be saved. Please, try again."
+msgstr ""
+"Ihre Nutzendeninfomationen konnte nicht gespeichert werden. Bitte versuchen "
+"Sie es erneut."
+
+#: src/Controller/UsersController.php:189
+msgid "Your Account has been activated"
+msgstr "Ihr Konto wurde aktiviert"
+
+#: src/Controller/UsersController.php:211
+msgid "The Invitation has been accepted and your account is now activated"
+msgstr "Die Einladung wurde angenommen, ihr Konto ist nun aktiv"
+
+#: src/Controller/UsersController.php:234
+msgid "Your Account Data have been saved"
+msgstr "Ihre Nutzerinformationen wurden gespeichert"
+
+#: src/Controller/UsersController.php:252
+msgid "The User and all related data have been deleted."
+msgstr "Der Nutzer und alle Nutzerdaten wurden gelöscht."
+
+#: src/Controller/UsersController.php:256
+msgid "The User could not be deleted. Please, try again."
+msgstr ""
+"Der Nutzer konnte nicht gelöscht werden. Bitte versuchen Sie es erneut."
+
+#: src/Controller/UsersController.php:276
+#: src/Controller/UsersController.php:297
+msgid "The current password is incorrect."
+msgstr "Das aktuelle Passwort ist nicht korrekt."
+
+#: src/Controller/UsersController.php:302
+msgid "The new password is invalid or does not match the confirmation."
+msgstr ""
+"Das neue Passwort ist nicht valide oder wurde nicht richtig wiederholt."
+
+#: src/Controller/UsersController.php:312
+msgid "Your password has been updated successfully."
+msgstr "Ihr Passwort wurde erfolgreich geändert."
+
+#: src/Controller/UsersController.php:314
+msgid "Failed to update your password. Please try again."
+msgstr "Fehler beim Ändern des Passworts. Bitte versuchen Sie es erneut."
+
+#: src/Controller/UsersController.php:357
+msgid "The User could not be found. Please, try again."
+msgstr "Der Nutzer wurde nicht gefunden. Bitte versuchen Sie es erneut."
+
+#: src/Controller/UsersController.php:376
+msgid "The token is invalid or has expired."
+msgstr "Das Token ist nicht falsch oder abgelaufen."
+
+#: src/Mailer/UserMailer.php:25 src/Mailer/UserMailer.php:42
+#: src/Mailer/UserMailer.php:61
+#: templates/element/organisms/app_left_purple_branding.php:6
+#: templates/layout/email/html/default.php:307
+#: templates/layout/email/html/default.php:335
+#: templates/layout/email/text/default.php:19
+msgid "MISSION KI"
+msgstr "MISSION KI"
+
+#: src/Mailer/UserMailer.php:25
+msgid "Reset password Subject"
+msgstr "Passwort zurücksetzen"
+
+#: src/Mailer/UserMailer.php:42
+msgid "Register confirmation Subject"
+msgstr "Anmeldung bestätigen"
+
+#: src/Mailer/UserMailer.php:61
+msgid "Invite User to a Process Subject"
+msgstr "Einladung zur Teilnahme an einem Prüfprozess"
+
+#: src/Model/Table/ProjectsTable.php:79
+msgid "A project with this name already exists"
+msgstr "Ein Projekt mit diesem Namen existiert bereits"
+
+#: src/View/Helper/LayoutHelper.php:192 src/View/Helper/LayoutHelper.php:323
+#: templates/Projects/add.php:6
+msgid "New Project"
+msgstr "Neues Projekt"
+
+#: src/View/Helper/LayoutHelper.php:227 src/View/Helper/LayoutHelper.php:358
+#: src/View/Helper/LayoutHelper.php:571 templates/Pages/home.php:7
+#: templates/element/Users/user_sidebar.php:3
+msgid "Dashboard"
+msgstr "Dashboard"
+
+#: src/View/Helper/LayoutHelper.php:233 src/View/Helper/LayoutHelper.php:317
+#: src/View/Helper/LayoutHelper.php:380 src/View/Helper/LayoutHelper.php:413
+#: src/View/Helper/LayoutHelper.php:479 src/View/Helper/LayoutHelper.php:511
+#: src/View/Helper/LayoutHelper.php:547 templates/Projects/add.php:13
+#: templates/element/Users/user_sidebar.php:10
+msgid "Projects"
+msgstr "Projekte"
+
+#: src/View/Helper/LayoutHelper.php:241 src/View/Helper/LayoutHelper.php:363
+#: src/View/Helper/LayoutHelper.php:432
+#: templates/element/Users/user_sidebar.php:17
+msgid "Comments"
+msgstr "Kommentare"
+
+#: src/View/Helper/LayoutHelper.php:247 src/View/Helper/LayoutHelper.php:440
+#: templates/Users/view.php:6 templates/Users/view.php:11
+msgid "Settings"
+msgstr "Einstellungen"
+
+#: src/View/Helper/LayoutHelper.php:270
+msgid "{0}"
+msgstr "{0}"
+
+#: src/View/Helper/LayoutHelper.php:279
+msgid "Documentation"
+msgstr "Dokumentation"
+
+#: src/View/Helper/LayoutHelper.php:286
+msgid "Beta-Version"
+msgstr "Beta-Version"
+
+#: src/View/Helper/LayoutHelper.php:289 templates/BugReports/form.php:10
+#: templates/BugReports/form.php:40
+msgid "Fehler melden"
+msgstr ""
+
+#: src/View/Helper/LayoutHelper.php:308 templates/element/layout/sidebar.php:10
+#: templates/layout/sidebar.php:17
+msgid "Home"
+msgstr "Start"
+
+#: src/View/Helper/LayoutHelper.php:329 templates/Projects/edit.php:6
+#: templates/Projects/edit.php:53
+msgid "Edit Project"
+msgstr "Projekt bearbeiten"
+
+#: src/View/Helper/LayoutHelper.php:334
+msgid "Project Details"
+msgstr "Projektdetails"
+
+#: src/View/Helper/LayoutHelper.php:391 templates/Processes/add.php:7
+msgid "New Process"
+msgstr "Neuer Prüfprozess"
+
+#: src/View/Helper/LayoutHelper.php:396
+msgid "Process Details"
+msgstr "Prozessdetails"
+
+#: src/View/Helper/LayoutHelper.php:487
+msgid "Assessment"
+msgstr "Prüfung"
+
+#: src/View/Helper/LayoutHelper.php:523 templates/Criteria/complete.php:6
+#: templates/Criteria/complete.php:49 templates/Criteria/index.php:11
+#: templates/Criteria/rate_q_d.php:15 templates/UiDemo/criteria_demo.php:44
+#: templates/cell/Processes/examiner.php:36
+msgid "Protection Needs Analysis"
+msgstr "Schutzbedarfsanalyse"
+
+#: src/View/Helper/LayoutHelper.php:559 templates/Indicators/view.php:11
+#: templates/Indicators/view.php:16
+msgid "VCIO Self-assessment Results"
+msgstr "Ergebnisse der VCIO-Einstufung"
+
+#: src/View/Helper/LayoutHelper.php:559
+msgid "VCIO Classification"
+msgstr "VCIO-Einstufung"
+
+#: templates/BugReports/form.php:43
+msgid "Helfen Sie uns, das Prüfportal zu verbessern, indem Sie Fehler melden."
+msgstr ""
+
+#: templates/BugReports/form.php:56
+msgid "Vielen Dank!"
+msgstr ""
+
+#: templates/BugReports/form.php:57
+msgid "Ihr Fehlerbericht wurde erfolgreich übermittelt."
+msgstr ""
+
+#: templates/BugReports/form.php:63
+msgid "Fenster schließen"
+msgstr ""
+
+#: templates/BugReports/form.php:86
+msgid "Beschreibung"
+msgstr ""
+
+#: templates/BugReports/form.php:93
+msgid "Detaillierte Beschreibung des Fehlers..."
+msgstr ""
+
+#: templates/BugReports/form.php:99
+msgid ""
+"Die System-Informationen sind bereits ausgefüllt. Bitte ergänzen Sie die "
+"Beschreibung."
+msgstr ""
+
+#: templates/BugReports/form.php:111 templates/Processes/add.php:41
+#: templates/Processes/view.php:251 templates/Projects/view.php:306
+msgid "Abbrechen"
+msgstr ""
+
+#: templates/BugReports/form.php:124
+msgid "Absenden"
+msgstr ""
+
+#: templates/BugReports/form.php:179
+msgid "Bitte geben Sie eine Beschreibung ein."
+msgstr ""
+
+#: templates/BugReports/form.php:206
+msgid "Ein Fehler ist aufgetreten."
+msgstr ""
+
+#: templates/BugReports/form.php:210
+msgid "Verbindungsfehler. Bitte versuchen Sie es erneut."
+msgstr ""
+
+#: templates/Comments/ajax_add.php:18 templates/Comments/ajax_view.php:26
+#: templates/element/comments_thread.php:12
+#: templates/element/molecules/comment_card.php:53
+msgid "General"
+msgstr "Allgemein"
+
+#: templates/Comments/ajax_add.php:30 templates/Comments/answer.php:20
+#: templates/element/molecules/comment_form.php:92
+msgid "Enter your comment here..."
+msgstr "Tragen Sie hier ihren Kommentar ein..."
+
+#: templates/Comments/ajax_add.php:45 templates/Comments/answer.php:45
+#: templates/element/molecules/form_stepper.php:79
+msgid "Reset"
+msgstr "Zurücksetzen"
+
+#: templates/Comments/ajax_add.php:54 templates/Comments/answer.php:54
+#: templates/Processes/edit.php:24 templates/Projects/edit.php:42
+#: templates/element/molecules/comment_form.php:196
+msgid "Submit"
+msgstr "Abschicken"
+
+#: templates/Comments/ajax_view.php:40
+msgid "Answer"
+msgstr "Antworten"
+
+#: templates/Criteria/complete.php:6 templates/Criteria/index.php:11
+#: templates/Criteria/rate_q_d.php:15 templates/Criteria/view.php:9
+#: templates/Indicators/accept_validation.php:6
+#: templates/Indicators/complete.php:6
+#: templates/Indicators/complete_validation.php:6
+#: templates/Indicators/form.php:11 templates/Indicators/index.php:8
+#: templates/Indicators/validate.php:12 templates/Indicators/validation.php:8
+#: templates/Indicators/view.php:11 templates/UsecaseDescriptions/form.php:16
+#: templates/UsecaseDescriptions/review.php:9
+#: templates/UsecaseDescriptions/view.php:8
+msgid "Process"
+msgstr "Prüfprozess"
+
+#: templates/Criteria/complete.php:38 templates/Criteria/index.php:42
+#: templates/Criteria/rate_q_d.php:46 templates/Criteria/view.php:32
+#: templates/Indicators/form.php:70 templates/Indicators/index.php:40
+#: templates/Indicators/validate.php:82 templates/Indicators/view.php:34
+#: templates/UsecaseDescriptions/form.php:116
+#: templates/UsecaseDescriptions/review.php:40
+#: templates/UsecaseDescriptions/view.php:39
+#: templates/element/organisms/process_step_completion.php:55
+msgid "Process progress bar"
+msgstr "Process progress bar"
+
+#: templates/Criteria/complete.php:42 templates/Criteria/index.php:46
+#: templates/Criteria/rate_q_d.php:50 templates/Criteria/view.php:36
+#: templates/Indicators/form.php:74 templates/Indicators/index.php:44
+#: templates/Indicators/validate.php:86 templates/Indicators/view.php:38
+#: templates/UsecaseDescriptions/form.php:120
+#: templates/UsecaseDescriptions/review.php:44
+#: templates/UsecaseDescriptions/view.php:43
+#: templates/element/organisms/process_step_completion.php:59
+msgid "Process progress:"
+msgstr "Process progress:"
+
+#: templates/Criteria/complete.php:48
+msgid "Complete Protection Needs Analysis"
+msgstr "Schutzbedarfsanalyse abschließen"
+
+#: templates/Criteria/complete.php:51
+msgid ""
+"Sobald Sie bestätigen, dass Sie die Anwendbarkeit der schutzbedürftigen "
+"Qualitätsdimensionen vollständig bewertet haben wird der Prüfling darüber "
+"informiert, dass nun die Selbsteinschätzung nach der VCIO-Systematik "
+"beginnen kann."
+msgstr ""
+"Sobald Sie bestätigen, dass Sie die Schutzbedarfsanalyse abgeschlossen "
+"haben, werden die anderen Teilnehmer informiert, dass nun die VCIO-"
+"Einstufung beginnen kann."
+
+#: templates/Criteria/complete.php:67
+msgid "Die Anwendbarkeit der Qualitätsdimensionen wurde vollständig bewertet."
+msgstr "Die Schutzbedarfe aller Kriterien wurden vollständig bewertet."
+
+#: templates/Criteria/complete.php:68
+msgid ""
+"Bei Unklarheiten kann der Prüfling per Kommentarfunktion auf Sie zukommen."
+msgstr ""
+"Bei Unklarheiten kann ein weiterer Austausch per Kommentarfunktion "
+"stattfinden."
+
+#: templates/Criteria/complete.php:80
+#: templates/Indicators/accept_validation.php:44
+#: templates/Indicators/complete_validation.php:44
+#: templates/UiDemo/form_original.php:90
+#: templates/element/molecules/form_stepper.php:118
+#: templates/element/organisms/process_step_completion.php:23
+msgid "Accept and submit"
+msgstr "Akzeptieren und abschicken"
+
+#: templates/Criteria/index.php:53 templates/Criteria/rate_q_d.php:57
+#: templates/Criteria/rate_q_d.php:129 templates/Criteria/view.php:9
+#: templates/Criteria/view.php:14 templates/Criteria/view.php:42
+msgid "Schutzbedarfsanalyse"
+msgstr ""
+
+#: templates/Criteria/index.php:55 templates/Criteria/view.php:44
+msgid ""
+"Die Schutzbedarfsanalyse dient der Identifizierung und Bewertung von "
+"Qualitätsanforderungen für ein KI-System. Dabei werden die relevanten "
+"Qualitätsmerkmale für den jeweiligen Anwendungsfall ermittelt und ein "
+"Zielwert für deren Erreichung festgelegt."
+msgstr ""
+"Die Schutzbedarfsanalyse dient der Identifizierung und Bewertung von "
+"Qualitätsanforderungen für ein KI-System. Dabei werden die relevanten "
+"Qualitätsmerkmale für den jeweiligen Anwendungsfall ermittelt und ein "
+"Zielwert für deren Erreichung festgelegt."
+
+#: templates/Criteria/index.php:74
+msgid "Bewerten"
+msgstr ""
+
+#: templates/Criteria/index.php:80
+msgid "Bewertung fortsetzen"
+msgstr ""
+
+#: templates/Criteria/index.php:88
+msgid "Bewertung bearbeiten"
+msgstr ""
+
+#: templates/Criteria/index.php:113
+msgid "Complete Rating"
+msgstr "Bewertung abschließen"
+
+#: templates/Criteria/rate_q_d.php:102 templates/Indicators/form.php:206
+#: templates/Indicators/validate.php:189 templates/UiDemo/criteria_demo.php:70
+#: templates/UiDemo/form_original.php:110
+#: templates/element/molecules/form_stepper.php:90
+msgid "Next step"
+msgstr "Nächster Schritt"
+
+#: templates/Criteria/rate_q_d.php:115
+msgid "Bereitgestellte Dokumente"
+msgstr "Bereitgestellte Dokumente"
+
+#: templates/Criteria/rate_q_d.php:121
+msgid "Noch keine Dokumente hochgeladen"
+msgstr "Noch keine Dokumente hochgeladen"
+
+#: templates/Criteria/rate_q_d.php:147 templates/Processes/view.php:178
+#: templates/Processes/view.php:413
+msgid "Aktionen"
+msgstr "Aktionen"
+
+#: templates/Criteria/rate_q_d.php:154 templates/Processes/view.php:258
+#: templates/Projects/view.php:313
+msgid "Speichern"
+msgstr ""
+
+#: templates/Criteria/rate_q_d.php:164
+msgid "Neuer Kommentar"
+msgstr "Neuer Kommentar"
+
+#: templates/Criteria/view.php:41
+msgid "Ergebnis der Schutzbedarfsanalyse"
+msgstr ""
+
+#: templates/Criteria/view.php:57 templates/Indicators/view.php:59
+msgid "Kriterium"
+msgstr ""
+
+#: templates/Criteria/view.php:60 templates/Indicators/view.php:62
+#: templates/Processes/view.php:34 templates/Processes/view.php:316
+#: templates/Projects/view.php:29 templates/Projects/view.php:116
+#: templates/Projects/view.php:420
+#: templates/element/organisms/participant_form_rows.php:43
+#: templates/element/organisms/participant_form_rows.php:109
+#: templates/element/organisms/participant_form_rows.php:179
+msgid "Name"
+msgstr "Name"
+
+#: templates/Criteria/view.php:63 templates/Indicators/view.php:65
+msgid "Schutzbedarf"
+msgstr ""
+
+#: templates/Criteria/view.php:110 templates/Criteria/view.php:114
+#: templates/Criteria/view.php:130 templates/Indicators/view.php:163
+#: templates/Indicators/view.php:167 templates/Indicators/view.php:183
+msgid "N/A"
+msgstr "nicht anwendbar"
+
+#: templates/Criteria/view.php:118 templates/Indicators/view.php:171
+msgid "gering"
+msgstr ""
+
+#: templates/Criteria/view.php:122 templates/Indicators/view.php:175
+msgid "moderat"
+msgstr ""
+
+#: templates/Criteria/view.php:126 templates/Indicators/view.php:179
+msgid "hoch"
+msgstr ""
+
+#: templates/Error/error400.php:24 templates/Error/error500.php:35
+msgid "Error"
+msgstr "Fehler"
+
+#: templates/Error/error400.php:25
+msgid "The requested address {0} was not found on this server."
+msgstr "The Addresse {0} wurde nicht gefunden."
+
+#: templates/Error/error500.php:33
+msgid "An Internal Error Has Occurred."
+msgstr "Es ist ein interner Fehler aufgetreten."
+
+#: templates/Indicators/accept_validation.php:6
+#: templates/Indicators/accept_validation.php:9
+#: templates/Indicators/accept_validation.php:19
+#: templates/Indicators/complete_validation.php:6
+#: templates/Indicators/complete_validation.php:9
+#: templates/Indicators/complete_validation.php:19
+#: templates/Indicators/validate.php:12 templates/Indicators/validate.php:25
+#: templates/Indicators/validation.php:8 templates/Indicators/validation.php:11
+#: templates/Indicators/validation.php:22
+msgid "VCIO-Validierung"
+msgstr "Validierung"
+
+#: templates/Indicators/accept_validation.php:20
+msgid "Accept Validation"
+msgstr "Validierung akzeptieren"
+
+#: templates/Indicators/accept_validation.php:22
+msgid ""
+"Die Prüfung und Bewertung Ihrer Selbsteinschätzung seitens der prüfenden "
+"Person ist nun abgeschlossen. Sie haben nun Gelegenheit, das Ergebnis in der "
+"Gesamtdarstellung nachzuvollziehen. Sie können sich die einzelnen Ergebnisse "
+"nach Qualitätsdimension geordnet anzeigen lassen. Wenn Sie dieses Ergebnis "
+"bestätigen, wird der eigentliche Prüfbericht sowie die Gesamtbewertung "
+"erstellt. Beides können Sie dann als Nachweis teilen und Ihrer Kommunikation "
+"verwenden."
+msgstr ""
+
+#: templates/Indicators/accept_validation.php:38
+msgid ""
+"Ich habe die Validierung der Selbsteinschätzung zur Kenntnis genommen und "
+"bestätige diese."
+msgstr ""
+"Ich habe die Validierung der VCIO-Einstufung zur Kenntnis genommen und "
+"bestätige diese."
+
+#: templates/Indicators/accept_validation.php:40
+msgid "Bei Unklarheiten wenden Sie sich bitte direkt an den/die PrüferIn."
+msgstr ""
+
+#: templates/Indicators/complete.php:6 templates/Indicators/complete.php:12
+#: templates/Indicators/complete.php:14 templates/Indicators/form.php:11
+#: templates/Indicators/form.php:35 templates/Indicators/form.php:81
+#: templates/Indicators/index.php:8 templates/Indicators/index.php:51
+#: templates/Indicators/validate.php:93
+msgid "VCIO-Einstufung"
+msgstr "VCIO-Einstufung"
+
+#: templates/Indicators/complete.php:13 templates/Indicators/index.php:94
+msgid "Complete Self-assessment"
+msgstr "Einstufung abschließen"
+
+#: templates/Indicators/complete.php:15
+msgid ""
+"Vielen Dank für Ihre Selbsteinstufung. Sie können nun den nächsten "
+"Prozessschritt anstoßen: die Validierung durch den/die PrüferIn."
+msgstr ""
+"Vielen Danke für die Einstufung. Sie können nun den nächsten Prozessschritt "
+"anstoßen: die Validierung durch den/die PrüferIn."
+
+#: templates/Indicators/complete.php:16
+msgid ""
+"Sobald Sie bestätigen, dass ihre Selbsteinstufung korrekt und vollständig "
+"erstellt wurde, wird der/die PrüferIn darüber informiert, dass die "
+"Validierung gestartet werden kann. Den Stand der Prüfung können Sie "
+"jederzeit in ihrem Dashboard einsehen."
+msgstr ""
+"Sobald Sie bestätigen, dass die VCIO-Einstufung korrekt und vollständig "
+"erstellt wurde, wird der/die PrüferIn darüber informiert, dass die "
+"Validierung gestartet werden kann. Den Stand der Prüfung können Sie "
+"jederzeit in ihrem Dashboard einsehen."
+
+#: templates/Indicators/complete.php:17
+msgid "Die VCIO-Selbsteinstufung wurde vollständig bewertet."
+msgstr "Die VCIO-Einstufung ist vollständig."
+
+#: templates/Indicators/complete.php:18
+msgid ""
+"Bei Unklarheiten kann der Prüfer in der Validierung und per "
+"Kommentarfunktion auf Sie zukommen."
+msgstr ""
+"Bei Unklarheiten kann der/die PrüferIn in der Validierung per "
+"Kommentarfunktion auf Sie zukommen."
+
+#: templates/Indicators/complete_validation.php:20
+#: templates/Indicators/validation.php:71
+msgid "Complete Validation"
+msgstr "Validierung abschließen"
+
+#: templates/Indicators/complete_validation.php:22
+msgid ""
+"Vielen Dank für die Validierung der Selbsteinstufung. Sie können nun das "
+"Ergebnis mit dem Prüfling teilen. Wichtig: Dieses Ergebnis wird erst dann "
+"gültig, wenn der Prüfling es seiner- bzw. ihrerseits bestätigt."
+msgstr ""
+
+#: templates/Indicators/complete_validation.php:38
+msgid ""
+"Die Validierung der Selbsteinstufung nach VCIO-Kriterien ist korrekt und "
+"vollständig."
+msgstr "Die Validierung der VCIO-Einstufung ist korrekt und vollständig."
+
+#: templates/Indicators/complete_validation.php:40
+msgid "Bei Unklarheiten wird der Prüfling auf sie zukommen."
+msgstr "Bei Unklarheiten wird der Prüfling auf sie zukommen."
+
+#: templates/Indicators/form.php:80 templates/Indicators/index.php:50
+#: templates/Indicators/validate.php:92
+msgid "Einstufung des KI-Systems nach der VCIO-Systematik"
+msgstr "Einstufung des KI-Systems nach der VCIO-Systematik"
+
+#: templates/Indicators/form.php:83 templates/Indicators/index.php:53
+#: templates/Indicators/validate.php:95
+msgid ""
+"Für jede der Qualitätsdimensionen des Qualitätsstandards, bezüglich deren "
+"Kriterien ein Schutzbedarf in der vorangegangenen Analyse durch den/die "
+"PrüferIn festgestellt wurde, nehmen Sie nun eine Selbsteinstufung des KI-"
+"Systems vor und liefern bitte die geforderten Evidenzen, um diese Einstufung "
+"zu belegen."
+msgstr ""
+"Bitte nehmen Sie nun eine Einstufung vor, inwieweit ihr KI-System die "
+"relevanten Qualitätskriterien gemäß Standard erfüllt. Sie haben die "
+"Möglichkeit, die Einstufungen mithilfe von Evidenzen (Text, Unterlagen) zu "
+"belegen."
+
+#: templates/Indicators/form.php:101 templates/Indicators/validate.php:16
+msgid " (vollständig erfüllt)"
+msgstr " (vollständig erfüllt)"
+
+#: templates/Indicators/form.php:102 templates/Indicators/validate.php:17
+msgid " (wesentlich erfüllt)"
+msgstr " (wesentlich erfüllt)"
+
+#: templates/Indicators/form.php:103 templates/Indicators/validate.php:18
+msgid " (im Ansatz erfüllt)"
+msgstr " (im Ansatz erfüllt)"
+
+#: templates/Indicators/form.php:104 templates/Indicators/validate.php:19
+msgid " (nicht erfüllt)"
+msgstr " (nicht erfüllt)"
+
+#: templates/Indicators/form.php:152 templates/Indicators/validate.php:160
+msgid "Selbsteinschätzung"
+msgstr "Einstufung"
+
+#: templates/Indicators/form.php:164
+msgid "Relevante Prüfmethoden"
+msgstr ""
+
+#: templates/Indicators/form.php:172
+msgid "Evidence"
+msgstr "Evidenz"
+
+#: templates/Indicators/form.php:175
+msgid "Please enter Evidences."
+msgstr "Bitte geben Sie Evidenzen an."
+
+#: templates/Indicators/form.php:179 templates/Projects/add.php:90
+#: templates/Users/login.php:34 templates/Users/register.php:31
+#: templates/Users/register.php:49 templates/Users/register.php:57
+#: templates/element/Processes/process_form_fields.php:51
+#: templates/element/organisms/participant_form_rows.php:48
+#: templates/element/organisms/participant_form_rows.php:115
+#: templates/element/organisms/participant_form_rows.php:184
+msgid "Text"
+msgstr "Text"
+
+#: templates/Indicators/form.php:188
+#: templates/element/molecules/comment_form.php:105
+#: templates/element/molecules/file_upload_with_preview.php:21
+msgid "Dateien anhängen"
+msgstr ""
+
+#: templates/Indicators/index.php:69
+msgid "Einstufen"
+msgstr "Einstufen"
+
+#: templates/Indicators/index.php:75
+msgid "Einstufung bearbeiten"
+msgstr ""
+
+#: templates/Indicators/validate.php:46
+#: templates/element/molecules/form_navigation.php:79
+#: templates/element/molecules/step_navigation.php:27
+msgid "Currently editing"
+msgstr "Bearbeite gerade"
+
+#: templates/Indicators/validate.php:168
+msgid "Evidenzen"
+msgstr "Bitte stellen Sie Evidenzen zur Verfügung"
+
+#: templates/Indicators/validate.php:174
+msgid "Einschätzung Prüfer"
+msgstr "Einschätzung Prüfer"
+
+#: templates/Indicators/validation.php:21
+msgid "Validierung der VCIO-Selbsteinstufung"
+msgstr ""
+
+#: templates/Indicators/validation.php:24
+msgid ""
+"Für jede der sechs Qualitätsdimensionen des Qualitätsstandards, bezüglich "
+"deren Kriterien ein Schutzbedarf in der vorangegangenen Analyse festgestellt "
+"wurde, nehmen Sie nun eine Einstufung aus externer Sicht  vor und prüfen die "
+"geforderten Evidenzen des Prüflings."
+msgstr ""
+"Bitte validieren Sie nun die Einstufungen des Prüflings unter "
+"Berücksichtigung der bereitgestellten Evidenzen."
+
+#: templates/Indicators/validation.php:40
+msgid "Validieren"
+msgstr "Validieren"
+
+#: templates/Indicators/view.php:43
+msgid "Ergebnis der VCIO Selbsteinschätzung"
+msgstr "Ergebnis der VCIO-Einstufung"
+
+#: templates/Indicators/view.php:44
+msgid "VCIO Self-assessment"
+msgstr "VCIO-Einstufung"
+
+#: templates/Indicators/view.php:46
+msgid ""
+"Die VCIO Selbsteinschätzung zeigt die Bewertung der Qualitätsindikatoren für "
+"das KI-System. Die Einstufung erfolgt in den Kategorien A-D und wird mit der "
+"Erfüllung (ja/nein) bewertet."
+msgstr ""
+
+#: templates/Indicators/view.php:68
+msgid "Einstufung"
+msgstr "VCIO-Einstufung"
+
+#: templates/Indicators/view.php:71
+msgid "Erfüllt?"
+msgstr ""
+
+#: templates/Pages/about.php:5 templates/Pages/about.php:7
+#: templates/element/layout/sidebar.php:17 templates/layout/sidebar.php:24
+msgid "About"
+msgstr "Über"
+
+#: templates/Pages/home.php:28
+msgid "Erstes Projekt anlegen"
+msgstr "Erstes Projekt anlegen"
+
+#: templates/Pages/home.php:29
+msgid "Noch ziemlich leer hier..."
+msgstr "Noch ziemlich leer hier..."
+
+#: templates/Pages/home.php:31
+msgid ""
+"Das kann sich aber schnell ändern. Sobald der Prüfprozess gestartet ist, "
+"werden Sie an dieser Stelle jederzeit nachvollziehen können, wer gerade was "
+"macht und wo Sie im Prozess stehen. Beginnen Sie damit, indem Sie ein neues "
+"Prüfprojekt anlegen."
+msgstr ""
+"Das kann sich aber schnell ändern. Sobald der Prüfprozess gestartet ist, "
+"werden Sie an dieser Stelle jederzeit den Stand Ihrer Prüfprozesse "
+"nachvollziehen können. Beginnen Sie, indem Sie ein neues Projekt anlegen."
+
+#: templates/Pages/home.php:37 templates/Projects/index.php:45
+msgid "Neues Projekt anlegen"
+msgstr "Neues Projekt anlegen"
+
+#: templates/Pages/home.php:47
+msgid "Welcome"
+msgstr "Willkommen"
+
+#: templates/Pages/home.php:48
+msgid "Please login to see your dashboard"
+msgstr "Bitte melden Sie sich an um Ihr Dashboard anzuzeigen"
+
+#: templates/Pages/imprint.php:6 templates/Pages/imprint.php:8
+#: templates/element/organisms/footer.php:43
+msgid "Terms of Service"
+msgstr "Impressum"
+
+#: templates/Pages/privacy.php:6 templates/Pages/privacy.php:8
+#: templates/element/organisms/footer.php:48
+msgid "Privacy Policy"
+msgstr "Datenschutzerklärung"
+
+#: templates/Processes/add.php:13 templates/Projects/index.php:7
+#: templates/Projects/index.php:12 templates/Projects/index.php:20
+msgid "Projekte"
+msgstr "Projekte"
+
+#: templates/Processes/add.php:15 templates/Projects/view.php:347
+#: templates/Projects/view.php:358
+msgid "Neuen Prüfprozess anlegen"
+msgstr "Neuen Prüfprozess anlegen"
+
+#: templates/Processes/add.php:16
+msgid ""
+"Die Grundlage eines Prüfprozesses ist das Projekt, dem es zugeordnet ist. "
+"Jeder Prüfprozess benötigt einen Prüfling und mindestens einen Prüfer."
+msgstr ""
+
+#: templates/Processes/add.php:48
+msgid "Prüfprozess anlegen"
+msgstr ""
+
+#: templates/Processes/comments.php:8 templates/Processes/comments.php:23
+msgid "Kommentare"
+msgstr "Kommentare"
+
+#: templates/Processes/comments.php:42
+msgid "No comments found"
+msgstr "Noch keine Kommentare vorhanden"
+
+#: templates/Processes/edit.php:7 templates/Processes/edit.php:13
+msgid "Edit Process"
+msgstr "Prüfprozess bearbeiten"
+
+#: templates/Processes/edit.php:34 templates/Projects/edit.php:61
+msgid "My Projects"
+msgstr "Meine Projekte"
+
+#: templates/Processes/view.php:12 templates/Projects/view.php:11
+#: templates/Projects/view.php:20
+msgid "Bitte wählen"
+msgstr ""
+
+#: templates/Processes/view.php:13 templates/Processes/view.php:73
+#: templates/Projects/view.php:21 templates/Projects/view.php:34
+#: templates/Projects/view.php:163
+msgid "Prüfer/in"
+msgstr ""
+
+#: templates/Processes/view.php:14 templates/Processes/view.php:75
+#: templates/Projects/view.php:22 templates/Projects/view.php:50
+#: templates/Projects/view.php:163
+#: templates/element/organisms/participant_form_rows.php:63
+#: templates/element/organisms/participant_form_rows.php:194
+msgid "Prüfling"
+msgstr ""
+
+#: templates/Processes/view.php:47 templates/Projects/view.php:129
+msgid "Eingeladen am"
+msgstr ""
+
+#: templates/Processes/view.php:58 templates/Projects/view.php:77
+#: templates/Projects/view.php:148 templates/element/process_status.php:61
+msgid "Status"
+msgstr "Status"
+
+#: templates/Processes/view.php:63 templates/Projects/view.php:153
+msgid "Aktiv"
+msgstr "Aktiv"
+
+#: templates/Processes/view.php:63 templates/Projects/view.php:153
+msgid "Inaktiv"
+msgstr ""
+
+#: templates/Processes/view.php:69 templates/Processes/view.php:332
+#: templates/Projects/view.php:159 templates/Projects/view.php:453
+#: templates/element/organisms/participant_form_rows.php:57
+#: templates/element/organisms/participant_form_rows.php:123
+#: templates/element/organisms/participant_form_rows.php:188
+#: templates/element/organisms/total_result.php:84
+msgid "Rolle"
+msgstr ""
+
+#: templates/Processes/view.php:82 templates/Projects/view.php:170
+msgid "E-Mail Adresse"
+msgstr "E-Mail Adresse"
+
+#: templates/Processes/view.php:101 templates/Projects/view.php:181
+#: templates/Users/view.php:74
+msgid "Edit"
+msgstr "Bearbeiten"
+
+#: templates/Processes/view.php:106 templates/Projects/view.php:101
+#: templates/Projects/view.php:186
+#: templates/element/Processes/process_candidate_examiner_fields.php:30
+#: templates/element/Processes/process_candidate_examiner_fields.php:83
+msgid "Delete"
+msgstr "Löschen"
+
+#: templates/Processes/view.php:108 templates/Projects/view.php:103
+#: templates/Projects/view.php:188
+msgid "Are you sure?"
+msgstr "Sind Sie sicher?"
+
+#: templates/Processes/view.php:126
+msgid "Request Use Case Description"
+msgstr "Anwendungsfallbeschreibung anfragen"
+
+#: templates/Processes/view.php:137 templates/cell/Processes/candidate.php:19
+msgid "Add UCD"
+msgstr "Anwendungsfallbeschreibung hinzufügen"
+
+#: templates/Processes/view.php:145 templates/cell/Processes/candidate.php:26
+msgid "Edit UCD"
+msgstr "Anwendungsfallbeschreibung bearbeiten"
+
+#: templates/Processes/view.php:156 templates/cell/Processes/candidate.php:36
+#: templates/cell/Processes/examiner.php:27
+msgid "View UCD"
+msgstr "Anwendungsfallbeschreibung anzeigen"
+
+#: templates/Processes/view.php:191 templates/Projects/view.php:228
+#: templates/element/molecules/quality_dimension_navigation.php:27
+msgid "Übersicht"
+msgstr ""
+
+#: templates/Processes/view.php:199 templates/Processes/view.php:213
+#: templates/element/Processes/process_form_fields.php:27
+msgid "Name des Prüfprozesses"
+msgstr ""
+
+#: templates/Processes/view.php:204 templates/Processes/view.php:225
+#: templates/element/Processes/process_form_fields.php:43
+msgid "Beschreibung des Prüfprozesses"
+msgstr ""
+
+#: templates/Processes/view.php:241 templates/Projects/view.php:296
+msgid "Bearbeiten"
+msgstr "Bearbeiten"
+
+#: templates/Processes/view.php:273
+#: templates/cell/Processes/participants.php:12
+#: templates/element/organisms/participant_form_rows.php:17
+msgid "Prozessbeteiligte"
+msgstr "Prozessbeteiligte"
+
+#: templates/Processes/view.php:292
+msgid "Keine Prozessbeteiligten"
+msgstr "Keine Prozessbeteiligten"
+
+#: templates/Processes/view.php:293 templates/Processes/view.php:297
+msgid "Keine Prozessbeteiligten vorhanden."
+msgstr "Keine Prozessbeteiligten vorhanden."
+
+#: templates/Processes/view.php:304
+msgid "Neue Prozessbeteiligte hinzufügen"
+msgstr "Neue Prozessbeteiligte hinzufügen"
+
+#: templates/Processes/view.php:349 templates/Projects/view.php:470
+#: templates/element/organisms/participant_form_rows.php:77
+#: templates/element/organisms/participant_form_rows.php:144
+#: templates/element/organisms/participant_form_rows.php:203
+msgid "E-Mail"
+msgstr ""
+
+#: templates/Processes/view.php:361 templates/Projects/view.php:482
+msgid "Bitte geben Sie eine gültige E-Mail-Adresse ein."
+msgstr ""
+
+#: templates/Processes/view.php:369 templates/Projects/view.php:489
+msgid "Einladen"
+msgstr ""
+
+#: templates/Processes/view.php:387 templates/Processes/view.php:396
+msgid "Prüfprozess löschen"
+msgstr ""
+
+#: templates/Processes/view.php:390
+msgid ""
+"Achtung: Nach dem Löschen Ihres Prüfprozesses können die Daten nicht "
+"wiederhergestellt werden. Diese Aktion ist permanent und kann nicht "
+"rückgängig gemacht werden."
+msgstr ""
+
+#: templates/Processes/view.php:399
+msgid "Sind Sie sicher, dass Sie diesen Prüfprozess löschen möchten?"
+msgstr ""
+
+#: templates/Projects/add.php:20
+msgid "Create New Project"
+msgstr "Neues Projekt anlegen"
+
+#: templates/Projects/add.php:21
+msgid "Project"
+msgstr "Projekt"
+
+#: templates/Projects/add.php:23
+msgid ""
+"The foundation of an assessment process is the project, which it is assigned "
+"to. A project can be understood as a \"roof\" for multiple assessment "
+"processes. Example: The project \"Company-AI\" could include the assessment "
+"processes \"HR Tool\", \"Process Automation\", and \"Production Assistant\"."
+msgstr ""
+"Prüfprozesse werden durch Projekte gebündelt. Ein Projekt kann sich "
+"beispielsweise auf ein KI-System innerhalb eines Unternehmens oder einer "
+"Organisation beziehen."
+
+#: templates/Projects/add.php:30
+msgid "General Information"
+msgstr "Allgemeine Informationen"
+
+#: templates/Projects/add.php:44
+msgid "Project Name"
+msgstr "Projektname"
+
+#: templates/Projects/add.php:47
+msgid ""
+"Choose a descriptive name that clearly identifies the project. This will be "
+"the umbrella under which all assessment processes are organized."
+msgstr ""
+"Wählen Sie einen knackigen Begriff, der das Projekt klar identifiziert. Das "
+"Projekt bündelt alle relevanten Prüfprozesse."
+
+#: templates/Projects/add.php:48
+msgid "A project can contain multiple separate assessment processes."
+msgstr "Ein Projekt kann mehrere separate Prüfprozesse beinhalten."
+
+#: templates/Projects/add.php:49
+msgid "Please enter a project name."
+msgstr "Bitte geben Sie einen Projektnamen ein."
+
+#: templates/Projects/add.php:50
+msgid "e.g., Organization, Testing Area, etc."
+msgstr "z.B. der Name eines Produkts"
+
+#: templates/Projects/add.php:55
+msgid "Project Description"
+msgstr "Projektbeschreibung"
+
+#: templates/Projects/add.php:58
+msgid ""
+"Choose a clear name that helps assessment participants orient themselves. "
+"You can edit the Project Description later."
+msgstr ""
+"Wählen Sie einen deutliche Beschreibung, anhand derer sich Prüfbeteiligte "
+"gut orientieren können. Sie können die Projektbeschreibung später noch "
+"einmal ändern."
+
+#: templates/Projects/add.php:59
+msgid "Please enter a Project Description."
+msgstr "Bitte geben Sie eine Projektbeschreibung ein."
+
+#: templates/Projects/add.php:60 templates/Projects/add.php:76
+msgid "e.g., Image Recognition"
+msgstr "z.B. Bilderkennung"
+
+#: templates/Projects/add.php:66
+msgid "Process Name"
+msgstr "Name des Prüfprozesses"
+
+#: templates/Projects/add.php:69
+msgid ""
+"Choose a clear name that helps assessment participants orient themselves. "
+"You can add more processes from the project page later."
+msgstr ""
+"Wählen Sie einen möglichst eindeutigen Namen, der es Prüfbeteiligten "
+"erleichtert, sich zu orientieren. Sie können auf der Projektseite jederzeit "
+"weitere Prüfprozesse hinzufügen."
+
+#: templates/Projects/add.php:70
+msgid "Please enter a process name."
+msgstr "Bitte geben Sie einen Namen für den Prüfprozess ein."
+
+#: templates/Projects/add.php:83
+msgid "Process Description"
+msgstr "Beschreibung des Prüfprozesses"
+
+#: templates/Projects/add.php:85
+msgid ""
+"Add a brief but meaningful description of what this assessment process is "
+"about."
+msgstr ""
+"Ergänzen Sie eine kurze aussagekräftige Beschreibung dafür, worum es in dem "
+"Prüfprozess geht."
+
+#: templates/Projects/add.php:104 templates/Users/view.php:88
+#: templates/Users/view.php:196
+#: templates/element/molecules/comment_form.php:188
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#: templates/Projects/add.php:111
+msgid "Create Project"
+msgstr "Projekt anlegen"
+
+#: templates/Projects/edit.php:19
+msgid "Title"
+msgstr "Titel"
+
+#: templates/Projects/edit.php:32
+msgid "Description"
+msgstr "Beschreibung"
+
+#: templates/Projects/index.php:19
+msgid "Projektübersicht"
+msgstr ""
+
+#: templates/Projects/index.php:22
+msgid ""
+"Wählen Sie ein Projekt aus, um es zu verwalten, die jeweiligen Prüfprozesse "
+"zu sehen und deren Status abzurufen"
+msgstr ""
+
+#: templates/Projects/view.php:66 templates/Projects/view.php:246
+#: templates/Projects/view.php:279
+msgid "Startdatum"
+msgstr ""
+
+#: templates/Projects/view.php:82
+msgid "in Bearbeitung"
+msgstr "in Bearbeitung"
+
+#: templates/Projects/view.php:93
+msgid "View"
+msgstr "Anzeigen"
+
+#: templates/Projects/view.php:140
+msgid "Prozess"
+msgstr ""
+
+#: templates/Projects/view.php:236 templates/Projects/view.php:255
+msgid "Projekt-Name"
+msgstr "Projektname"
+
+#: templates/Projects/view.php:241 templates/Projects/view.php:267
+msgid "Projekt-Owner"
+msgstr "Projektverantwortlicher"
+
+#: templates/Projects/view.php:323
+msgid "Zugehörige Prüfprozesse"
+msgstr ""
+
+#: templates/Projects/view.php:337
+msgid "Keine Prüfprozesse"
+msgstr ""
+
+#: templates/Projects/view.php:338 templates/Projects/view.php:356
+msgid "Keine Prüfprozesse vorhanden."
+msgstr ""
+
+#: templates/Projects/view.php:371
+msgid "Projektbeteiligte"
+msgstr "Projektbeteiligte"
+
+#: templates/Projects/view.php:372
+msgid "3 von 5 aktiv"
+msgstr ""
+
+#: templates/Projects/view.php:378
+msgid "Alle Prüfprozesse"
+msgstr ""
+
+#: templates/Projects/view.php:395
+msgid "Keine Projektbeteiligten"
+msgstr "Keine Projektbeteiligten"
+
+#: templates/Projects/view.php:396 templates/Projects/view.php:400
+msgid "Keine Projektbeteiligten vorhanden."
+msgstr ""
+
+#: templates/Projects/view.php:408
+msgid "Neue Projektbeteiligte hinzufügen"
+msgstr "Neue Projektbeteiligte hinzufügen"
+
+#: templates/Projects/view.php:436
+msgid "Prüfprozess"
+msgstr ""
+
+#: templates/Projects/view.php:508 templates/Projects/view.php:517
+msgid "Projekt löschen"
+msgstr ""
+
+#: templates/Projects/view.php:511
+msgid ""
+"Achtung: Nach dem Löschen Ihres Projektes können die Daten nicht "
+"wiederhergestellt werden. Das Löschen eines Projektes hat auch die Löschung "
+"aller damit verbundenen Prüfprozesse zufolge. Diese Aktion ist permanent und "
+"kann nicht rückgängig gemacht werden."
+msgstr ""
+
+#: templates/Projects/view.php:520
+msgid "Sind Sie sicher, dass Sie dieses Projekt löschen möchten?"
+msgstr ""
+
+#: templates/UiDemo/criteria_demo.php:13
+msgid "Protection Needs Analysis Demo - Server-side Rendering"
+msgstr "Schutzbedarfsanalyse Demo - Server-side Rendering"
+
+#: templates/UiDemo/criteria_demo.php:18
+msgid "Protection Needs Analysis Demo"
+msgstr "Schutzbedarfsanalyse Demo"
+
+#: templates/UiDemo/form_demo.php:14
+msgid "Form Renderer Demo - Handlebars vs Server-side"
+msgstr "Form Renderer Demo - Handlebars vs Server-side"
+
+#: templates/UiDemo/form_original.php:10
+msgid "Original Form Implementation (Handlebars)"
+msgstr "Original Form Implementation (Handlebars)"
+
+#: templates/UiDemo/form_original.php:62
+msgid "Usecase Description progress bar:"
+msgstr "Anwendungsfallbeschreibung progress bar:"
+
+#: templates/UiDemo/form_original.php:62
+msgid "Usecase Description progress bar"
+msgstr "Anwendungsfallbeschreibung Progress bar"
+
+#: templates/UiDemo/form_original.php:80
+#: templates/element/molecules/form_stepper.php:106
+msgid "The process is finished completely and correctly"
+msgstr "Vollständig und korrekt abgeschlossen"
+
+#: templates/UiDemo/form_original.php:82
+#: templates/element/molecules/form_stepper.php:107
+msgid "The examiner will contact you after the review is finished."
+msgstr "Der Prüfer meldet sich, nachdem die Bewertung abgeschlossen wurde."
+
+#: templates/UiDemo/index.php:22
+msgid "UI Component Demo"
+msgstr "UI Component Demo"
+
+#: templates/UsecaseDescriptions/form.php:30
+#: templates/element/molecules/action_card.php:13
+#: templates/element/molecules/data_table.php:76
+msgid "Actions"
+msgstr "Aktionen"
+
+#: templates/UsecaseDescriptions/form.php:33
+msgid "Save Draft"
+msgstr "Entwurf speichern"
+
+#: templates/UsecaseDescriptions/review.php:18
+#: templates/cell/Processes/examiner.php:18
+msgid "Review UCD"
+msgstr "Anwendungsfallbeschreibung prüfen"
+
+#: templates/UsecaseDescriptions/review.php:18
+#: templates/UsecaseDescriptions/view.php:17
+msgid "Version"
+msgstr "Version"
+
+#: templates/UsecaseDescriptions/review.php:61
+msgid "Reject UCD"
+msgstr "Anwendungsfallbeschreibung ablehnen"
+
+#: templates/UsecaseDescriptions/review.php:64
+msgid ""
+"Confirm: Are you sure you want to reject the UCD for {0} back to the "
+"candidate?"
+msgstr ""
+"Bestätigen: Sind Sie sicher, dass Sie die Anwendungsfallbeschreibung für {0} "
+"zurückgeben wollen?"
+
+#: templates/UsecaseDescriptions/review.php:71
+msgid "Accept UCD"
+msgstr "Anwendungsfallbeschreibung akzeptieren"
+
+#: templates/UsecaseDescriptions/review.php:74
+msgid "Confirm: Are you sure you accept the UCD for {0} from the candidate?"
+msgstr ""
+"Bestätigen: Sind Sie sicher, dass sie die Anwendungsfallbeschreibung für {0} "
+"akzeptieren wollen?"
+
+#: templates/UsecaseDescriptions/view.php:17
+msgid "UCD"
+msgstr "Anwendungsfallbeschreibung"
+
+#: templates/Users/accept_invitation.php:6
+#: templates/Users/accept_invitation.php:110
+msgid "Accept Invitation"
+msgstr "Einladung annehmen"
+
+#: templates/Users/accept_invitation.php:22
+#: templates/Users/set_new_password.php:35 templates/Users/view.php:164
+msgid "New Password"
+msgstr "Neues Passwort"
+
+#: templates/Users/accept_invitation.php:24
+#: templates/Users/set_new_password.php:37
+msgid "Enter your new password"
+msgstr "Geben Sie Ihr neues Passwort ein"
+
+#: templates/Users/accept_invitation.php:29 templates/Users/register.php:62
+#: templates/Users/set_new_password.php:42 templates/Users/view.php:173
+msgid ""
+"Password must be at least 8 characters and include at least one number and "
+"one special character"
+msgstr ""
+"Das Passwort muss mindestens 8 Zeichen lang sein und mindestens eine Zahl "
+"und ein Sonderzeichen enthalten"
+
+#: templates/Users/accept_invitation.php:44 templates/Users/register.php:77
+msgid "Hinweis zur Betaversion des Prüfportals"
+msgstr ""
+
+#: templates/Users/accept_invitation.php:49 templates/Users/register.php:82
+msgid ""
+"Dieses Prüfportal befindet sich derzeit in einer Betaversion und wird aktiv "
+"weiterentwickelt."
+msgstr ""
+
+#: templates/Users/accept_invitation.php:57 templates/Users/register.php:90
+msgid "Mehr anzeigen"
+msgstr ""
+
+#: templates/Users/accept_invitation.php:58 templates/Users/register.php:91
+msgid "Weniger anzeigen"
+msgstr ""
+
+#: templates/Users/accept_invitation.php:63 templates/Users/register.php:96
+msgid ""
+"Die bereitgestellten Funktionen, Inhalte und Prozesse können daher "
+"unvollständig sein, Fehler aufweisen oder sich jederzeit ändern. Es kann "
+"außerdem zu Abweichungen vom MISSION KI Qualitätsstandard kommen, da "
+"einzelne Module, Darstellungen oder Bewertungslogiken noch nicht final "
+"implementiert sind. Ebenso befinden sich Teile des Designs und der "
+"Benutzerführung noch in Überarbeitung, sodass Darstellungen, Bezeichnungen "
+"oder Interaktionen nicht dem späteren Endzustand entsprechen müssen. Während "
+"der Beta-Phase können wir keine durchgehende Verfügbarkeit, fehlerfreie "
+"Funktionsweise oder vollständige Korrektheit der angezeigten Informationen "
+"gewährleisten."
+msgstr ""
+
+#: templates/Users/accept_invitation.php:66 templates/Users/register.php:99
+msgid ""
+"Hochgeladene Dokumente werden verschlüsselt übertragen und gespeichert. "
+"Dennoch empfehlen wir ausdrücklich, in der aktuellen Testphase keine "
+"vertraulichen, sensiblen oder personenbezogenen Unterlagen über das Portal "
+"zu übermitteln, da sicherheitsrelevante Funktionen, organisatorische "
+"Schutzmaßnahmen und interne Prüfprozesse noch erweitert und finalisiert "
+"werden."
+msgstr ""
+
+#: templates/Users/accept_invitation.php:69 templates/Users/register.php:102
+msgid ""
+"Die angebotene Selbstprüfung dient ausschließlich der freiwilligen internen "
+"Bewertung durch die teilnehmende Organisation. Sie stellt keine behördliche "
+"Prüfung, Zertifizierung oder rechtsverbindliche Bewertung dar. acatech "
+"übernimmt keine Gewähr für Vollständigkeit, Richtigkeit oder rechtliche "
+"Wirkung der Ergebnisse dieser Selbstprüfung. Die Nutzung erfolgt auf eigenes "
+"Risiko und in eigener Verantwortung des teilnehmenden Unternehmens. acatech "
+"haftet nur bei Vorsatz oder grober Fahrlässigkeit sowie in Fällen "
+"gesetzlicher Haftung."
+msgstr ""
+
+#: templates/Users/accept_invitation.php:74 templates/Users/register.php:107
+msgid ""
+"Mit der Nutzung des Prüfportals in der Betaphase erkennen Sie diese "
+"Einschränkungen und Hinweise ausdrücklich an."
+msgstr ""
+
+#: templates/Users/accept_invitation.php:82
+msgid "Set Password"
+msgstr "Passwort festlegen"
+
+#: templates/Users/accept_invitation.php:98
+#: templates/Users/reset_password.php:64
+#: templates/Users/set_new_password.php:67
+msgid "Back to Login"
+msgstr "Zurück zur Anmeldung"
+
+#: templates/Users/accept_invitation.php:111
+msgid "Please set a password for your account:"
+msgstr "Bitte legen Sie ein Passwort für Ihr Konto fest:"
+
+#: templates/Users/login.php:5 templates/Users/login.php:40
+#: templates/Users/login.php:78
+msgid "Log in"
+msgstr "Anmeldung"
+
+#: templates/Users/login.php:21 templates/Users/register.php:37
+#: templates/Users/reset_password.php:35 templates/Users/view.php:42
+msgid "Email Address"
+msgstr "E-Mail Adresse"
+
+#: templates/Users/login.php:23 templates/Users/register.php:39
+#: templates/Users/reset_password.php:37
+msgid "name@domain.com"
+msgstr "name@organisation.de"
+
+#: templates/Users/login.php:27 templates/Users/register.php:43
+#: templates/Users/reset_password.php:41
+#: templates/element/organisms/participant_form_rows.php:94
+#: templates/element/organisms/participant_form_rows.php:162
+msgid "Please enter a valid email address"
+msgstr "Bitte geben Sie eine gültige E-Mail Adresse ein"
+
+#: templates/Users/login.php:32 templates/Users/register.php:55
+#: templates/Users/view.php:118
+msgid "Password"
+msgstr "Passwort"
+
+#: templates/Users/login.php:55
+msgid "Forgot password?"
+msgstr "Passwort vergessen?"
+
+#: templates/Users/login.php:57
+msgid "Reset here"
+msgstr "Hier zurücksetzen"
+
+#: templates/Users/login.php:64
+msgid "No account yet?"
+msgstr "Noch kein Konto?"
+
+#: templates/Users/login.php:66
+msgid "Create one now"
+msgstr "Jetzt registrieren"
+
+#: templates/Users/login.php:79
+msgid "Please enter your credentials to continue"
+msgstr "Bitte geben Sie ihre Anmeldedaten ein um fortzufahren"
+
+#: templates/Users/register.php:6 templates/Users/register.php:144
+msgid "Register"
+msgstr "Registrieren"
+
+#: templates/Users/register.php:21 templates/Users/view.php:33
+msgid "Salutation"
+msgstr "Anrede"
+
+#: templates/Users/register.php:23
+msgid "Please select..."
+msgstr "Bitte auswählen..."
+
+#: templates/Users/register.php:29 templates/Users/view.php:55
+msgid "Full Name"
+msgstr "Name"
+
+#: templates/Users/register.php:48 templates/Users/view.php:63
+msgid "Company / Organization"
+msgstr "Firma / Organisation"
+
+#: templates/Users/register.php:60 templates/Users/view.php:166
+msgid ""
+"min. 8 characters, including at least one number and one special character "
+"(?!&$ etc.)"
+msgstr ""
+"mind. 8 Zeichen, inklusive mind. einer Zahl und einem Sonderzeichen (?!&$ "
+"etc.)"
+
+#: templates/Users/register.php:115
+msgid "Register now"
+msgstr "Jetzt registrieren"
+
+#: templates/Users/register.php:130
+msgid "Already registered?"
+msgstr "Bereits registriert?"
+
+#: templates/Users/register.php:132
+msgid "Go to login"
+msgstr "Zur Anmeldung"
+
+#: templates/Users/register.php:145
+msgid ""
+"Register to create assessment processes or participate in ongoing "
+"assessments."
+msgstr ""
+"Registrieren Sie sich, um Prüfprozesse anzulegen, oder an laufenden "
+"Prüfungen mitzuwirken."
+
+#: templates/Users/reset_password.php:6 templates/Users/reset_password.php:47
+msgid "Reset Password"
+msgstr "Passwort zurücksetzen"
+
+#: templates/Users/reset_password.php:18
+msgid "Forgot your password?"
+msgstr "Passwort vergessen?"
+
+#: templates/Users/reset_password.php:21
+msgid ""
+"Please enter your email address. You will receive an email with instructions "
+"to reset your password."
+msgstr ""
+"Bitte geben Sie Ihre E-Mail Adresse ein. Sie werden eine E-Mail mit weiteren "
+"Anweisung zum Zurücksetzen Ihres Passworts erhalten."
+
+#: templates/Users/reset_password.php:62
+msgid "Remember your password?"
+msgstr "Erinnern Sie sich an Ihr Passwort?"
+
+#: templates/Users/set_new_password.php:6
+#: templates/Users/set_new_password.php:18
+#: templates/element/Users/user_form_fields.php:13
+#: templates/email/html/reset_password.php:15
+msgid "Set New Password"
+msgstr "Neues Passwort festlegen"
+
+#: templates/Users/set_new_password.php:21
+msgid "Please enter a new password for your account: {0}"
+msgstr "Bitte geben Sie für Ihr Konto {0} ein neues Passwort ein"
+
+#: templates/Users/set_new_password.php:46
+msgid "Use 8 or more characters with a mix of letters, numbers & symbols"
+msgstr ""
+"Bitte benutzen Sie 8 oder mehr Zeichen (Buchstaben, Zahlen, Sonderzeichen)"
+
+#: templates/Users/set_new_password.php:51 templates/Users/view.php:205
+msgid "Update Password"
+msgstr "Passwort aktualisieren"
+
+#: templates/Users/view.php:22
+msgid "Account"
+msgstr "Konto"
+
+#: templates/Users/view.php:45
+msgid ""
+"Das Ändern der E-Mail Adresse ist derzeit deaktiviert. Wenden Sie sich an "
+"den Administrator (pruefportal@acatech.de), wenn Sie Ihre E-Mail Adresse "
+"ändern möchten."
+msgstr ""
+"Das Ändern der E-Mail Adresse ist derzeit deaktiviert. Wenden Sie sich an "
+"den Administrator (pruefportal@acatech.de), wenn Sie Ihre E-Mail Adresse "
+"ändern möchten."
+
+#: templates/Users/view.php:97 templates/Users/view.php:254
+msgid "Save Changes"
+msgstr "Änderungen speichern"
+
+#: templates/Users/view.php:137
+msgid "Change"
+msgstr "Ändern"
+
+#: templates/Users/view.php:153
+msgid "Current Password"
+msgstr "Aktuelles Passwort"
+
+#: templates/Users/view.php:155
+msgid "Enter your current password to verify your identity"
+msgstr ""
+"Bitte geben Sie Ihr aktuelles Passwort ein um Ihre Identität zu bestätigen"
+
+#: templates/Users/view.php:181
+msgid "Confirm New Password"
+msgstr "Neues Passwort bestätigen"
+
+#: templates/Users/view.php:183
+msgid "Please re-enter your new password"
+msgstr "Passwort durch erneute Eingabe bestätigen"
+
+#: templates/Users/view.php:228
+msgid "Notification Settings"
+msgstr "Benachrichtigungen"
+
+#: templates/Users/view.php:237
+msgid "Process Updates via Email"
+msgstr "Updates zu Prüfprozessen"
+
+#: templates/Users/view.php:238
+msgid "Receive important updates about your audit processes."
+msgstr "Updates zum Prüfprozess per E-Mail erhalten."
+
+#: templates/Users/view.php:245
+msgid "Comment Notifications via Email"
+msgstr "Kommentare"
+
+#: templates/Users/view.php:246
+msgid "Receive an email when someone comments on your posts."
+msgstr "Bei Antworten auf Ihre Kommentare eine E-Mail erhalten."
+
+#: templates/Users/view.php:275 templates/Users/view.php:287
+msgid "Delete Account"
+msgstr "Konto löschen"
+
+#: templates/Users/view.php:280
+msgid "Warning"
+msgstr "Warnung"
+
+#: templates/Users/view.php:280
+msgid ""
+"After deleting your account, your data cannot be restored. This action is "
+"permanent and cannot be undone."
+msgstr ""
+"Das Löschen Ihres Kontos ist permanent. Ihre Daten können nicht "
+"wiederhergestellt werden."
+
+#: templates/Users/view.php:294
+msgid "Are you sure you want to delete your account?"
+msgstr "Sind Sie sicher, dass Sie Ihr Konto löschen wollen?"
+
+#: templates/Users/view.php:386
+msgid "Password must be at least 8 characters long"
+msgstr "Das Passwort muss mindestens 8 Zeichen lang sein"
+
+#: templates/Users/view.php:399
+msgid "Passwords do not match"
+msgstr "Die Passwörter stimmen nicht überein"
+
+#: templates/Users/view.php:437
+msgid "Current password is incorrect"
+msgstr "Das aktuelle Passwort ist falsch"
+
+#: templates/Users/view.php:442
+msgid "Unable to verify password"
+msgstr "Kann das Passwort nicht verifizieren"
+
+#: templates/cell/Notifications/display.php:21
+msgid "Date"
+msgstr "Datum"
+
+#: templates/cell/Notifications/display.php:28
+msgid "Message"
+msgstr "Nachricht"
+
+#: templates/cell/Notifications/display.php:34
+msgid "Type"
+msgstr "Typ"
+
+#: templates/cell/Notifications/display.php:108
+msgid "Notifications"
+msgstr "Benachrichtigungen"
+
+#: templates/cell/Notifications/display.php:122
+msgid "No new notifications"
+msgstr "Keine neuen Benachrichtigungen"
+
+#: templates/cell/Notifications/display.php:123
+msgid "You are all caught up! Check back later for updates."
+msgstr "Sie sind auf dem neuesten Stand! Schauen Sie später wieder vorbei."
+
+#: templates/cell/Notifications/display.php:174
+#: templates/element/molecules/modal.php:158
+msgid "Close"
+msgstr "Schließen"
+
+#: templates/cell/Notifications/display.php:206
+#: templates/cell/Uploads/display.php:26
+msgid "Datum"
+msgstr ""
+
+#: templates/cell/Notifications/display.php:214
+msgid "Nachricht"
+msgstr ""
+
+#: templates/cell/Notifications/display.php:222
+msgid "Typ"
+msgstr "Typ"
+
+#: templates/cell/Processes/candidate.php:45
+#: templates/cell/Processes/examiner.php:45
+msgid "View PNA"
+msgstr "Schutzbedarfsanalyse anzeigen"
+
+#: templates/cell/Processes/candidate.php:54
+msgid "Add VICO"
+msgstr "VCIO-Einstufung hinzufügen"
+
+#: templates/cell/Processes/candidate.php:63
+msgid "Accept VICO Validation"
+msgstr "Validierung akzeptieren"
+
+#: templates/cell/Processes/candidate.php:73
+#: templates/cell/Processes/examiner.php:64
+msgid "In Bearbeitung"
+msgstr "In Bearbeitung"
+
+#: templates/cell/Processes/candidate.php:77
+#: templates/cell/Processes/examiner.php:68
+msgid "Prüfergebnis"
+msgstr ""
+
+#: templates/cell/Processes/candidate.php:82
+#: templates/cell/Processes/examiner.php:73
+msgid "Fertig"
+msgstr ""
+
+#: templates/cell/Processes/examiner.php:54
+msgid "Add Validation"
+msgstr "Validieren"
+
+#: templates/cell/Processes/participants.php:30
+msgid "Owner"
+msgstr "Owner"
+
+#: templates/cell/Processes/participants.php:38
+#: templates/element/Processes/process_candidate_examiner_fields.php:64
+#: templates/element/organisms/process_card.php:50
+msgid "Examiner"
+msgstr "Prüfer"
+
+#: templates/cell/Processes/participants.php:46
+#: templates/element/Processes/process_candidate_examiner_fields.php:11
+#: templates/element/organisms/process_card.php:53
+msgid "Candidate"
+msgstr "Prüfling"
+
+#: templates/cell/Processes/participants.php:55
+msgid "Nutzer verwalten"
+msgstr "Nutzer verwalten"
+
+#: templates/cell/Uploads/display.php:13
+msgid "Dateiname"
+msgstr "Dateiname"
+
+#: templates/cell/Uploads/display.php:38
+msgid "Dateigröße"
+msgstr ""
+
+#: templates/cell/Uploads/display.php:56
+msgid "Download"
+msgstr ""
+
+#: templates/cell/Uploads/display.php:77
+msgid "Dokumente"
+msgstr "Dokumente"
+
+#: templates/cell/Uploads/display.php:96
+msgid "Dokument hinzufügen"
+msgstr ""
+
+#: templates/cell/Uploads/display.php:156
+msgid "Lädt hoch..."
+msgstr ""
+
+#: templates/cell/Uploads/display.php:160
+msgid "Upload vollständig"
+msgstr "Upload vollständig"
+
+#: templates/cell/Uploads/display.php:164
+msgid "Upload gescheitert"
+msgstr ""
+
+#: templates/cell/Uploads/display.php:179
+msgid "Bitte erneut versuchen"
+msgstr ""
+
+#: templates/cell/Uploads/display.php:206
+msgid "Keine Dokumente"
+msgstr "Keine Dokumente"
+
+#: templates/cell/Uploads/display.php:207
+msgid "Keine Dokumente für diesen Prozess gefunden"
+msgstr ""
+
+#: templates/element/Processes/process_candidate_examiner_fields.php:42
+#: templates/element/Processes/process_candidate_examiner_fields.php:43
+msgid "Candidate Name"
+msgstr "Name Prüfling"
+
+#: templates/element/Processes/process_candidate_examiner_fields.php:48
+#: templates/element/Processes/process_candidate_examiner_fields.php:49
+msgid "Candidate Email"
+msgstr "E-Mail Prüfling"
+
+#: templates/element/Processes/process_candidate_examiner_fields.php:54
+#: templates/element/Processes/process_candidate_examiner_fields.php:107
+msgid "Error: The candidate and the examiner may not be the same person."
+msgstr "Fehler: Prüfling und Prüfer dürfen nicht die gleiche Person sein."
+
+#: templates/element/Processes/process_candidate_examiner_fields.php:95
+#: templates/element/Processes/process_candidate_examiner_fields.php:96
+msgid "Examiner Name"
+msgstr "Name Prüfer"
+
+#: templates/element/Processes/process_candidate_examiner_fields.php:101
+#: templates/element/Processes/process_candidate_examiner_fields.php:102
+msgid "Examiner Email"
+msgstr "E-Mail Prüfer"
+
+#: templates/element/Processes/process_form_fields.php:16
+msgid "Angaben zum Prüfprozess"
+msgstr ""
+
+#: templates/element/Processes/process_form_fields.php:30
+msgid ""
+"Wählen Sie einen möglichst eindeutigen Namen, der es Prüfbeteiligten "
+"erleichtert, sich zu orientieren. Sie können auf der Projektseite jederzeit "
+"weitere Prüfprozesse hinzufügen."
+msgstr ""
+
+#: templates/element/Processes/process_form_fields.php:35
+msgid "z.B. Bilderkennung"
+msgstr ""
+
+#: templates/element/Processes/process_form_fields.php:45
+#: templates/element/Processes/process_form_fields.php:46
+msgid ""
+"Ergänzen Sie eine kurze aussagekräftige Beschreibung dafür, worum es in dem "
+"Prüfprozess geht."
+msgstr ""
+
+#: templates/element/Users/user_sidebar.php:24
+msgid "My Account"
+msgstr "Mein Konto"
+
+#: templates/element/molecules/action_card.php:54
+msgid "No actions available"
+msgstr "Keine Aktionen verfügbar"
+
+#: templates/element/molecules/breadcrumb_nav.php:27
+msgid "Breadcrumb"
+msgstr "Breadcrumb"
+
+#: templates/element/molecules/comment_form.php:55
+#: templates/element/molecules/usecase_description_viewer.php:134
+msgid "Add Comment"
+msgstr "Kommentar hinzugefügen"
+
+#: templates/element/molecules/comment_form.php:59
+msgid ""
+"Saved comments are part of the assessment documentation and cannot be edited."
+msgstr ""
+"Gespeicherte Kommentare sind Teil der Prüfdokumentation und können nicht "
+"bearbeitet werden."
+
+#: templates/element/molecules/comment_form.php:85
+msgid "Content"
+msgstr "Inhalt"
+
+#: templates/element/molecules/disclaimer.php:18
+msgid "Disclaimer"
+msgstr ""
+
+#: templates/element/molecules/disclaimer.php:25
+msgid ""
+"Die angebotene Selbstprüfung dient ausschließlich der freiwilligen internen "
+"Bewertung durch das teilnehmende Unternehmen. Sie stellt keine behördliche "
+"Prüfung, Zertifizierung oder rechtsverbindliche Bewertung dar. acatech "
+"übernimmt keine Gewähr für Vollständigkeit, Richtigkeit oder rechtliche "
+"Wirkung der Ergebnisse dieser Selbstprüfung. Die Nutzung erfolgt auf eigenes "
+"Risiko und in eigener Verantwortung des teilnehmenden Unternehmens. acatech "
+"haftet nur bei Vorsatz oder grober Fahrlässigkeit sowie in Fällen "
+"gesetzlicher Haftung."
+msgstr ""
+
+#: templates/element/molecules/document_list.php:14
+msgid "No documents available"
+msgstr "Keine Dokumente verfügbar"
+
+#: templates/element/molecules/form_field_readonly.php:102
+msgid "No value provided"
+msgstr "Keine Eingabe"
+
+#: templates/element/molecules/form_field_readonly.php:118
+msgid "View comments"
+msgstr "Kommentare anzeigen"
+
+#: templates/element/molecules/form_field_readonly.php:118
+msgid "Add comment"
+msgstr "Kommentar hinzufügen"
+
+#: templates/element/molecules/form_navigation.php:18
+msgid "Form Navigation"
+msgstr "Navigation"
+
+#: templates/element/molecules/info_popover.php:18
+msgid "Information"
+msgstr "Information"
+
+#: templates/element/molecules/modal.php:171
+msgid "Loading..."
+msgstr "Lade..."
+
+#: templates/element/molecules/pagination.php:29
+#: templates/element/pagination.php:59
+msgid ""
+"Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} "
+"total"
+msgstr ""
+"Seite {{page}} von {{pages}}, zeige {{current}} Einträge von {{count}} gesamt"
+
+#: templates/element/molecules/pagination.php:79
+#: templates/element/pagination.php:9
+msgid "first"
+msgstr "erste"
+
+#: templates/element/molecules/pagination.php:87
+#: templates/element/pagination.php:18
+msgid "previous"
+msgstr "vorherige"
+
+#: templates/element/molecules/pagination.php:105
+#: templates/element/pagination.php:39
+msgid "next"
+msgstr "nächste"
+
+#: templates/element/molecules/pagination.php:113
+#: templates/element/pagination.php:48
+msgid "last"
+msgstr "letzte"
+
+#: templates/element/molecules/quality_dimension_card.php:22
+msgid "Rate"
+msgstr "Bewerten"
+
+#: templates/element/molecules/table_header.php:66
+msgid "Aktion"
+msgstr "Aktion"
+
+#: templates/element/molecules/usecase_description_viewer.php:121
+msgid "No file uploaded"
+msgstr "Keine Datei hochgeladen"
+
+#: templates/element/molecules/usecase_description_viewer.php:138
+msgid "View Comment"
+msgstr "Kommentar anzeigen"
+
+#: templates/element/molecules/usecase_description_viewer.php:143
+#: templates/element/molecules/usecase_description_viewer_refactored.php:147
+msgid "Comment for {0}"
+msgstr "Kommentar zu {0}"
+
+#: templates/element/molecules/usecase_description_viewer_refactored.php:30
+msgid "Invalid UseCase Description data format"
+msgstr "Ungültiges Datenformat der Anwendungsfallbeschreibung"
+
+#: templates/element/molecules/usecase_description_viewer_refactored.php:121
+msgid "View file"
+msgstr "Datei anzeigen"
+
+#: templates/element/organisms/app_auth_layout.php:76
+#: templates/element/organisms/app_auth_layout.php:78
+msgid "help@missionki.de"
+msgstr "pruefportal@acatech.de"
+
+#: templates/element/organisms/app_auth_layout.php:91
+msgid "Zur Dokumentation"
+msgstr "Zur Dokumentation"
+
+#: templates/element/organisms/app_header.php:58
+msgid "Toggle menu"
+msgstr "Menü auf-/zuklappen"
+
+#: templates/element/organisms/app_left_purple_branding.php:7
+msgid "PRÜFPORTAL"
+msgstr "PRÜFPORTAL"
+
+#: templates/element/organisms/app_left_purple_branding.php:12
+#: templates/layout/email/html/default.php:335
+#: templates/layout/email/text/default.php:19
+msgid "Nationale Initiative für Künstliche Intelligenz und Datenökonomie"
+msgstr "Nationale Initiative für Künstliche Intelligenz und Datenökonomie"
+
+#: templates/element/organisms/app_sidebar.php:53
+msgid "Main navigation"
+msgstr "Hauptnavigation"
+
+#: templates/element/organisms/overall_assessment.php:259
+#: templates/element/organisms/total_result.php:180
+msgid "vollständiger Prüfbericht"
+msgstr "vollständiger Prüfbericht"
+
+#: templates/element/organisms/participant_form_rows.php:84
+#: templates/element/organisms/participant_form_rows.php:152
+#: templates/element/organisms/participant_form_rows.php:212
+msgid "E-Mail-Adresse"
+msgstr "E-Mail-Adresse"
+
+#: templates/element/organisms/participant_form_rows.php:97
+#: templates/element/organisms/participant_form_rows.php:165
+msgid "Candidate and examiner cannot have the same email address"
+msgstr "Prüfling und Prüfer können nicht die gleiche E-Mail-Adresse haben"
+
+#: templates/element/organisms/participant_form_rows.php:130
+#: templates/element/organisms/participant_form_rows.php:195
+msgid "Prüfer"
+msgstr "PrüferIn"
+
+#: templates/element/organisms/participant_form_rows.php:193
+msgid "-- Rolle wählen --"
+msgstr ""
+
+#: templates/element/organisms/participant_form_rows.php:224
+msgid "Person entfernen"
+msgstr ""
+
+#: templates/element/organisms/participant_form_rows.php:234
+msgid "weitere Person hinzufügen"
+msgstr ""
+
+#: templates/element/organisms/process_card.php:34
+msgid "Unknown"
+msgstr "Unbekannt"
+
+#: templates/element/organisms/process_card.php:104
+msgid "Phase {0}/6"
+msgstr "Schritt {0}/6"
+
+#: templates/element/organisms/process_card.php:113
+msgid "Process progress: {0}/6 steps"
+msgstr "Prozessfortschritt: {0}/6 Schritte"
+
+#: templates/element/organisms/process_card.php:121
+msgid "Letzte Aktualisierung:"
+msgstr "Letzte Aktualisierung"
+
+#: templates/element/organisms/process_card.php:121
+msgid "Uhr"
+msgstr "Uhr"
+
+#: templates/element/organisms/process_card.php:149
+msgid "Projektdetails"
+msgstr "Projektdetails"
+
+#: templates/element/organisms/process_card.php:156
+msgid "Prozess ansehen"
+msgstr "Prozess ansehen"
+
+#: templates/element/organisms/sortable_table.php:76
+msgid "No data"
+msgstr "Keine Daten"
+
+#: templates/element/organisms/sortable_table.php:77
+msgid "No data available to display"
+msgstr "Keine Daten anzeigbar"
+
+#: templates/element/organisms/total_result.php:61
+msgid "Bewertung der KI-Anwendung"
+msgstr ""
+
+#: templates/element/organisms/total_result.php:68
+msgid "Branche"
+msgstr ""
+
+#: templates/element/organisms/total_result.php:76
+msgid "Datum der Prüfung"
+msgstr ""
+
+#: templates/element/organisms/total_result.php:92
+msgid "Betriebsort"
+msgstr ""
+
+#: templates/element/organisms/total_result.php:100
+msgid "Kontakt"
+msgstr ""
+
+#: templates/element/organisms/total_result.php:117
+msgid "Prüfungsart"
+msgstr ""
+
+#: templates/element/organisms/total_result.php:129
+msgid "Zweck der Anwendung"
+msgstr ""
+
+#: templates/element/organisms/total_result.php:137
+msgid "Aufgaben der KI"
+msgstr ""
+
+#: templates/element/organisms/user_menu.php:47
+msgid "Logout"
+msgstr "Abmelden"
+
+#: templates/element/organisms/vcio_definitions.php:8
+msgid "Definitionen und Kriterien"
+msgstr "Definitionen und Kriterien"
+
+#: templates/element/organisms/vcio_definitions.php:14
+msgid "Definition für "
+msgstr "Definition für "
+
+#: templates/email/html/invite_user.php:8
+#: templates/email/html/register_confirmation.php:6
+#: templates/email/html/reset_password.php:6
+#: templates/email/text/invite_user.php:8
+#: templates/email/text/register_confirmation.php:6
+#: templates/email/text/reset_password.php:6
+msgid "Hi"
+msgstr "Hi"
+
+#: templates/email/html/invite_user.php:11
+#: templates/email/text/invite_user.php:12
+msgid ""
+"You can set the credentials for your account \"{0}\" after the activation."
+msgstr ""
+"Sie können die Anmeldedaten für Ihr Konto \"{0}\" nach der Aktivierung "
+"einstellen."
+
+#: templates/email/html/invite_user.php:20
+msgid "Accept and activate account"
+msgstr "Akzeptieren und Konto aktivieren"
+
+#: templates/email/html/invite_user.php:28
+#: templates/email/html/register_confirmation.php:23
+#: templates/email/html/reset_password.php:24
+#: templates/email/text/invite_user.php:17
+#: templates/email/text/register_confirmation.php:12
+#: templates/email/text/reset_password.php:14
+msgid "Good luck! Hope it works."
+msgstr "Viele Grüße, Ihr MISSION KI Prüfportal Team"
+
+#: templates/email/html/register_confirmation.php:7
+#: templates/email/text/register_confirmation.php:8
+msgid "Please open the link below to activate your account."
+msgstr "Bitte öffnen Sie den folgenden Link um Ihr Konto zu aktivieren."
+
+#: templates/email/html/register_confirmation.php:15
+msgid "Activate account"
+msgstr "Konto aktivieren"
+
+#: templates/email/html/reset_password.php:7
+#: templates/email/text/reset_password.php:8
+msgid "Please open the link below to set a new password."
+msgstr "Bitte öffnen Sie den folgenden Link um ein neues Passwort festzulegen."
+
+#: templates/email/html/reset_password.php:23
+#: templates/email/text/reset_password.php:12
+msgid "This link will expire in 10 minutes."
+msgstr "Dieser Link läuft in 10 Minuten ab."
+
+#: templates/layout/email/html/default.php:326
+#: templates/layout/email/text/default.php:14
+msgid "Detailed information on data processing:"
+msgstr "Detaillierte Informationen zu unserem Umgang mit Daten:"
+
+#: templates/layout/email/html/default.php:326
+msgid "Privacy link"
+msgstr "Datenschutzerklärung"
+
+#: templates/layout/error.php:36
+msgid "Back"
+msgstr "Zurück"
+
+#~ msgid "Continue Rating"
+#~ msgstr "Weiter bewerten"
+
+#~ msgid "Process description"
+#~ msgstr "Prozessbeschreibung"
+
+#~ msgid "Enabled"
+#~ msgstr "Aktiviert"
+
+#~ msgid "Project description"
+#~ msgstr "Projektbeschreibung"
+
+#~ msgid "Are you sure you want to delete {0}?"
+#~ msgstr "Sind Sie sicher, dass Sie {0} löschen wollen?"
+
+#~ msgid "My latest candidate processes"
+#~ msgstr "Neuste Prüfprozesse (Prüfling)"
+
+#~ msgid "My latest examiner processes"
+#~ msgstr "Neuste Prüfprozesse (Prüfer)"
+
+#~ msgid "Enter process title"
+#~ msgstr "Prozesstitel eingeben"
+
+#~ msgid "Enter process description"
+#~ msgstr "Prozessbeschreibung eingeben"
+
+#~ msgid "Qualitätsdimension Datenqualität, -schutz und -Governance"
+#~ msgstr "Qualitätsdimension Datenqualität, -schutz und -Governance"
+
+#~ msgid "Qualitätsdimension Nicht-Diskriminierung "
+#~ msgstr "Qualitätsdimension Nicht-Diskriminierung "
+
+#~ msgid "Qualitätsdimension Transparenz "
+#~ msgstr "Qualitätsdimension Transparenz"
+
+#~ msgid "Qualitätsdimension KI-spezifische Cybersicherheit"
+#~ msgstr "Qualitätsdimension KI-spezifische Cybersicherheit"
+
+#~ msgid "List Indicators"
+#~ msgstr "Indikatoren auflisten"
+
+#~ msgid "Add Indicator"
+#~ msgstr "Indikator hinzufügen"
+
+#~ msgid "Are you sure you want to delete # {0}?"
+#~ msgstr "Sind Sie sicher, dass Sie # \"{0}\" löschen wollen?"
+
+#~ msgid "Edit Indicator"
+#~ msgstr "Indikator bearbeiten"
+
+#~ msgid "New Indicator"
+#~ msgstr "Neuer Indikator"
+
+#~ msgid "Indicators"
+#~ msgstr "Indikatoren"
+
+#~ msgid "Delete Indicator"
+#~ msgstr "Indikator löschen"
+
+#~ msgid "Id"
+#~ msgstr "Id"
+
+#~ msgid "Criterion Id"
+#~ msgstr "Kriterium Id"
+
+#~ msgid "Level Candidate"
+#~ msgstr "Level (Prüfling)"
+
+#~ msgid "Level Examiner"
+#~ msgstr "Level (Prüfer)"
+
+#~ msgid "Created"
+#~ msgstr "Erzeugt"
+
+#~ msgid "Modified"
+#~ msgstr "Bearbeitet"
+
+#~ msgid "Edit use case"
+#~ msgstr "Anwendungsfall bearbeiten"
+
+#~ msgid "Mark Notification as seen"
+#~ msgstr "Benachrichtigung als gelesen kennzeichnen"
+
+#~ msgid "Last modified"
+#~ msgstr "Zuletzt bearbeitet"
+
+#~ msgid "Processes"
+#~ msgstr "Prüfprozesse"
+
+#~ msgid "Zurückkehren"
+#~ msgstr "Zurückkehren"
+
+#~ msgid "Qualitätsdimensionen"
+#~ msgstr "Qualitätsdimensionen"

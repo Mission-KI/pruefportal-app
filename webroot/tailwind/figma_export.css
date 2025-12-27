@@ -1,0 +1,84 @@
+/* MISSION KI Design System - Design Tokens */
+/* Generated from Figma - DO NOT EDIT MANUALLY */
+/* Run `node scripts/import-figma-tokens.mjs` to regenerate */
+/*
+/* Source: missionki_pruefportal
+/* Page: Fundamentals
+/* Extracted: 9/18/2025, 2:22:32 PM
+/* File ID: 0:1
+*/
+
+@theme {
+  /* === COLORS === */
+  --color-heading-h1: #000000;
+  --color-heading-h2: #000000;
+  --color-heading-h3: #000000;
+  --color-heading-h4: #000000;
+  --color-heading-h5: #000000;
+  --color-body-copy-p: #000000;
+  --color-caption: #000000;
+  --color-button-cta: #000000;
+  --color-default: #067647;
+  --color-supporting: #535862;
+  --color-number: #181d27;
+  --color-hex: #535862;
+  --color-wcag-contrast: #ffffff;
+  --color-dot: #ffffff;
+
+  /* === TYPOGRAPHY === */
+  --font-typeface-size: 48px;
+  --font-typeface-weight: 400;
+  --font-typeface-line-height: 60px;
+  --font-sample-size: 72px;
+  --font-sample-weight: 400;
+  --font-sample-line-height: 90px;
+  --font-specimen-size: 48px;
+  --font-specimen-weight: 400;
+  --font-specimen-line-height: 60px;
+  --font-type-specimen-size: 60px;
+  --font-type-specimen-weight: 600;
+  --font-type-specimen-line-height: 72px;
+  --font-default-size: 18px;
+  --font-default-weight: 600;
+  --font-default-line-height: 28px;
+  --font-supporting-size: 18px;
+  --font-supporting-weight: 400;
+  --font-supporting-line-height: 28px;
+  --font-heading-size: 16px;
+  --font-heading-weight: 600;
+  --font-heading-line-height: 24px;
+  --font-type-specimen-regular-size: 12px;
+  --font-type-specimen-regular-weight: 400;
+  --font-type-specimen-regular-line-height: 18px;
+  --font-type-specimen-semibold-size: 12px;
+  --font-type-specimen-semibold-weight: 600;
+  --font-type-specimen-semibold-line-height: 18px;
+  --font-type-specimen-bold-size: 24px;
+  --font-type-specimen-bold-weight: 600;
+  --font-type-specimen-bold-line-height: 32px;
+  --font-heading-h1-size: 72px;
+  --font-heading-h1-weight: 600;
+  --font-heading-h1-line-height: 90px;
+  --font-heading-h2-size: 60px;
+  --font-heading-h2-weight: 600;
+  --font-heading-h2-line-height: 72px;
+  --font-heading-h3-size: 48px;
+  --font-heading-h3-weight: 600;
+  --font-heading-h3-line-height: 60px;
+  --font-heading-h4-size: 36px;
+  --font-heading-h4-weight: 600;
+  --font-heading-h4-line-height: 44px;
+  --font-heading-h5-size: 30px;
+  --font-heading-h5-weight: 600;
+  --font-heading-h5-line-height: 38px;
+  --font-body-copy-p-size: 18px;
+  --font-body-copy-p-weight: 400;
+  --font-body-copy-p-line-height: 28px;
+  --font-caption-size: 14px;
+  --font-caption-weight: 400;
+  --font-caption-line-height: 21px;
+  --font-button-cta-size: 18px;
+  --font-button-cta-weight: 400;
+  --font-button-cta-line-height: 22.640625px;
+
+}

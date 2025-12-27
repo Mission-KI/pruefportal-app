@@ -1,0 +1,49 @@
+/* Avatar Component */
+
+@layer components {
+    .mki-avatar {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 9999px;
+        flex-shrink: 0;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    .mki-avatar--xs {
+        width: var(--avatar-size-xs);
+        height: var(--avatar-size-xs);
+        font-size: 0.625rem;
+    }
+
+    .mki-avatar--sm {
+        width: var(--avatar-size-sm);
+        height: var(--avatar-size-sm);
+        font-size: 0.75rem;
+    }
+
+    .mki-avatar--md {
+        width: var(--avatar-size-md);
+        height: var(--avatar-size-md);
+        font-size: 1rem;
+    }
+
+    .mki-avatar--lg {
+        width: var(--avatar-size-lg);
+        height: var(--avatar-size-lg);
+        font-size: 1.25rem;
+    }
+
+    .mki-avatar--xl {
+        width: var(--avatar-size-xl);
+        height: var(--avatar-size-xl);
+        font-size: 1.5rem;
+    }
+
+    .mki-avatar--initials {
+        background-color: var(--color-blue-100);
+        color: var(--color-brand-deep);
+        border: 2px solid var(--color-brand-deep);
+    }
+}

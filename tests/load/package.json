@@ -1,0 +1,24 @@
+{
+  "name": "registration-load-test",
+  "version": "1.0.0",
+  "description": "Load testing for user registration with Puppeteer",
+  "main": "registration-load-test.js",
+  "scripts": {
+    "test:local": "node registration-load-test.js --env=local --users=5",
+    "test:staging": "node registration-load-test.js --env=test --users=10",
+    "test:full": "node registration-load-test.js --env=test --users=50"
+  },
+  "keywords": [
+    "load-test",
+    "puppeteer",
+    "registration"
+  ],
+  "author": "MISSION KI",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "puppeteer": "^24.30.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

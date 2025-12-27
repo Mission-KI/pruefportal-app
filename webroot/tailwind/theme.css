@@ -1,0 +1,496 @@
+/* MISSION KI Design System - Design Tokens */
+/* Single source of truth for design tokens - no manual regeneration needed */
+/* Edit these tokens and run `npm run build:tailwind` or `npm run watch:tailwind` for automatic rebuild */
+
+/* === FONT FACES === */
+/* Mission KI Brand Font */
+@font-face {
+    font-family: 'Mission KI';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../font/Baikal-VF.ttf.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Mission KI';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../font/Baikal-VF.ttf.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Mission KI';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('../font/Baikal-VF.ttf.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Mission KI';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('../font/Baikal-VF.ttf.woff2') format('woff2');
+}
+
+@theme {
+    /* === BREAKPOINTS === */
+    --breakpoint-sm: 768px;
+    --breakpoint-md: 992px;
+    --breakpoint-lg: 1280px;
+    --breakpoint-xl: 1440px;
+
+  /* === COLORS === */
+
+  /* Base Colors - Base black and white color styles to quickly swap out if needed */
+  --color-base-white: #FFFFFF;
+  --color-base-white-contrast: #000000;
+  --color-base-black: #000000;
+  --color-base-black-contrast: #FFFFFF;
+
+  /* Brand Colors - The brand color is your "primary" color, used across all interactive elements such as buttons, links, inputs, etc. */
+  --color-brand-lightest: #FCFAFF;
+  --color-brand-light: #D4BBFF;
+  --color-brand-light-contrast: #3C0483;
+  --color-brand-light-web: #7948CF;
+  --color-brand-light-web-contrast: #FFFFFF;
+  --color-brand-deep: #3C0483;
+  --color-brand-deep-contrast: #FFFFFF;
+
+  /* Gray Colors - Text, form fields, backgrounds, dividers are usually gray */
+  --color-gray-25: #FDFDFD;
+  --color-gray-25-contrast: #535862;
+  --color-gray-50: #FAFAFA;
+  --color-gray-50-contrast: #535862;
+  --color-gray-100: #F5F5F5;
+  --color-gray-100-contrast: #535862;
+  --color-gray-200: #E9EAEB;
+  --color-gray-200-contrast: #535862;
+  --color-gray-300: #D5D7DA;
+  --color-gray-300-contrast: #535862;
+  --color-gray-400: #A4A7AE;
+  --color-gray-400-contrast: #FFFFFF;
+  --color-gray-500: #717680;
+  --color-gray-500-contrast: #FFFFFF;
+  --color-gray-600: #535862;
+  --color-gray-600-contrast: #FFFFFF;
+  --color-gray-700: #414651;
+  --color-gray-700-contrast: #FFFFFF;
+  --color-gray-800: #252B37;
+  --color-gray-800-contrast: #FFFFFF;
+  --color-gray-900: #181D27;
+  --color-gray-900-contrast: #FFFFFF;
+  --color-gray-950: #0A0D12;
+  --color-gray-950-contrast: #FFFFFF;
+
+  /* Error Colors - Used across error states and in "destructive" actions, such as removing a user */
+  --color-error-25: #FFFBFA;
+  --color-error-25-contrast: #B42318;
+  --color-error-50: #FEF3F2;
+  --color-error-50-contrast: #B42318;
+  --color-error-100: #FEE4E2;
+  --color-error-100-contrast: #B42318;
+  --color-error-200: #FECDCA;
+  --color-error-200-contrast: #B42318;
+  --color-error-300: #FDA29B;
+  --color-error-300-contrast: #B42318;
+  --color-error-400: #F97066;
+  --color-error-400-contrast: #FFFFFF;
+  --color-error-500: #F04438;
+  --color-error-500-contrast: #FFFFFF;
+  --color-error-600: #D92D20;
+  --color-error-600-contrast: #FFFFFF;
+  --color-error-700: #B42318;
+  --color-error-700-contrast: #FFFFFF;
+  --color-error-800: #912018;
+  --color-error-800-contrast: #FFFFFF;
+  --color-error-900: #7A271A;
+  --color-error-900-contrast: #FFFFFF;
+  --color-error-950: #55160C;
+  --color-error-950-contrast: #FFFFFF;
+
+  /* Warning Colors - Communicate that an action is potentially destructive or "on-hold" */
+  --color-warning-25: #FFFCF5;
+  --color-warning-25-contrast: #B54708;
+  --color-warning-50: #FFFAEB;
+  --color-warning-50-contrast: #B54708;
+  --color-warning-100: #FEF0C7;
+  --color-warning-100-contrast: #B54708;
+  --color-warning-200: #FEDF89;
+  --color-warning-200-contrast: #B54708;
+  --color-warning-300: #FEC84B;
+  --color-warning-300-contrast: #B54708;
+  --color-warning-400: #FDB022;
+  --color-warning-400-contrast: #FFFFFF;
+  --color-warning-500: #F79009;
+  --color-warning-500-contrast: #FFFFFF;
+  --color-warning-600: #DC6803;
+  --color-warning-600-contrast: #FFFFFF;
+  --color-warning-700: #B54708;
+  --color-warning-700-contrast: #FFFFFF;
+  --color-warning-800: #93370D;
+  --color-warning-800-contrast: #FFFFFF;
+  --color-warning-900: #7A2E0E;
+  --color-warning-900-contrast: #FFFFFF;
+  --color-warning-950: #4E1D09;
+  --color-warning-950-contrast: #FFFFFF;
+
+  /* Blue Colors - Use for information and Links */
+  --color-blue-25: #F5F8FF;
+  --color-blue-25-contrast: #004EEB;
+  --color-blue-50: #EFF4FF;
+  --color-blue-50-contrast: #004EEB;
+  --color-blue-100: #D1E0FF;
+  --color-blue-100-contrast: #004EEB;
+  --color-blue-200: #B2CCFF;
+  --color-blue-200-contrast: #004EEB;
+  --color-blue-300: #84ADFF;
+  --color-blue-300-contrast: #004EEB;
+  --color-blue-400: #528BFF;
+  --color-blue-400-contrast: #FFFFFF;
+  --color-blue-500: #2970FF;
+  --color-blue-500-contrast: #FFFFFF;
+  --color-blue-600: #155EEF;
+  --color-blue-600-contrast: #FFFFFF;
+  --color-blue-700: #004EEB;
+  --color-blue-700-contrast: #FFFFFF;
+  --color-blue-800: #0040C1;
+  --color-blue-800-contrast: #FFFFFF;
+  --color-blue-900: #00359E;
+  --color-blue-900-contrast: #FFFFFF;
+  --color-blue-950: #002266;
+  --color-blue-950-contrast: #FFFFFF;
+
+  /* Success Colors - Communicate a positive action, positive trend, or a successful confirmation */
+  --color-success-25: #F6FEF9;
+  --color-success-25-contrast: #067647;
+  --color-success-50: #ECFDF3;
+  --color-success-50-contrast: #067647;
+  --color-success-100: #DCFAE6;
+  --color-success-100-contrast: #067647;
+  --color-success-200: #ABEFC6;
+  --color-success-200-contrast: #067647;
+  --color-success-300: #75E0A7;
+  --color-success-300-contrast: #067647;
+  --color-success-400: #47CD89;
+  --color-success-400-contrast: #FFFFFF;
+  --color-success-500: #17B26A;
+  --color-success-500-contrast: #FFFFFF;
+  --color-success-600: #079455;
+  --color-success-600-contrast: #FFFFFF;
+  --color-success-700: #067647;
+  --color-success-700-contrast: #FFFFFF;
+  --color-success-800: #085D3A;
+  --color-success-800-contrast: #FFFFFF;
+  --color-success-900: #074D31;
+  --color-success-900-contrast: #FFFFFF;
+  --color-success-950: #053321;
+  --color-success-950-contrast: #FFFFFF;
+
+  /* Semantic Color Aliases & Defaults */
+  /* Default colors for each family - used when no shade is specified */
+  --color-brand: #3C0483; /* Default: Brand Deep */
+  --color-brand-contrast: #FFFFFF;
+  --color-gray: #717680; /* Default: Gray 500 */
+  --color-gray-contrast: #FFFFFF;
+  --color-error: #D92D20; /* Default: Error 600 */
+  --color-error-contrast: #FFFFFF;
+  --color-warning: #F79009; /* Default: Warning 500 */
+  --color-warning-contrast: #FFFFFF;
+  --color-blue: #155EEF; /* Default: Blue 600 */
+  --color-blue-contrast: #FFFFFF;
+  --color-success: #067647; /* Default: Success 700 */
+  --color-success-contrast: #FFFFFF;
+
+  /* Primary color aliases - maps to Brand Deep */
+  --color-primary: #3C0483; /* Brand Deep */
+  --color-primary-contrast: #FFFFFF;
+  --color-primary-inverse: #FFFFFF;
+  --color-primary-hover: #7948CF; /* Brand Light Web */
+  --color-primary-active: #3C0483;
+  --color-primary-focus: #3C0483;
+
+  /* Other semantic aliases */
+  --color-secondary: #FFFFFF;
+  --color-secondary-border: #3C0483;
+  --color-tertiary-border: #3C0483;
+  --color-input-disabled: var(--color-gray-50);
+  --color-disabled: var(--color-gray-400);
+
+  /* === SPACING === */
+    --spacing: .25rem;
+    --spacing-sm: .25rem;
+    --spacing-md: .25rem;
+    --spacing-lg: .25rem;
+
+  /* === CONTAINER MAX WIDTHS === */
+  --container-sm: 24rem;   /* 384px */
+  --container-md: 28rem;   /* 448px */
+  --container-lg: 32rem;   /* 512px */
+  --container-xl: 36rem;   /* 576px */
+  --container-2xl: 42rem;  /* 672px */
+
+  /* Max-width utilities for Tailwind v4 */
+  --max-width-sm: 24rem;   /* 384px */
+  --max-width-md: 28rem;   /* 448px */
+  --max-width-lg: 32rem;   /* 512px */
+
+
+  /* Button Spacing */
+  --spacing-btn-padding-vertical: 8px;
+  --spacing-btn-padding-horizontal-md: 16px;
+  --spacing-btn-padding-horizontal-sm: 12px;
+  --spacing-btn-padding-horizontal-xs: 12px;
+
+  /* Card Spacing */
+  --spacing-card-padding-sm: 16px;
+  --spacing-card-padding-md: 20px;
+  --spacing-card-padding-lg: 24px;
+  --spacing-card-margin-sm: 12px;
+  --spacing-card-margin-md: 16px;
+  --spacing-card-margin-lg: 20px;
+  --spacing-card-gap-sm: 8px;
+  --spacing-card-gap-md: 12px;
+  --spacing-card-gap-lg: 16px;
+
+  /* Form Field Spacing */
+  --spacing-field-index-badge-padding: 8px;
+  --spacing-field-index-badge-gap: 8px;
+
+  /* === BORDER RADIUS === */
+  --radius-btn-round: 24px;
+  --radius-sm: 8px;
+  --radius-xs: 8px;
+  --radius-card-sm: 8px;
+  --radius-card-md: 12px;
+  --radius-card-lg: 16px;
+  --radius-field-index-badge: 4px;
+
+  /* === TYPOGRAPHY === */
+
+  /* Font Families */
+  --font-family-brand: 'Mission KI', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  --font-family-sans: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+
+  /* Font Weights */
+  --font-weight-regular: 400;
+  --font-weight-semibold: 600;
+  --font-weight-expanded-semibold: 700; /* Only available for Display sizes */
+
+  /* Display Sizes - Support all 3 weights (400, 600, 700) */
+  --font-size-display-2xl: 72px;
+  --line-height-display-2xl: 1.25; /* 90px */
+
+  --font-size-display-xl: 60px;
+  --line-height-display-xl: 1.2; /* 72px */
+
+  --font-size-display-lg: 48px;
+  --line-height-display-lg: 1.25; /* 60px */
+
+  --font-size-display-md: 36px;
+  --line-height-display-md: 1.22; /* 44px */
+
+  --font-size-display-sm: 30px;
+  --line-height-display-sm: 1.27; /* 38px */
+
+  --font-size-display-xs: 24px;
+  --line-height-display-xs: 1.33; /* 32px */
+
+  /* Text Sizes - Support only 2 weights (400, 600) */
+  --font-size-text-xl: 20px;
+  --line-height-text-xl: 1.5; /* 30px */
+
+  --font-size-text-lg: 18px;
+  --line-height-text-lg: 1.56; /* 28px */
+
+  --font-size-text-md: 16px;
+  --line-height-text-md: 1.5; /* 24px */
+
+  --font-size-text-sm: 14px; /* Also used as Caption */
+  --line-height-text-sm: 1.43; /* 20px */
+  --font-size-caption: 14px; /* Alias for text-sm */
+  --line-height-caption: 1.43;
+
+  --font-size-text-xs: 12px; /* Also used as Tiny */
+  --line-height-text-xs: 1.5; /* 18px */
+  --font-size-tiny: 12px; /* Alias for text-xs */
+  --line-height-tiny: 1.5;
+
+  /* Letter Spacing */
+  --letter-spacing-tight: -0.02em; /* -2% for Display 2xl through md */
+  --letter-spacing-normal: 0; /* 0% for Display sm/xs and all Text sizes */
+  --tracking-wide: 0.02em; /* 2% for expanded letter spacing */
+
+  /* Legacy aliases for backward compatibility */
+  --font-size-md: 16px;
+  --font-size-sm: 14px;
+  --font-size-xs: 12px;
+
+  /* === SEMANTIC TYPOGRAPHY === */
+  /* Composed styles using base typography tokens */
+
+  /* Headings */
+  --typography-h1-size: var(--font-size-display-2xl);
+  --typography-h1-line-height: var(--line-height-display-2xl);
+  --typography-h1-weight: var(--font-weight-semibold);
+  --typography-h1-letter-spacing: var(--letter-spacing-tight);
+
+  --typography-h2-size: var(--font-size-display-xl);
+  --typography-h2-line-height: var(--line-height-display-xl);
+  --typography-h2-weight: var(--font-weight-semibold);
+  --typography-h2-letter-spacing: var(--letter-spacing-tight);
+
+  --typography-h3-size: var(--font-size-display-lg);
+  --typography-h3-line-height: var(--line-height-display-lg);
+  --typography-h3-weight: var(--font-weight-semibold);
+  --typography-h3-letter-spacing: var(--letter-spacing-tight);
+
+  --typography-h4-size: var(--font-size-display-md);
+  --typography-h4-line-height: var(--line-height-display-md);
+  --typography-h4-weight: var(--font-weight-semibold);
+  --typography-h4-letter-spacing: var(--letter-spacing-tight);
+
+  --typography-h5-size: var(--font-size-display-sm);
+  --typography-h5-line-height: var(--line-height-display-sm);
+  --typography-h5-weight: var(--font-weight-semibold);
+  --typography-h5-letter-spacing: var(--letter-spacing-normal);
+
+  /* Body Text */
+  --typography-body-size: var(--font-size-text-lg);
+  --typography-body-line-height: var(--line-height-text-lg);
+  --typography-body-weight: var(--font-weight-regular);
+  --typography-body-letter-spacing: var(--letter-spacing-normal);
+
+  /* Special Components */
+  --typography-caption-size: var(--font-size-caption);
+  --typography-caption-line-height: 1.5; /* 21px at 14px size - slightly different from text-sm */
+  --typography-caption-weight: var(--font-weight-regular);
+  --typography-caption-letter-spacing: var(--letter-spacing-normal);
+
+  --typography-button-size: var(--font-size-text-lg);
+  --typography-button-line-height: 1; /* 100% - tight for single-line buttons */
+  --typography-button-weight: var(--font-weight-regular);
+  --typography-button-letter-spacing: var(--letter-spacing-normal);
+
+  /* === CARD SYSTEM === */
+  /* Card Shadows */
+  --shadow-card-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-card-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-card-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+
+  /* Card Borders */
+  --card-border-width: 1px;
+  --card-border-color: #e5e7eb;
+
+  /* Card Dimensions */
+  --card-max-width-sm: 320px;
+  --card-max-width-md: 480px;
+  --card-max-width-lg: 640px;
+  --card-min-height-sm: 120px;
+  --card-min-height-md: 160px;
+  --card-min-height-lg: 200px;
+
+  /* === FORM SYSTEM === */
+  /* Form Field Index Badge */
+  --form-field-index-badge-width: 45px;
+  --form-field-index-badge-height: 24px;
+--form-field-input-width: 320px;
+
+  /* Form Input */
+  --form-input-width: var(--form-field-input-width);
+  --form-input-height: 44px;
+  --form-input-padding-top: 10px;
+  --form-input-padding-right: 14px;
+  --form-input-padding-bottom: 10px;
+  --form-input-padding-left: 14px;
+  --form-input-border-radius: 4px;
+  --form-input-border-width: 1px;
+  --form-input-background-color: #FFFFFF;
+  --form-input-border-color: #D4BBFF;
+  --form-input-gap: 8px;
+
+  /* Form Textarea */
+  --form-textarea-width: var(--form-field-input-width);
+  --form-textarea-height: 120px;
+  --form-textarea-padding-top: 12px;
+  --form-textarea-padding-right: 14px;
+  --form-textarea-padding-bottom: 12px;
+  --form-textarea-padding-left: 14px;
+  --form-textarea-border-radius: 4px;
+  --form-textarea-border-width: 1px;
+  --form-textarea-background-color: #FFFFFF;
+  --form-textarea-border-color: #D4BBFF;
+  --form-textarea-gap: 8px;
+
+  /* Form Select */
+  --form-select-width: var(--form-field-input-width);
+  --form-select-height: 44px;
+  --form-select-padding-top: 10px;
+  --form-select-padding-right: 14px;
+  --form-select-padding-bottom: 10px;
+  --form-select-padding-left: 14px;
+  --form-select-border-radius: 4px;
+  --form-select-border-width: 1px;
+  --form-select-background-color: #FFFFFF;
+  --form-select-border-color: #D4BBFF;
+  --form-select-gap: 8px;
+
+  /* Form Radio */
+  --form-radio-wrapper-width: 304px;
+  --form-radio-wrapper-height: 24px;
+  --form-radio-wrapper-gap: 12px;
+  --form-radio-circle-width: 20px;
+  --form-radio-circle-height: 20px;
+  --form-radio-circle-border-radius: 10px;
+  --form-radio-circle-border-width: 1px;
+  --form-radio-circle-border-color: #7948CF;
+  --form-radio-circle-background-color: #FFFFFF;
+  --form-radio-circle-checked-color: #7948CF;
+
+  /* === LAYOUT === */
+  --layout-header-height: 4rem;
+  --layout-header-padding-y: 0.75rem;
+  --layout-header-padding-x: 1.5rem;
+  --layout-sidebar-width: 15rem;
+  --layout-sidebar-collapsed-width: 4rem;
+  --layout-sidebar-padding: 1rem 0.5rem;
+  --layout-content-max-width-sm: 45rem;
+  --layout-content-max-width-md: 60rem;
+  --layout-content-max-width-lg: 75rem;
+  --layout-content-max-width-xl: 87.5rem;
+  --layout-content-padding: 1.5rem;
+
+  /* === NAVIGATION === */
+  --nav-item-padding-y: 0.75rem;
+  --nav-item-padding-x: 1rem;
+  --nav-item-gap: 0.75rem;
+  --nav-item-border-radius: var(--radius-sm);
+  --nav-item-icon-size: 1.25rem;
+  --nav-section-gap: 1rem;
+  --nav-section-padding: 0.5rem;
+  --nav-section-heading-padding: 0.75rem 1rem 0.5rem;
+  --nav-submenu-indent: 2.5rem;
+  --nav-submenu-gap: 0.25rem;
+
+  /* === AVATAR === */
+  --avatar-size-xs: 1.5rem;
+  --avatar-size-sm: 2rem;
+  --avatar-size-md: 2.5rem;
+  --avatar-size-lg: 3rem;
+  --avatar-size-xl: 3.5rem;
+
+  /* === BREADCRUMB === */
+  --breadcrumb-separator-spacing: 0.5rem;
+  --breadcrumb-font-size: var(--font-size-text-sm);
+  --breadcrumb-padding-y: 0.75rem;
+  --breadcrumb-padding-x: 1.5rem;
+
+  /* === INFO BANNER === */
+  --info-banner-badge-bg: var(--color-warning-500);
+  --info-banner-badge-color: var(--color-warning-900);
+  --info-banner-badge-padding: 0.25rem 0.75rem;
+  --info-banner-badge-radius: 0.25rem;
+}

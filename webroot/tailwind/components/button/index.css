@@ -1,0 +1,4 @@
+/* Button component - modular imports */
+@import "./base.css";
+@import "./variants.css";
+@import "./sizes.css";

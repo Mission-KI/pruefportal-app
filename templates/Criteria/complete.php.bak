@@ -1,0 +1,66 @@
+<?php
+/**
+ * @var \App\View\AppView $this
+ * @var \App\Model\Entity\Process $process
+ */
+$title_for_layout = __('Process') . ': ' . $process->title . ' - ' . __('Protection Needs Analysis');
+$this->assign('title', $title_for_layout);
+?>
+
+<?= $this->element('atoms/heading', [
+    'level' => 1,
+    'text' => $process->title,
+    'size' => false,
+    'weight' => false,
+    'options' => ['class' => 'text-brand display-xs mb-6']
+]) ?>
+
+<div class="w-full mb-6">
+    <?= $this->element('process_status', ['process' => $process]); ?>
+</div>
+
+<?= $this->element('molecules/card', [
+    'title' => __('Complete Protection Needs Analysis'),
+    'subtitle' => "",
+    'subtitle_position' => 'above',
+    'body' => __('Sobald Sie bestätigen, dass Sie die Anwendbarkeit der schutzbedürftigen Qualitätsdimensionen vollständig bewertet haben wird der Prüfling darüber informiert, dass nun die Selbsteinschätzung nach der VCIO-Systematik beginnen kann.'),
+    'variant' => 'primary',
+    'heading_level' => 'h4',
+    'heading_size' => false,
+    'heading_weight' => false,
+    'options' => ['class' => 'mb-6']
+]) ?>
+
+<div x-data="{ finalConfirmation: false }">
+    <?= $this->Form->create($process, ['class' => 'space-y-6 needs-validation', 'url' => ['action' => 'complete', $process->id]]) ?>
+
+        <!-- Checkbox (centered) -->
+        <div class="flex justify-center mb-8">
+            <?= $this->element('atoms/form_checkbox', [
+                'name' => 'finalConfirmation',
+                'id' => 'checkFinishedCompletely',
+                'label' => __('Die Anwendbarkeit der Qualitätsdimensionen wurde vollständig bewertet.'),
+                'description' => __('Bei Unklarheiten kann der Prüfling per Kommentarfunktion auf Sie zukommen.'),
+                'checked' => false,
+                'required' => true,
+                'attributes' => [
+                    'x-model' => 'finalConfirmation'
+                ]
+            ]) ?>
+        </div>
+
+        <!-- Button (right-aligned) -->
+        <div class="flex justify-end items-center">
+            <?= $this->element('atoms/button', [
+                'label' => __('Accept and submit'),
+                'variant' => 'primary',
+                'size' => 'MD',
+                'options' => [
+                    'type' => 'submit',
+                    ':disabled' => '!finalConfirmation'
+                ]
+            ]) ?>
+        </div>
+
+    <?= $this->Form->end() ?>
+</div>

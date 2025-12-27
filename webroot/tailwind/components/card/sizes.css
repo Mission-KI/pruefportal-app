@@ -1,0 +1,27 @@
+@layer components {
+  .card {
+    /* === CARD SIZE VARIANTS === */
+    &-sm {
+      padding: var(--spacing-card-padding-sm);
+      border-radius: var(--radius-card-sm);
+      max-width: var(--card-max-width-sm);
+
+      & > * + * {
+        margin-top: var(--spacing-card-gap-sm);
+      }
+    }
+
+    &-lg {
+      padding: var(--spacing-card-padding-lg);
+      margin: var(--spacing-card-margin-lg);
+      border-radius: var(--radius-card-lg);
+      max-width: var(--card-max-width-lg);
+      min-height: var(--card-min-height-lg);
+      box-shadow: var(--shadow-card-md);
+
+      & > * + * {
+        margin-top: var(--spacing-card-gap-lg);
+      }
+    }
+  }
+}

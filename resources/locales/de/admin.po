@@ -1,0 +1,954 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2025-11-25 13:05+0000\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: ./src/Controller/Admin/CommentsController.php:58
+#: ./src/Controller/Admin/CommentsController.php:82
+#: ./src/Controller/Admin/CriteriaController.php:100
+#: ./src/Controller/Admin/CriteriaController.php:123
+#: ./src/Controller/Admin/IndicatorsController.php:64
+#: ./src/Controller/Admin/IndicatorsController.php:87
+#: ./src/Controller/Admin/NotificationsController.php:53
+#: ./src/Controller/Admin/NotificationsController.php:76
+#: ./src/Controller/Admin/ProcessesController.php:54
+#: ./src/Controller/Admin/ProcessesController.php:78
+#: ./src/Controller/Admin/ProjectsController.php:53
+#: ./src/Controller/Admin/ProjectsController.php:76
+#: ./src/Controller/Admin/TagsController.php:52
+#: ./src/Controller/Admin/TagsController.php:75
+#: ./src/Controller/Admin/UploadsController.php:54
+#: ./src/Controller/Admin/UploadsController.php:79
+#: ./src/Controller/Admin/UsecaseDescriptionsController.php:77
+#: ./src/Controller/Admin/UsersController.php:108
+#: ./src/Controller/Admin/UsersController.php:133
+msgid "The entry has been saved."
+msgstr ""
+
+#: ./src/Controller/Admin/CommentsController.php:62
+#: ./src/Controller/Admin/CommentsController.php:86
+#: ./src/Controller/Admin/CriteriaController.php:104
+#: ./src/Controller/Admin/CriteriaController.php:127
+#: ./src/Controller/Admin/IndicatorsController.php:68
+#: ./src/Controller/Admin/IndicatorsController.php:91
+#: ./src/Controller/Admin/NotificationsController.php:56
+#: ./src/Controller/Admin/NotificationsController.php:80
+#: ./src/Controller/Admin/ProcessesController.php:58
+#: ./src/Controller/Admin/ProcessesController.php:82
+#: ./src/Controller/Admin/ProjectsController.php:57
+#: ./src/Controller/Admin/ProjectsController.php:80
+#: ./src/Controller/Admin/TagsController.php:56
+#: ./src/Controller/Admin/TagsController.php:79
+#: ./src/Controller/Admin/UploadsController.php:58
+#: ./src/Controller/Admin/UploadsController.php:83
+#: ./src/Controller/Admin/UsecaseDescriptionsController.php:81
+#: ./src/Controller/Admin/UsersController.php:111
+#: ./src/Controller/Admin/UsersController.php:136
+msgid "The entry could not be saved. Please, try again."
+msgstr ""
+
+#: ./src/Controller/Admin/CommentsController.php:105
+#: ./src/Controller/Admin/CriteriaController.php:145
+#: ./src/Controller/Admin/IndicatorsController.php:109
+#: ./src/Controller/Admin/NotificationsController.php:99
+#: ./src/Controller/Admin/ProcessesController.php:101
+#: ./src/Controller/Admin/ProjectsController.php:98
+#: ./src/Controller/Admin/TagsController.php:97
+#: ./src/Controller/Admin/UploadsController.php:127
+#: ./src/Controller/Admin/UsecaseDescriptionsController.php:100
+#: ./src/Controller/Admin/UsersController.php:154
+msgid "The entry has been deleted."
+msgstr ""
+
+#: ./src/Controller/Admin/CommentsController.php:107
+#: ./src/Controller/Admin/CriteriaController.php:147
+#: ./src/Controller/Admin/IndicatorsController.php:111
+#: ./src/Controller/Admin/NotificationsController.php:101
+#: ./src/Controller/Admin/ProcessesController.php:103
+#: ./src/Controller/Admin/ProjectsController.php:100
+#: ./src/Controller/Admin/TagsController.php:99
+#: ./src/Controller/Admin/UploadsController.php:129
+#: ./src/Controller/Admin/UsecaseDescriptionsController.php:102
+#: ./src/Controller/Admin/UsersController.php:156
+msgid "The entry could not be deleted. Please, try again."
+msgstr ""
+
+#: ./src/Controller/Admin/UsersController.php:42
+msgid "Please login"
+msgstr ""
+
+#: ./src/Controller/Admin/UsersController.php:61
+msgid "Error: Username or password is incorrect"
+msgstr ""
+
+#: ./templates/Admin/Comments/add.php:12
+#: ./templates/Admin/Comments/edit.php:12
+#: ./templates/Admin/Comments/index.php:21
+#: ./templates/Admin/Comments/view.php:10
+#: ./templates/Admin/Comments/view.php:68
+#: ./templates/Admin/Comments/view.php:94
+#: ./templates/Admin/Criteria/add.php:15
+#: ./templates/Admin/Criteria/calculation.php:51
+#: ./templates/Admin/Criteria/edit.php:15
+#: ./templates/Admin/Criteria/index.php:27
+#: ./templates/Admin/Criteria/view.php:14
+#: ./templates/Admin/Indicators/add.php:12
+#: ./templates/Admin/Indicators/edit.php:12
+#: ./templates/Admin/Indicators/index.php:21
+#: ./templates/Admin/Indicators/view.php:11
+#: ./templates/Admin/Notifications/add.php:12
+#: ./templates/Admin/Notifications/edit.php:12
+#: ./templates/Admin/Notifications/index.php:22
+#: ./templates/Admin/Notifications/view.php:10
+#: ./templates/Admin/Processes/add.php:13
+#: ./templates/Admin/Processes/edit.php:13
+#: ./templates/Admin/Processes/index.php:23
+#: ./templates/Admin/Processes/view.php:13
+#: ./templates/Admin/Processes/view.php:78
+#: ./templates/Admin/Processes/view.php:106
+#: ./templates/Admin/Processes/view.php:133
+#: ./templates/Admin/Processes/view.php:162
+#: ./templates/Admin/Processes/view.php:190
+#: ./templates/Admin/Processes/view.php:218
+#: ./templates/Admin/Projects/add.php:11
+#: ./templates/Admin/Projects/edit.php:11
+#: ./templates/Admin/Projects/index.php:19
+#: ./templates/Admin/Projects/view.php:11
+#: ./templates/Admin/Projects/view.php:60
+#: ./templates/Admin/Tags/add.php:11
+#: ./templates/Admin/Tags/edit.php:11
+#: ./templates/Admin/Tags/index.php:16
+#: ./templates/Admin/Tags/view.php:10
+#: ./templates/Admin/Tags/view.php:40
+#: ./templates/Admin/Uploads/add.php:12
+#: ./templates/Admin/Uploads/edit.php:12
+#: ./templates/Admin/Uploads/index.php:22
+#: ./templates/Admin/Uploads/view.php:10
+#: ./templates/Admin/UsecaseDescriptions/add.php:12
+#: ./templates/Admin/UsecaseDescriptions/edit.php:12
+#: ./templates/Admin/UsecaseDescriptions/index.php:21
+#: ./templates/Admin/UsecaseDescriptions/view.php:10
+#: ./templates/Admin/Users/add.php:11
+#: ./templates/Admin/Users/edit.php:11
+#: ./templates/Admin/Users/index.php:23
+#: ./templates/Admin/Users/view.php:11
+#: ./templates/Admin/Users/view.php:81
+#: ./templates/Admin/Users/view.php:107
+#: ./templates/Admin/Users/view.php:131
+#: ./templates/Admin/Users/view.php:157
+msgid "Actions"
+msgstr ""
+
+#: ./templates/Admin/Comments/add.php:13
+#: ./templates/Admin/Comments/edit.php:13
+#: ./templates/Admin/Comments/view.php:13
+#: ./templates/Admin/Users/display.php:14
+#: ./templates/layout/admin.php:34
+msgid "List Comments"
+msgstr ""
+
+#: ./templates/Admin/Comments/add.php:20
+#: ./templates/Admin/Comments/index.php:8
+#: ./templates/Admin/Comments/view.php:14
+msgid "Add Comment"
+msgstr ""
+
+#: ./templates/Admin/Comments/add.php:29
+#: ./templates/Admin/Comments/edit.php:29
+#: ./templates/Admin/Criteria/add.php:34
+#: ./templates/Admin/Criteria/edit.php:34
+#: ./templates/Admin/Indicators/add.php:30
+#: ./templates/Admin/Indicators/edit.php:30
+#: ./templates/Admin/Notifications/add.php:30
+#: ./templates/Admin/Notifications/edit.php:30
+#: ./templates/Admin/Processes/add.php:31
+#: ./templates/Admin/Processes/edit.php:31
+#: ./templates/Admin/Projects/add.php:26
+#: ./templates/Admin/Projects/edit.php:26
+#: ./templates/Admin/Tags/add.php:25
+#: ./templates/Admin/Tags/edit.php:25
+#: ./templates/Admin/Uploads/add.php:27
+#: ./templates/Admin/Uploads/edit.php:34
+#: ./templates/Admin/UsecaseDescriptions/add.php:29
+#: ./templates/Admin/UsecaseDescriptions/edit.php:29
+#: ./templates/Admin/Users/add.php:26
+#: ./templates/Admin/Users/edit.php:26
+msgid "Submit"
+msgstr ""
+
+#: ./templates/Admin/Comments/edit.php:20
+#: ./templates/Admin/Comments/view.php:11
+msgid "Edit Comment"
+msgstr ""
+
+#: ./templates/Admin/Comments/index.php:9
+msgid "Comments"
+msgstr ""
+
+#: ./templates/Admin/Comments/index.php:35
+#: ./templates/Admin/Comments/view.php:75
+#: ./templates/Admin/Comments/view.php:103
+#: ./templates/Admin/Criteria/index.php:41
+#: ./templates/Admin/Indicators/index.php:34
+#: ./templates/Admin/Notifications/index.php:37
+#: ./templates/Admin/Processes/index.php:38
+#: ./templates/Admin/Processes/view.php:88
+#: ./templates/Admin/Processes/view.php:113
+#: ./templates/Admin/Processes/view.php:142
+#: ./templates/Admin/Processes/view.php:171
+#: ./templates/Admin/Processes/view.php:198
+#: ./templates/Admin/Processes/view.php:227
+#: ./templates/Admin/Projects/index.php:31
+#: ./templates/Admin/Projects/view.php:70
+#: ./templates/Admin/Tags/index.php:25
+#: ./templates/Admin/Tags/view.php:49
+#: ./templates/Admin/Uploads/index.php:37
+#: ./templates/Admin/UsecaseDescriptions/index.php:35
+#: ./templates/Admin/Users/index.php:39
+#: ./templates/Admin/Users/view.php:90
+#: ./templates/Admin/Users/view.php:114
+#: ./templates/Admin/Users/view.php:138
+#: ./templates/Admin/Users/view.php:166
+msgid "View"
+msgstr ""
+
+#: ./templates/Admin/Comments/index.php:36
+#: ./templates/Admin/Comments/view.php:76
+#: ./templates/Admin/Comments/view.php:104
+#: ./templates/Admin/Criteria/index.php:42
+#: ./templates/Admin/Indicators/index.php:35
+#: ./templates/Admin/Notifications/index.php:38
+#: ./templates/Admin/Processes/index.php:39
+#: ./templates/Admin/Processes/view.php:89
+#: ./templates/Admin/Processes/view.php:114
+#: ./templates/Admin/Processes/view.php:143
+#: ./templates/Admin/Processes/view.php:172
+#: ./templates/Admin/Processes/view.php:199
+#: ./templates/Admin/Processes/view.php:228
+#: ./templates/Admin/Projects/index.php:32
+#: ./templates/Admin/Projects/view.php:71
+#: ./templates/Admin/Tags/index.php:26
+#: ./templates/Admin/Tags/view.php:50
+#: ./templates/Admin/Uploads/index.php:38
+#: ./templates/Admin/UsecaseDescriptions/index.php:36
+#: ./templates/Admin/Users/index.php:40
+#: ./templates/Admin/Users/view.php:91
+#: ./templates/Admin/Users/view.php:115
+#: ./templates/Admin/Users/view.php:139
+#: ./templates/Admin/Users/view.php:167
+msgid "Edit"
+msgstr ""
+
+#: ./templates/Admin/Comments/index.php:38
+#: ./templates/Admin/Criteria/index.php:44
+#: ./templates/Admin/Indicators/index.php:37
+#: ./templates/Admin/Notifications/index.php:40
+#: ./templates/Admin/Processes/index.php:41
+#: ./templates/Admin/Projects/index.php:34
+#: ./templates/Admin/Tags/index.php:28
+#: ./templates/Admin/Uploads/index.php:40
+#: ./templates/Admin/UsecaseDescriptions/index.php:38
+#: ./templates/Admin/Users/index.php:42
+msgid "Delete"
+msgstr ""
+
+#: ./templates/Admin/Comments/index.php:42
+#: ./templates/Admin/Comments/view.php:12
+#: ./templates/Admin/Criteria/index.php:48
+#: ./templates/Admin/Criteria/view.php:16
+#: ./templates/Admin/Indicators/index.php:41
+#: ./templates/Admin/Indicators/view.php:13
+#: ./templates/Admin/Notifications/index.php:44
+#: ./templates/Admin/Notifications/view.php:12
+#: ./templates/Admin/Processes/index.php:45
+#: ./templates/Admin/Processes/view.php:15
+#: ./templates/Admin/Projects/index.php:38
+#: ./templates/Admin/Projects/view.php:13
+#: ./templates/Admin/Tags/index.php:32
+#: ./templates/Admin/Tags/view.php:12
+#: ./templates/Admin/Uploads/index.php:44
+#: ./templates/Admin/Uploads/view.php:13
+#: ./templates/Admin/UsecaseDescriptions/index.php:42
+#: ./templates/Admin/Users/index.php:46
+#: ./templates/Admin/Users/view.php:13
+msgid "Are you sure you want to delete {0}?"
+msgstr ""
+
+#: ./templates/Admin/Comments/view.php:12
+msgid "Delete Comment"
+msgstr ""
+
+#: ./templates/Admin/Comments/view.php:19
+#: ./templates/Admin/Comments/view.php:35
+#: ./templates/Admin/Comments/view.php:72
+#: ./templates/Admin/Processes/view.php:110
+#: ./templates/Admin/Processes/view.php:111
+#: ./templates/Admin/Uploads/index.php:32
+#: ./templates/Admin/Uploads/view.php:55
+#: ./templates/Admin/Uploads/view.php:56
+#: ./templates/Admin/Users/view.php:111
+#: ./templates/Admin/Users/view.php:112
+msgid "Comment"
+msgstr ""
+
+#: ./templates/Admin/Comments/view.php:22
+#: ./templates/Admin/Comments/view.php:66
+#: ./templates/Admin/Comments/view.php:90
+#: ./templates/Admin/Criteria/view.php:26
+#: ./templates/Admin/Indicators/view.php:23
+#: ./templates/Admin/Notifications/view.php:22
+#: ./templates/Admin/Processes/view.php:25
+#: ./templates/Admin/Processes/view.php:73
+#: ./templates/Admin/Processes/view.php:104
+#: ./templates/Admin/Processes/view.php:129
+#: ./templates/Admin/Processes/view.php:158
+#: ./templates/Admin/Processes/view.php:187
+#: ./templates/Admin/Processes/view.php:214
+#: ./templates/Admin/Projects/view.php:23
+#: ./templates/Admin/Projects/view.php:55
+#: ./templates/Admin/Tags/view.php:22
+#: ./templates/Admin/Tags/view.php:36
+#: ./templates/Admin/Uploads/view.php:23
+#: ./templates/Admin/UsecaseDescriptions/view.php:20
+#: ./templates/Admin/Users/view.php:23
+#: ./templates/Admin/Users/view.php:77
+#: ./templates/Admin/Users/view.php:105
+#: ./templates/Admin/Users/view.php:129
+#: ./templates/Admin/Users/view.php:153
+msgid "Id"
+msgstr ""
+
+#: ./templates/Admin/Comments/view.php:26
+#: ./templates/Admin/Notifications/view.php:30
+#: ./templates/Admin/Processes/view.php:160
+#: ./templates/Admin/Users/view.php:155
+msgid "Seen"
+msgstr ""
+
+#: ./templates/Admin/Comments/view.php:30
+msgid "Reference"
+msgstr ""
+
+#: ./templates/Admin/Comments/view.php:31
+msgid "General"
+msgstr ""
+
+#: ./templates/Admin/Comments/view.php:34
+#: ./templates/Admin/Processes/view.php:105
+#: ./templates/Admin/Users/view.php:106
+msgid "Parent Comment"
+msgstr ""
+
+#: ./templates/Admin/Comments/view.php:38
+#: ./templates/Admin/Comments/view.php:67
+#: ./templates/Admin/Notifications/view.php:38
+#: ./templates/Admin/Projects/view.php:31
+#: ./templates/Admin/UsecaseDescriptions/view.php:28
+msgid "User"
+msgstr ""
+
+#: ./templates/Admin/Comments/view.php:42
+#: ./templates/Admin/Criteria/calculation.php:39
+#: ./templates/Admin/Criteria/view.php:34
+#: ./templates/Admin/Indicators/view.php:31
+#: ./templates/Admin/Notifications/view.php:42
+#: ./templates/Admin/Uploads/view.php:47
+#: ./templates/Admin/UsecaseDescriptions/view.php:24
+msgid "Process"
+msgstr ""
+
+#: ./templates/Admin/Comments/view.php:46
+#: ./templates/Admin/Comments/view.php:92
+#: ./templates/Admin/Criteria/view.php:58
+#: ./templates/Admin/Indicators/view.php:47
+#: ./templates/Admin/Notifications/view.php:46
+#: ./templates/Admin/Processes/view.php:49
+#: ./templates/Admin/Processes/view.php:216
+#: ./templates/Admin/Projects/view.php:35
+#: ./templates/Admin/Uploads/view.php:59
+#: ./templates/Admin/UsecaseDescriptions/view.php:40
+#: ./templates/Admin/Users/view.php:63
+#: ./templates/Admin/Users/view.php:79
+msgid "Created"
+msgstr ""
+
+#: ./templates/Admin/Comments/view.php:50
+#: ./templates/Admin/Comments/view.php:93
+#: ./templates/Admin/Criteria/view.php:62
+#: ./templates/Admin/Indicators/view.php:51
+#: ./templates/Admin/Notifications/view.php:50
+#: ./templates/Admin/Processes/view.php:53
+#: ./templates/Admin/Processes/view.php:217
+#: ./templates/Admin/Projects/view.php:39
+#: ./templates/Admin/Uploads/view.php:63
+#: ./templates/Admin/UsecaseDescriptions/view.php:44
+#: ./templates/Admin/Users/view.php:67
+#: ./templates/Admin/Users/view.php:80
+msgid "Modified"
+msgstr ""
+
+#: ./templates/Admin/Comments/view.php:55
+msgid "Content"
+msgstr ""
+
+#: ./templates/Admin/Comments/view.php:62
+msgid "Related Child Comments"
+msgstr ""
+
+#: ./templates/Admin/Comments/view.php:85
+#: ./templates/Admin/Processes/view.php:209
+msgid "Related Uploads"
+msgstr ""
+
+#: ./templates/Admin/Comments/view.php:91
+#: ./templates/Admin/Processes/view.php:215
+#: ./templates/Admin/Uploads/view.php:31
+msgid "Name"
+msgstr ""
+
+#: ./templates/Admin/Criteria/add.php:16
+#: ./templates/Admin/Criteria/calculation.php:52
+#: ./templates/Admin/Criteria/edit.php:16
+#: ./templates/Admin/Criteria/view.php:17
+#: ./templates/Admin/Users/display.php:13
+#: ./templates/layout/admin.php:35
+msgid "List Criteria"
+msgstr ""
+
+#: ./templates/Admin/Criteria/add.php:23
+#: ./templates/Admin/Criteria/index.php:12
+#: ./templates/Admin/Criteria/view.php:18
+msgid "Add Criterion"
+msgstr ""
+
+#: ./templates/Admin/Criteria/calculation.php:47
+msgid "Filter"
+msgstr ""
+
+#: ./templates/Admin/Criteria/calculation.php:57
+#: ./templates/Admin/Criteria/index.php:13
+#: ./templates/Admin/Processes/view.php:68
+msgid "Criteria Calculation"
+msgstr ""
+
+#: ./templates/Admin/Criteria/calculation.php:59
+#: ./templates/Admin/Processes/view.php:37
+#: ./templates/Admin/Projects/view.php:57
+#: ./templates/cell/Projects/admin_tree.php:28
+msgid "Status"
+msgstr ""
+
+#: ./templates/Admin/Criteria/calculation.php:107
+msgid " Question Relevance"
+msgstr ""
+
+#: ./templates/Admin/Criteria/calculation.php:120
+msgid "Criteria Types"
+msgstr ""
+
+#: ./templates/Admin/Criteria/edit.php:23
+#: ./templates/Admin/Criteria/view.php:15
+msgid "Edit Criterion"
+msgstr ""
+
+#: ./templates/Admin/Criteria/index.php:15
+msgid "Criteria"
+msgstr ""
+
+#: ./templates/Admin/Criteria/index.php:22
+#: ./templates/Admin/Criteria/view.php:38
+#: ./templates/Admin/Indicators/view.php:35
+#: ./templates/Admin/Processes/view.php:77
+msgid "Quality Dimension"
+msgstr ""
+
+#: ./templates/Admin/Criteria/index.php:23
+#: ./templates/Admin/Criteria/view.php:50
+#: ./templates/Admin/Processes/view.php:74
+msgid "Question Type"
+msgstr ""
+
+#: ./templates/Admin/Criteria/view.php:16
+msgid "Delete Criterion"
+msgstr ""
+
+#: ./templates/Admin/Criteria/view.php:30
+#: ./templates/Admin/Indicators/view.php:27
+#: ./templates/Admin/Notifications/view.php:26
+#: ./templates/Admin/Processes/view.php:29
+#: ./templates/Admin/Processes/view.php:75
+#: ./templates/Admin/Processes/view.php:130
+#: ./templates/Admin/Processes/view.php:159
+#: ./templates/Admin/Projects/view.php:27
+#: ./templates/Admin/Projects/view.php:56
+#: ./templates/Admin/Tags/view.php:26
+#: ./templates/Admin/Users/view.php:78
+#: ./templates/Admin/Users/view.php:130
+#: ./templates/Admin/Users/view.php:154
+msgid "Title"
+msgstr ""
+
+#: ./templates/Admin/Criteria/view.php:42
+#: ./templates/Admin/Processes/view.php:76
+msgid "Value"
+msgstr ""
+
+#: ./templates/Admin/Criteria/view.php:46
+msgid "Criterion Type"
+msgstr ""
+
+#: ./templates/Admin/Criteria/view.php:54
+msgid "Protection Target Category"
+msgstr ""
+
+#: ./templates/Admin/Indicators/add.php:13
+#: ./templates/Admin/Indicators/edit.php:13
+#: ./templates/Admin/Indicators/view.php:14
+#: ./templates/Admin/Users/display.php:15
+#: ./templates/layout/admin.php:36
+msgid "List Indicators"
+msgstr ""
+
+#: ./templates/Admin/Indicators/add.php:20
+#: ./templates/Admin/Indicators/index.php:9
+#: ./templates/Admin/Indicators/view.php:15
+msgid "Add Indicator"
+msgstr ""
+
+#: ./templates/Admin/Indicators/edit.php:20
+#: ./templates/Admin/Indicators/view.php:12
+msgid "Edit Indicator"
+msgstr ""
+
+#: ./templates/Admin/Indicators/index.php:10
+msgid "Indicators"
+msgstr ""
+
+#: ./templates/Admin/Indicators/view.php:13
+msgid "Delete Indicator"
+msgstr ""
+
+#: ./templates/Admin/Indicators/view.php:39
+#: ./templates/Admin/Processes/view.php:131
+msgid "Level Candidate"
+msgstr ""
+
+#: ./templates/Admin/Indicators/view.php:43
+#: ./templates/Admin/Processes/view.php:132
+msgid "Level Examiner"
+msgstr ""
+
+#: ./templates/Admin/Indicators/view.php:56
+msgid "Evidence"
+msgstr ""
+
+#: ./templates/Admin/Notifications/add.php:13
+#: ./templates/Admin/Notifications/edit.php:13
+#: ./templates/Admin/Notifications/view.php:13
+#: ./templates/Admin/Users/display.php:16
+#: ./templates/layout/admin.php:37
+msgid "List Notifications"
+msgstr ""
+
+#: ./templates/Admin/Notifications/add.php:20
+#: ./templates/Admin/Notifications/index.php:8
+#: ./templates/Admin/Notifications/view.php:14
+msgid "Add Notification"
+msgstr ""
+
+#: ./templates/Admin/Notifications/edit.php:20
+#: ./templates/Admin/Notifications/view.php:11
+msgid "Edit Notification"
+msgstr ""
+
+#: ./templates/Admin/Notifications/index.php:9
+msgid "Notifications"
+msgstr ""
+
+#: ./templates/Admin/Notifications/view.php:12
+msgid "Delete Notification"
+msgstr ""
+
+#: ./templates/Admin/Notifications/view.php:34
+#: ./templates/Admin/Processes/view.php:161
+#: ./templates/Admin/Users/view.php:156
+msgid "Mailed"
+msgstr ""
+
+#: ./templates/Admin/Notifications/view.php:55
+#: ./templates/Admin/Processes/view.php:58
+#: ./templates/Admin/Projects/view.php:44
+#: ./templates/Admin/UsecaseDescriptions/view.php:49
+msgid "Description"
+msgstr ""
+
+#: ./templates/Admin/Processes/add.php:14
+#: ./templates/Admin/Processes/edit.php:14
+#: ./templates/Admin/Processes/view.php:16
+#: ./templates/Admin/Users/display.php:17
+#: ./templates/layout/admin.php:38
+msgid "List Processes"
+msgstr ""
+
+#: ./templates/Admin/Processes/add.php:21
+#: ./templates/Admin/Processes/index.php:9
+#: ./templates/Admin/Processes/view.php:17
+msgid "Add Process"
+msgstr ""
+
+#: ./templates/Admin/Processes/edit.php:21
+#: ./templates/Admin/Processes/view.php:14
+msgid "Edit Process"
+msgstr ""
+
+#: ./templates/Admin/Processes/index.php:10
+msgid "Processes"
+msgstr ""
+
+#: ./templates/Admin/Processes/view.php:15
+msgid "Delete Process"
+msgstr ""
+
+#: ./templates/Admin/Processes/view.php:33
+msgid "Project"
+msgstr ""
+
+#: ./templates/Admin/Processes/view.php:41
+#: ./templates/Admin/Projects/view.php:58
+#: ./templates/cell/Projects/admin_tree.php:31
+msgid "Candidate User"
+msgstr ""
+
+#: ./templates/Admin/Processes/view.php:45
+#: ./templates/Admin/Projects/view.php:59
+#: ./templates/cell/Projects/admin_tree.php:32
+msgid "Examiner User"
+msgstr ""
+
+#: ./templates/Admin/Processes/view.php:65
+msgid "Related Criteria"
+msgstr ""
+
+#: ./templates/Admin/Processes/view.php:99
+#: ./templates/Admin/Users/view.php:100
+msgid "Related Comments"
+msgstr ""
+
+#: ./templates/Admin/Processes/view.php:124
+msgid "Related Indicators"
+msgstr ""
+
+#: ./templates/Admin/Processes/view.php:153
+#: ./templates/Admin/Users/view.php:148
+msgid "Related Notifications"
+msgstr ""
+
+#: ./templates/Admin/Processes/view.php:182
+msgid "Related Usecase Descriptions"
+msgstr ""
+
+#: ./templates/Admin/Processes/view.php:188
+#: ./templates/Admin/UsecaseDescriptions/view.php:32
+msgid "Step"
+msgstr ""
+
+#: ./templates/Admin/Processes/view.php:189
+#: ./templates/Admin/UsecaseDescriptions/view.php:36
+msgid "Version"
+msgstr ""
+
+#: ./templates/Admin/Projects/add.php:12
+#: ./templates/Admin/Projects/edit.php:12
+#: ./templates/Admin/Projects/view.php:14
+#: ./templates/Admin/Users/display.php:18
+#: ./templates/layout/admin.php:39
+msgid "List Projects"
+msgstr ""
+
+#: ./templates/Admin/Projects/add.php:19
+#: ./templates/Admin/Projects/index.php:8
+#: ./templates/Admin/Projects/view.php:15
+msgid "Add Project"
+msgstr ""
+
+#: ./templates/Admin/Projects/edit.php:19
+#: ./templates/Admin/Projects/view.php:12
+msgid "Edit Project"
+msgstr ""
+
+#: ./templates/Admin/Projects/index.php:9
+msgid "Projects"
+msgstr ""
+
+#: ./templates/Admin/Projects/view.php:13
+msgid "Delete Project"
+msgstr ""
+
+#: ./templates/Admin/Projects/view.php:50
+msgid "Related Processes"
+msgstr ""
+
+#: ./templates/Admin/Tags/add.php:12
+#: ./templates/Admin/Tags/edit.php:12
+#: ./templates/Admin/Tags/view.php:13
+#: ./templates/Admin/Users/display.php:19
+#: ./templates/layout/admin.php:40
+msgid "List Tags"
+msgstr ""
+
+#: ./templates/Admin/Tags/add.php:19
+#: ./templates/Admin/Tags/index.php:8
+#: ./templates/Admin/Tags/view.php:14
+msgid "Add Tag"
+msgstr ""
+
+#: ./templates/Admin/Tags/edit.php:19
+#: ./templates/Admin/Tags/view.php:11
+msgid "Edit Tag"
+msgstr ""
+
+#: ./templates/Admin/Tags/index.php:9
+msgid "Tags"
+msgstr ""
+
+#: ./templates/Admin/Tags/view.php:12
+msgid "Delete Tag"
+msgstr ""
+
+#: ./templates/Admin/Tags/view.php:31
+msgid "Related Users"
+msgstr ""
+
+#: ./templates/Admin/Tags/view.php:37
+#: ./templates/Admin/Users/login.php:14
+#: ./templates/Admin/Users/view.php:31
+msgid "Username"
+msgstr ""
+
+#: ./templates/Admin/Tags/view.php:38
+#: ./templates/Admin/Users/view.php:35
+msgid "Role"
+msgstr ""
+
+#: ./templates/Admin/Tags/view.php:39
+#: ./templates/Admin/Users/view.php:47
+msgid "Full Name"
+msgstr ""
+
+#: ./templates/Admin/Uploads/add.php:13
+#: ./templates/Admin/Uploads/edit.php:13
+#: ./templates/Admin/Uploads/view.php:14
+#: ./templates/Admin/Users/display.php:20
+#: ./templates/layout/admin.php:41
+msgid "List Uploads"
+msgstr ""
+
+#: ./templates/Admin/Uploads/add.php:20
+#: ./templates/Admin/Uploads/index.php:8
+#: ./templates/Admin/Uploads/view.php:15
+msgid "Add Upload"
+msgstr ""
+
+#: ./templates/Admin/Uploads/edit.php:20
+#: ./templates/Admin/Uploads/view.php:12
+msgid "Edit Upload"
+msgstr ""
+
+#: ./templates/Admin/Uploads/index.php:9
+msgid "Uploads"
+msgstr ""
+
+#: ./templates/Admin/Uploads/index.php:55
+#: ./templates/Admin/UsecaseDescriptions/index.php:53
+#: ./templates/element/admin_pagination.php:3
+msgid "first"
+msgstr ""
+
+#: ./templates/Admin/Uploads/index.php:56
+#: ./templates/Admin/UsecaseDescriptions/index.php:54
+#: ./templates/element/admin_pagination.php:4
+msgid "previous"
+msgstr ""
+
+#: ./templates/Admin/Uploads/index.php:58
+#: ./templates/Admin/UsecaseDescriptions/index.php:56
+#: ./templates/element/admin_pagination.php:6
+msgid "next"
+msgstr ""
+
+#: ./templates/Admin/Uploads/index.php:59
+#: ./templates/Admin/UsecaseDescriptions/index.php:57
+#: ./templates/element/admin_pagination.php:7
+msgid "last"
+msgstr ""
+
+#: ./templates/Admin/Uploads/index.php:61
+#: ./templates/Admin/UsecaseDescriptions/index.php:59
+#: ./templates/element/admin_pagination.php:9
+msgid "Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total"
+msgstr ""
+
+#: ./templates/Admin/Uploads/view.php:11
+msgid "Download Upload"
+msgstr ""
+
+#: ./templates/Admin/Uploads/view.php:13
+msgid "Delete Upload"
+msgstr ""
+
+#: ./templates/Admin/Uploads/view.php:27
+#: ./templates/Admin/Users/view.php:39
+msgid "Key"
+msgstr ""
+
+#: ./templates/Admin/Uploads/view.php:35
+msgid "Location"
+msgstr ""
+
+#: ./templates/Admin/Uploads/view.php:39
+msgid "Etag"
+msgstr ""
+
+#: ./templates/Admin/Uploads/view.php:43
+msgid "Size"
+msgstr ""
+
+#: ./templates/Admin/Uploads/view.php:51
+msgid "Indicator"
+msgstr ""
+
+#: ./templates/Admin/UsecaseDescriptions/add.php:13
+#: ./templates/Admin/UsecaseDescriptions/edit.php:13
+#: ./templates/Admin/UsecaseDescriptions/view.php:12
+#: ./templates/Admin/Users/display.php:21
+#: ./templates/layout/admin.php:42
+msgid "List Usecase Descriptions"
+msgstr ""
+
+#: ./templates/Admin/UsecaseDescriptions/add.php:20
+#: ./templates/Admin/UsecaseDescriptions/index.php:8
+msgid "Add Usecase Description"
+msgstr ""
+
+#: ./templates/Admin/UsecaseDescriptions/edit.php:20
+#: ./templates/Admin/UsecaseDescriptions/view.php:11
+msgid "Edit Usecase Description"
+msgstr ""
+
+#: ./templates/Admin/UsecaseDescriptions/index.php:9
+msgid "Usecase Descriptions"
+msgstr ""
+
+#: ./templates/Admin/UsecaseDescriptions/view.php:17
+msgid "Usecase Description"
+msgstr ""
+
+#: ./templates/Admin/Users/add.php:12
+#: ./templates/Admin/Users/display.php:22
+#: ./templates/Admin/Users/edit.php:12
+#: ./templates/Admin/Users/view.php:14
+#: ./templates/layout/admin.php:43
+msgid "List Users"
+msgstr ""
+
+#: ./templates/Admin/Users/add.php:19
+#: ./templates/Admin/Users/index.php:8
+#: ./templates/Admin/Users/view.php:15
+msgid "Add User"
+msgstr ""
+
+#: ./templates/Admin/Users/display.php:6
+#: ./templates/Admin/Users/display.php:27
+msgid "Welcome to the Administration"
+msgstr ""
+
+#: ./templates/Admin/Users/display.php:12
+msgid "Modules"
+msgstr ""
+
+#: ./templates/Admin/Users/display.php:28
+msgid "You are logged in as"
+msgstr ""
+
+#: ./templates/Admin/Users/edit.php:19
+#: ./templates/Admin/Users/view.php:12
+msgid "Edit User"
+msgstr ""
+
+#: ./templates/Admin/Users/index.php:9
+msgid "Users"
+msgstr ""
+
+#: ./templates/Admin/Users/login.php:1
+#: ./templates/Admin/Users/login.php:11
+#: ./templates/Admin/Users/login.php:26
+msgid "Log in"
+msgstr ""
+
+#: ./templates/Admin/Users/login.php:19
+msgid "Password"
+msgstr ""
+
+#: ./templates/Admin/Users/view.php:13
+msgid "Delete User"
+msgstr ""
+
+#: ./templates/Admin/Users/view.php:27
+msgid "Enabled"
+msgstr ""
+
+#: ./templates/Admin/Users/view.php:43
+msgid "Salutation"
+msgstr ""
+
+#: ./templates/Admin/Users/view.php:51
+msgid "Company"
+msgstr ""
+
+#: ./templates/Admin/Users/view.php:55
+msgid "Process Updates"
+msgstr ""
+
+#: ./templates/Admin/Users/view.php:59
+msgid "Comment Notifications"
+msgstr ""
+
+#: ./templates/Admin/Users/view.php:72
+msgid "Related Projects"
+msgstr ""
+
+#: ./templates/Admin/Users/view.php:124
+msgid "Related Tags"
+msgstr ""
+
+#: ./templates/cell/Projects/admin_tree.php:9
+msgid "Last Modified Project"
+msgstr ""
+
+#: ./templates/element/admin_boolean.php:2
+msgid "Checked"
+msgstr ""
+
+#: ./templates/element/admin_boolean.php:4
+msgid "Unchecked"
+msgstr ""
+
+#: ./templates/layout/admin.php:12
+msgid "Mission KI Administration"
+msgstr ""
+
+#: ./templates/layout/admin.php:44
+msgid "Log out"
+msgstr ""
+

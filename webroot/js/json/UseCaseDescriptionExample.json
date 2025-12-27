@@ -1,0 +1,30 @@
+[
+    {
+        "UCD_1-1": "KI-gestützte Dokumentenklassifizierung",
+        "UCD_1-2": "Das System analysiert eingehende Dokumente automatisch und klassifiziert sie nach vordefinierten Kategorien. Es nutzt maschinelles Lernen, um die Genauigkeit der Klassifizierung kontinuierlich zu verbessern und kann verschiedene Dokumenttypen wie PDFs, Textdateien und gescannte Dokumente verarbeiten.",
+        "UCD_1-3": "1",
+        "UCD_1-4": "2"
+    },
+    {
+        "UCD_2-1": "Automatisierte Dokumentenverarbeitung v2.0",
+        "UCD_2-2": "Relevante KPIs umfassen:\n- Klassifizierungsgenauigkeit (>95%)\n- Verarbeitungszeit pro Dokument (<2 Sekunden)\n- Fehlerrate (<5%)\n- Anzahl verarbeiteter Dokumente pro Tag\n- Nutzerakzeptanz und Zufriedenheit"
+    },
+    {
+        "UCD_3-1": "Eingangsdokumente werden über eine Web-Schnittstelle hochgeladen, vom System analysiert und automatisch den entsprechenden Abteilungen zugeordnet."
+    },
+    {
+        "UCD_4-1": "Das System nutzt einen vortrainierten Sprachmodell-Klassifikator, der auf spezifische Unternehmenskategorien finegetuned wurde."
+    },
+    {
+        "UCD_5-1": "Cloud-basierte Infrastruktur mit TensorFlow 2.14 und Python 3.11. GPU-Beschleunigung für Inferenz. PostgreSQL-Datenbank für Metadaten."
+    },
+    {
+        "UCD_6-1": "Die Trainingsdaten stammen aus historischen Dokumentenarchiven (ca. 500.000 klassifizierte Dokumente) und werden regelmäßig aktualisiert."
+    },
+    {
+        "UCD_7-1": "Nutzer können falsche Klassifizierungen korrigieren, was als Feedback in das System einfließt und zur kontinuierlichen Verbesserung beiträgt."
+    },
+    {
+        "UCD_8-1": "Das System wird in einer containerisierten Umgebung betrieben und unterliegt regelmäßigen Security-Audits. DSGVO-Konformität ist durch Datenschutz-Folgeabschätzung sichergestellt."
+    }
+]

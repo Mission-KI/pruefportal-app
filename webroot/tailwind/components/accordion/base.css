@@ -1,0 +1,156 @@
+/*
+ * Accordion Base Styles
+ * Core functionality for collapsible accordion components
+ */
+
+/* Accordion Container */
+.mki-accordion {
+  @apply space-y-2;
+}
+
+.mki-accordion.mki-accordion--compact {
+  @apply space-y-1;
+}
+
+.mki-accordion.mki-accordion--bordered {
+  @apply space-y-0 border border-gray-200 rounded-lg overflow-hidden;
+}
+
+/* Accordion Item */
+.mki-accordion-item {
+  @apply border border-gray-200 rounded-lg overflow-hidden;
+}
+
+.mki-accordion--bordered .mki-accordion-item {
+  @apply border-0 rounded-none;
+}
+
+.mki-accordion--bordered .mki-accordion-item:not(:first-child) {
+  @apply border-t border-gray-200;
+}
+
+/* Accordion Header/Button */
+.mki-accordion-header {
+  @apply w-full px-4 py-3 text-left bg-gray-50
+         focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors duration-200
+         flex items-center justify-between font-medium text-gray-900;
+
+  @media (hover: hover) {
+    @apply hover:bg-gray-100;
+  }
+
+  &:active {
+    @apply bg-gray-200;
+  }
+
+  &:focus-visible {
+    @apply bg-gray-100;
+  }
+}
+
+/* Accordion Content */
+.mki-accordion-content {
+  @apply overflow-hidden transition-all duration-300 ease-in-out;
+}
+
+.mki-accordion-content-inner {
+  @apply px-4 py-3 text-gray-700 bg-white;
+}
+
+/* Chevron Icon Animation */
+.mki-accordion-chevron {
+  @apply text-gray-500 transition-transform duration-200 transform;
+}
+
+.mki-accordion-chevron.mki-accordion-chevron--open {
+  @apply rotate-180;
+}
+
+/* UI Demo Section Navigation Styles */
+.scroll-mt-20 {
+  scroll-margin-top: 5rem;
+}
+
+/* Sidebar Navigation Links */
+.main-section-link {
+  @apply font-semibold text-gray-700 transition-colors;
+
+  @media (hover: hover) {
+    @apply hover:text-blue-600;
+  }
+
+  &:active {
+    @apply text-blue-700;
+  }
+}
+
+.main-section-link.active {
+  @apply bg-blue-100 text-blue-700 font-bold;
+}
+
+.sub-section-link {
+  @apply text-sm text-gray-500 transition-colors;
+
+  @media (hover: hover) {
+    @apply hover:text-blue-500;
+  }
+
+  &:active {
+    @apply text-blue-600;
+  }
+}
+
+.sub-section-link.active {
+  @apply bg-blue-50 text-blue-600 font-medium;
+}
+
+/* Section Styling */
+section {
+  scroll-behavior: smooth;
+}
+
+/* Enhanced Visual Hierarchy */
+.ui-demo-section-header {
+  @apply mb-8 pb-6 border-b border-gray-200;
+}
+
+.ui-demo-section-title {
+  @apply text-3xl font-bold text-gray-900 mb-3;
+}
+
+.ui-demo-section-description {
+  @apply text-lg text-gray-600 leading-relaxed;
+}
+
+.ui-demo-category-badge {
+  @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800;
+}
+
+.ui-demo-status-documented {
+  @apply text-green-500;
+}
+
+.ui-demo-status-pending {
+  @apply text-orange-500;
+}
+
+/* Example Card Styling */
+.ui-demo-example-card {
+  @apply border border-gray-200 rounded-lg overflow-hidden;
+}
+
+.ui-demo-example-header {
+  @apply bg-gray-50 px-6 py-4 border-b border-gray-200;
+}
+
+.ui-demo-example-title {
+  @apply text-xl font-semibold text-gray-800;
+}
+
+.ui-demo-example-content {
+  @apply p-6 bg-white;
+}
+
+.ui-demo-example-result {
+  @apply flex flex-wrap gap-4 items-center;
+}

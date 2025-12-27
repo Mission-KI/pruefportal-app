@@ -1,0 +1,63 @@
+/* MISSION KI Design System - Main Entry Point */
+/* This file orchestrates the entire TailwindCSS v4 design system */
+/* Edit design tokens in theme.css, components in components.css */
+
+/* Configure content sources for TailwindCSS v4 */
+@source "../templates/**/*.php";
+@source "../src/**/*.php";
+
+/* Import TailwindCSS utilities (must come after theme) */
+@import "tailwindcss";
+
+
+/* Import design tokens first */
+/* @import "figma_export.css"; */
+@import "./theme.css";
+
+/* Import typography classes */
+@import "./typography.css";
+
+/* Import color utilities */
+@import "./colors.css";
+
+/* Import component definitions */
+@import "./components/index.css";
+
+
+
+
+
+/* Mobile-Native Optimizations */
+
+/* iOS Safe Area Insets - Prevents content from being clipped by notch/home indicator */
+@supports (padding: env(safe-area-inset-top)) {
+  body {
+    padding-top: env(safe-area-inset-top);
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+/* Bootstrap Compatibility Layer */
+@layer utilities {
+  /* Prevent TailwindCSS collapse utility from breaking Bootstrap navigation */
+  .sidebar.collapse,
+  .navbar-collapse,
+  .collapse.show,
+  .collapsing {
+    visibility: visible !important;
+  }
+
+  /* Ensure Bootstrap's collapse behavior works properly */
+  .collapse:not(.show) {
+    display: none;
+  }
+
+  .collapsing {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.35s ease;
+  }
+
+}

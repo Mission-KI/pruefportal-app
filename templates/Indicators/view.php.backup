@@ -1,0 +1,192 @@
+<?php
+/**
+ * @var \App\View\AppView $this
+ * @var \App\Model\Entity\Process $process
+ * @var array $indicators
+ * @var array $classification
+ * @var array $fulfillment
+ * @var array $protectionLevels
+ * @var string $currentLanguage
+ */
+$title_for_layout = __('Process') . ': ' . $process->title . ' - ' . __('VCIO Self-assessment Results');
+$this->assign('title', $title_for_layout);
+?>
+
+<h1 class="text-primary display-xs uppercase"><?= $process->title ?></h1>
+<p class="text-gray-600 mb-6"><?= __('VCIO Self-assessment Results') ?></p>
+
+<?= $this->element('process_status', ['process' => $process]); ?>
+
+<?= $this->element('molecules/primary_card', [
+    'title' => __('Ergebnis der VCIO Selbsteinschätzung'),
+    'subtitle' => __('VCIO Self-assessment'),
+    'body' => __('Die VCIO Selbsteinschätzung zeigt die Bewertung der Qualitätsindikatoren für das KI-System. Die Einstufung erfolgt in den Kategorien A-D und wird mit der Erfüllung (ja/nein) bewertet.')
+]) ?>
+
+<div class="bg-white rounded-lg shadow overflow-hidden">
+    <table class="w-full">
+        <thead class="bg-gray-50 border-b border-gray-200">
+            <tr>
+                <th class="px-6 py-3 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">
+                    <?= __('Kriterium') ?>
+                </th>
+                <th class="px-6 py-3 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">
+                    <?= __('Name') ?>
+                </th>
+                <th class="px-6 py-3 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">
+                    <?= __('Schutzbedarf') ?>
+                </th>
+                <th class="px-6 py-3 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">
+                    <?= __('Einstufung') ?>
+                </th>
+                <th class="px-6 py-3 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">
+                    <?= __('Erfüllt?') ?>
+                </th>
+            </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-200">
+            <?php
+            // Group criteria that have indicators by quality dimension
+            $groupedCriteria = [];
+            foreach ($indicators as $indicator) {
+                $indicatorTitle = $indicator->title ?? null;
+                // Extract criterion from indicator title (e.g., "DA1.1" -> "DA1")
+                $criterionIndex = preg_replace('/\.\d+$/', '', $indicatorTitle);
+
+                $qd_id = $indicator->quality_dimension_id;
+                if (!isset($groupedCriteria[$qd_id])) {
+                    $groupedCriteria[$qd_id] = [];
+                }
+                $groupedCriteria[$qd_id][$criterionIndex] = true;
+            }
+
+            foreach ($vcioConfig as $qd_key => $qualityDimension):
+                $quality_dimension_id = $qualityDimension['quality_dimension_id'];
+
+                if (!isset($groupedCriteria[$quality_dimension_id])) {
+                    continue;
+                }
+            ?>
+                <tr class="bg-gray-100">
+                    <td colspan="5" class="px-6 py-4">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0">
+                                <?= $this->element('atoms/icon', [
+                                    'name' => $qualityDimension['icon'],
+                                    'size' => 'md',
+                                    'options' => ['class' => 'text-primary']
+                                ]) ?>
+                            </div>
+                            <h3 class="text-lg font-semibold text-brand">
+                                <?= h(is_array($qualityDimension['title']) ? $qualityDimension['title'][$currentLanguage] : $qualityDimension['title']) ?> (<?= h($qd_key) ?>)
+                            </h3>
+                        </div>
+                    </td>
+                </tr>
+                <?php
+                foreach ($qualityDimension['criteria'] ?? [] as $criterion):
+                    $criterionIndex = $criterion['index'];
+                    $criterionTypeId = $criterion['criterion_type_id'];
+
+                    // Only show criteria that have indicators
+                    if (!isset($groupedCriteria[$quality_dimension_id][$criterionIndex])) {
+                        continue;
+                    }
+
+                    $criterionName = $criterionTypes[$criterionTypeId] ?? $criterionIndex;
+
+                    $classificationValue = $classification[$criterionTypeId] ?? 'N/A';
+                    $fulfillmentValue = $fulfillment[$criterionTypeId] ?? 'N/A';
+
+                    switch ($classificationValue) {
+                        case 'A':
+                            $classificationBgClass = 'bg-gray-700';
+                            $classificationTextClass = 'text-white';
+                            break;
+                        case 'B':
+                            $classificationBgClass = 'bg-gray-500';
+                            $classificationTextClass = 'text-white';
+                            break;
+                        case 'C':
+                            $classificationBgClass = 'bg-gray-300';
+                            $classificationTextClass = 'text-gray-900';
+                            break;
+                        case 'D':
+                            $classificationBgClass = 'bg-gray-100';
+                            $classificationTextClass = 'text-gray-900';
+                            break;
+                        default:
+                            $classificationBgClass = 'bg-gray-100';
+                            $classificationTextClass = 'text-gray-600';
+                    }
+
+                    if ($fulfillmentValue === 'ja') {
+                        $fulfillmentTextClass = 'text-success-700';
+                    } elseif ($fulfillmentValue === 'nein') {
+                        $fulfillmentTextClass = 'text-error-700';
+                    } else {
+                        $fulfillmentTextClass = 'text-gray-600';
+                    }
+
+                    // Get protection level from criteria data for this criterion (same logic as criteria/view)
+                    $protectionLevelValue = $protectionLevels[$criterionTypeId] ?? null;
+
+                    if ($protectionLevelValue === false) {
+                        $protectionLevel = __('N/A');
+                        $protectionBgClass = 'bg-gray-100';
+                        $protectionTextClass = 'text-gray-600';
+                    } elseif ($protectionLevelValue === true) {
+                        $protectionLevel = __('N/A');
+                        $protectionBgClass = 'bg-gray-100';
+                        $protectionTextClass = 'text-gray-600';
+                    } elseif ($protectionLevelValue === 1) {
+                        $protectionLevel = __('gering');
+                        $protectionBgClass = 'bg-success-100';
+                        $protectionTextClass = 'text-success-700';
+                    } elseif ($protectionLevelValue === 2) {
+                        $protectionLevel = __('moderat');
+                        $protectionBgClass = 'bg-warning-100';
+                        $protectionTextClass = 'text-warning-700';
+                    } elseif ($protectionLevelValue >= 3) {
+                        $protectionLevel = __('hoch');
+                        $protectionBgClass = 'bg-error-100';
+                        $protectionTextClass = 'text-error-700';
+                    } else {
+                        $protectionLevel = __('N/A');
+                        $protectionBgClass = 'bg-gray-100';
+                        $protectionTextClass = 'text-gray-600';
+                    }
+                ?>
+                <tr class="m-0 p-0">
+                    <td class="px-6 py-4 whitespace-nowrap text-md font-medium text-gray-900">
+                        <span class="mki-form-field-index-badge"><?= h($criterionIndex) ?></span>
+                    </td>
+                    <td class="px-6 py-4 text-md text-gray-700">
+                        <?= h($criterionName) ?>
+                    </td>
+                    <td class="px-6 py-4 text-center whitespace-nowrap text-md font-semibold <?= $protectionTextClass ?> <?= $protectionBgClass ?>">
+                        <?= h($protectionLevel) ?>
+                    </td>
+                    <td class="px-6 py-4 text-center whitespace-nowrap text-md font-semibold <?= $classificationTextClass ?> <?= $classificationBgClass ?>">
+                        <?= h($classificationValue) ?>
+                    </td>
+                    <td class="px-6 py-4 text-center whitespace-nowrap text-md font-semibold <?= $fulfillmentTextClass ?>">
+                        <?= h($fulfillmentValue) ?>
+                    </td>
+                </tr>
+                <?php endforeach; ?>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
+</div>
+
+<?php if ($process->status_id == 30): ?>
+    <div class="py-4 w-full flex justify-end">
+        <?= $this->element('atoms/button', [
+            'label' => __('Einstufung abschließen'),
+            'url' => ['controller' => 'Indicators', 'action' => 'complete', $process->id],
+            'variant' => 'primary',
+            'size' => 'MD',
+        ]); ?>
+    </div>
+<?php endif; ?>

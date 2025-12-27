@@ -1,0 +1,63 @@
+@layer components {
+  /* === FORM SYSTEM === */
+  .mki-form {
+    /* Form field container - outer wrapper */
+    &-field-container {
+      display: flex;
+      flex-direction: column;
+        @media (max-width: 768px) {
+            width: 100%;
+        }
+    }
+
+    /* Form field wrapper - contains badge, label-wrapper, and input */
+    &-field-wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Label wrapper - inline layout for label and tooltip */
+    &-field-label-wrapper {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 8px;
+
+      & label {
+          flex: 1;
+          color: var(--color-primary);
+      }
+
+      & .mki-form-field-tooltip {
+        flex-shrink: 0;
+        margin-left: 8px;
+      }
+    }
+
+    /* Index badge */
+    &-field-index-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: flex-start;
+      align-self: flex-start;
+      height: var(--form-field-index-badge-height);
+      padding: 0 var(--spacing-field-index-badge-padding);
+      border-radius: var(--radius-field-index-badge);
+      background-color: var(--color-primary);
+      color: var(--color-primary-inverse);
+      font-size: var(--font-size-xs);
+      font-weight: 500;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    /* Help text styling */
+    &-field-help {
+      margin-top: 4px;
+      font-size: 14px;
+      line-height: 1.43;
+      color: var(--color-gray-600);
+    }
+  }
+}

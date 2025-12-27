@@ -1,0 +1,216 @@
+/* MISSION KI Design System - Typography Classes */
+/* Semantic typography classes derived from design tokens */
+/* These classes compose the base typography tokens into ready-to-use styles */
+
+/* === HEADING STYLES === */
+
+/* H1 - Display 2XL Semi Bold */
+.h1, h1 {
+  font-family: var(--font-family-brand);
+  font-size: var(--typography-h1-size);
+  line-height: var(--typography-h1-line-height);
+  font-weight: var(--typography-h1-weight);
+  letter-spacing: var(--typography-h1-letter-spacing);
+}
+
+/* H2 - Display XL Semi Bold */
+.h2, h2 {
+  font-family: var(--font-family-brand);
+  font-size: var(--typography-h2-size);
+  line-height: var(--typography-h2-line-height);
+  font-weight: var(--typography-h2-weight);
+  letter-spacing: var(--typography-h2-letter-spacing);
+}
+
+/* H3 - Display LG Semi Bold */
+.h3, h3 {
+  font-family: var(--font-family-brand);
+  font-size: var(--typography-h3-size);
+  line-height: var(--typography-h3-line-height);
+  font-weight: var(--typography-h3-weight);
+  letter-spacing: var(--typography-h3-letter-spacing);
+}
+
+/* H4 - Display MD Semi Bold */
+.h4, h4 {
+  font-family: var(--font-family-brand);
+  font-size: var(--typography-h4-size);
+  line-height: var(--typography-h4-line-height);
+  font-weight: var(--typography-h4-weight);
+  letter-spacing: var(--typography-h4-letter-spacing);
+}
+
+/* H5 - Display SM Semi Bold */
+.h5, h5 {
+  font-family: var(--font-family-brand);
+  font-size: var(--typography-h5-size);
+  line-height: var(--typography-h5-line-height);
+  font-weight: var(--typography-h5-weight);
+  letter-spacing: var(--typography-h5-letter-spacing);
+}
+
+/* H6 - Using Display XS for consistency (not defined in Figma) */
+.h6, h6 {
+  font-family: var(--font-family-brand);
+  font-size: var(--font-size-display-xs);
+  line-height: var(--line-height-display-xs);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--letter-spacing-normal);
+}
+
+/* === BODY & PARAGRAPH STYLES === */
+
+/* Body text - Text LG Regular */
+.body-text, body {
+  font-family: var(--font-family-brand);
+  font-size: var(--typography-body-size);
+  line-height: var(--typography-body-line-height);
+  font-weight: var(--typography-body-weight);
+  letter-spacing: var(--typography-body-letter-spacing);
+}
+
+/* Paragraph - Same as body */
+.paragraph, p {
+  font-family: var(--font-family-brand);
+  font-size: var(--typography-body-size);
+  line-height: var(--typography-body-line-height);
+  font-weight: var(--typography-body-weight);
+  letter-spacing: var(--typography-body-letter-spacing);
+}
+
+/* === COMPONENT STYLES === */
+
+/* Caption - Small descriptive text */
+.caption {
+  font-family: var(--font-family-brand);
+  font-size: var(--typography-caption-size);
+  line-height: var(--typography-caption-line-height);
+  font-weight: var(--typography-caption-weight);
+  letter-spacing: var(--typography-caption-letter-spacing);
+}
+
+/* Button CTA - Button text style */
+.button-text, .btn-text {
+  font-family: var(--font-family-brand);
+  font-size: var(--typography-button-size);
+  line-height: var(--typography-button-line-height);
+  font-weight: var(--typography-button-weight);
+  letter-spacing: var(--typography-button-letter-spacing);
+}
+
+/* Tiny - Smallest text size */
+.tiny {
+  font-family: var(--font-family-brand);
+  font-size: var(--font-size-tiny);
+  line-height: var(--line-height-tiny);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: var(--letter-spacing-normal);
+}
+
+/* === DISPLAY SIZE UTILITIES === */
+/* For when you need display sizes without semantic meaning */
+
+.display-2xl {
+  font-family: var(--font-family-brand);
+  font-size: var(--font-size-display-2xl);
+  line-height: var(--line-height-display-2xl);
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+.display-xl {
+  font-family: var(--font-family-brand);
+  font-size: var(--font-size-display-xl);
+  line-height: var(--line-height-display-xl);
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+.display-lg {
+  font-family: var(--font-family-brand);
+  font-size: var(--font-size-display-lg);
+  line-height: var(--line-height-display-lg);
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+.display-md {
+  font-family: var(--font-family-brand);
+  font-size: var(--font-size-display-md);
+  line-height: var(--line-height-display-md);
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+.display-sm {
+  font-family: var(--font-family-brand);
+  font-size: var(--font-size-display-sm);
+  line-height: var(--line-height-display-sm);
+  letter-spacing: var(--letter-spacing-normal);
+}
+
+.display-xs {
+  font-family: var(--font-family-brand);
+  font-size: var(--font-size-display-xs);
+  line-height: var(--line-height-display-xs);
+  letter-spacing: var(--letter-spacing-normal);
+}
+
+/* === TEXT SIZE UTILITIES === */
+/* For when you need text sizes without semantic meaning */
+
+.text-xl {
+  font-family: var(--font-family-brand);
+  font-size: var(--font-size-text-xl);
+  line-height: var(--line-height-text-xl);
+  letter-spacing: var(--letter-spacing-normal);
+}
+
+.text-lg {
+  font-family: var(--font-family-brand);
+  font-size: var(--font-size-text-lg);
+  line-height: var(--line-height-text-lg);
+  letter-spacing: var(--letter-spacing-normal);
+}
+
+.text-md {
+  font-family: var(--font-family-brand);
+  font-size: var(--font-size-text-md);
+  line-height: var(--line-height-text-md);
+  letter-spacing: var(--letter-spacing-normal);
+}
+
+.text-sm {
+  font-family: var(--font-family-brand);
+  font-size: var(--font-size-text-sm);
+  line-height: var(--line-height-text-sm);
+  letter-spacing: var(--letter-spacing-normal);
+}
+
+.text-xs {
+  font-family: var(--font-family-brand);
+  font-size: var(--font-size-text-xs);
+  line-height: var(--line-height-text-xs);
+  letter-spacing: var(--letter-spacing-normal);
+}
+
+/* === FONT WEIGHT MODIFIERS === */
+/* Can be combined with any typography class */
+
+.font-regular {
+  font-weight: var(--font-weight-regular);
+}
+
+.font-semibold {
+  font-weight: var(--font-weight-semibold);
+}
+
+.font-expanded-semibold {
+  font-weight: var(--font-weight-expanded-semibold);
+}
+
+/* === LETTER SPACING MODIFIERS === */
+
+.tracking-tight {
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+.tracking-normal {
+  letter-spacing: var(--letter-spacing-normal);
+}

@@ -1,0 +1,21 @@
+{{#each this}}
+    {{#each this}}
+        <input type="hidden" name="criteria[{{ @key }}][title]" value="{{ @key }}">
+        <input type="hidden" name="criteria[{{ @key }}][protection_target_category_id]" value="{{ category }}">
+        <input type="hidden" name="criteria[{{ @key }}][criterion_type_id]" value="{{ criteria }}">
+        <div class="mb-3">
+            <span class="badge text-bg-primary p-2">{{@key}}</span><br>
+            <label class="form-label my-2">{{question}}*</label>
+            {{#if tooltip }}
+                <a href="#" class="text-decoration-none float-end" data-bs-toggle="tooltip" data-bs-placement="top" title="{{tooltip}}"><i class="bi bi-question-circle"></i></a>
+            {{/if}}
+            {{#each answers}}
+            <div class="form-check">
+                <input class="form-check-input" type="radio" required="required" name="criteria[{{@../key}}][value]" id="{{@../key}}-{{@index}}" value="{{@key}}">
+                <label class="form-check-label" for="{{@../key}}-{{@index}}">{{this}}</label>
+            </div>
+            {{/each}}
+        </div>
+    {{/each}}
+{{/each}}
+

@@ -1,0 +1,1407 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2025-11-07 20:44+0000\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: ./src/Controller/AppController.php:97
+msgid "allgemein"
+msgstr ""
+
+#: ./src/Controller/AppController.php:98
+msgid "Leib und Leben"
+msgstr ""
+
+#: ./src/Controller/AppController.php:99
+msgid "Gesundheit"
+msgstr ""
+
+#: ./src/Controller/AppController.php:100
+msgid "Grundrechte"
+msgstr ""
+
+#: ./src/Controller/AppController.php:101
+msgid "Schutz personenbezogener Daten"
+msgstr ""
+
+#: ./src/Controller/AppController.php:102
+msgid "Eigentum und Sachen"
+msgstr ""
+
+#: ./src/Controller/AppController.php:103
+msgid "Nichtdiskriminierung"
+msgstr ""
+
+#: ./src/Controller/AppController.php:104
+msgid "Menschenwürde"
+msgstr ""
+
+#: ./src/Controller/AppController.php:105
+msgid "Umwelt"
+msgstr ""
+
+#: ./src/Controller/AppController.php:106
+msgid "AF"
+msgstr ""
+
+#: ./src/Controller/AppController.php:121
+#: ./src/Controller/UiDemoController.php:95
+#: ./templates/Criteria/index.php:24
+msgid "Applikationsfragen"
+msgstr ""
+
+#: ./src/Controller/AppController.php:122
+#: ./src/Controller/UiDemoController.php:96
+msgid "Grundfragen"
+msgstr ""
+
+#: ./src/Controller/AppController.php:123
+#: ./src/Controller/UiDemoController.php:97
+msgid "Erweiterungsfragen"
+msgstr ""
+
+#: ./src/Controller/AppController.php:128
+msgid "Schutzbedarf Kriterium: Datenqualität"
+msgstr ""
+
+#: ./src/Controller/AppController.php:129
+msgid "Schutzbedarf Kriterium: Schutz personenbezogener Daten"
+msgstr ""
+
+#: ./src/Controller/AppController.php:130
+msgid "Schutzbedarf Kriterium: Schutz proprietärer Daten"
+msgstr ""
+
+#: ./src/Controller/AppController.php:131
+msgid "Schutzbedarf Kriterium: Vermeidung von ungerechtfertigter Diskriminierung und Verzerrung"
+msgstr ""
+
+#: ./src/Controller/AppController.php:132
+msgid "Schutzbedarf Kriterium: Rückverfolgbarkeit & Dokumentation"
+msgstr ""
+
+#: ./src/Controller/AppController.php:133
+msgid "Schutzbedarf Kriterium: Erklärbarkeit & Interpretierbarkeit"
+msgstr ""
+
+#: ./src/Controller/AppController.php:134
+msgid "Schutzbedarf Kriterium: Menschliche Handlungsfähigkeit"
+msgstr ""
+
+#: ./src/Controller/AppController.php:135
+msgid "Schutzbedarf Kriterium: Menschliche Aufsicht"
+msgstr ""
+
+#: ./src/Controller/AppController.php:136
+msgid "Schutzbedarf Kriterium: Leistungsfähigkeit und Robustheit"
+msgstr ""
+
+#: ./src/Controller/AppController.php:137
+msgid "Schutzbedarf Kriterium: Rückfallpläne und funktionale Sicherheit"
+msgstr ""
+
+#: ./src/Controller/AppController.php:138
+msgid "Schutzbedarf Kriterium: Widerstandsfähigkeit gegen KI-spezifische Angriffe und Sicherheit"
+msgstr ""
+
+#: ./src/Controller/CommentsController.php:35
+#: ./src/Controller/CommentsController.php:85
+msgid "The Comment has been saved."
+msgstr ""
+
+#: ./src/Controller/CommentsController.php:43
+#: ./src/Controller/CommentsController.php:89
+msgid "The Comment could not be saved. Please, try again."
+msgstr ""
+
+#: ./src/Controller/CommentsController.php:114
+msgid "A new comment for the process \"{0}\" has been added."
+msgstr ""
+
+#: ./src/Controller/CommentsController.php:115
+msgid "Notification: Comment added"
+msgstr ""
+
+#: ./src/Controller/CriteriaController.php:20
+msgid "Qualitätsdimension Datenqualität, -schutz und -Governance"
+msgstr ""
+
+#: ./src/Controller/CriteriaController.php:21
+msgid "Qualitätsdimension Nicht-Diskriminierung "
+msgstr ""
+
+#: ./src/Controller/CriteriaController.php:22
+msgid "Qualitätsdimension Transparenz "
+msgstr ""
+
+#: ./src/Controller/CriteriaController.php:23
+#: ./src/Controller/UiDemoController.php:83
+msgid "Qualitätsdimension Menschliche Aufsicht und Kontrolle"
+msgstr ""
+
+#: ./src/Controller/CriteriaController.php:24
+#: ./src/Controller/UiDemoController.php:84
+msgid "Qualitätsdimension Verlässlichkeit"
+msgstr ""
+
+#: ./src/Controller/CriteriaController.php:25
+msgid "Qualitätsdimension KI-spezifische Cybersicherheit"
+msgstr ""
+
+#: ./src/Controller/CriteriaController.php:83
+#: ./src/Controller/UiDemoController.php:34
+msgid "The Criteria has been saved."
+msgstr ""
+
+#: ./src/Controller/ProcessesController.php:117
+#: ./src/Controller/ProcessesController.php:145
+msgid "The Process has been saved."
+msgstr ""
+
+#: ./src/Controller/ProcessesController.php:120
+#: ./src/Controller/ProcessesController.php:149
+#: ./src/Controller/ProcessesController.php:251
+msgid "The Process could not be saved. Please, try again."
+msgstr ""
+
+#: ./src/Controller/ProcessesController.php:166
+msgid "Invite Candidate user Subject from Project Owner: {0} for Project: {1}"
+msgstr ""
+
+#: ./src/Controller/ProcessesController.php:172
+msgid "Invite Examiner user Subject from Project Owner: {0} for Project: {1}"
+msgstr ""
+
+#: ./src/Controller/ProcessesController.php:202
+msgid "The User has been removed from the Process."
+msgstr ""
+
+#: ./src/Controller/ProcessesController.php:221
+msgid "The Process has been deleted."
+msgstr ""
+
+#: ./src/Controller/ProcessesController.php:223
+msgid "The Process could not be deleted. Please, try again."
+msgstr ""
+
+#: ./src/Controller/ProcessesController.php:245
+msgid "The UCD for the process \"{0}\" is requested by the examiner. Please add the UCD."
+msgstr ""
+
+#: ./src/Controller/ProcessesController.php:246
+msgid "Notification: UCD Requested"
+msgstr ""
+
+#: ./src/Controller/ProcessesController.php:249
+msgid "The Candidate can start now with the Use Case Description."
+msgstr ""
+
+#: ./src/Controller/ProjectsController.php:40
+#: ./src/Controller/ProjectsController.php:65
+msgid "The Project has been saved."
+msgstr ""
+
+#: ./src/Controller/ProjectsController.php:44
+#: ./src/Controller/ProjectsController.php:69
+msgid "The Project could not be saved. Please, try again."
+msgstr ""
+
+#: ./src/Controller/ProjectsController.php:89
+msgid "The Project has been deleted."
+msgstr ""
+
+#: ./src/Controller/ProjectsController.php:91
+msgid "The Project could not be deleted. Please, try again."
+msgstr ""
+
+#: ./src/Controller/UiDemoController.php:35
+msgid "The User could not be saved. Please, try again."
+msgstr ""
+
+#: ./src/Controller/UiDemoController.php:36
+msgid "This action may have unintended consequences."
+msgstr ""
+
+#: ./src/Controller/UiDemoController.php:37
+msgid "Your session will expire in 10 minutes."
+msgstr ""
+
+#: ./src/Controller/UiDemoController.php:85
+msgid "Qualitätsdimension Transparenz"
+msgstr ""
+
+#: ./src/Controller/UsecaseDescriptionsController.php:60
+#: ./src/Controller/UsecaseDescriptionsController.php:116
+msgid "The current UCD Step has been saved."
+msgstr ""
+
+#: ./src/Controller/UsecaseDescriptionsController.php:63
+#: ./src/Controller/UsecaseDescriptionsController.php:120
+msgid "The current UCD Step could not be saved. Please, try again."
+msgstr ""
+
+#: ./src/Controller/UsecaseDescriptionsController.php:110
+msgid "The UCD for the process \"{0}\" is completed by the candidate. Please review the UCD."
+msgstr ""
+
+#: ./src/Controller/UsecaseDescriptionsController.php:111
+msgid "Notification: UCD Completed"
+msgstr ""
+
+#: ./src/Controller/UsecaseDescriptionsController.php:113
+msgid "The UCD has been saved and the examiner will be notified."
+msgstr ""
+
+#: ./src/Controller/UsecaseDescriptionsController.php:188
+msgid "The UCD for the process \"{0}\" has been accepted by the examiner. Please wait for the Analysis of the Protection Needs."
+msgstr ""
+
+#: ./src/Controller/UsecaseDescriptionsController.php:189
+msgid "Notification: UCD Accepted"
+msgstr ""
+
+#: ./src/Controller/UsecaseDescriptionsController.php:192
+msgid "The UCD has been marked as accepted and the candidate will be notified."
+msgstr ""
+
+#: ./src/Controller/UsecaseDescriptionsController.php:194
+msgid "The UCD could not be marked as accepted. Please, try again."
+msgstr ""
+
+#: ./src/Controller/UsecaseDescriptionsController.php:222
+msgid "The UCD for the process \"{0}\" has been rejected by the examiner. Please review the UCD."
+msgstr ""
+
+#: ./src/Controller/UsecaseDescriptionsController.php:223
+msgid "Notification: UCD Rejected"
+msgstr ""
+
+#: ./src/Controller/UsecaseDescriptionsController.php:246
+msgid "The UCD has been marked as rejected and the candidate will be notified."
+msgstr ""
+
+#: ./src/Controller/UsecaseDescriptionsController.php:248
+msgid "The UCD could not be rejected. Please, try again."
+msgstr ""
+
+#: ./src/Controller/UsersController.php:54
+msgid "Login successful"
+msgstr ""
+
+#: ./src/Controller/UsersController.php:61
+msgid "Invalid username or password"
+msgstr ""
+
+#: ./src/Controller/UsersController.php:85
+msgid "Logout successful"
+msgstr ""
+
+#: ./src/Controller/UsersController.php:105
+msgid "The new password has been saved"
+msgstr ""
+
+#: ./src/Controller/UsersController.php:108
+msgid "The new password could not be saved. Please, try again."
+msgstr ""
+
+#: ./src/Controller/UsersController.php:122
+msgid "Your username is incorrect. Please contact the MISSION KI team."
+msgstr ""
+
+#: ./src/Controller/UsersController.php:135
+msgid "An email with your reset password link is on its way to you."
+msgstr ""
+
+#: ./src/Controller/UsersController.php:138
+msgid "Error sending password email. Please try again."
+msgstr ""
+
+#: ./src/Controller/UsersController.php:165
+msgid "Please open the link in your email to activate your account."
+msgstr ""
+
+#: ./src/Controller/UsersController.php:168
+#: ./src/Controller/UsersController.php:190
+#: ./src/Controller/UsersController.php:211
+#: ./src/Controller/UsersController.php:234
+msgid "Your Account Data could not be saved. Please, try again."
+msgstr ""
+
+#: ./src/Controller/UsersController.php:187
+msgid "Your Account has been activated"
+msgstr ""
+
+#: ./src/Controller/UsersController.php:208
+msgid "The Invitation has been accepted and your account is now activated"
+msgstr ""
+
+#: ./src/Controller/UsersController.php:231
+msgid "Your Account Data have been saved"
+msgstr ""
+
+#: ./src/Controller/UsersController.php:249
+msgid "The User and all related data have been deleted."
+msgstr ""
+
+#: ./src/Controller/UsersController.php:253
+msgid "The User could not be deleted. Please, try again."
+msgstr ""
+
+#: ./src/Controller/UsersController.php:273
+#: ./src/Controller/UsersController.php:294
+msgid "The current password is incorrect."
+msgstr ""
+
+#: ./src/Controller/UsersController.php:299
+msgid "The new password is invalid or does not match the confirmation."
+msgstr ""
+
+#: ./src/Controller/UsersController.php:309
+msgid "Your password has been updated successfully."
+msgstr ""
+
+#: ./src/Controller/UsersController.php:311
+msgid "Failed to update your password. Please try again."
+msgstr ""
+
+#: ./src/Controller/UsersController.php:354
+msgid "The User could not be found. Please, try again."
+msgstr ""
+
+#: ./src/Controller/UsersController.php:366
+msgid "The token is invalid or has expired."
+msgstr ""
+
+#: ./src/Mailer/UserMailer.php:25
+#: ./src/Mailer/UserMailer.php:42
+#: ./src/Mailer/UserMailer.php:61
+#: ./templates/element/organisms/app_left_purple_branding.php:5
+#: ./templates/layout/email/html/default.php:307
+#: ./templates/layout/email/html/default.php:335
+#: ./templates/layout/email/text/default.php:19
+msgid "MISSION KI"
+msgstr ""
+
+#: ./src/Mailer/UserMailer.php:25
+msgid "Reset password Subject"
+msgstr ""
+
+#: ./src/Mailer/UserMailer.php:42
+msgid "Register confirmation Subject"
+msgstr ""
+
+#: ./src/Mailer/UserMailer.php:61
+msgid "Invite User to a Process Subject"
+msgstr ""
+
+#: ./src/View/Helper/LayoutHelper.php:55
+#: ./templates/Pages/home.php:5
+#: ./templates/Pages/home.php:9
+#: ./templates/element/Users/user_sidebar.php:3
+msgid "Dashboard"
+msgstr ""
+
+#: ./src/View/Helper/LayoutHelper.php:61
+#: ./src/View/Helper/LayoutHelper.php:129
+#: ./templates/Projects/add.php:12
+#: ./templates/element/Users/user_sidebar.php:10
+msgid "Projects"
+msgstr ""
+
+#: ./src/View/Helper/LayoutHelper.php:67
+#: ./src/View/Helper/LayoutHelper.php:157
+#: ./templates/element/Users/user_sidebar.php:17
+msgid "Comments"
+msgstr ""
+
+#: ./src/View/Helper/LayoutHelper.php:73
+#: ./src/View/Helper/LayoutHelper.php:165
+#: ./templates/Users/view.php:6
+#: ./templates/Users/view.php:11
+msgid "Settings"
+msgstr ""
+
+#: ./src/View/Helper/LayoutHelper.php:96
+msgid "{0}"
+msgstr ""
+
+#: ./src/View/Helper/LayoutHelper.php:105
+msgid "Documentation"
+msgstr ""
+
+#: ./src/View/Helper/LayoutHelper.php:120
+#: ./templates/element/layout/sidebar.php:10
+#: ./templates/layout/sidebar.php:17
+msgid "Home"
+msgstr ""
+
+#: ./src/View/Helper/LayoutHelper.php:135
+#: ./templates/Projects/add.php:6
+#: ./templates/Projects/index.php:186
+msgid "New Project"
+msgstr ""
+
+#: ./src/View/Helper/LayoutHelper.php:141
+#: ./templates/Projects/edit.php:6
+#: ./templates/Projects/edit.php:53
+msgid "Edit Project"
+msgstr ""
+
+#: ./src/View/Helper/LayoutHelper.php:147
+msgid "Project Details"
+msgstr ""
+
+#: ./templates/Comments/ajax_add.php:18
+#: ./templates/Comments/ajax_view.php:18
+#: ./templates/element/comments_thread.php:12
+#: ./templates/element/molecules/comment_card.php:53
+msgid "General"
+msgstr ""
+
+#: ./templates/Comments/ajax_add.php:30
+#: ./templates/Comments/answer.php:20
+#: ./templates/element/molecules/comment_form.php:92
+msgid "Enter your comment here..."
+msgstr ""
+
+#: ./templates/Comments/ajax_add.php:45
+#: ./templates/Comments/answer.php:45
+msgid "Reset"
+msgstr ""
+
+#: ./templates/Comments/ajax_add.php:54
+#: ./templates/Comments/answer.php:54
+#: ./templates/Indicators/add.php:26
+#: ./templates/Indicators/edit.php:31
+#: ./templates/Processes/add.php:24
+#: ./templates/Processes/edit.php:24
+#: ./templates/Projects/edit.php:42
+msgid "Submit"
+msgstr ""
+
+#: ./templates/Comments/ajax_view.php:28
+msgid "Answer"
+msgstr ""
+
+#: ./templates/Criteria/index.php:10
+#: ./templates/Criteria/rate_q_d.php:13
+#: ./templates/UsecaseDescriptions/form.php:16
+#: ./templates/UsecaseDescriptions/review.php:9
+#: ./templates/UsecaseDescriptions/view.php:8
+msgid "Process"
+msgstr ""
+
+#: ./templates/Criteria/index.php:10
+#: ./templates/Criteria/index.php:13
+#: ./templates/Criteria/index.php:23
+#: ./templates/Criteria/rate_q_d.php:13
+#: ./templates/Criteria/rate_q_d.php:22
+#: ./templates/Criteria/rate_q_d.php:32
+#: ./templates/UiDemo/criteria_demo.php:44
+#: ./templates/cell/Process/examiner.php:73
+msgid "Protection Needs Analysis"
+msgstr ""
+
+#: ./templates/Criteria/index.php:25
+msgid "Die Schutzbedarfsanalyse dient der Identifizierung und Bewertung von Qualitätsanforderungen für ein KI-System. Dabei werden die relevanten Qualitätsmerkmale für den jeweiligen Anwendungsfall ermittelt und ein Zielwert für deren Erreichung festgelegt."
+msgstr ""
+
+#: ./templates/Criteria/index.php:57
+msgid "Rate"
+msgstr ""
+
+#: ./templates/Criteria/rate_q_d.php:71
+#: ./templates/UiDemo/criteria_demo.php:70
+#: ./templates/UiDemo/form_original.php:110
+#: ./templates/element/molecules/form_stepper.php:91
+msgid "Next step"
+msgstr ""
+
+#: ./templates/Error/error400.php:24
+#: ./templates/Error/error500.php:35
+msgid "Error"
+msgstr ""
+
+#: ./templates/Error/error400.php:25
+msgid "The requested address {0} was not found on this server."
+msgstr ""
+
+#: ./templates/Error/error500.php:33
+msgid "An Internal Error Has Occurred."
+msgstr ""
+
+#: ./templates/Indicators/add.php:10
+#: ./templates/Indicators/edit.php:10
+#: ./templates/Indicators/index.php:21
+#: ./templates/Indicators/view.php:10
+#: ./templates/UsecaseDescriptions/form.php:30
+#: ./templates/element/molecules/action_card.php:13
+#: ./templates/element/molecules/data_table.php:76
+msgid "Actions"
+msgstr ""
+
+#: ./templates/Indicators/add.php:11
+#: ./templates/Indicators/edit.php:16
+#: ./templates/Indicators/view.php:13
+msgid "List Indicators"
+msgstr ""
+
+#: ./templates/Indicators/add.php:18
+msgid "Add Indicator"
+msgstr ""
+
+#: ./templates/Indicators/edit.php:12
+#: ./templates/Indicators/index.php:38
+#: ./templates/Projects/index.php:159
+#: ./templates/element/Processes/process_candidate_examiner_fields.php:30
+#: ./templates/element/Processes/process_candidate_examiner_fields.php:83
+msgid "Delete"
+msgstr ""
+
+#: ./templates/Indicators/edit.php:14
+#: ./templates/Indicators/index.php:42
+#: ./templates/Indicators/view.php:12
+msgid "Are you sure you want to delete # {0}?"
+msgstr ""
+
+#: ./templates/Indicators/edit.php:23
+#: ./templates/Indicators/view.php:11
+msgid "Edit Indicator"
+msgstr ""
+
+#: ./templates/Indicators/index.php:8
+#: ./templates/Indicators/view.php:14
+msgid "New Indicator"
+msgstr ""
+
+#: ./templates/Indicators/index.php:9
+msgid "Indicators"
+msgstr ""
+
+#: ./templates/Indicators/index.php:35
+msgid "View"
+msgstr ""
+
+#: ./templates/Indicators/index.php:36
+#: ./templates/Projects/index.php:61
+#: ./templates/Projects/index.php:150
+#: ./templates/Users/view.php:73
+msgid "Edit"
+msgstr ""
+
+#: ./templates/Indicators/index.php:53
+#: ./templates/element/molecules/pagination.php:79
+#: ./templates/element/pagination.php:9
+msgid "first"
+msgstr ""
+
+#: ./templates/Indicators/index.php:54
+#: ./templates/element/molecules/pagination.php:87
+#: ./templates/element/pagination.php:18
+msgid "previous"
+msgstr ""
+
+#: ./templates/Indicators/index.php:56
+#: ./templates/element/molecules/pagination.php:105
+#: ./templates/element/pagination.php:39
+msgid "next"
+msgstr ""
+
+#: ./templates/Indicators/index.php:57
+#: ./templates/element/molecules/pagination.php:113
+#: ./templates/element/pagination.php:48
+msgid "last"
+msgstr ""
+
+#: ./templates/Indicators/index.php:59
+#: ./templates/element/molecules/pagination.php:29
+#: ./templates/element/pagination.php:59
+msgid "Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total"
+msgstr ""
+
+#: ./templates/Indicators/view.php:12
+msgid "Delete Indicator"
+msgstr ""
+
+#: ./templates/Indicators/view.php:22
+#: ./templates/Projects/edit.php:19
+#: ./templates/element/Processes/process_form_fields.php:14
+msgid "Title"
+msgstr ""
+
+#: ./templates/Indicators/view.php:26
+msgid "Id"
+msgstr ""
+
+#: ./templates/Indicators/view.php:30
+msgid "Criterion Id"
+msgstr ""
+
+#: ./templates/Indicators/view.php:34
+msgid "Level Candidate"
+msgstr ""
+
+#: ./templates/Indicators/view.php:38
+msgid "Level Examiner"
+msgstr ""
+
+#: ./templates/Indicators/view.php:42
+msgid "Created"
+msgstr ""
+
+#: ./templates/Indicators/view.php:46
+msgid "Modified"
+msgstr ""
+
+#: ./templates/Pages/about.php:5
+#: ./templates/Pages/about.php:7
+#: ./templates/element/layout/sidebar.php:17
+#: ./templates/element/organisms/footer.php:12
+#: ./templates/layout/sidebar.php:24
+msgid "About"
+msgstr ""
+
+#: ./templates/Pages/home.php:18
+msgid "Welcome"
+msgstr ""
+
+#: ./templates/Pages/home.php:19
+msgid "Please login to see your dashboard"
+msgstr ""
+
+#: ./templates/Pages/imprint.php:5
+#: ./templates/Pages/imprint.php:7
+#: ./templates/element/organisms/footer.php:40
+msgid "Privacy Policy"
+msgstr ""
+
+#: ./templates/Pages/tos.php:5
+#: ./templates/Pages/tos.php:7
+#: ./templates/element/organisms/footer.php:43
+msgid "Terms of Service"
+msgstr ""
+
+#: ./templates/Processes/add.php:7
+#: ./templates/Processes/add.php:13
+#: ./templates/Projects/index.php:142
+msgid "New Process"
+msgstr ""
+
+#: ./templates/Processes/add.php:34
+#: ./templates/Processes/edit.php:34
+#: ./templates/Projects/edit.php:61
+#: ./templates/Projects/index.php:7
+#: ./templates/Projects/index.php:12
+msgid "My Projects"
+msgstr ""
+
+#: ./templates/Processes/comments.php:8
+#: ./templates/Processes/comments.php:23
+msgid "Kommentare"
+msgstr ""
+
+#: ./templates/Processes/comments.php:41
+msgid "No comments found"
+msgstr ""
+
+#: ./templates/Processes/edit.php:7
+#: ./templates/Processes/edit.php:13
+msgid "Edit Process"
+msgstr ""
+
+#: ./templates/Projects/add.php:19
+msgid "Create New Project"
+msgstr ""
+
+#: ./templates/Projects/add.php:20
+msgid "Project"
+msgstr ""
+
+#: ./templates/Projects/add.php:22
+msgid "The foundation of an assessment process is the project, which it is assigned to. A project can be understood as a \"roof\" for multiple assessment processes. Example: The project \"Company-AI\" could include the assessment processes \"HR Tool\", \"Process Automation\", and \"Production Assistant\"."
+msgstr ""
+
+#: ./templates/Projects/add.php:29
+msgid "General Information"
+msgstr ""
+
+#: ./templates/Projects/add.php:37
+msgid "Project Name"
+msgstr ""
+
+#: ./templates/Projects/add.php:40
+msgid "Choose a descriptive name that clearly identifies the project. This will be the umbrella under which all assessment processes are organized."
+msgstr ""
+
+#: ./templates/Projects/add.php:41
+msgid "A project can contain multiple separate assessment processes."
+msgstr ""
+
+#: ./templates/Projects/add.php:42
+msgid "Please enter a project name."
+msgstr ""
+
+#: ./templates/Projects/add.php:48
+msgid "e.g., Organization, Testing Area, etc."
+msgstr ""
+
+#: ./templates/Projects/add.php:55
+msgid "Project Description"
+msgstr ""
+
+#: ./templates/Projects/add.php:58
+msgid "Choose a clear name that helps assessment participants orient themselves. You can edit the Project Description later."
+msgstr ""
+
+#: ./templates/Projects/add.php:59
+msgid "Please enter a Project Description."
+msgstr ""
+
+#: ./templates/Projects/add.php:64
+msgid "e.g., Image Recognition"
+msgstr ""
+
+#: ./templates/Projects/add.php:72
+#: ./templates/Users/view.php:87
+#: ./templates/Users/view.php:195
+msgid "Cancel"
+msgstr ""
+
+#: ./templates/Projects/add.php:79
+msgid "Create Project"
+msgstr ""
+
+#: ./templates/Projects/edit.php:32
+#: ./templates/element/Processes/process_form_fields.php:21
+msgid "Description"
+msgstr ""
+
+#: ./templates/Projects/index.php:28
+msgid "Process description"
+msgstr ""
+
+#: ./templates/Projects/index.php:36
+#: ./templates/cell/Process/candidate.php:18
+#: ./templates/cell/Process/examiner.php:18
+#: ./templates/cell/Process/examiner.php:41
+#: ./templates/element/Processes/process_candidate_examiner_fields.php:11
+msgid "Candidate"
+msgstr ""
+
+#: ./templates/Projects/index.php:40
+#: ./templates/Projects/index.php:52
+msgid "Enabled"
+msgstr ""
+
+#: ./templates/Projects/index.php:48
+#: ./templates/cell/Process/candidate.php:42
+#: ./templates/element/Processes/process_candidate_examiner_fields.php:64
+msgid "Examiner"
+msgstr ""
+
+#: ./templates/Projects/index.php:77
+msgid "Request Use Case Description"
+msgstr ""
+
+#: ./templates/Projects/index.php:95
+#: ./templates/cell/Process/candidate.php:29
+#: ./templates/cell/Process/examiner.php:28
+#: ./templates/element/process_status.php:11
+msgid "Status"
+msgstr ""
+
+#: ./templates/Projects/index.php:95
+#: ./templates/cell/Process/candidate.php:30
+#: ./templates/cell/Process/examiner.php:29
+msgid "Unknown"
+msgstr ""
+
+#: ./templates/Projects/index.php:119
+msgid "Project description"
+msgstr ""
+
+#: ./templates/Projects/index.php:163
+msgid "Are you sure you want to delete {0}?"
+msgstr ""
+
+#: ./templates/UiDemo/criteria_demo.php:13
+msgid "Protection Needs Analysis Demo - Server-side Rendering"
+msgstr ""
+
+#: ./templates/UiDemo/criteria_demo.php:18
+msgid "Protection Needs Analysis Demo"
+msgstr ""
+
+#: ./templates/UiDemo/form_demo.php:14
+msgid "Form Renderer Demo - Handlebars vs Server-side"
+msgstr ""
+
+#: ./templates/UiDemo/form_original.php:10
+msgid "Original Form Implementation (Handlebars)"
+msgstr ""
+
+#: ./templates/UiDemo/form_original.php:62
+msgid "Usecase Description progress bar:"
+msgstr ""
+
+#: ./templates/UiDemo/form_original.php:62
+msgid "Usecase Description progress bar"
+msgstr ""
+
+#: ./templates/UiDemo/form_original.php:80
+#: ./templates/element/molecules/form_stepper.php:107
+msgid "The process is finished completely and correctly"
+msgstr ""
+
+#: ./templates/UiDemo/form_original.php:82
+#: ./templates/element/molecules/form_stepper.php:109
+msgid "The examiner will contact you after the review is finished."
+msgstr ""
+
+#: templates/element/molecules/form_stepper.php:118
+msgid "Edit use case"
+msgstr ""
+
+#: ./templates/UiDemo/form_original.php:90
+#: ./templates/element/molecules/form_stepper.php:113
+msgid "Accept and submit"
+msgstr ""
+
+#: ./templates/UiDemo/index.php:22
+msgid "UI Component Demo"
+msgstr ""
+
+#: ./templates/UsecaseDescriptions/form.php:33
+msgid "Save Draft"
+msgstr ""
+
+#: ./templates/UsecaseDescriptions/form.php:114
+msgid "Process progress bar"
+msgstr ""
+
+#: ./templates/UsecaseDescriptions/form.php:118
+msgid "Process progress:"
+msgstr ""
+
+#: ./templates/UsecaseDescriptions/review.php:17
+#: ./templates/cell/Process/examiner.php:51
+msgid "Review UCD"
+msgstr ""
+
+#: ./templates/UsecaseDescriptions/review.php:28
+msgid "Reject UCD"
+msgstr ""
+
+#: ./templates/UsecaseDescriptions/review.php:31
+msgid "Confirm: Are you sure you want to reject the UCD for {0} back to the candidate?"
+msgstr ""
+
+#: ./templates/UsecaseDescriptions/review.php:38
+msgid "Accept UCD"
+msgstr ""
+
+#: ./templates/UsecaseDescriptions/review.php:41
+msgid "Confirm: Are you sure you accept the UCD for {0} from the candidate?"
+msgstr ""
+
+#: ./templates/UsecaseDescriptions/view.php:11
+msgid "UCD"
+msgstr ""
+
+#: ./templates/UsecaseDescriptions/view.php:11
+msgid "Version"
+msgstr ""
+
+#: ./templates/Users/accept_invitation.php:6
+#: ./templates/Users/accept_invitation.php:18
+msgid "Accept Invitation"
+msgstr ""
+
+#: ./templates/Users/accept_invitation.php:21
+msgid "Please set a password for your account:"
+msgstr ""
+
+#: ./templates/Users/accept_invitation.php:36
+#: ./templates/Users/set_new_password.php:35
+#: ./templates/Users/view.php:163
+msgid "New Password"
+msgstr ""
+
+#: ./templates/Users/accept_invitation.php:38
+#: ./templates/Users/set_new_password.php:37
+msgid "Enter your new password"
+msgstr ""
+
+#: ./templates/Users/accept_invitation.php:43
+#: ./templates/Users/register.php:75
+#: ./templates/Users/set_new_password.php:42
+#: ./templates/Users/view.php:172
+msgid "Password must be at least 8 characters and include at least one number and one special character"
+msgstr ""
+
+#: ./templates/Users/accept_invitation.php:49
+msgid "Set Password"
+msgstr ""
+
+#: ./templates/Users/accept_invitation.php:65
+#: ./templates/Users/reset_password.php:64
+#: ./templates/Users/set_new_password.php:67
+msgid "Back to Login"
+msgstr ""
+
+#: ./templates/Users/login.php:5
+#: ./templates/Users/login.php:17
+#: ./templates/Users/login.php:53
+msgid "Log in"
+msgstr ""
+
+#: ./templates/Users/login.php:20
+msgid "Please enter your credentials to continue"
+msgstr ""
+
+#: ./templates/Users/login.php:34
+#: ./templates/Users/register.php:50
+#: ./templates/Users/reset_password.php:35
+#: ./templates/Users/view.php:42
+msgid "Email Address"
+msgstr ""
+
+#: ./templates/Users/login.php:36
+#: ./templates/Users/register.php:52
+#: ./templates/Users/reset_password.php:37
+msgid "name@domain.com"
+msgstr ""
+
+#: ./templates/Users/login.php:40
+#: ./templates/Users/register.php:56
+#: ./templates/Users/reset_password.php:41
+msgid "Please enter a valid email address"
+msgstr ""
+
+#: ./templates/Users/login.php:45
+#: ./templates/Users/register.php:68
+#: ./templates/Users/view.php:117
+msgid "Password"
+msgstr ""
+
+#: ./templates/Users/login.php:47
+#: ./templates/Users/register.php:44
+#: ./templates/Users/register.php:62
+#: ./templates/Users/register.php:70
+msgid "Text"
+msgstr ""
+
+#: ./templates/Users/login.php:69
+msgid "Forgot password?"
+msgstr ""
+
+#: ./templates/Users/login.php:71
+msgid "Reset here"
+msgstr ""
+
+#: ./templates/Users/login.php:78
+msgid "No account yet?"
+msgstr ""
+
+#: ./templates/Users/login.php:80
+msgid "Create one now"
+msgstr ""
+
+#: ./templates/Users/login.php:90
+msgid "help@missionki.de"
+msgstr ""
+
+#: ./templates/Users/register.php:6
+#: ./templates/Users/register.php:18
+msgid "Register"
+msgstr ""
+
+#: ./templates/Users/register.php:21
+msgid "Register to create assessment processes or participate in ongoing assessments."
+msgstr ""
+
+#: ./templates/Users/register.php:34
+#: ./templates/Users/view.php:33
+msgid "Salutation"
+msgstr ""
+
+#: ./templates/Users/register.php:36
+msgid "Please select..."
+msgstr ""
+
+#: ./templates/Users/register.php:42
+#: ./templates/Users/view.php:54
+msgid "Full Name"
+msgstr ""
+
+#: ./templates/Users/register.php:61
+#: ./templates/Users/view.php:62
+msgid "Company / Organization"
+msgstr ""
+
+#: ./templates/Users/register.php:73
+#: ./templates/Users/view.php:165
+msgid "min. 8 characters, including at least one number and one special character (?!&$ etc.)"
+msgstr ""
+
+#: ./templates/Users/register.php:81
+msgid "Register now"
+msgstr ""
+
+#: ./templates/Users/register.php:96
+msgid "Already registered?"
+msgstr ""
+
+#: ./templates/Users/register.php:98
+msgid "Go to login"
+msgstr ""
+
+#: ./templates/Users/reset_password.php:6
+#: ./templates/Users/reset_password.php:47
+msgid "Reset Password"
+msgstr ""
+
+#: ./templates/Users/reset_password.php:18
+msgid "Forgot your password?"
+msgstr ""
+
+#: ./templates/Users/reset_password.php:21
+msgid "Please enter your email address. You will receive an email with instructions to reset your password."
+msgstr ""
+
+#: ./templates/Users/reset_password.php:62
+msgid "Remember your password?"
+msgstr ""
+
+#: ./templates/Users/set_new_password.php:6
+#: ./templates/Users/set_new_password.php:18
+#: ./templates/element/Users/user_form_fields.php:13
+#: ./templates/email/html/reset_password.php:15
+msgid "Set New Password"
+msgstr ""
+
+#: ./templates/Users/set_new_password.php:21
+msgid "Please enter a new password for your account: {0}"
+msgstr ""
+
+#: ./templates/Users/set_new_password.php:46
+msgid "Use 8 or more characters with a mix of letters, numbers & symbols"
+msgstr ""
+
+#: ./templates/Users/set_new_password.php:51
+#: ./templates/Users/view.php:204
+msgid "Update Password"
+msgstr ""
+
+#: ./templates/Users/view.php:22
+msgid "Account"
+msgstr ""
+
+#: ./templates/Users/view.php:96
+#: ./templates/Users/view.php:253
+msgid "Save Changes"
+msgstr ""
+
+#: ./templates/Users/view.php:136
+msgid "Change"
+msgstr ""
+
+#: ./templates/Users/view.php:152
+msgid "Current Password"
+msgstr ""
+
+#: ./templates/Users/view.php:154
+msgid "Enter your current password to verify your identity"
+msgstr ""
+
+#: ./templates/Users/view.php:180
+msgid "Confirm New Password"
+msgstr ""
+
+#: ./templates/Users/view.php:182
+msgid "Please re-enter your new password"
+msgstr ""
+
+#: ./templates/Users/view.php:227
+msgid "Notification Settings"
+msgstr ""
+
+#: ./templates/Users/view.php:236
+msgid "Process Updates via Email"
+msgstr ""
+
+#: ./templates/Users/view.php:237
+msgid "Receive important updates about your audit processes."
+msgstr ""
+
+#: ./templates/Users/view.php:244
+msgid "Comment Notifications via Email"
+msgstr ""
+
+#: ./templates/Users/view.php:245
+msgid "Receive an email when someone comments on your posts."
+msgstr ""
+
+#: ./templates/Users/view.php:274
+#: ./templates/Users/view.php:286
+msgid "Delete Account"
+msgstr ""
+
+#: ./templates/Users/view.php:279
+msgid "Warning"
+msgstr ""
+
+#: ./templates/Users/view.php:279
+msgid "After deleting your account, your data cannot be restored. This action is permanent and cannot be undone."
+msgstr ""
+
+#: ./templates/Users/view.php:293
+msgid "Are you sure you want to delete your account?"
+msgstr ""
+
+#: ./templates/Users/view.php:385
+msgid "Password must be at least 8 characters long"
+msgstr ""
+
+#: ./templates/Users/view.php:398
+msgid "Passwords do not match"
+msgstr ""
+
+#: ./templates/Users/view.php:436
+msgid "Current password is incorrect"
+msgstr ""
+
+#: ./templates/Users/view.php:441
+msgid "Unable to verify password"
+msgstr ""
+
+#: ./templates/cell/Notifications/display.php:8
+msgid "Notifications"
+msgstr ""
+
+#: ./templates/cell/Notifications/display.php:33
+msgid "Mark Notification as seen"
+msgstr ""
+
+#: ./templates/cell/Process/candidate.php:18
+msgid "My latest candidate processes"
+msgstr ""
+
+#: ./templates/cell/Process/candidate.php:34
+#: ./templates/cell/Process/examiner.php:33
+msgid "Process progress: {0}/6 steps"
+msgstr ""
+
+#: ./templates/cell/Process/candidate.php:41
+#: ./templates/cell/Process/examiner.php:40
+msgid "Last modified"
+msgstr ""
+
+#: ./templates/cell/Process/candidate.php:53
+msgid "Add UCD"
+msgstr ""
+
+#: ./templates/cell/Process/candidate.php:61
+msgid "Edit UCD"
+msgstr ""
+
+#: ./templates/cell/Process/candidate.php:73
+#: ./templates/cell/Process/examiner.php:62
+msgid "View UCD"
+msgstr ""
+
+#: ./templates/cell/Process/examiner.php:18
+msgid "My latest examiner processes"
+msgstr ""
+
+#: ./templates/element/Processes/process_candidate_examiner_fields.php:42
+#: ./templates/element/Processes/process_candidate_examiner_fields.php:43
+msgid "Candidate Name"
+msgstr ""
+
+#: ./templates/element/Processes/process_candidate_examiner_fields.php:48
+#: ./templates/element/Processes/process_candidate_examiner_fields.php:49
+msgid "Candidate Email"
+msgstr ""
+
+#: ./templates/element/Processes/process_candidate_examiner_fields.php:54
+#: ./templates/element/Processes/process_candidate_examiner_fields.php:107
+msgid "Error: The candidate and the examiner may not be the same person."
+msgstr ""
+
+#: ./templates/element/Processes/process_candidate_examiner_fields.php:95
+#: ./templates/element/Processes/process_candidate_examiner_fields.php:96
+msgid "Examiner Name"
+msgstr ""
+
+#: ./templates/element/Processes/process_candidate_examiner_fields.php:101
+#: ./templates/element/Processes/process_candidate_examiner_fields.php:102
+msgid "Examiner Email"
+msgstr ""
+
+#: ./templates/element/Processes/process_form_fields.php:16
+msgid "Enter process title"
+msgstr ""
+
+#: ./templates/element/Processes/process_form_fields.php:22
+msgid "Enter process description"
+msgstr ""
+
+#: ./templates/element/Users/user_sidebar.php:24
+msgid "My Account"
+msgstr ""
+
+#: ./templates/element/molecules/action_card.php:54
+msgid "No actions available"
+msgstr ""
+
+#: ./templates/element/molecules/breadcrumb_nav.php:27
+msgid "Breadcrumb"
+msgstr ""
+
+#: ./templates/element/molecules/comment_filter_bar.php:29
+msgid "Processes"
+msgstr ""
+
+#: ./templates/element/molecules/comment_form.php:59
+msgid "Saved comments are part of the assessment documentation and cannot be edited."
+msgstr ""
+
+#: ./templates/element/molecules/comment_form.php:85
+msgid "Content"
+msgstr ""
+
+#: ./templates/element/molecules/form_navigation.php:32
+msgid "Form Navigation"
+msgstr ""
+
+#: ./templates/element/molecules/form_navigation.php:78
+msgid "Currently editing"
+msgstr ""
+
+#: ./templates/element/molecules/info_popover.php:18
+msgid "Information"
+msgstr ""
+
+#: ./templates/element/molecules/modal.php:149
+msgid "Close"
+msgstr ""
+
+#: ./templates/element/molecules/modal.php:162
+msgid "Loading..."
+msgstr ""
+
+#: ./templates/element/molecules/usecase_description_viewer.php:121
+msgid "No file uploaded"
+msgstr ""
+
+#: ./templates/element/molecules/usecase_description_viewer.php:134
+msgid "Add Comment"
+msgstr ""
+
+#: ./templates/element/molecules/usecase_description_viewer.php:138
+msgid "View Comment"
+msgstr ""
+
+#: ./templates/element/molecules/usecase_description_viewer.php:143
+msgid "Comment for {0}"
+msgstr ""
+
+#: ./templates/element/organisms/app_header.php:58
+msgid "Toggle menu"
+msgstr ""
+
+#: ./templates/element/organisms/app_left_purple_branding.php:6
+msgid "PRÜFPORTAL"
+msgstr ""
+
+#: ./templates/element/organisms/app_left_purple_branding.php:11
+#: ./templates/layout/email/html/default.php:335
+#: ./templates/layout/email/text/default.php:19
+msgid "Nationale Initiative für Künstliche Intelligenz und Datenökonomie"
+msgstr ""
+
+#: ./templates/element/organisms/app_sidebar.php:53
+msgid "Main navigation"
+msgstr ""
+
+#: ./templates/element/organisms/user_menu.php:47
+msgid "Logout"
+msgstr ""
+
+#: ./templates/email/html/invite_user.php:8
+#: ./templates/email/html/register_confirmation.php:6
+#: ./templates/email/html/reset_password.php:6
+#: ./templates/email/text/invite_user.php:8
+#: ./templates/email/text/register_confirmation.php:6
+#: ./templates/email/text/reset_password.php:6
+msgid "Hi"
+msgstr ""
+
+#: ./templates/email/html/invite_user.php:11
+#: ./templates/email/text/invite_user.php:12
+msgid "You can set the credentials for your account \"{0}\" after the activation."
+msgstr ""
+
+#: ./templates/email/html/invite_user.php:20
+msgid "Accept and activate account"
+msgstr ""
+
+#: ./templates/email/html/invite_user.php:28
+#: ./templates/email/html/register_confirmation.php:23
+#: ./templates/email/html/reset_password.php:24
+#: ./templates/email/text/invite_user.php:17
+#: ./templates/email/text/register_confirmation.php:12
+#: ./templates/email/text/reset_password.php:14
+msgid "Good luck! Hope it works."
+msgstr ""
+
+#: ./templates/email/html/register_confirmation.php:7
+#: ./templates/email/text/register_confirmation.php:8
+msgid "Please open the link below to activate your account."
+msgstr ""
+
+#: ./templates/email/html/register_confirmation.php:15
+msgid "Activate account"
+msgstr ""
+
+#: ./templates/email/html/reset_password.php:7
+#: ./templates/email/text/reset_password.php:8
+msgid "Please open the link below to set a new password."
+msgstr ""
+
+#: ./templates/email/html/reset_password.php:23
+#: ./templates/email/text/reset_password.php:12
+msgid "This link will expire in 10 minutes."
+msgstr ""
+
+#: ./templates/layout/email/html/default.php:326
+#: ./templates/layout/email/text/default.php:14
+msgid "Detailed information on data processing:"
+msgstr ""
+
+#: ./templates/layout/email/html/default.php:326
+msgid "Privacy link"
+msgstr ""
+
+#: ./templates/layout/error.php:36
+msgid "Back"
+msgstr ""
+
+#: templates/cell/Notifications/display.php:104
+msgid "No new notifications"
+msgstr ""
+
+#: templates/cell/Notifications/display.php:105
+msgid "You are all caught up! Check back later for updates."
+msgstr ""

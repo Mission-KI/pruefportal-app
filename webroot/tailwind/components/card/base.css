@@ -1,0 +1,30 @@
+@layer components {
+  /* === CARD SYSTEM === */
+  .card {
+    /* Base card structure */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    word-wrap: break-word;
+
+    /* Default styles (medium) */
+    padding: var(--spacing-card-padding-md);
+    border-radius: var(--radius-card-md);
+    /*max-width: var(--card-max-width-md);*/
+    min-height: var(--card-min-height-sm);
+
+    /* Visual styling */
+    background-color: var(--color-secondary);
+    border: var(--card-border-width) solid var(--card-border-color);
+    box-shadow: var(--shadow-card-sm);
+
+    /* Typography defaults */
+    color: inherit;
+    line-height: 1.5;
+
+    /* Content spacing */
+    & > * + * {
+      margin-top: var(--spacing-card-gap-md);
+    }
+  }
+}

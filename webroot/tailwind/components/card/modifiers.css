@@ -1,0 +1,13 @@
+@layer components {
+  .card {
+    /* === CARD ELEVATION VARIANTS === */
+    &-elevated {
+      box-shadow: var(--shadow-card-lg);
+    }
+
+    &-flat {
+      box-shadow: none;
+      border-width: 2px;
+    }
+  }
+}

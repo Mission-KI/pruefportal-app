@@ -1,0 +1,1661 @@
+{
+    "DA": {
+        "quality_dimension_id": 50,
+        "title": {
+            "de": "Qualitätsdimension Datenqualität, -schutz und -Governance",
+            "en": "Qualitätsdimension Datenqualität, -schutz und -Governance"
+        },
+        "icon": "data-quality",
+        "questions": [
+            [
+                {
+                    "id": "DA-Z12",
+                    "dimension": "DA",
+                    "question": "Verarbeitet oder erzeugt das KI-System personenbezogene Daten oder wurden diese im Rahmen des Trainings des KI-Modells bzw. der KI-Modelle verwendet?",
+                    "category": 0,
+                    "criteria": 11,
+                    "answers": {
+                        "3": "Ja",
+                        "1": "Nein"
+                    },
+                    "type": "AF",
+                    "relatedQuestions": [],
+                    "tooltip": "\"Verarbeiten\" meint explizit keine Schritte um eben diese Daten für weitere Prozesse zu entfernen, auszuschließen oder zu anonymisieren, sofern diese nicht gespeichert werden"
+                },
+                {
+                    "id": "DA-Z13",
+                    "dimension": "DA",
+                    "question": "Verarbeitet oder erzeugt das KI-System proprietäre Daten oder wurden diese im Rahmen des Trainings des KI-Modells bzw. der KI-Modelle verwendet?",
+                    "category": 0,
+                    "criteria": 12,
+                    "answers": {
+                        "3": "Ja",
+                        "1": "Nein"
+                    },
+                    "type": "AF",
+                    "relatedQuestions": [],
+                    "tooltip": "\"Verarbeiten\" meint explizit keine Schritte um eben diese Daten für weitere Prozesse zu entfernen, auszuschließen oder zu anonymisieren, sofern diese nicht gespeichert werden"
+                }
+            ],
+            [
+                {
+                    "id": "DA-Z16",
+                    "dimension": "DA",
+                    "question": "Wie hoch ist der Schutzbedarf bezüglich des Kriteriums „Leistungsfähigkeit und Robustheit“ (VE)?",
+                    "category": 0,
+                    "criteria": 10,
+                    "answers": {
+                        "3": "hoch",
+                        "2": "moderat",
+                        "1": "gering"
+                    },
+                    "type": "GF",
+                    "relatedQuestions": [],
+                    "tooltip": "",
+                    "receivesValueFromCriterion": 50
+                },
+                {
+                    "id": "DA-Z17",
+                    "dimension": "DA",
+                    "question": "Wie hoch ist der Schutzbedarf bezüglich des Kriteriums „Schutz personenbezogener Daten“ (DA)?",
+                    "category": 0,
+                    "criteria": 10,
+                    "answers": {
+                        "3": "hoch",
+                        "2": "moderat",
+                        "1": "gering"
+                    },
+                    "type": "GF",
+                    "relatedQuestions": [],
+                    "tooltip": "",
+                    "receivesValueFromCriterion": 11
+                },
+                {
+                    "id": "DA-Z18",
+                    "dimension": "DA",
+                    "question": "Wie hoch ist der Schutzbedarf bezüglich des Kriteriums „Vermeidung von ungerechtfertigter Diskriminierung und Verzerrung“ (ND)?",
+                    "category": 0,
+                    "criteria": 10,
+                    "answers": {
+                        "3": "hoch",
+                        "2": "moderat",
+                        "1": "gering"
+                    },
+                    "type": "GF",
+                    "relatedQuestions": [],
+                    "tooltip": "",
+                    "receivesValueFromCriterion": 20
+                },
+                {
+                    "id": "DA-Z19",
+                    "dimension": "DA",
+                    "question": "Verarbeitet das KI-System personenbezogene Daten angelehnt an Art. 9 Abs. 1 DSGVO?",
+                    "category": 0,
+                    "criteria": 11,
+                    "answers": {
+                        "3": "Ja",
+                        "1": "Nein"
+                    },
+                    "type": "GF",
+                    "relatedQuestions": [],
+                    "tooltip": "Personenbezogene Daten angelehnt an Art. 9 Abs. 1 DSGVO sind Daten, aus denen die rassische oder ethnische Herkunft, politische Meinungen, religiöse oder weltanschauliche Überzeugungen oder die Gewerkschaftszugehörigkeit einer natürlichen Person hervorgehen."
+                },
+                {
+                    "id": "DA-Z20",
+                    "dimension": "DA",
+                    "question": "Verarbeitet das KI-System genetische Daten, biometrische Daten zur eindeutigen Identifizierung einer natürlichen Person, Gesundheitsdaten oder Daten zum Sexualleben oder der sexuellen Orientierung einer natürlichen Person?",
+                    "category": 0,
+                    "criteria": 11,
+                    "answers": {
+                        "3": "Ja",
+                        "1": "Nein"
+                    },
+                    "type": "GF",
+                    "relatedQuestions": [],
+                    "tooltip": ""
+                },
+                {
+                    "id": "DA-Z21",
+                    "dimension": "DA",
+                    "question": "Können mangelhafter Schutz oder mangelhaftes Management der von dem KI-System genutzten oder erzeugten Daten – im realistischen worst-case – tödliche Personenschäden verursachen?",
+                    "category": 1,
+                    "criteria": 11,
+                    "answers": {
+                        "3": "Ja",
+                        "1": "Nein"
+                    },
+                    "type": "GF",
+                    "relatedQuestions": [],
+                    "tooltip": "Zu denken ist beispielsweise politische Verfolgung: in einem solchen Falle kann mangelhafter Schutz sensibler Daten durch den Zugriff entsprechender Stellen Lebensgefahr für die jeweilie Person bedeuten."
+                },
+                {
+                    "id": "DA-Z22",
+                    "dimension": "DA",
+                    "question": "Können mangelhafter Schutz oder mangelhaftes Management der von dem KI-System genutzten oder erzeugten Daten – im realistischen worst-case – Gesundheitsschäden (körperliche Gesundheit) bei natürlichen Personen verursachen?",
+                    "category": 2,
+                    "criteria": 11,
+                    "answers": {
+                        "2": "Ja",
+                        "1": "Nein"
+                    },
+                    "type": "GF",
+                    "relatedQuestions": [],
+                    "tooltip": "Zu denken ist beispielweise an Angriffe auf Politiker, auch in diesem Fall vor dem Hintergrund eines mangelhaften Datenschutzes."
+                },
+                {
+                    "id": "DA-Z23",
+                    "dimension": "DA",
+                    "question": "Kann das KI-System die Überwachung von natürlichen Personen erleichtern bzw. stärken oder dient sie unmittelbar der Überwachung von natürlichen Personen?",
+                    "category": 0,
+                    "criteria": 11,
+                    "answers": {
+                        "3": "Ja",
+                        "1": "Nein"
+                    },
+                    "type": "GF",
+                    "relatedQuestions": [],
+                    "tooltip": ""
+                }
+            ],
+            [
+                {
+                    "id": "DA-Z26",
+                    "dimension": "DA",
+                    "question": "Kann das KI-System prinzipiell, angesichts der Aufgabenstellung und Datengrundlage, personenbezogene Daten erzeugen?",
+                    "category": 0,
+                    "criteria": 11,
+                    "answers": {
+                        "3": "Ja",
+                        "1": "Nein"
+                    },
+                    "type": "EF",
+                    "relatedQuestions": [],
+                    "tooltip": ""
+                },
+                {
+                    "id": "DA-Z27",
+                    "dimension": "DA",
+                    "question": "Können die Ergebnisse des KI-Systems prinzipiell verwendet werden, um einen Personenbezug in den Daten herzustellen?",
+                    "category": 0,
+                    "criteria": 11,
+                    "answers": {
+                        "3": "Ja",
+                        "1": "Nein"
+                    },
+                    "type": "EF",
+                    "relatedQuestions": [],
+                    "tooltip": ""
+                },
+                {
+                    "id": "DA-Z28",
+                    "dimension": "DA",
+                    "question": "Liegt für das KI-System ein Data Protection Impact Assessment (DPIA) mit hoher bzw. kritischer Einstufung im Ergebnis vor?",
+                    "category": 0,
+                    "criteria": 11,
+                    "answers": {
+                        "3": "Ja",
+                        "1": "Nein"
+                    },
+                    "type": "EF",
+                    "relatedQuestions": [],
+                    "tooltip": ""
+                },
+                {
+                    "id": "DA-Z29",
+                    "dimension": "DA",
+                    "question": "Wie häufig wird das KI-System während des Betriebs weitertrainiert oder durch neue Versionen aktualisiert?",
+                    "category": 0,
+                    "criteria": 10,
+                    "answers": {
+                        "3": "oft",
+                        "2": "hin und wieder",
+                        "1": "nie"
+                    },
+                    "type": "EF",
+                    "relatedQuestions": [
+                        "TR-Z31",
+                        "VE-Z24"
+                    ],
+                    "tooltip": "Beispielhafte Grenzen:<br />nie = kein einziges mal<br />hin und wieder = monatlich oder seltener<br />oft = häufiger als monatlich"
+                },
+                {
+                    "id": "DA-Z30",
+                    "dimension": "DA",
+                    "question": "Werden personenbezogenen Daten anonymisiert, bevor sie für das KI-System verwendet werden?",
+                    "category": 4,
+                    "criteria": 11,
+                    "answers": {
+                        "3": "mit großen oder größten Einschränkungen",
+                        "2": "mit leichten bis moderaten Einschränkungen",
+                        "1": "alle und immer"
+                    },
+                    "type": "EF",
+                    "relatedQuestions": [],
+                    "tooltip": "Beispielhafte Grenzen:<br />alle und immer = Anonymisierung (alle Daten sind vollständig anonymisiert)<br />mit leichten bis moderaten Einschränkungen = Pseudonymisierung (Daten sind pseudonymisiert, jedoch besteht ein Risiko der Re-Identifizierung)<br />mit großen oder größten Einschränkungen = Daten werden weder anonymisiert noch pseudonymisiert oder der Prozentsatz liegt unter 50 %<br />"
+                },
+                {
+                    "id": "DA-Z31",
+                    "dimension": "DA",
+                    "question": "Wie hoch kann der finanzielle Schaden für das Unternehmen maximal sein, falls geistiges Eigentum nicht ausreichend geschützt wird? Der potentiell finanzielle Schaden dient hier als stellvertretende Bemessung des Schadens für den oder die Betroffenen.",
+                    "category": 5,
+                    "criteria": 12,
+                    "answers": {
+                        "3": "schwerwiegender oder katastrophaler finanzieller Schaden",
+                        "2": "moderater finanzieller Schaden",
+                        "1": "kein bis niedriger finanzieller Schaden"
+                    },
+                    "type": "EF",
+                    "relatedQuestions": [],
+                    "tooltip": "Beispielhafte Grenzen:<br />kein bis niedriger finanzieller Schaden = Schaden in Höhe von bis zu 1 % des Vorjahresumsatzes oder unter 1.000€<br />moderater finanzieller Schaden = Schaden in Höhe von 1 % bis 5 % des Vorjahresumsatzes oder zwischen 1.000€ bis 50.000€<br />schwerwiegender oder katastrophaler finanzieller Schaden = Schaden in Höhe von über 5 % des Vorjahresumsatzes oder über 50.000€"
+                },
+                {
+                    "id": "DA-Z32",
+                    "dimension": "DA",
+                    "question": "Wie hoch kann der finanzielle Schaden für das Unternehmen maximal sein, falls personenbezogene Daten nicht ausreichend geschützt werden (kummulierter Schaden)? Der potentiell finanzielle Schaden dient hier als stellvertretende Bemessung des Schadens für den oder die Betroffenen.",
+                    "category": 5,
+                    "criteria": 11,
+                    "answers": {
+                        "3": "schwerwiegender oder katastrophaler finanzieller Schaden",
+                        "2": "moderater finanzieller Schaden",
+                        "1": "kein bis niedriger finanzieller Schaden"
+                    },
+                    "type": "EF",
+                    "relatedQuestions": [],
+                    "tooltip": "Beispielhafte Grenzen:<br />kein bis niedriger finanzieller Schaden = Schaden in Höhe von bis zu 1 % des Vorjahresumsatzes oder unter 1.000€<br />moderater finanzieller Schaden = Schaden in Höhe von 1 % bis 5 % des Vorjahresumsatzes oder zwischen 1.000€ bis 50.000€<br />schwerwiegender oder katastrophaler finanzieller Schaden = Schaden in Höhe von über 5 % des Vorjahresumsatzes oder über 50.000€"
+                }
+            ]
+        ]
+    },
+    "ND": {
+        "quality_dimension_id": 30,
+        "title": {
+            "de": "Qualitätsdimension Nicht-Diskriminierung",
+            "en": "Qualitätsdimension Nicht-Diskriminierung"
+        },
+        "icon": "non-discrimination",
+        "questions": [
+            [
+                {
+                    "id": "ND-Z10",
+                    "dimension": "ND",
+                    "question": "Betreffen die Ergebnisse oder das Verhalten des KI-Systems natürliche Personen auf unterschiedliche Art und Weise und ist diese Ungleichbehandlung mit der Ausprägung geschützter Merkmale (Rasse, ethnische Herkunft, Geschlecht, Religion oder Weltanschauung,  Behinderung, Alter, sexuelle Identität) bei diesen Personen verbunden?",
+                    "category": 0,
+                    "criteria": 20,
+                    "answers": {
+                        "3": "Ja",
+                        "1": "Nein"
+                    },
+                    "type": "AF",
+                    "relatedQuestions": [],
+                    "tooltip": "Hier sind betroffene Personen natürliche Personen, die durch ein KI-System beeinflusst oder betroffen werden, ohne notwendigerweise direkt oder aktiv mit dem System zu interagieren. Der Unterschied zu Nutzern liegt in der Art der Interaktion: Während Nutzer das KI-System direkt und aktiv bedienen, beispielsweise als Endnutzer oder Benutzer, stehen betroffene Personen in einem eher indirekten und passiven Verhältnis zum KI-System, können jedoch durch dessen Entscheidungen oder Funktionen beeinflusst werden (vgl. Glossar).<br /><br />Geschütze Eigenschaften sind (in Anlehnung an das AGG): Rasse, ethnische Herkunft, Geschlecht, Religion oder Weltanschauung, Behinderung, Alter, sexuelle Identität."
+                }
+            ],
+            [
+                {
+                    "id": "ND-Z14",
+                    "dimension": "ND",
+                    "question": "Benutzt das KI-System Daten, die Aufschluss über die Zugehörigkeit einer natürlichen Person zu einer Personengruppe mit geschützten Eigenschaften geben?",
+                    "category": 0,
+                    "criteria": 20,
+                    "answers": {
+                        "3": "Ja",
+                        "1": "Nein"
+                    },
+                    "type": "GF",
+                    "relatedQuestions": [],
+                    "tooltip": "Geschütze Eigenschaften sind (in Anlehnung an das AGG): Rasse, ethnische Herkunft, Geschlecht, Religion oder Weltanschauung, Behinderung, Alter, sexuelle Identität."
+                },
+                {
+                    "id": "ND-Z15",
+                    "dimension": "ND",
+                    "question": "Regelt das KI-System den Zugang zu essenziell die Persönlichkeit betreffenden Diensten oder Aktivitäten?",
+                    "category": 0,
+                    "criteria": 20,
+                    "answers": {
+                        "3": "Ja",
+                        "1": "Nein"
+                    },
+                    "type": "GF",
+                    "relatedQuestions": [],
+                    "tooltip": ""
+                },
+                {
+                    "id": "ND-Z16",
+                    "dimension": "ND",
+                    "question": "Ist das KI-System in Entscheidungsprozesse eingebunden, welche Persönlichkeitsrechte weitreichend beeinflussen?",
+                    "category": 0,
+                    "criteria": 20,
+                    "answers": {
+                        "3": "Ja",
+                        "1": "Nein"
+                    },
+                    "type": "GF",
+                    "relatedQuestions": [],
+                    "tooltip": ""
+                }
+            ],
+            [
+                {
+                    "id": "ND-Z19",
+                    "dimension": "ND",
+                    "question": "Könnte ein Missbrauch (z.B. Überwachung von Personen) des KI-Systems Gruppen, die sich anhand geschützter Eigenschaften definieren, in besonders starkem Ausmaß schaden?",
+                    "category": 0,
+                    "criteria": 20,
+                    "answers": {
+                        "3": "Ja",
+                        "1": "Nein"
+                    },
+                    "type": "EF",
+                    "relatedQuestions": [],
+                    "tooltip": "Geschütze Eigenschaften sind (in Anlehnung an das AGG): Rasse, ethnische Herkunft, Geschlecht, Religion oder Weltanschauung, Behinderung, Alter, sexuelle Identität."
+                },
+                {
+                    "id": "ND-Z20",
+                    "dimension": "ND",
+                    "question": "Wie viele Nutzer und (durch die Nutzung) betroffene Personen hat das KI-System innerhalb eines bestimmten Zeitraums?",
+                    "category": 0,
+                    "criteria": 20,
+                    "answers": {
+                        "3": "hohe Anzahl an Nutzer*innen/betroffenen Personen",
+                        "2": "moderate Anzahl an Nutzer*innen/betroffenen Personen",
+                        "1": "niedrige Anzahl an Nutzer*innen/betroffenen Personen"
+                    },
+                    "type": "EF",
+                    "relatedQuestions": [],
+                    "tooltip": "Beispielhafte Grenzen:<br />niedrige Anzahl an Nutzern/betroffenen Personen im Monat = 0-1.000<br />moderate Anzahl an Nutzern/betroffenen Personen im Monat = 1.001-10.000<br />hohe Anzahl an Nutzern/betroffenen Personen im Monat = >10.000 <br /><br />Hier sind betroffene Personen natürliche Personen, die durch ein KI-System beeinflusst oder betroffen werden, ohne notwendiger-weise direkt oder aktiv mit dem System zu interagieren. Der Unterschied zu Nutzer*innen liegt in der Art der Interaktion: Während Nutzer*innen das KI-System direkt und aktiv bedienen, beispielsweise als Endnutzer*innen oder Benutzer*innen, stehen betroffene Personen in einem eher indirekten und passiven Verhältnis zum KI-System, können jedoch durch dessen Entscheidungen oder Funktionen beeinflusst werden (vgl. Glossar).<br /><br /><br />Hier meint Nutzer natürliche Personen, die direkt und aktiv mit einem KI-System interagieren, entweder als Endnutzer*innen, die das KI-System für persönliche oder geschäftliche Zwecke verwenden, oder als Benutzer*innen, die das KI-System im professionellen Kontext anwenden. Der Begriff umfasst sowohl diejenigen, die das KI-System bedienen, als auch jene, die es für die Erreichung spezifischer Ziele nutzen. Je nach Kontext kann dies die Verwendung von KI-Systemen in alltäglichen Anwendungen oder in spezialisierten, beruflichen Szenarien beinhalten (vgl. Glossar).<br /><br />"
+                },
+                {
+                    "id": "ND-Z22",
+                    "dimension": "ND",
+                    "question": "Hat das KI-System hinsichtlich seines Anwendungsbereiches das Potenzial, gesetzlich verbotene Schlechterbehandlung abzubilden, oder besteht die begründete Annahme, dass es derartige Ungleichbehandlungen verstärkt?",
+                    "category": 6,
+                    "criteria": 20,
+                    "answers": {
+                        "3": "Ja",
+                        "1": "Nein"
+                    },
+                    "type": "EF",
+                    "relatedQuestions": [],
+                    "tooltip": ""
+                },
+                {
+                    "id": "ND-Z23",
+                    "dimension": "ND",
+                    "question": "Hat das KI-System aufgrund seines Anwendungsbereichs oder seiner Funktionsweise das Potenzial, Ausgaben zu produzieren, die möglicherweise gesetzlich verboten sind (z.B. Beleidigungen), oder lässt sich mit hinreichender Plausibilität annehmen, dass die zugrundeliegende (Trainings-/Test-)Datenbasis derartige Instanzen oder Inhalte enthält?",
+                    "category": 7,
+                    "criteria": 20,
+                    "answers": {
+                        "3": "Ja",
+                        "1": "Nein"
+                    },
+                    "type": "EF",
+                    "relatedQuestions": [],
+                    "tooltip": ""
+                }
+            ]
+        ]
+    },
+    "TR": {
+        "quality_dimension_id": 20,
+        "title": {
+            "de": "Qualitätsdimension Transparenz",
+            "en": "Qualitätsdimension Transparenz"
+        },
+        "icon": "transparency",
+        "questions": [
+            [
+                {
+                    "id": "TR-Z11",
+                    "dimension": "TR",
+                    "question": "Reduziert sich die Sicherheit (safety) des Systems, wenn eine Einschränkung von Erklärbarkeit und Interpretierbarkeit des Systems gegeben ist?",
+                    "category": 0,
+                    "criteria": 31,
+                    "answers": {
+                        "3": "Ja",
+                        "1": "Nein"
+                    },
+                    "type": "AF",
+                    "relatedQuestions": [],
+                    "tooltip": "Als geringes Maß können Auswirkungen verstanden werden, die Nutzer und/oder Betroffene vermutlich ohne Beschwerde hinnehmen würden."
+                },
+                {
+                    "id": "TR-Z12",
+                    "dimension": "TR",
+                    "question": "Wirkt sich das Verhalten oder Ergebnis des KI-Systems substanziell auf die Handlungsfreiheit von natürlichen Personen oder auf persönliche Rechte aus?",
+                    "category": 0,
+                    "criteria": 31,
+                    "answers": {
+                        "3": "Ja",
+                        "1": "Nein"
+                    },
+                    "type": "AF",
+                    "relatedQuestions": [],
+                    "tooltip": "Als substanziell können Auswirkungen verstanden werden, die die Handlungsfreiheit oder -autonomie einschränken."
+                }
+            ],
+            [
+                {
+                    "id": "TR-Z16",
+                    "dimension": "TR",
+                    "question": "Kann eine infolge mangelnder Erklärbarkeit und Interpretierbarkeit verursachte Einschränkung der sicheren und zweckgemäßen Nutzung des KI-Systems – im realistischen worst-case –  tödliche Personenschäden verursachen?",
+                    "category": 1,
+                    "criteria": 31,
+                    "answers": {
+                        "3": "Ja",
+                        "1": "Nein"
+                    },
+                    "type": "GF",
+                    "relatedQuestions": [],
+                    "tooltip": ""
+                },
+                {
+                    "id": "TR-Z17",
+                    "dimension": "TR",
+                    "question": "Kann eine infolge mangelnder Rückverfolgbarkeit und Dokumentation verursachte Einschränkung der sicheren und zweckgemäßen Nutzung des KI-Systems – im realistischen worst-case –  tödliche Personenschäden verursachen?",
+                    "category": 1,
+                    "criteria": 30,
+                    "answers": {
+                        "3": "Ja",
+                        "1": "Nein"
+                    },
+                    "type": "GF",
+                    "relatedQuestions": [],
+                    "tooltip": ""
+                },
+                {
+                    "id": "TR-Z18",
+                    "dimension": "TR",
+                    "question": "Kann eine infolge mangelnder Erklärbarkeit und Interpretierbarkeit verursachte Einschränkung der sicheren und zweckgemäßen Nutzung des KI-Systems – im realistischen  worst-case –  Gesundheitsschäden (körperliche Gesundheit) bei natürlichen Personen verursachen?",
+                    "category": 2,
+                    "criteria": 31,
+                    "answers": {
+                        "2": "Ja",
+                        "1": "Nein"
+                    },
+                    "type": "GF",
+                    "relatedQuestions": [],
+                    "tooltip": ""
+                },
+                {
+                    "id": "TR-Z19",
+                    "dimension": "TR",
+                    "question": "Kann eine infolge mangelnder Rückverfolgbarkeit und Dokumentation verursachte Einschränkung der sicheren und zweckgemäßen Nutzung des KI-Systems – im realistischen worst-case –  Gesundheitsschäden (körperliche Gesundheit) bei natürlichen Personen verursachen?",
+                    "category": 2,
+                    "criteria": 30,
+                    "answers": {
+                        "2": "Ja",
+                        "1": "Nein"
+                    },
+                    "type": "GF",
+                    "relatedQuestions": [],
+                    "tooltip": ""
+                },
+                {
+                    "id": "TR-Z20",
+                    "dimension": "TR",
+                    "question": "Regelt das KI-System den Zugang zu essenziell die Persönlichkeit oder die persönlichen Handlungsspielräume betreffenden Diensten und Aktivitäten?",
+                    "category": 0,
+                    "criteria": 30,
+                    "answers": {
+                        "3": "Ja",
+                        "1": "Nein"
+                    },
+                    "type": "GF",
+                    "relatedQuestions": [
+                        "TR-Z21"
+                    ],
+                    "tooltip": "Identisch zu Frage TR-Z21 (anderes Kriterium)"
+                },
+                {
+                    "id": "TR-Z21",
+                    "dimension": "TR",
+                    "question": "Regelt das KI-System den Zugang zu essenziell die Persönlichkeit oder die persönlichen Handlungsspielräume betreffenden Diensten und Aktivitäten?",
+                    "category": 0,
+                    "criteria": 31,
+                    "answers": {
+                        "3": "Ja",
+                        "1": "Nein"
+                    },
+                    "type": "GF",
+                    "relatedQuestions": [
+                        "TR-Z20"
+                    ],
+                    "tooltip": "Identisch zu Frage TR-Z20 (anderes Kriterium)"
+                },
+                {
+                    "id": "TR-Z22",
+                    "dimension": "TR",
+                    "question": "Ist das KI-System in Entscheidungsprozesse eingebunden, welche Grundrechte oder demokratische Verfahren betreffen?",
+                    "category": 0,
+                    "criteria": 30,
+                    "answers": {
+                        "3": "Ja",
+                        "1": "Nein"
+                    },
+                    "type": "GF",
+                    "relatedQuestions": [
+                        "TR-Z23"
+                    ],
+                    "tooltip": "Identisch zu Frage TR-Z23 (anderes Kriterium)<br /><br />Beispiel: Überwachung von natürlichen Personen"
+                },
+                {
+                    "id": "TR-Z23",
+                    "dimension": "TR",
+                    "question": "Ist das KI-System in Entscheidungsprozesse eingebunden, welche Grundrechte oder demokratische Verfahren betreffen?",
+                    "category": 0,
+                    "criteria": 31,
+                    "answers": {
+                        "3": "Ja",
+                        "1": "Nein"
+                    },
+                    "type": "GF",
+                    "relatedQuestions": [
+                        "TR-Z22"
+                    ],
+                    "tooltip": "Identisch zu Frage TR-Z22 (anderes Kriterium)<br /><br />Beispiel: Überwachung von natürlichen Personen"
+                },
+                {
+                    "id": "TR-Z24",
+                    "dimension": "TR",
+                    "question": "Kann das KI-System – absichtlich oder unabsichtlich – bei fehlender Rückverfolgbarkeit und Dokumentation zu einem anderen Zwecke missbraucht werden, sodass dadurch gesellschaftliche Schäden oder Schäden bzgl. der Grundrechte von natürlichen Personen verursacht werden?",
+                    "category": 0,
+                    "criteria": 30,
+                    "answers": {
+                        "3": "Ja",
+                        "1": "Nein"
+                    },
+                    "type": "GF",
+                    "relatedQuestions": [],
+                    "tooltip": "Beispiel: Ein KI-System, welches den Informationsfluss auf Plattformen wie sozialen Netzwerken reguliert, könnte versehentlich die Verbreitung von Fehlinformationen verstärken, indem es Inhalte priorisiert, die polarisierend oder reißerisch sind. Dies könnte zu gesellschaftlicher Spaltung, dem Aufkommen von Extremismus und zur Untergrabung des Vertrauens in öffentliche Institutionen führen."
+                },
+                {
+                    "id": "TR-Z25",
+                    "dimension": "TR",
+                    "question": "In welchem Ausmaß interagiert das KI-System mit Nutzern in einer Art und Weise, die – im realistischen worst-case – ihre Wahrnehmung, Entscheidungen oder Handlungen entscheidend negativ einschränken oder beeinflussen kann?",
+                    "category": 0,
+                    "criteria": 30,
+                    "answers": {
+                        "3": "in hohem Maße",
+                        "2": "in moderatem Maße",
+                        "1": "überhaupt nicht oder in geringem Maße"
+                    },
+                    "type": "GF",
+                    "relatedQuestions": [
+                        "TR-Z26"
+                    ],
+                    "tooltip": "Identisch zu Frage TR-Z26 (anderes Kriterium)<br /><br />Hier meint Nutzer natürliche Personen, die direkt und aktiv mit einem KI-System interagieren, entweder als Endnutzer, die das KI-System für persönliche oder geschäftliche Zwecke verwenden, oder als Benutzer, die das KI-System im professionellen Kontext anwenden. Der Begriff umfasst sowohl diejenigen, die das KI-System bedienen, als auch jene, die es für die Erreichung spezifischer Ziele nutzen. Je nach Kontext kann dies die Verwendung von KI-Systemen in alltäglichen Anwendungen oder in spezialisierten, beruflichen Szenarien beinhalten (vgl. Glossar)."
+                },
+                {
+                    "id": "TR-Z26",
+                    "dimension": "TR",
+                    "question": "In welchem Ausmaß interagiert das KI-System mit Nutzern in einer Art und Weise, die – im realistischen worst-case – ihre Wahrnehmung, Entscheidungen oder Handlungen entscheidend negativ einschränken oder beeinflussen kann?",
+                    "category": 0,
+                    "criteria": 31,
+                    "answers": {
+                        "3": "in hohem Maße",
+                        "2": "in moderatem Maße",
+                        "1": "überhaupt nicht oder in geringem Maße"
+                    },
+                    "type": "GF",
+                    "relatedQuestions": [
+                        "TR-Z25"
+                    ],
+                    "tooltip": "<br />Identisch zu Frage TR-Z25 (anderes Kriterium)<br /><br />Hier meint Nutzer natürliche Personen, die direkt und aktiv mit einem KI-System interagieren, entweder als Endnutzer, die das KI-System für persönliche oder geschäftliche Zwecke verwenden, oder als Benutzer, die das KI-System im professionellen Kontext anwenden. Der Begriff umfasst sowohl diejenigen, die das KI-System bedienen, als auch jene, die es für die Erreichung spezifischer Ziele nutzen. Je nach Kontext kann dies die Verwendung von KI-Systemen in alltäglichen Anwendungen oder in spezialisierten, beruflichen Szenarien beinhalten (vgl. Glossar)."
+                },
+                {
+                    "id": "TR-Z27",
+                    "dimension": "TR",
+                    "question": "Wie häufig können Situationen auftreten, in denen die Nutzungssicherheit oder der Nutzen des KI-Systems bei mangelnder Validierbarkeit oder Erklärbarkeit einzelner Ergebnisse eingeschränkt sind?",
+                    "category": 0,
+                    "criteria": 31,
+                    "answers": {
+                        "3": "oft",
+                        "2": "hin und wieder",
+                        "1": "nie"
+                    },
+                    "type": "GF",
+                    "relatedQuestions": [],
+                    "tooltip": ""
+                }
+            ],
+            [
+                {
+                    "id": "TR-Z30",
+                    "dimension": "TR",
+                    "question": "Ist die Nutzung des KI-Systems für die Nutzer verpflichtend bzw. nicht-freiwillig?",
+                    "category": 0,
+                    "criteria": 31,
+                    "answers": {
+                        "3": "Ja",
+                        "1": "Nein"
+                    },
+                    "type": "EF",
+                    "relatedQuestions": [],
+                    "tooltip": "<br />Hier meint Nutzer natürliche Personen, die direkt und aktiv mit einem KI-System interagieren, entweder als Endnutzer, die das KI-System für persönliche oder geschäftliche Zwecke verwenden, oder als Benutzer, die das KI-System im professionellen Kontext anwenden. Der Begriff umfasst sowohl diejenigen, die das KI-System bedienen, als auch jene, die es für die Erreichung spezifischer Ziele nutzen. Je nach Kontext kann dies die Verwendung von KI-Systemen in alltäglichen Anwendungen oder in spezialisierten, beruflichen Szenarien beinhalten (vgl. Glossar)."
+                },
+                {
+                    "id": "TR-Z31",
+                    "dimension": "TR",
+                    "question": "Wie häufig wird das KI-System während des Betriebs weitertrainiert oder durch neue Versionen aktualisiert?",
+                    "category": 0,
+                    "criteria": 30,
+                    "answers": {
+                        "3": "oft",
+                        "2": "hin und wieder",
+                        "1": "nie"
+                    },
+                    "type": "EF",
+                    "relatedQuestions": [
+                        "DA-Z29",
+                        "VE-Z24"
+                    ],
+                    "tooltip": "Identisch zu Frage VE-Z24 (andere Dimension)<br /><br />Beispielhafte Grenzen:<br />nie = kein einziges Mal<br />hin und wieder = monatlich oder seltener<br />oft = häufiger als monatlich"
+                },
+                {
+                    "id": "TR-Z32",
+                    "dimension": "TR",
+                    "question": "Wie gut können durch das KI-System verursachte, schadhafte Fehler als solche erkannt werden?",
+                    "category": 0,
+                    "criteria": 30,
+                    "answers": {
+                        "3": "mit großen oder größten Mühen",
+                        "2": "mit leichten bis moderaten Mühen",
+                        "1": "immer leicht und eindeutig"
+                    },
+                    "type": "EF",
+                    "relatedQuestions": [],
+                    "tooltip": ""
+                },
+                {
+                    "id": "TR-Z33",
+                    "dimension": "TR",
+                    "question": "Kann eine durch mangelnde Rückverfolgbarkeit und Dokumentation verursachte Einschränkung der sicheren und zweckgemäßen Nutzung des KI-Systems – im realistischen worst-case – tödliche Schäden bei Tieren verursachen?",
+                    "category": 1,
+                    "criteria": 30,
+                    "answers": {
+                        "3": "Ja",
+                        "1": "Nein"
+                    },
+                    "type": "EF",
+                    "relatedQuestions": [
+                        "VE-Z25",
+                        "VE-Z26",
+                        "TR-Z34"
+                    ],
+                    "tooltip": ""
+                },
+                {
+                    "id": "TR-Z34",
+                    "dimension": "TR",
+                    "question": "Kann eine durch mangelnde Erklärbarkeit und Interpretierbarkeit verursachte Einschränkung der sicheren und zweckgemäßen Nutzung des KI-Systems – im realistischen worst-case – tödliche Schäden bei Tieren verursachen?",
+                    "category": 1,
+                    "criteria": 31,
+                    "answers": {
+                        "3": "Ja",
+                        "1": "Nein"
+                    },
+                    "type": "EF",
+                    "relatedQuestions": [
+                        "VE-Z25",
+                        "VE-Z26",
+                        "TR-Z33"
+                    ],
+                    "tooltip": ""
+                },
+                {
+                    "id": "TR-Z35",
+                    "dimension": "TR",
+                    "question": "Falls Fachkenntnisse über künstliche Intelligenz bei den Nutzern notwendig sind: In welchem Maße sind Fachkenntnisse über künstliche Intelligenz bei Nutzern oder betroffenen Personen des KI-Systems erwartbar?",
+                    "category": 0,
+                    "criteria": 31,
+                    "answers": {
+                        "3": "keine oder geringe Fachkenntnisse erwartbar",
+                        "2": "moderate Fachkenntnisse erwartbar",
+                        "1": "Fachkenntnisse in hohem Maße erwartbar oder nicht notwendig"
+                    },
+                    "type": "EF",
+                    "relatedQuestions": [],
+                    "tooltip": "Hier sind betroffene Personen natürliche Personen, die durch ein KI-System beeinflusst oder betroffen werden, ohne notwendiger-weise direkt oder aktiv mit dem System zu interagieren. Der Unterschied zu Nutzern liegt in der Art der Interaktion: Während Nutzer das KI-System direkt und aktiv bedienen, beispielsweise als Endnutzer oder Benutzer, stehen betroffene Personen in einem eher indirekten und passiven Verhältnis zum KI-System, können jedoch durch dessen Entscheidungen oder Funktionen beeinflusst werden (vgl. Glossar).<br /><br /><br />Hier meint Nutzer natürliche Personen, die direkt und aktiv mit einem KI-System interagieren, entweder als Endnutzer, die das KI-System für persönliche oder geschäftliche Zwecke verwenden, oder als Benutzer, die das KI-System im professionellen Kontext anwenden. Der Begriff umfasst sowohl diejenigen, die das KI-System bedienen, als auch jene, die es für die Erreichung spezifischer Ziele nutzen. Je nach Kontext kann dies die Verwendung von KI-Systemen in alltäglichen Anwendungen oder in spezialisierten, beruflichen Szenarien beinhalten (vgl. Glossar)."
+                },
+                {
+                    "id": "TR-Z36",
+                    "dimension": "TR",
+                    "question": "Ist es aufgrund der Funktionsweise und Aufgabenstellung des KI-Systems prinzipiell möglich, dass das KI-System die Entscheidungen oder Handlungen von Nutzern oder betroffenen Personen auf eine Art und Weise beeinflusst oder lenkt, die von ihnen nicht hinreichend durchdrungen werden kann?",
+                    "category": 0,
+                    "criteria": 30,
+                    "answers": {
+                        "3": "Ja",
+                        "1": "Nein"
+                    },
+                    "type": "EF",
+                    "relatedQuestions": [
+                        "MA-Z23"
+                    ],
+                    "tooltip": "Identisch zu Frage MA-Z23 (andere Dimension)<br /><br />„Hinreichend durchdrungen“ bedeutet hier, dass Nutzer/betroffene Personen nicht hinreichend nachvollziehen können, wie ihre Entscheidungen und Handlungen beeinflusst werden.<br /><br />Hier sind betroffene Personen natürliche Personen, die durch ein KI-System beeinflusst oder betroffen werden, ohne notwendiger-weise direkt oder aktiv mit dem System zu interagieren. Der Unterschied zu Nutzern liegt in der Art der Interaktion: Während Nutzer das KI-System direkt und aktiv bedienen, beispielsweise als Endnutzer oder Benutzer, stehen betroffene Personen in einem eher indirekten und passiven Verhältnis zum KI-System, können jedoch durch dessen Entscheidungen oder Funktionen beeinflusst werden (vgl. Glossar).<br /><br /><br />Hier meint Nutzer natürliche Personen, die direkt und aktiv mit einem KI-System interagieren, entweder als Endnutzer, die das KI-System für persönliche oder geschäftliche Zwecke verwenden, oder als Benutzer, die das KI-System im professionellen Kontext anwenden. Der Begriff umfasst sowohl diejenigen, die das KI-System bedienen, als auch jene, die es für die Erreichung spezifischer Ziele nutzen. Je nach Kontext kann dies die Verwendung von KI-Systemen in alltäglichen Anwendungen oder in spezialisierten, beruflichen Szenarien beinhalten (vgl. Glossar)."
+                },
+                {
+                    "id": "TR-Z37",
+                    "dimension": "TR",
+                    "question": "Wie hoch ist – im realistischen worst-case – der finanzielle Schaden, der entstehen kann, wenn Erklärungen oder Einsichten in die Genese von Ausgaben des KI-Systems fehlen?  Der potentiell finanzielle Schaden dient hier als stellvertretende Bemessung des Schadens für den oder die Betroffenen.",
+                    "category": 5,
+                    "criteria": 31,
+                    "answers": {
+                        "3": "schwerwiegender oder katastrophaler finanzieller Schaden",
+                        "2": "moderater finanzieller Schaden",
+                        "1": "kein bis niedriger finanzieller Schaden"
+                    },
+                    "type": "EF",
+                    "relatedQuestions": [
+                        "VE-Z27",
+                        "VE-Z28",
+                        "TR-Z38"
+                    ],
+                    "tooltip": "Beispielhafte Grenzen:<br />kein bis niedriger finanzieller Schaden = Schaden in Höhe von bis zu 1 % des Vorjahresumsatzes oder unter 1.000€<br />moderater finanzieller Schaden = Schaden in Höhe von 1 % bis 5 % des Vorjahresumsatzes oder zwischen 1.000€ bis 50.000€<br />schwerwiegender oder katastrophaler finanzieller Schaden = Schaden in Höhe von über 5 % des Vorjahresumsatzes oder über 50.000€"
+                },
+                {
+                    "id": "TR-Z38",
+                    "dimension": "TR",
+                    "question": "Wie hoch ist – im realistischen worst-case – der finanzielle Schaden, der entstehen kann, falls Begründungen oder Rechenschaft über Fehler oder Fehlfunktion des KI-Systems nachträglich nicht vorgelegt werden können? Der potentiell finanzielle Schaden dient hier als stellvertretende Bemessung des Schadens für den oder die Betroffenen.",
+                    "category": 5,
+                    "criteria": 30,
+                    "answers": {
+                        "3": "schwerwiegender oder katastrophaler finanzieller Schaden",
+                        "2": "moderater finanzieller Schaden",
+                        "1": "kein bis niedriger finanzieller Schaden"
+                    },
+                    "type": "EF",
+                    "relatedQuestions": [
+                        "VE-Z27",
+                        "VE-Z28",
+                        "TR-Z37"
+                    ],
+                    "tooltip": "Beispielhafte Grenzen:<br />kein bis niedriger finanzieller Schaden = Schaden in Höhe von bis zu 1 % des Vorjahresumsatzes oder unter 1.000€<br />moderater finanzieller Schaden = Schaden in Höhe von 1 % bis 5 % des Vorjahresumsatzes oder zwischen 1.000€ bis 50.000€<br />schwerwiegender oder katastrophaler finanzieller Schaden = Schaden in Höhe von über 5 % des Vorjahresumsatzes oder über 50.000€"
+                }
+            ]
+        ]
+    },
+    "MA": {
+        "quality_dimension_id": 60,
+        "title": {
+            "de": "Qualitätsdimension Menschliche Aufsicht und Kontrolle",
+            "en": "Qualitätsdimension Menschliche Aufsicht und Kontrolle"
+        },
+        "icon": "human-oversight",
+        "questions": [
+            [
+                {
+                    "id": "MA-Z11",
+                    "dimension": "MA",
+                    "question": "Kann das KI-System prinzipiell ohne menschliche Be(s)tätigung seine Aufgabe vollständig ausführen?",
+                    "category": 9,
+                    "criteria": 41,
+                    "answers": {
+                        "3": "Ja",
+                        "1": "Nein"
+                    },
+                    "type": "AF",
+                    "relatedQuestions": [],
+                    "tooltip": "Gemeint ist hier mit „prinzipiell“ die Art und Weise des Einsatzes innerhalb des Verwendungszwecks.<br /><br />Mit „Aufgabe“ ist die Aufgabe des gesamten KI-Systems gemeint."
+                },
+                {
+                    "id": "MA-Z12",
+                    "dimension": "MA",
+                    "question": "Kann das KI-System eine unmittelbare Auswirkung auf Personen haben?",
+                    "category": 9,
+                    "criteria": 40,
+                    "answers": {
+                        "3": "Ja",
+                        "1": "Nein"
+                    },
+                    "type": "AF",
+                    "relatedQuestions": [],
+                    "tooltip": "Beispiele für Personenbezug: personenbezogene Daten beim Training des KI-Modells bzw. der KI-Modelle, Verarbeitung oder Erzeugung personenbezogener Daten, menschliche Rezipienten des Outputs"
+                }
+            ],
+            [
+                {
+                    "id": "MA-Z15",
+                    "dimension": "MA",
+                    "question": "Wie hoch ist der Schutzbedarf des Kriteriums „Leistungsfähigkeit und Robustheit\" (VE)?",
+                    "category": 0,
+                    "criteria": 41,
+                    "answers": {
+                        "3": "hoch",
+                        "2": "moderat",
+                        "1": "gering"
+                    },
+                    "type": "GF",
+                    "relatedQuestions": [],
+                    "tooltip": "",
+                    "receivesValueFromCriterion": 50
+                },
+                {
+                    "id": "MA-Z16",
+                    "dimension": "MA",
+                    "question": "Wie hoch ist der Schutzbedarf des Kriteriums „Rückfallpläne und funktionale Sicherheit\" (VE)?",
+                    "category": 0,
+                    "criteria": 41,
+                    "answers": {
+                        "3": "hoch",
+                        "2": "moderat",
+                        "1": "gering"
+                    },
+                    "type": "GF",
+                    "relatedQuestions": [],
+                    "tooltip": "",
+                    "receivesValueFromCriterion": 51
+                },
+                {
+                    "id": "MA-Z17",
+                    "dimension": "MA",
+                    "question": "Ist die Nutzung des KI-Systems für die Nutzer verpflichtend bzw. nicht-freiwillig?",
+                    "category": 0,
+                    "criteria": 40,
+                    "answers": {
+                        "3": "Ja",
+                        "1": "Nein"
+                    },
+                    "type": "GF",
+                    "relatedQuestions": [],
+                    "tooltip": "<br />Hier meint Nutzer natürliche Personen, die direkt und aktiv mit einem KI-System interagieren, entweder als Endnutzer, die das KI-System für persönliche oder geschäftliche Zwecke verwenden, oder als Benutzer, die das KI-System im professionellen Kontext anwenden. Der Begriff umfasst sowohl diejenigen, die das KI-System bedienen, als auch jene, die es für die Erreichung spezifischer Ziele nutzen. Je nach Kontext kann dies die Verwendung von KI-Systemen in alltäglichen Anwendungen oder in spezialisierten, beruflichen Szenarien beinhalten (vgl. Glossar)."
+                },
+                {
+                    "id": "MA-Z18",
+                    "dimension": "MA",
+                    "question": "Wie dringlich ist eine schnelle Behebung oder Wiederherstellung bei einem Ausfall oder fehlerhafter Funktion des KI-Systems?",
+                    "category": 0,
+                    "criteria": 41,
+                    "answers": {
+                        "3": "hohe Dringlichkeit",
+                        "2": "moderate Dringlichkeit",
+                        "1": "keine oder geringe Dringlichkeit"
+                    },
+                    "type": "GF",
+                    "relatedQuestions": [],
+                    "tooltip": "Eine schnelle Behebung oder Wiederherstellung ist zum Beispiel dann dringlich, wenn der Schaden durch andauernden Ausfall oder fehlerhafter Funktion kontinuierlich steigt"
+                }
+            ],
+            [
+                {
+                    "id": "MA-Z21",
+                    "dimension": "MA",
+                    "question": "Wie lassen sich die Ausweichmöglichkeiten für die Nutzer oder die Aufgabe des KI-Systems, falls die gewünschte Funktionalität des KI-Systems nicht zur Verfügung steht, beschreiben?",
+                    "category": 0,
+                    "criteria": 40,
+                    "answers": {
+                        "3": "nur mit großen und größten Einschränkungen verfügbar",
+                        "2": "mit leichten bis moderate Einschränkungen verfügbar",
+                        "1": "angemessen und schnell verfügbar"
+                    },
+                    "type": "EF",
+                    "relatedQuestions": [],
+                    "tooltip": "<br />Hier meint Nutzer natürliche Personen, die direkt und aktiv mit einem KI-System interagieren, entweder als Endnutzer, die das KI-System für persönliche oder geschäftliche Zwecke verwenden, oder als Benutzer, die das KI-System im professionellen Kontext anwenden. Der Begriff umfasst sowohl diejenigen, die das KI-System bedienen, als auch jene, die es für die Erreichung spezifischer Ziele nutzen. Je nach Kontext kann dies die Verwendung von KI-Systemen in alltäglichen Anwendungen oder in spezialisierten, beruflichen Szenarien beinhalten (vgl. Glossar)."
+                },
+                {
+                    "id": "MA-Z22",
+                    "dimension": "MA",
+                    "question": "In welchem Ausmaß interagiert das KI-System mit Nutzern in einer Art und Weise, die – im realistischen worst-case – die Wahrnehmung, Entscheidungen oder Handlungen der Nutzer entscheidend negativ einschränken oder beeinflussen kann?",
+                    "category": 0,
+                    "criteria": 40,
+                    "answers": {
+                        "3": "in hohem Maße",
+                        "2": "in moderatem Maße",
+                        "1": "überhaupt nicht oder in geringem Maße"
+                    },
+                    "type": "EF",
+                    "relatedQuestions": [],
+                    "tooltip": "<br />Hier meint Nutzer natürliche Personen, die direkt und aktiv mit einem KI-System interagieren, entweder als Endnutzer, die das KI-System für persönliche oder geschäftliche Zwecke verwenden, oder als Benutzer, die das KI-System im professionellen Kontext anwenden. Der Begriff umfasst sowohl diejenigen, die das KI-System bedienen, als auch jene, die es für die Erreichung spezifischer Ziele nutzen. Je nach Kontext kann dies die Verwendung von KI-Systemen in alltäglichen Anwendungen oder in spezialisierten, beruflichen Szenarien beinhalten (vgl. Glossar)."
+                },
+                {
+                    "id": "MA-Z23",
+                    "dimension": "MA",
+                    "question": "Ist es aufgrund der Funktionsweise und Aufgabenstellung des KI-Systems prinzipiell möglich, dass das KI-System die Entscheidungen oder Handlungen von Nutzern oder betroffenen Personen auf eine Art und Weise beeinflusst oder lenkt, die von ihnen nicht hinreichend durchdrungen werden kann?",
+                    "category": 0,
+                    "criteria": 40,
+                    "answers": {
+                        "3": "Ja",
+                        "1": "Nein"
+                    },
+                    "type": "EF",
+                    "relatedQuestions": [
+                        "TR-Z36"
+                    ],
+                    "tooltip": "Identisch zu Frage TR-Z36 (andere Dimension)<br /><br /><br />Hier meint Nutzer natürliche Personen, die direkt und aktiv mit einem KI-System interagieren, entweder als Endnutzer, die das KI-System für persönliche oder geschäftliche Zwecke verwenden, oder als Benutzer, die das KI-System im professionellen Kontext anwenden. Der Begriff umfasst sowohl diejenigen, die das KI-System bedienen, als auch jene, die es für die Erreichung spezifischer Ziele nutzen. Je nach Kontext kann dies die Verwendung von KI-Systemen in alltäglichen Anwendungen oder in spezialisierten, beruflichen Szenarien beinhalten (vgl. Glossar)."
+                }
+            ]
+        ]
+    },
+    "CY": {
+        "quality_dimension_id": 10,
+        "title": {
+            "de": "Qualitätsdimension KI-spezifische Cybersicherheit",
+            "en": "Quality dimension of AI-specific cybersecurity"
+        },
+        "icon": "ai-security",
+        "questions": [
+            [
+                {
+                    "id": "CY-Z10",
+                    "dimension": "CY",
+                    "question": "Ist das KI-System dazu bestimmt, an ein Netzwerk angeschlossen zu werden oder ist das KI-System ein Netzwerk?",
+                    "category": 0,
+                    "criteria": 61,
+                    "answers": {
+                        "3": "Ja",
+                        "1": "Nein"
+                    },
+                    "type": "AF",
+                    "relatedQuestions": [],
+                    "tooltip": "„Anschluss\" meint hier drahtlose, kabellose Verbindungen.<br /><br />Es sind sowohl interne, als auch externe Netzwerke gemeint."
+                }
+            ],
+            [
+                {
+                    "id": "CY-Z141",
+                    "dimension": "CY",
+                    "question": "Wie hoch ist die Kritikalität der Daten, die durch das KI-System verarbeitet werden?",
+                    "category": 0,
+                    "criteria": 60,
+                    "answers": {
+                        "3": "wenig bis nicht behebbar",
+                        "2": "teilweise behebbar",
+                        "1": "vollständig behebbar"
+                    },
+                    "type": "GF",
+                    "relatedQuestions": [
+                        "CY-Z142"
+                    ],
+                    "tooltip": ""
+                },
+                {
+                    "id": "CY-Z142",
+                    "dimension": "CY",
+                    "question": "Wie hoch ist die Kritikalität der Daten, die durch das KI-System verarbeitet werden?",
+                    "category": 0,
+                    "criteria": 61,
+                    "answers": {
+                        "3": "wenig bis nicht behebbar",
+                        "2": "teilweise behebbar",
+                        "1": "vollständig behebbar"
+                    },
+                    "type": "GF",
+                    "relatedQuestions": [
+                        "CY-Z141"
+                    ],
+                    "tooltip": ""
+                },
+                {
+                    "id": "CY-Z151",
+                    "dimension": "CY",
+                    "question": "Inwiefern sind die Schäden, die durch den absichtlichen Missbrauch oder die Manipulation des KI-Systems – im realistischen worst-case – verursacht werden können, behebbar bzw. wiederherstellbar?",
+                    "category": 0,
+                    "criteria": 60,
+                    "answers": {
+                        "3": "wenig bis nicht behebbar",
+                        "2": "teilweise behebbar",
+                        "1": "vollständig behebbar"
+                    },
+                    "type": "GF",
+                    "relatedQuestions": [
+                        "CY-Z152"
+                    ],
+                    "tooltip": "„Missbrauch\" ist hier im weiten Sinne zu verstehen"
+                },
+                {
+                    "id": "CY-Z152",
+                    "dimension": "CY",
+                    "question": "Inwiefern sind die Schäden, die durch den absichtlichen Missbrauch oder die Manipulation des KI-Systems – im realistischen worst-case – verursacht werden können, behebbar bzw. wiederherstellbar?",
+                    "category": 0,
+                    "criteria": 61,
+                    "answers": {
+                        "3": "wenig bis nicht behebbar",
+                        "2": "teilweise behebbar",
+                        "1": "vollständig behebbar"
+                    },
+                    "type": "GF",
+                    "relatedQuestions": [
+                        "CY-Z151"
+                    ],
+                    "tooltip": "„Missbrauch\" ist hier im weiten Sinne zu verstehen"
+                },
+                {
+                    "id": "CY-Z161",
+                    "dimension": "CY",
+                    "question": "Inwiefern sind die Schäden, die – im realistischen worst-case – durch Datenzugriffe von nicht-authorisierten Personen oder durch Datennutzung außerhalb der vertraglichen Bedingungen verursacht werden können, behebbar bzw. inwiefern sind Zustände vor Zugriff oder Nutzung der Daten wiederherstellbar?",
+                    "category": 0,
+                    "criteria": 60,
+                    "answers": {
+                        "3": "nicht behebbar",
+                        "2": "teilweise behebbar",
+                        "1": "vollständig behebbar"
+                    },
+                    "type": "GF",
+                    "relatedQuestions": [
+                        "CY-Z162"
+                    ],
+                    "tooltip": "Hier geht es nur um die direkt Konsequenzen durch unauthorisierte Datenzugriffe und Datennutzungen. Die Konsequenzend durch Missbrauch und Manipulation werden an anderer Stelle abgefragt.<br /><br />Ausgelesene Passwörter können geändert werden, insofern ist der unmittelbare Schaden behebbar.<br /><br />Die Einsicht in sensitive Informationen kann nicht Rückgängig gemacht werden, der unmittelbare Schaden ist nicht behebbar."
+                },
+                {
+                    "id": "CY-Z162",
+                    "dimension": "CY",
+                    "question": "Inwiefern sind die Schäden, die – im realistischen worst-case – durch Datenzugriffe von nicht-authorisierten Personen oder durch Datennutzung außerhalb der vertraglichen Bedingungen verursacht werden können, behebbar bzw. inwiefern sind Zustände vor Zugriff oder Nutzung der Daten wiederherstellbar?",
+                    "category": 0,
+                    "criteria": 61,
+                    "answers": {
+                        "3": "nicht behebbar",
+                        "2": "teilweise behebbar",
+                        "1": "vollständig behebbar"
+                    },
+                    "type": "GF",
+                    "relatedQuestions": [
+                        "CY-Z161"
+                    ],
+                    "tooltip": "Hier geht es nur um die direkt Konsequenzen durch unauthorisierte Datenzugriffe und Datennutzungen. Die Konsequenzend durch Missbrauch und Manipulation werden an anderer Stelle abgefragt.<br /><br />Ausgelesene Passwörter können geändert werden, insofern ist der unmittelbare Schaden behebbar.<br /><br />Die Einsicht in sensitive Informationen kann nicht Rückgängig gemacht werden, der unmittelbare Schaden ist nicht behebbar."
+                },
+                {
+                    "id": "CY-Z171",
+                    "dimension": "CY",
+                    "question": "Können absichtlicher Missbrauch oder Manipulation des KI-Systems – im realistischen worst-case – tödliche Personenschäden verursachen?",
+                    "category": 1,
+                    "criteria": 60,
+                    "answers": {
+                        "3": "Ja",
+                        "1": "Nein"
+                    },
+                    "type": "GF",
+                    "relatedQuestions": [
+                        "CY-Z172"
+                    ],
+                    "tooltip": ""
+                },
+                {
+                    "id": "CY-Z172",
+                    "dimension": "CY",
+                    "question": "Können absichtlicher Missbrauch oder Manipulation des KI-Systems – im realistischen worst-case – tödliche Personenschäden verursachen?",
+                    "category": 1,
+                    "criteria": 61,
+                    "answers": {
+                        "3": "Ja",
+                        "1": "Nein"
+                    },
+                    "type": "GF",
+                    "relatedQuestions": [
+                        "CY-Z171"
+                    ],
+                    "tooltip": ""
+                },
+                {
+                    "id": "CY-Z181",
+                    "dimension": "CY",
+                    "question": "Können absichtlicher Missbrauch oder Manipulation des KI-Systems – im realistischen worst-case – Gesundheitsschäden (körperliche Gesundheit) bei natürlichen Personen verursachen?",
+                    "category": 2,
+                    "criteria": 60,
+                    "answers": {
+                        "2": "Ja",
+                        "1": "Nein"
+                    },
+                    "type": "GF",
+                    "relatedQuestions": [
+                        "CY-Z182"
+                    ],
+                    "tooltip": ""
+                },
+                {
+                    "id": "CY-Z182",
+                    "dimension": "CY",
+                    "question": "Können absichtlicher Missbrauch oder Manipulation des KI-Systems – im realistischen worst-case – Gesundheitsschäden (körperliche Gesundheit) bei natürlichen Personen verursachen?",
+                    "category": 2,
+                    "criteria": 61,
+                    "answers": {
+                        "2": "Ja",
+                        "1": "Nein"
+                    },
+                    "type": "GF",
+                    "relatedQuestions": [
+                        "CY-Z181"
+                    ],
+                    "tooltip": ""
+                },
+                {
+                    "id": "CY-Z191",
+                    "dimension": "CY",
+                    "question": "Können absichtlicher Missbrauch oder Manipulation des KI-Systems gesellschaftlichen Schaden anrichten oder Grundrechtsverletzungen verursachen?",
+                    "category": 0,
+                    "criteria": 60,
+                    "answers": {
+                        "3": "Ja",
+                        "1": "Nein"
+                    },
+                    "type": "GF",
+                    "relatedQuestions": [
+                        "CY-Z192"
+                    ],
+                    "tooltip": ""
+                },
+                {
+                    "id": "CY-Z192",
+                    "dimension": "CY",
+                    "question": "Können absichtlicher Missbrauch oder Manipulation des KI-Systems gesellschaftlichen Schaden anrichten oder Grundrechtsverletzungen verursachen?",
+                    "category": 0,
+                    "criteria": 61,
+                    "answers": {
+                        "3": "Ja",
+                        "1": "Nein"
+                    },
+                    "type": "GF",
+                    "relatedQuestions": [
+                        "CY-Z191"
+                    ],
+                    "tooltip": ""
+                },
+                {
+                    "id": "CY-Z201",
+                    "dimension": "CY",
+                    "question": "Können absichtlicher Missbrauch oder Manipulation der KI-Systems besonders starke Auswirkungen auf Gruppen haben, die sich anhand geschützter Eigenschaften definieren?",
+                    "category": 0,
+                    "criteria": 60,
+                    "answers": {
+                        "3": "Ja",
+                        "1": "Nein"
+                    },
+                    "type": "GF",
+                    "relatedQuestions": [
+                        "CY-Z202"
+                    ],
+                    "tooltip": "Geschütze Eigenschaften sind (in Anlehnung an das AGG): Rasse, ethnische Herkunft, Geschlecht, Religion oder Weltanschauung, Behinderung, Alter, sexuelle Identität."
+                },
+                {
+                    "id": "CY-Z202",
+                    "dimension": "CY",
+                    "question": "Können absichtlicher Missbrauch oder Manipulation der KI-Systems besonders starke Auswirkungen auf Gruppen haben, die sich anhand geschützter Eigenschaften definieren?",
+                    "category": 0,
+                    "criteria": 61,
+                    "answers": {
+                        "3": "Ja",
+                        "1": "Nein"
+                    },
+                    "type": "GF",
+                    "relatedQuestions": [
+                        "CY-Z201"
+                    ],
+                    "tooltip": "Geschütze Eigenschaften sind (in Anlehnung an das AGG): Rasse, ethnische Herkunft, Geschlecht, Religion oder Weltanschauung, Behinderung, Alter, sexuelle Identität."
+                }
+            ],
+            [
+                {
+                    "id": "CY-Z231",
+                    "dimension": "CY",
+                    "question": "Wie viele schadhafte Ergebnisse oder Ausgaben können – im realistischen worst-case – bei absichtlichem Missbrauch oder bei Manipulation des KI-Systems potenziell durch das KI-System erzeugt werden, bis der sichere Regelbetrieb wiederhergestellt ist?",
+                    "category": 0,
+                    "criteria": 60,
+                    "answers": {
+                        "3": "hohe Anzahl",
+                        "2": "moderate Anzahl",
+                        "1": "niedrige Anzahl"
+                    },
+                    "type": "EF",
+                    "relatedQuestions": [
+                        "CY-Z232"
+                    ],
+                    "tooltip": "Beispielhafte Grenzen:<br /><br />niedrige Anzahl = 0-1.000<br />moderate Anzahl = 1.001-10.000<br />hohe Anzahl = >10.000 "
+                },
+                {
+                    "id": "CY-Z232",
+                    "dimension": "CY",
+                    "question": "Wie viele schadhafte Ergebnisse oder Ausgaben können – im realistischen worst-case – bei absichtlichem Missbrauch oder bei Manipulation des KI-Systems potenziell durch das KI-System erzeugt werden, bis der sichere Regelbetrieb wiederhergestellt ist?",
+                    "category": 0,
+                    "criteria": 61,
+                    "answers": {
+                        "3": "hohe Anzahl",
+                        "2": "moderate Anzahl",
+                        "1": "niedrige Anzahl"
+                    },
+                    "type": "EF",
+                    "relatedQuestions": [
+                        "CY-Z231"
+                    ],
+                    "tooltip": "Beispielhafte Grenzen:<br /><br />niedrige Anzahl = 0-1.000<br />moderate Anzahl = 1.001-10.000<br />hohe Anzahl = >10.000 "
+                },
+                {
+                    "id": "CY-Z241",
+                    "dimension": "CY",
+                    "question": "Wie gut können schadhafte, durch absichtlichen Missbrauch oder Manipulation verursachte Fehler des KI-Systems als solche erkannt werden?",
+                    "category": 0,
+                    "criteria": 60,
+                    "answers": {
+                        "3": "mit großen oder größten Mühen",
+                        "2": "mit leichten bis moderaten Mühen",
+                        "1": "immer leicht und eindeutig"
+                    },
+                    "type": "EF",
+                    "relatedQuestions": [
+                        "CY-Z242"
+                    ],
+                    "tooltip": ""
+                },
+                {
+                    "id": "CY-Z242",
+                    "dimension": "CY",
+                    "question": "Wie gut können schadhafte, durch absichtlichen Missbrauch oder Manipulation verursachte Fehler des KI-Systems als solche erkannt werden?",
+                    "category": 0,
+                    "criteria": 61,
+                    "answers": {
+                        "3": "mit großen oder größten Mühen",
+                        "2": "mit leichten bis moderaten Mühen",
+                        "1": "immer leicht und eindeutig"
+                    },
+                    "type": "EF",
+                    "relatedQuestions": [
+                        "CY-Z241"
+                    ],
+                    "tooltip": ""
+                },
+                {
+                    "id": "CY-Z251",
+                    "dimension": "CY",
+                    "question": "Können absichtlicher Missbrauch oder Manipulation des KI-Systems – im realistischen worst-case – tödliche Schäden bei Tieren verursachen?",
+                    "category": 1,
+                    "criteria": 60,
+                    "answers": {
+                        "3": "Ja",
+                        "1": "Nein"
+                    },
+                    "type": "EF",
+                    "relatedQuestions": [
+                        "CY-Z252"
+                    ],
+                    "tooltip": ""
+                },
+                {
+                    "id": "CY-Z252",
+                    "dimension": "CY",
+                    "question": "Können absichtlicher Missbrauch oder Manipulation des KI-Systems – im realistischen worst-case – tödliche Schäden bei Tieren verursachen?",
+                    "category": 1,
+                    "criteria": 61,
+                    "answers": {
+                        "3": "Ja",
+                        "1": "Nein"
+                    },
+                    "type": "EF",
+                    "relatedQuestions": [
+                        "CY-Z251"
+                    ],
+                    "tooltip": ""
+                },
+                {
+                    "id": "CY-Z261",
+                    "dimension": "CY",
+                    "question": "Wie hoch ist – im realistischen worst-case – der finanzielle Schaden, den die Verletzung der Vertraulichkeit oder Integrität der vom KI-System verarbeiteten sensiblen Geschäfts- oder lizenzgebundenen Daten oder des geistigen Eigentums zur Folge haben kann? Der potentiell finanzielle Schaden dient hier als stellvertretende Bemessung des Schadens für den oder die Betroffenen.",
+                    "category": 5,
+                    "criteria": 60,
+                    "answers": {
+                        "3": "schwerwiegender oder katastrophaler finanzieller Schaden",
+                        "2": "moderater finanzieller Schaden",
+                        "1": "kein bis niedriger finanzieller Schaden"
+                    },
+                    "type": "EF",
+                    "relatedQuestions": [
+                        "CY-Z262"
+                    ],
+                    "tooltip": "Beispielhafte Grenzen:<br />kein bis niedriger finanzieller Schaden = Schaden in Höhe von bis zu 1 % des Vorjahresumsatzes oder unter 1.000€<br />moderater finanzieller Schaden = Schaden in Höhe von 1 % bis 5 % des Vorjahresumsatzes oder zwischen 1.000€ bis 50.000€<br />schwerwiegender oder katastrophaler finanzieller Schaden = Schaden in Höhe von über 5 % des Vorjahresumsatzes oder über 50.000€"
+                },
+                {
+                    "id": "CY-Z262",
+                    "dimension": "CY",
+                    "question": "Wie hoch ist – im realistischen worst-case – der finanzielle Schaden, den die Verletzung der Vertraulichkeit oder Integrität der vom KI-System verarbeiteten sensiblen Geschäfts- oder lizenzgebundenen Daten oder des geistigen Eigentums zur Folge haben kann? Der potentiell finanzielle Schaden dient hier als stellvertretende Bemessung des Schadens für den oder die Betroffenen.",
+                    "category": 5,
+                    "criteria": 61,
+                    "answers": {
+                        "3": "schwerwiegender oder katastrophaler finanzieller Schaden",
+                        "2": "moderater finanzieller Schaden",
+                        "1": "kein bis niedriger finanzieller Schaden"
+                    },
+                    "type": "EF",
+                    "relatedQuestions": [
+                        "CY-Z261"
+                    ],
+                    "tooltip": "Beispielhafte Grenzen:<br />kein bis niedriger finanzieller Schaden = Schaden in Höhe von bis zu 1 % des Vorjahresumsatzes oder unter 1.000€<br />moderater finanzieller Schaden = Schaden in Höhe von 1 % bis 5 % des Vorjahresumsatzes oder zwischen 1.000€ bis 50.000€<br />schwerwiegender oder katastrophaler finanzieller Schaden = Schaden in Höhe von über 5 % des Vorjahresumsatzes oder über 50.000€"
+                },
+                {
+                    "id": "CY-Z271",
+                    "dimension": "CY",
+                    "question": "Wie lassen sich die Auswirkungen von absichtlichem Missbrauch oder Manipulation des KI-Systems – im realistischen worst-case – in Bezug auf die Umwelt (Sustainability) beschreiben?",
+                    "category": 8,
+                    "criteria": 60,
+                    "answers": {
+                        "3": "hohe oder katastrophale Auswirkungen",
+                        "2": "moderate negative Auswirkungen",
+                        "1": "höchstens geringe negative Auswirkungen"
+                    },
+                    "type": "EF",
+                    "relatedQuestions": [
+                        "CY-Z272",
+                        "VE-Z29",
+                        "VE-Z30"
+                    ],
+                    "tooltip": "Auswirkungen auf die Umwelt können sich auf verschwendete materielle Ressourcen oder Strom beziehen.<br /><br />Beispielhafte Grenzen:<br />höchstens geringe negative Auswirkungen = es werden einzelne unbrauchbare Produkte produziert<br />moderate negative Auswirkungen = es werden einige unbrauchbare Produkte produziert<br />hohe oder katastrophale Auswirkungen = es werden in große Mengen unbrauchbare Produkte produziert"
+                },
+                {
+                    "id": "CY-Z272",
+                    "dimension": "CY",
+                    "question": "Wie lassen sich die Auswirkungen von absichtlichem Missbrauch oder Manipulation des KI-Systems – im realistischen worst-case – in Bezug auf die Umwelt (Sustainability) beschreiben?",
+                    "category": 8,
+                    "criteria": 61,
+                    "answers": {
+                        "3": "hohe oder katastrophale Auswirkungen",
+                        "2": "moderate negative Auswirkungen",
+                        "1": "höchstens geringe negative Auswirkungen"
+                    },
+                    "type": "EF",
+                    "relatedQuestions": [
+                        "CY-Z271",
+                        "VE-Z29",
+                        "VE-Z30"
+                    ],
+                    "tooltip": "Auswirkungen auf die Umwelt können sich auf verschwendete materielle Ressourcen oder Strom beziehen.<br /><br />Beispielhafte Grenzen:<br />höchstens geringe negative Auswirkungen = es werden einzelne unbrauchbare Produkte produziert<br />moderate negative Auswirkungen = es werden einige unbrauchbare Produkte produziert<br />hohe oder katastrophale Auswirkungen = es werden in große Mengen unbrauchbare Produkte produziert"
+                }
+            ]
+        ]
+    },
+    "VE": {
+        "quality_dimension_id": 40,
+        "title": {
+            "de": "Qualitätsdimension Verlässlichkeit",
+            "en": "Qualitätsdimension Verlässlichkeit"
+        },
+        "icon": "reliability",
+        "questions": [
+            [],
+            [
+                {
+                    "id": "VE-Z11",
+                    "dimension": "VE",
+                    "question": "Inwiefern sind die Schäden, die durch das KI-System – im realistischen worst-case – verursacht werden können, behebbar bzw. wiederherstellbar?",
+                    "category": 0,
+                    "criteria": 51,
+                    "answers": {
+                        "3": "nicht behebbar",
+                        "2": "teilweise behebbar",
+                        "1": "vollständig behebbar"
+                    },
+                    "type": "GF",
+                    "relatedQuestions": [],
+                    "tooltip": ""
+                },
+                {
+                    "id": "VE-Z12",
+                    "dimension": "VE",
+                    "question": "Kann das KI-System – im realistischen worst-case – unmittelbar tödliche Personenschäden verursachen?",
+                    "category": 1,
+                    "criteria": 50,
+                    "answers": {
+                        "3": "Ja",
+                        "1": "Nein"
+                    },
+                    "type": "GF",
+                    "relatedQuestions": [],
+                    "tooltip": "Identisch zu Frage VE-Z13 (anderes Kriterium)"
+                },
+                {
+                    "id": "VE-Z13",
+                    "dimension": "VE",
+                    "question": "Kann das KI-System – im realistischen worst-case – unmittelbar tödliche Personenschäden verursachen?",
+                    "category": 1,
+                    "criteria": 51,
+                    "answers": {
+                        "3": "Ja",
+                        "1": "Nein"
+                    },
+                    "type": "GF",
+                    "relatedQuestions": [],
+                    "tooltip": "Identisch zu Frage VE-Z12 (anderes Kriterium)"
+                },
+                {
+                    "id": "VE-Z14",
+                    "dimension": "VE",
+                    "question": "Kann das KI-System – im realistischen worst-case – Gesundheitsschäden (körperliche Gesundheit) bei Personen verursachen?",
+                    "category": 2,
+                    "criteria": 50,
+                    "answers": {
+                        "2": "Ja",
+                        "1": "Nein"
+                    },
+                    "type": "GF",
+                    "relatedQuestions": [],
+                    "tooltip": "Identisch zu Frage VE-Z15 (anderes Kriterium)"
+                },
+                {
+                    "id": "VE-Z15",
+                    "dimension": "VE",
+                    "question": "Kann das KI-System – im realistischen worst-case – Gesundheitsschäden (körperliche Gesundheit) bei natürlichen Personen verursachen?",
+                    "category": 2,
+                    "criteria": 51,
+                    "answers": {
+                        "2": "Ja",
+                        "1": "Nein"
+                    },
+                    "type": "GF",
+                    "relatedQuestions": [],
+                    "tooltip": "Identisch zu Frage VE-Z14 (anderes Kriterium)"
+                },
+                {
+                    "id": "VE-Z16",
+                    "dimension": "VE",
+                    "question": "Regelt das KI-System den Zugang zu essenziell die Persönlichkeit oder die persönlichen Handlungsspielräume betreffenden Diensten und Aktivitäten?",
+                    "category": 0,
+                    "criteria": 50,
+                    "answers": {
+                        "3": "Ja",
+                        "1": "Nein"
+                    },
+                    "type": "GF",
+                    "relatedQuestions": [],
+                    "tooltip": ""
+                },
+                {
+                    "id": "VE-Z17",
+                    "dimension": "VE",
+                    "question": "Ist das KI-System in Entscheidungsprozesse eingebunden, welche Grundrechte oder demokratische Verfahren betreffen?",
+                    "category": 0,
+                    "criteria": 50,
+                    "answers": {
+                        "3": "Ja",
+                        "1": "Nein"
+                    },
+                    "type": "GF",
+                    "relatedQuestions": [],
+                    "tooltip": ""
+                }
+            ],
+            [
+                {
+                    "id": "VE-Z20",
+                    "dimension": "VE",
+                    "question": "Wie gut können durch das KI-System verursachte, schadhafte Ergebnisse oder Ausgaben als solche erkannt werden?",
+                    "category": 0,
+                    "criteria": 50,
+                    "answers": {
+                        "3": "mit großen oder größten Mühen; gar nicht",
+                        "2": "mit leichten bis moderaten Mühen",
+                        "1": "immer leicht und eindeutig"
+                    },
+                    "type": "EF",
+                    "relatedQuestions": [],
+                    "tooltip": ""
+                },
+                {
+                    "id": "VE-Z21",
+                    "dimension": "VE",
+                    "question": "Wie viele schadhafte Ergebnisse oder Ausgaben können – im realistischen worst-case – bei fehlerhaftem Zustand oder Verhalten potenziell durch das KI-System erzeugt werden, bis der sichere Regelbetrieb wiederhergestellt ist?",
+                    "category": 0,
+                    "criteria": 51,
+                    "answers": {
+                        "3": "hohe Anzahl",
+                        "2": "moderate Anzahl",
+                        "1": "niedrige Anzahl"
+                    },
+                    "type": "EF",
+                    "relatedQuestions": [],
+                    "tooltip": "Beispielhafte Grenzen:<br />niedrige Anzahl = 0–1.000<br />moderate Anzahl = 1.001–10.000<br />hohe Anzahl = > 10.000 "
+                },
+                {
+                    "id": "VE-Z22",
+                    "dimension": "VE",
+                    "question": "Ist uneindeutig, wie die Validität der Ergebnisse des KI-Systems gemessen werden kann?",
+                    "category": 0,
+                    "criteria": 50,
+                    "answers": {
+                        "3": "Ja",
+                        "1": "Nein"
+                    },
+                    "type": "EF",
+                    "relatedQuestions": [],
+                    "tooltip": ""
+                },
+                {
+                    "id": "VE-Z23",
+                    "dimension": "VE",
+                    "question": "Wie lassen sich die Ausweichmöglichkeiten für die Nutzer oder die Aufgabe des KI-Systems beschreiben, für den Fall dass die gewünschte Funktionalität des KI-Systems nicht zur Verfügung steht?",
+                    "category": 0,
+                    "criteria": 51,
+                    "answers": {
+                        "3": "als nur mit großen und größten Einschränkungen verfügbar",
+                        "2": "als mit leichten bis moderaten Einschränkungen verfügbar",
+                        "1": "als angemessen und schnell verfügbar"
+                    },
+                    "type": "EF",
+                    "relatedQuestions": [],
+                    "tooltip": "<br />Hier meint Nutzer natürliche Personen, die direkt und aktiv mit einem KI-System interagieren, entweder als Endnutzer, die das KI-System für persönliche oder geschäftliche Zwecke verwenden, oder als Benutzer, die das KI-System im professionellen Kontext anwenden. Der Begriff umfasst sowohl diejenigen, die das KI-System bedienen, als auch jene, die es für die Erreichung spezifischer Ziele nutzen. Je nach Kontext kann dies die Verwendung von KI-Systemen in alltäglichen Anwendungen oder in spezialisierten, beruflichen Szenarien beinhalten (vgl. Glossar)."
+                },
+                {
+                    "id": "VE-Z24",
+                    "dimension": "VE",
+                    "question": "Wie häufig wird das KI-System während des Betriebs weitertrainiert oder durch neue Versionen aktualisiert?",
+                    "category": 0,
+                    "criteria": 50,
+                    "answers": {
+                        "3": "oft",
+                        "2": "hin und wieder",
+                        "1": "nie"
+                    },
+                    "type": "EF",
+                    "relatedQuestions": [
+                        "DA-Z29",
+                        "TR-Z31"
+                    ],
+                    "tooltip": "Identisch zu Frage TR-Z31 (andere Dimension)<br /><br />Beispielhafte Grenzen:<br />nie = kein einziges Mal<br />hin und wieder = monatlich oder seltener<br />oft = häufiger als monatlich"
+                },
+                {
+                    "id": "VE-Z25",
+                    "dimension": "VE",
+                    "question": "Kann das KI-System – im realistischen worst-case – tödliche Schäden bei Tieren verursachen?",
+                    "category": 1,
+                    "criteria": 50,
+                    "answers": {
+                        "3": "Ja",
+                        "1": "Nein"
+                    },
+                    "type": "EF",
+                    "relatedQuestions": [
+                        "VE-Z26",
+                        "TR-Z33",
+                        "TR-Z34"
+                    ],
+                    "tooltip": "Identisch zu Frage VE-Z26 (anderes Kriterium)"
+                },
+                {
+                    "id": "VE-Z26",
+                    "dimension": "VE",
+                    "question": "Kann das KI-System – im realistischen worst-case – tödliche Schäden bei Tieren verursachen?",
+                    "category": 1,
+                    "criteria": 51,
+                    "answers": {
+                        "3": "Ja",
+                        "1": "Nein"
+                    },
+                    "type": "EF",
+                    "relatedQuestions": [
+                        "VE-Z25",
+                        "TR-Z33",
+                        "TR-Z34"
+                    ],
+                    "tooltip": "Identisch zu Frage VE-Z25 (anderes Kriterium)"
+                },
+                {
+                    "id": "VE-Z27",
+                    "dimension": "VE",
+                    "question": "Wie hoch ist der finanzielle Schaden, der – für alle involvierten Interessengruppen, im realistischen worst-case – durch das KI-System entstehen kann?",
+                    "category": 5,
+                    "criteria": 50,
+                    "answers": {
+                        "3": "schwerwiegender oder katastrophaler finanzieller Schaden",
+                        "2": "moderater finanzieller Schaden",
+                        "1": "kein bis niedriger finanzieller Schaden"
+                    },
+                    "type": "EF",
+                    "relatedQuestions": [
+                        "VE-Z28",
+                        "TR-Z37",
+                        "TR-Z38"
+                    ],
+                    "tooltip": "Anmerkung: Hier geht es um den unmittelbar messbaren finanziellen Schaden.<br /><br />Beispielhafte Grenzen:<br />kein bis niedriger finanzieller Schaden = Schaden in Höhe von unter 1.000€<br />moderater finanzieller Schaden = Schaden in Höhe von zwischen 1.000€ bis 50.000€<br />schwerwiegender oder katastrophaler finanzieller Schaden = Schaden in Höhe von über 50.000€"
+                },
+                {
+                    "id": "VE-Z28",
+                    "dimension": "VE",
+                    "question": "Wie hoch ist der finanzielle Schaden, der – für alle involvierten Interessengruppen, im realistischen worst-case – durch das KI-System entstehen kann?",
+                    "category": 5,
+                    "criteria": 51,
+                    "answers": {
+                        "3": "schwerwiegender oder katastrophaler finanzieller Schaden",
+                        "2": "moderater finanzieller Schaden",
+                        "1": "kein bis niedriger finanzieller Schaden"
+                    },
+                    "type": "EF",
+                    "relatedQuestions": [
+                        "VE-Z27",
+                        "TR-Z37",
+                        "TR-Z38"
+                    ],
+                    "tooltip": "Anmerkung: Hier geht es um den unmittelbar messbaren finanziellen Schaden.<br /><br />Beispielhafte Grenzen:<br />kein bis niedriger finanzieller Schaden = Schaden in Höhe von unter 1.000€<br />moderater finanzieller Schaden = Schaden in Höhe von zwischen 1.000€ bis 50.000€<br />schwerwiegender oder katastrophaler finanzieller Schaden = Schaden in Höhe von über 50.000€"
+                },
+                {
+                    "id": "VE-Z29",
+                    "dimension": "VE",
+                    "question": "Wie lassen sich die Auswirkungen des KI-Systems – im realistischen worst-case – in Bezug auf die Umwelt (Sustainability) beschreiben?",
+                    "category": 8,
+                    "criteria": 50,
+                    "answers": {
+                        "3": "hohe oder katastrophale Auswirkungen",
+                        "2": "moderate negative Auswirkungen",
+                        "1": "höchstens geringe negative Auswirkungen"
+                    },
+                    "type": "EF",
+                    "relatedQuestions": [
+                        "CY-Z27",
+                        "VE-Z30"
+                    ],
+                    "tooltip": "Identisch zu Frage VE-Z30 (anderes Kriterium)<br /><br />Auswirkungen auf die Umwelt können sich auf verschwendete materielle Ressourcen oder Strom beziehen.<br /><br />Beispielhafte Grenzen:<br />höchstens geringe negative Auswirkungen = es werden einzelne unbrauchbare Produkte produziert<br />moderate negative Auswirkungen = es werden einige unbrauchbare Produkte produziert<br />hohe oder katastrophale Auswirkungen = es werden in große Mengen unbrauchbare Produkte produziert"
+                },
+                {
+                    "id": "VE-Z30",
+                    "dimension": "VE",
+                    "question": "Wie lassen sich die Auswirkungen des KI-Systems – im realistischen worst-case – in Bezug auf die Umwelt (Sustainability) beschreiben?",
+                    "category": 8,
+                    "criteria": 51,
+                    "answers": {
+                        "3": "hohe oder katastrophale Auswirkungen",
+                        "2": "moderate negative Auswirkungen",
+                        "1": "höchstens geringe negative Auswirkungen"
+                    },
+                    "type": "EF",
+                    "relatedQuestions": [
+                        "CY-Z27",
+                        "VE-Z29"
+                    ],
+                    "tooltip": "Identisch zu Frage VE-Z29 (anderes Kriterium)"
+                }
+            ]
+        ]
+    }
+}

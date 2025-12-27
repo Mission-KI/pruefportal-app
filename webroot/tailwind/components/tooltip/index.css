@@ -1,0 +1,76 @@
+@layer components {
+  /* Tooltip/Bottomsheet Component Styles */
+
+  /* Trigger Button */
+  .tooltip-trigger {
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    color: var(--color-gray-500);
+    transition: color 0.15s ease-in-out;
+  }
+
+  .tooltip-trigger:hover,
+  .tooltip-trigger:focus-visible {
+    color: var(--color-brand-light-web);
+    outline: none;
+  }
+
+  .tooltip-trigger:focus-visible {
+    outline: 2px solid var(--color-brand-light-web);
+    outline-offset: 2px;
+  }
+
+  /* Desktop Popover (≥768px) */
+  .tooltip-popover {
+    position: absolute;
+    z-index: 9999;
+    background: var(--color-brand-deep);
+    color: white;
+    padding: 1rem;
+    border-radius: var(--radius-md);
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    min-width: 16rem;
+    max-width: min(32rem, calc(100vw - 2rem));
+  }
+
+  .tooltip-arrow {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 0.5rem solid transparent;
+  }
+
+  /* Mobile Styles (< 768px) */
+  @media (max-width: var(--breakpoint-sm)) {
+    .tooltip-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 9998;
+    }
+
+    .tooltip-bottomsheet {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 9999;
+      background: white;
+      border-radius: var(--radius-card-lg) var(--radius-card-lg) 0 0;
+      padding: 1.5rem;
+      padding-bottom: calc(1.5rem + env(safe-area-inset-bottom));
+      max-height: 80vh;
+      overflow-y: auto;
+    }
+
+    .tooltip-drag-handle {
+      width: 2.5rem;
+      height: 0.25rem;
+      background: var(--color-gray-300);
+      border-radius: 0.125rem;
+      margin: 0 auto 1rem;
+    }
+  }
+}

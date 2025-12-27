@@ -1,0 +1,314 @@
+@layer components {
+  .mki-form {
+    /* Base form element styles */
+    input,
+    select,
+    textarea {
+        width: 100%;
+        &:disabled {
+            background-color: var(--color-input-disabled);
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+    }
+
+      /* TODO: Consolidate, these classes are not used */
+    &-input,
+    &-textarea,
+    &-select {
+      font-family: inherit;
+      font-size: inherit;
+      line-height: 1.5;
+      color: inherit;
+      outline: none;
+      background-color: #FFFFFF;
+      transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+      /* Filled state (has value) */
+      &:not(:placeholder-shown) {
+        background-color: var(--color-brand-lightest);
+      }
+
+      &:focus {
+        border-color: var(--color-brand-light-web);
+        border-width: 2px;
+        background-color: var(--color-brand-lightest);
+      }
+
+      &::placeholder {
+        color: var(--color-gray-500);
+        opacity: 1;
+      }
+    }
+
+    &-field-container input:not([type="radio"]):not([type="checkbox"]) {
+      /* Remove min-width on mobile to prevent overflow, apply on desktop only */
+      @media (min-width: 768px) {
+        min-width: var(--form-input-width);
+      }
+        @media (max-width: 768px) {
+            width: 100%;
+        }
+      height: var(--form-input-height);
+      padding: var(--form-input-padding-top) var(--form-input-padding-right) var(--form-input-padding-bottom) var(--form-input-padding-left);
+      border-radius: var(--form-input-border-radius);
+      border: var(--form-input-border-width) solid var(--form-input-border-color);
+
+      /* TODO: These filled/focus states are duplicated from the unused classes above */
+      /* Filled state (has value) */
+      &:not(:placeholder-shown) {
+        background-color: var(--color-brand-lightest);
+      }
+
+      /* Focus state */
+      &:focus {
+        border: 2px solid var(--color-brand-light-web);
+        background-color: var(--color-brand-lightest);
+        outline: none;
+      }
+
+
+
+      /* Success state (valid + filled) */
+      /* TODO: Success state disabled - was showing prematurely on blur without actual user changes */
+      /* Re-enable after implementing proper "modified" state tracking */
+      /* &:valid:not(:placeholder-shown):not(:focus).touched {
+        border: 1px solid var(--color-success-600);
+        background-color: var(--color-success-25);
+      } */
+
+    }
+
+  }
+
+  /* Error states for inputs - only show after user interaction (touched) */
+  .mki-form-field-container.touched input:not([type="radio"]):not([type="checkbox"]):required {
+    /* Error-empty state (invalid but empty, after touched) */
+    &:invalid:placeholder-shown:not(:focus) {
+      border: 1px solid var(--color-error-600) !important;
+      background-color: var(--color-error-25);
+    }
+
+    /* Error-filled state (invalid + filled, after touched) */
+    &:invalid:not(:placeholder-shown):not(:focus) {
+      border: 1px solid var(--color-error-600) !important;
+      background-color: var(--color-error-25);
+      box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    }
+
+    /* Error-focused state (invalid + focused) */
+    &:invalid:focus {
+      border: 2px solid var(--color-error-600) !important;
+      background-color: var(--color-error-25);
+      box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+      outline: none;
+    }
+  }
+
+  /* TODO: Consider consolidating with required input error states above - very similar rules */
+  /* Error states for non-required inputs with validation (e.g., email format) */
+  .mki-form-field-container.touched input:not([type="radio"]):not([type="checkbox"]):not(:required) {
+    /* Only show error if filled with invalid data */
+    &:invalid:not(:placeholder-shown):not(:focus) {
+      border: 1px solid var(--color-error-600) !important;
+      background-color: var(--color-error-25);
+      box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    }
+
+    /* Error-focused state */
+    &:invalid:focus {
+      border: 2px solid var(--color-error-600) !important;
+      background-color: var(--color-error-25);
+      box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+      outline: none;
+    }
+  }
+
+  /* Server-side error states (has-server-error class added via Alpine.js) */
+  .mki-form-field-container.has-server-error input:not([type="radio"]):not([type="checkbox"]) {
+    /* Error state when not focused */
+    &:not(:focus) {
+      border: 1px solid var(--color-error-600) !important;
+      background-color: var(--color-error-25);
+      box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    }
+
+    /* Error state when focused */
+    &:focus {
+      border: 2px solid var(--color-error-600) !important;
+      background-color: var(--color-error-25);
+      box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+      outline: none;
+    }
+  }
+
+  /* Input with icon - add left padding */
+  .mki-form-field-with-icon input:not([type="radio"]):not([type="checkbox"]) {
+    padding-left: 2.5rem;
+  }
+
+  /* Input with error icon - add right padding when touched and invalid */
+  .mki-form-field-container input:not([type="radio"]):not([type="checkbox"]):invalid.touched1 {
+    padding-right: 2.5rem;
+  }
+
+  .mki-form {
+  &-field-container textarea {
+      /* Remove min-width on mobile to prevent overflow, apply on desktop only */
+      @media (min-width: 768px) {
+        min-width: var(--form-textarea-width);
+      }
+      height: var(--form-textarea-height);
+      min-height: var(--form-textarea-height);
+      padding: var(--form-textarea-padding-top) var(--form-textarea-padding-right) var(--form-textarea-padding-bottom) var(--form-textarea-padding-left);
+      border-radius: var(--form-textarea-border-radius);
+      border: var(--form-textarea-border-width) solid var(--form-textarea-border-color);
+      resize: vertical;
+
+      &:disabled {
+        resize: none;
+      }
+
+      /* TODO: These filled/focus states are duplicated from inputs section above */
+      /* Filled state (has value) */
+      &:not(:placeholder-shown) {
+        background-color: var(--color-brand-lightest);
+      }
+
+      /* Focus state */
+      &:focus {
+        border: 2px solid var(--color-brand-light-web);
+        background-color: var(--color-brand-lightest);
+        outline: none;
+      }
+
+      /* Success state (valid + filled) */
+      /* TODO: Success state disabled - was showing prematurely on blur without actual user changes */
+      /* &:valid:not(:placeholder-shown):not(:focus).touched {
+        border: 1px solid var(--color-success-600);
+        background-color: var(--color-success-25);
+      } */
+
+    }
+  }
+
+  /* Textarea error states - only show after user interaction (touched) */
+  .mki-form-field-container.touched textarea {
+    /* Error-empty state */
+    &:invalid:placeholder-shown:not(:focus) {
+      border: 1px solid var(--color-error-600) !important;
+      background-color: var(--color-error-25);
+    }
+
+    /* Error-filled state */
+    &:invalid:not(:placeholder-shown):not(:focus) {
+      border: 1px solid var(--color-error-600) !important;
+      background-color: var(--color-error-25);
+      box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    }
+
+    /* Error-focused state */
+    &:invalid:focus {
+      border: 2px solid var(--color-error-600) !important;
+      background-color: var(--color-error-25);
+      box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+      outline: none;
+    }
+  }
+
+  /* Server-side error states for textarea */
+  .mki-form-field-container.has-server-error textarea {
+    &:not(:focus) {
+      border: 1px solid var(--color-error-600) !important;
+      background-color: var(--color-error-25);
+      box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    }
+
+    &:focus {
+      border: 2px solid var(--color-error-600) !important;
+      background-color: var(--color-error-25);
+      box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+      outline: none;
+    }
+  }
+
+  .mki-form {
+
+      &-field-container select {
+      /* Remove min-width on mobile to prevent overflow, apply on desktop only */
+      @media (min-width: 768px) {
+        min-width: var(--form-select-width);
+      }
+          @media (max-width: 768px) {
+              width: 100%;
+          }
+      height: var(--form-select-height);
+      padding: var(--form-select-padding-top) var(--form-select-padding-right) var(--form-select-padding-bottom) var(--form-select-padding-left);
+      border-radius: var(--form-select-border-radius);
+      border: var(--form-select-border-width) solid var(--form-select-border-color);
+      appearance: none;
+      cursor: pointer;
+      padding-right: 36px;
+
+      /* Custom dropdown arrow */
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+      background-position: right 10px center;
+      background-repeat: no-repeat;
+      background-size: 16px 16px;
+
+      /* Style placeholder option */
+      & option[disabled] {
+        color: #9CA3AF;
+      }
+
+      /* Focus state */
+      &:focus {
+        border: 2px solid var(--color-brand-light-web);
+        background-color: var(--color-brand-lightest);
+        outline: none;
+      }
+
+      /* Success state (valid + has selection + touched) */
+      /* TODO: Success state disabled - was showing prematurely on blur without actual user changes */
+      /* &:valid:not(:focus).touched {
+        border: 1px solid var(--color-success-600);
+        background-color: var(--color-success-25);
+      } */
+
+    }
+  }
+
+  /* Select error states - only show after user interaction (touched) */
+  .mki-form-field-container.touched select {
+    /* Error state (invalid) */
+    &:invalid:not(:focus) {
+      border: 1px solid var(--color-error-600) !important;
+      background-color: var(--color-error-25);
+      box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    }
+
+    /* Error-focused state */
+    &:invalid:focus {
+      border: 2px solid var(--color-error-600) !important;
+      background-color: var(--color-error-25);
+      box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+      outline: none;
+    }
+  }
+
+  /* Server-side error states for select */
+  .mki-form-field-container.has-server-error select {
+    &:not(:focus) {
+      border: 1px solid var(--color-error-600) !important;
+      background-color: var(--color-error-25);
+      box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    }
+
+    &:focus {
+      border: 2px solid var(--color-error-600) !important;
+      background-color: var(--color-error-25);
+      box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+      outline: none;
+    }
+  }
+}

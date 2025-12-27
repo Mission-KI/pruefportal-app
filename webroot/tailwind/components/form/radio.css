@@ -1,0 +1,86 @@
+@layer components {
+  .mki-form {
+    /* Radio button system */
+    &-radio {
+      &-wrapper {
+        display: flex;
+        align-items: center;
+      min-width: var(--form-radio-wrapper-width);
+        height: var(--form-radio-wrapper-height);
+        gap: var(--form-radio-wrapper-gap);
+      }
+
+      /* Radio input - using :not() to target the input itself */
+      &:not(&-wrapper):not(&-label):not(&-group) {
+        width: var(--form-radio-circle-width);
+        height: var(--form-radio-circle-height);
+        border-radius: var(--form-radio-circle-border-radius);
+        border: var(--form-radio-circle-border-width) solid var(--form-radio-circle-border-color);
+        background-color: var(--form-radio-circle-background-color);
+        appearance: none;
+        cursor: pointer;
+        outline: none;
+        transition: all 0.15s ease-in-out;
+        position: relative;
+        flex-shrink: 0;
+
+        &:checked {
+          border-color: var(--form-radio-circle-checked-color);
+          background-color: var(--form-radio-circle-checked-color);
+
+          /* Inner circle for checked state */
+          &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #FFFFFF;
+          }
+        }
+
+        &:focus {
+          box-shadow: 0 0 0 2px rgba(121, 72, 207, 0.1);
+        }
+
+        &:disabled {
+          border-color: var(--color-disabled);
+          background-color: var(--color-disabled);
+          opacity: 0.6;
+          cursor: not-allowed;
+        }
+      }
+
+      &-label {
+        font-family: inherit;
+        font-size: inherit;
+        line-height: 1.5;
+        color: inherit;
+        cursor: pointer;
+        flex: 1;
+
+        /* Disabled state when radio is disabled */
+        .mki-form-radio:disabled + & {
+          color: var(--color-disabled);
+          cursor: not-allowed;
+        }
+      }
+
+      &-group {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+    }
+  }
+}
+
+/* Error state for radio group fieldsets - only when NO radios are checked */
+.mki-form-field-container.touched fieldset:has(input[type="radio"]:required) {
+  &:not(:has(input[type="radio"]:checked)) {
+    border-color: var(--color-error-600) !important;
+  }
+}

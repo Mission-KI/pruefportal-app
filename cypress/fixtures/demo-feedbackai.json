@@ -1,0 +1,58 @@
+{
+  "testUser": {
+    "email": "l.schmidt@feedbackai.de",
+    "password": "admin123"
+  },
+  "examiner": {
+    "email": "m.weber@feedbackai.de",
+    "password": "admin123",
+    "name": "Dr. Michael Weber"
+  },
+  "project": {
+    "title": "FeedbackAI Analyzer - Qualitätsprüfung",
+    "description": "Prüfung des KI-gestützten Sentiment-Analyse-Systems für E-Commerce Kundenbewertungen nach dem MISSION KI Qualitätsstandard. Das System analysiert deutschsprachige Produktrezensionen und klassifiziert diese nach Sentiment und Themenkategorien."
+  },
+  "process": {
+    "title": "FeedbackAI Analyzer v2.1"
+  },
+  "participants": {
+    "candidate": {
+      "name": "Lisa Schmidt",
+      "email": "l.schmidt@feedbackai.de"
+    },
+    "examiner": {
+      "name": "Dr. Michael Weber",
+      "email": "m.weber@feedbackai.de"
+    }
+  },
+  "ucd": {
+    "step1": {
+      "ucd[UC_1-1]": "FeedbackAI Analyzer",
+      "ucd[UC_1-2]": "Der FeedbackAI Analyzer ist ein KI-System zur automatisierten Analyse von Kundenrezensionen im E-Commerce. Das System klassifiziert eingehende Produktbewertungen nach Sentiment (positiv, neutral, negativ) und ordnet sie thematischen Kategorien zu (Lieferung, Produktqualität, Kundenservice, Preis-Leistung). Zielgruppe sind mittelständische Online-Händler mit 100-10.000 Bewertungen pro Monat, die ihre Kundenfeedback-Auswertung automatisieren möchten. Die FeedbackAI UG ist ein Berliner Startup, das die Lösung als SaaS-Produkt für E-Commerce-Unternehmen anbietet.",
+      "ucd[UC_1-3]": "Das System löst das Problem der manuellen, zeitaufwändigen Auswertung großer Mengen von Kundenfeedback. Es verwendet ein fine-tuned Transformer-Modell (german-BERT, basierend auf deepset/gbert-base) für die Textklassifikation. Die Methodik umfasst: (1) Preprocessing der Eingabetexte mit Tokenisierung und Normalisierung, (2) Embedding-Generierung durch das vortrainierte Sprachmodell, (3) Multi-Label-Klassifikation für Themen mittels Fine-Tuning auf annotierten E-Commerce-Daten, (4) Sentiment-Scoring mit Konfidenzwerten basierend auf Softmax-Ausgaben.",
+      "ucd[UC_1-4]": "Eingabedomäne: Deutsche Freitext-Kundenrezensionen mit 10-2000 Zeichen Länge. Unterstützt werden Produktbewertungen aus gängigen E-Commerce-Plattformen (Shopify, WooCommerce, Magento) via REST-API-Integration. Als optionale Metadaten werden Sternebewertungen (1-5 Sterne) und Produktkategorien akzeptiert, um die Klassifikation zu verbessern. Das System ist sowohl für formelle als auch informelle Schreibstile optimiert und verarbeitet auch Texte mit Rechtschreibfehlern robust.",
+      "ucd[UC_1-5]": "Grenzen der Eingabedomäne: (1) Texte unter 10 Zeichen liefern keine zuverlässigen Sentiment-Ergebnisse aufgrund fehlenden Kontexts, (2) Stark dialektgefärbte Texte (z.B. Schweizerdeutsch, Österreichisch) können zu reduzierter Klassifikationsgenauigkeit führen, (3) Fremdsprachige Texte werden nicht unterstützt und erzeugen eine Fehlermeldung, (4) Ironie und Sarkasmus werden nur eingeschränkt erkannt (ca. 65% Genauigkeit vs. 92% bei direkten Aussagen), (5) Bewertungen mit mehr als 2000 Zeichen werden am Ende abgeschnitten.",
+      "ucd[UC_1-6]": "Ausgabedomäne: Pro Rezension liefert das System ein strukturiertes JSON-Objekt mit: (1) Sentiment-Label (positiv/neutral/negativ) mit Konfidenzwert zwischen 0-100%, (2) Bis zu 3 Themen-Tags aus dem definierten Katalog (Lieferung, Produktqualität, Kundenservice, Preis-Leistung, Verpackung, Rückgabe) mit jeweiligen Konfidenzwerten, (3) Highlighting der sentiment-relevanten Textpassagen mit Start- und End-Indizes, (4) Aggregierte Statistiken auf Dashboard-Ebene (Trends, Verteilungen, Zeitreihen) für Batch-Analysen."
+    },
+    "step2": {
+      "ucd[UC_1-7-a]": "Primäre Nutzergruppe: E-Commerce-Manager und Customer-Service-Teams bei mittelständischen Online-Händlern (50-500 Mitarbeiter). Voraussetzungen: Grundlegende Computer-Kenntnisse, Verständnis von Kundenfeedback-Prozessen und E-Commerce-Metriken. Keine Machine-Learning-Expertise erforderlich. Das Dashboard ist für nicht-technische Nutzer konzipiert mit intuitiver Bedienung, kontextuellen Hilfetexten und Export-Funktionen für Reporting.",
+      "ucd[UC_1-7-b]": "Indirekt betroffene Gruppen: (1) Endkunden, deren Bewertungen analysiert werden - keine direkten Auswirkungen auf Einzelpersonen, da das System ausschließlich aggregierte Insights liefert und keine Entscheidungen über individuelle Kunden trifft, (2) Produktmanager, die auf Basis der Analysen Sortimentsentscheidungen treffen, (3) Kundenservice-Mitarbeiter, die priorisierte Feedback-Listen erhalten und effizienter auf kritische Rückmeldungen reagieren können, (4) Marketing-Teams für Kampagnenoptimierung basierend auf Sentiment-Trends.",
+      "ucd[UC_1-8-a]": "1",
+      "ucd[UC_1-8-b]": "1",
+      "ucd[UC_1-8-c]": "0"
+    },
+    "step3": {
+      "ucd[UC_1-9]": "1",
+      "ucd[UC_1-10]": "Das System unterliegt der DSGVO, da Kundenbewertungen personenbezogene Daten enthalten können (Namen, Bestellnummern, Adressen in Freitexten). Implementierte Maßnahmen: (1) Datenverarbeitung ausschließlich in der EU (AWS Frankfurt, eu-central-1), (2) Keine dauerhafte Speicherung von Rohtexten nach Analyse, nur aggregierte und anonymisierte Metriken, (3) Auftragsverarbeitungsvertrag (AVV) mit allen Kunden gemäß Art. 28 DSGVO, (4) Technische und organisatorische Maßnahmen nach Art. 32 DSGVO (Verschlüsselung, Zugriffskontrollen, Logging). Keine Hochrisiko-Einstufung nach EU AI Act (Anhang III), da das System rein informationsaufbereitend arbeitet und keine automatisierten Einzelentscheidungen über natürliche Personen trifft.",
+      "ucd[UC_1-11]": "2"
+    }
+  },
+  "pnaAnswers": {
+    "DA": { "af": 3, "gf": 3 },
+    "ND": { "af": 3, "gf": 2 },
+    "TR": { "af": 3, "gf": 2 },
+    "MA": { "af": 3, "gf": 2 },
+    "VE": { "gf": 1 },
+    "CY": { "af": 1, "gf": 1 }
+  }
+}

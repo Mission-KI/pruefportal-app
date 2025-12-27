@@ -1,0 +1,305 @@
+{
+    "1": {
+        "category": {
+            "de": "Anwendungsfallbeschreibung",
+            "en": "Use Case Description"
+        },
+        "title": {
+            "de": "Allgemeine Informationen",
+            "en": "General Information"
+        },
+        "description": {
+            "de": "Bitte geben Sie allgemeine Informationen zu ihrem Anwendungsfall an",
+            "en": "Please provide the following general information for your use case"
+        },
+        "fields": [
+            {
+                "index": "UC 1.1",
+                "type": "text",
+                "name": "UC_1-1",
+                "label": {
+                    "de": "Name des Anwendungsfalls",
+                    "en": "Name of the use case"
+                },
+                "tooltip": {
+                    "de": "Geben Sie einen aussagekräftigen Namen für den Anwendungsfall aus, der die Funktionalität gut zusammenfasst.",
+                    "en": "This is a tooltip lorem ipsum (EN)"
+                }
+            },
+            {
+                "index": "UC 1.2",
+                "type": "textarea",
+                "name": "UC_1-2",
+                "label": {
+                    "de": "Beschreiben Sie den Anwendungsfall (maximal 300 Wörter)",
+                    "en": "Describe your use case (maximum 300 words)"
+                },
+                "tooltip": {
+                    "de": "Beschreiben Sie den Anwendungsfall möglichst so, dass sowohl  Funktionalität, als auch Adressaten bzw. mögliche Zielgruppen und -Sektoren beschrieben werden.",
+                    "en": "This is a tooltip lorem ipsum (EN)"
+                }
+            },
+            {
+                "index": "UC 1.3",
+                "type": "textarea",
+                "name": "UC_1-3",
+                "label": {
+                    "de": "Welche Aufgabenstellung wird durch das KI-System gelöst? (maximal 300 Wörter)",
+                    "en": "What problem or task is solved by the AI system? (maximum 300 words)"
+                },
+                "tooltip": {
+                    "de": "Geben Sie an, welche Aufgabe oder welches Problem das KI-System in Ihrem Anwendungsfall automatisiert oder unterstützt und welche Verfahren dafür zum Einsatz kommen (z. B. Bilderkennung mit neuronalen Netzen, Textklassifikation mit NLP-Modellen, Prognosen mit Regressionsverfahren). Ein KI-System ist ein funktionaler Zusammenschluss einer oder mehrerer KI-Komponenten mit Nicht-KI-Komponenten für eine bestimmte Zweckbestimmung und einen definierten Anwendungskontext. Mehrere KI-Systeme können zu einem größeren System kombiniert werden. Komponenten, mit denen das System interagiert, die aber nicht notwendig oder austauschbar sind, gelten nicht als Teil des KI-Systems.",
+                    "en": "This is a tooltip lorem ipsum (EN)"
+                }
+            },
+            {
+                "index": "UC 1.4",
+                "type": "textarea",
+                "name": "UC_1-4",
+                "label": {
+                    "de": "Was ist der Eingabebereich des KI-Systems, d.h. in welchen Situationen/bei welchen Eingaben soll das KI-System funktionieren?",
+                    "en": "What is the input domain of the AI system, i.e., in which situations/with which inputs is the AI system intended to operate?"
+                },
+                "tooltip": {
+                    "de": "Der Eingabebereich kann beispielsweise durch Rahmenbedingungen oder technische Voraussetzungen eingeschränkt sein. Im Kontext autonomen Fahrens spricht man hier auch von einer Operational Design Domain (ODD). Ein Beispiel wäre eine Objekterkennung, die nur unter bestimmten Lichtbedingungen funktioniert.",
+                    "en": "The input domain may, for example, be limited by boundary conditions or technical requirements. In the context of autonomous driving, this is also referred to as an Operational Design Domain (ODD). An example would be an object detection system that only works under certain lighting conditions."
+                }
+            },
+            {
+                "index": "UC 1.5",
+                "type": "textarea",
+                "name": "UC_1-5",
+                "label": {
+                    "de": "Wo liegen die Grenzen des Eingabebereichs des KI-Systems, d.h. in welchen Situationen/bei welchen Eingaben funktioniert das KI-System nur eingeschränkt oder gar nicht mehr?",
+                    "en": "Where are the limits of the AI system’s input domain, i.e., in which situations/with which inputs does the AI system function only to a limited extent or not at all?"
+                },
+                "tooltip": {
+                    "de": "Beschreibt, welche Arten von Eingaben ein KI-System zuverlässig verarbeiten kann. Liegt eine Anfrage außerhalb dieses Bereichs – z. B. zu unklar, zu lang oder fachlich zu speziell – kann das KI-System nur eingeschränkt oder fehlerhaft reagieren.",
+                    "en": "This is a tooltip lorem ipsum (EN)"
+                }
+            },
+            {
+                "index": "UC 1.6",
+                "type": "textarea",
+                "name": "UC_1-6",
+                "label": {
+                    "de": "Was ist der Ausgabebereich des KI-Systems?",
+                    "en": "What is the output domain of the AI system?"
+                },
+                "tooltip": {
+                    "de": "Beschreiben Sie die konkreten Ergebnisse  und die Art der Daten, die das KI-System ausgibt, nachdem es seine Aufgabe bearbeitet hat. Mögliche Ausgabebereiche umfassen beispielsweise Klassifikationen, Prognosen durch Zahlenwerte, Generative Formate wie Text, Bild und Audio oder Empfehlungen.",
+                    "en": "This is a tooltip lorem ipsum (EN)"
+                }
+            }
+        ]
+    },
+    "2": {
+        "category": {
+            "de": "Anwendungsfallbeschreibung",
+            "en": "Use Case Description"
+        },
+        "title": {
+            "de": "Menschliche Interaktion",
+            "en": "Human interaction"
+        },
+        "description": {
+            "de": "Bitte geben Sie die benötigten Informationen zu ihrem Anwendungsfall an",
+            "en": "Please provide the following information for your use case"
+        },
+        "fields": [        
+            {
+                "index": "UC 1.7a",
+                "type": "textarea",
+                "name": "UC_1-7-a",
+                "label": {
+                    "de": "Für welche Nutzergruppe ist der Einsatz des KI-Systems denkbar? Gibt es Voraussetzungen bzgl. Ausbildung oder Wissen dieser Nutzergruppe?",
+                    "en": "For which user group is the use of the AI system conceivable? Are there any prerequisites regarding the education or knowledge of this user group?"
+                },
+                "tooltip": {
+                    "de": "Denkbar wäre der Einsatz durch die breite Öffentlichkeit, ohne Voraussetzung bestimmter fachlicher oder technischer Vorkenntnisse, die unterstützende Nutzung durch Fachkräfte, etwa in der Medizin oder im Rechtswesen oder durch Spezialisten wie Entwickler.  Art. 4 der KI-Grundverordnung setzt voraus, dass sowohl Provider, als auch Deployer Maßnahmen ergreifen müssen, um den Personenkreis der Nutzenden zu identifizieren und eine angemessene AI literacy der Anwender sicherzustellen.",
+                    "en": "This is a tooltip lorem ipsum (EN)"
+                }
+            },
+            {
+                "index": "UC 1.7b",
+                "type": "textarea",
+                "name": "UC_1-7-b",
+                "label": {
+                    "de": "Welche Gruppen von Personen sind möglicherweise unmittelbar durch die Ausgaben des KI-Systems (positiv und/oder negativ) betroffen?",
+                    "en": "Which groups of people might be directly affected (positively and/or negatively) by the outputs of the AI system?"
+                },
+                "tooltip": {
+                    "de": "Damit sind die Personengruppen gemeint, auf die sich unentdeckte fehlerhafte Ausgaben des KI-Systems auswirken, bspw. Bewerber bei einem Bewerbertool oder Leser bei automatisch generierten Zeitungsartikeln.",
+                    "en": "This refers to the groups of people who may be affected by undetected erroneous outputs of the AI system. For example, applicants using a recruitment tool or readers of automatically generated newspaper articles."
+                }
+            },
+            {
+                "index": "UC 1.8a",
+                "type": "radio",
+                "name": "UC_1-8-a",
+                "label": {
+                    "de": "Ist vorgesehen, dass Menschen am Betrieb des KI-Systems beteiligt sind?",
+                    "en": "Is it intended that humans are involved in the operation of the AI system?"
+                },
+                "tooltip": {
+                    "de": "Wird Input, Wartung, Kontrolle und Verwendung des Outputs durch Menschen gewährleistet?",
+                    "en": "This is a tooltip lorem ipsum (EN)"
+                },
+                "options": [
+                    {
+                        "label": "Ja",
+                        "value": 1
+                    },
+                    {
+                        "label": "Nein",
+                        "value": 0
+                    }
+                ]
+            },
+            {
+                "index": "UC 1.8b",
+                "type": "radio",
+                "name": "UC_1-8-b",
+                "label": {
+                    "de": "Sind Menschen an der Aufsicht des KI-Systems beteiligt?",
+                    "en": "Are humans involved in the supervision of the AI system?"
+                },
+                "tooltip": {
+                    "de": "Nach Art. 14 der KI-Grundverordnung müssen Hochrisiko-Systeme jederzeit durch Menschen beaufsichtigt werden können.  Die Aufsichtspflichten variieren je nach Risikoeinstufung. Systeme mit niedrigem Risiko müssen dabei nicht jederzeit beaufsichtigt werden.",
+                    "en": "This is a tooltip lorem ipsum (EN)"
+                },
+                "options": [
+                    {
+                        "label": "Ja",
+                        "value": 1
+                    },
+                    {
+                        "label": "Nein",
+                        "value": 0
+                    }
+                ]
+            },
+            {
+                "index": "UC 1.8c",
+                "type": "radio",
+                "name": "UC_1-8-c",
+                "label": {
+                    "de": "Falls ja, müssen sie aktiv eingreifen, um Einfluss zu nehmen, oder ist die Prüfung durch einen Menschen notwendiger Teil des Prozesses?",
+                    "en": "If yes, do they need to intervene actively to exert influence, or is human review an integral part of the process?"
+                },
+                "tooltip": {
+                    "de": "Sind Eingriffe durch Menschen nur außerplanmäßig angedacht und damit nicht Teil des Bearbeitungsprozesses oder sind menschliche Kontrollen im Prozess selbst angelegt?",
+                    "en": "This is a tooltip lorem ipsum (EN)"
+                },
+                "options": [
+                    {
+                        "label": "Ja",
+                        "value": 1
+                    },
+                    {
+                        "label": "Nein",
+                        "value": 0
+                    }
+                ]
+            }
+        ]
+    },
+    "3": {
+        "category": {
+            "de": "Anwendungsfallbeschreibung",
+            "en": "Use Case Description"
+        },
+        "title": {
+            "de": "Weiteres",
+            "en": "Other"
+        },
+        "description": {
+            "de": "Bitte geben Sie die folgenden weiteren Informationen an",
+            "en": "Please provide the following further information"
+        },
+        "fields": [    
+            {
+                "index": "UC 1.9",
+                "type": "select",
+                "name": "UC_1-9",
+                "label": {
+                    "de": "Betreiben Sie Ihre KI-Modelle on-premise/lokal oder in der Cloud?",
+                    "en": "Do you operate your AI models on-premises/locally or in the cloud?"
+                },
+                "tooltip": {
+                    "de": "Unter einem on-premise- bzw. lokalen Betrieb wird das KI-Modell komplett in der eigenen Infrastruktur einer Organisation ausgeführt. Daten bleiben intern und verlassen die Organisation nicht und Ausführung, Speicherung und ggf. Training des Modells finden auf eigener Hardware statt. Im Gegensatz dazu bedeutet Cloud-Betrieb, dass ein KI-Modell auf den Servern eines externen Dienstleisters ausgeführt wird und Daten zur Verarbeitung dorthin übertragen werden.",
+                    "en": "This is a tooltip lorem ipsum (EN)"
+                },
+                "options": [
+                    {
+                        "label": "Cloud",
+                        "value": 1
+                    },
+                    {
+                        "label": "On-Premise/lokal",
+                        "value": 2
+                    },
+                    {
+                        "label": "Hybrid",
+                        "value": 3
+                    }
+                ]
+            },
+            {
+                "index": "UC 1.10",
+                "type": "textarea",
+                "name": "UC_1-10",
+                "label": {
+                    "de": "Gibt es besondere regulatorische Anforderungen bezogen auf den Einsatzkontext",
+                    "en": "Are there any specific regulatory requirements related to the application context?"
+                },
+                "tooltip": {
+                    "de": "Beispielsweise Anforderungen folgend aus der Einstufung nach KI-Verordnung oder Anforderungen aus sektoraler Regulierung. Nachweise über erfüllte Anforderungen können im weiteren Verlauf der Prüfung als Evidenzen dienen.",
+                    "en": "For example, requirements resulting from the classification under the AI Act or from sector-specific regulations. Evidence of compliance with these requirements can serve as supporting documentation in the further course of the assessment."
+                }
+            },
+            {
+                "index": "UC 1.11",
+                "type": "select",
+                "name": "UC_1-11",
+                "label": {
+                    "de": "Gibt es besondere regulatorische Anforderungen bezogen auf den Einsatzkontext",
+                    "en": "Are there any specific regulatory requirements related to the application context?"
+                },
+                "tooltip": {
+                    "de": "Beispielsweise Anforderungen folgend aus der Einstufung nach KI-Verordnung oder Anforderungen aus sektoraler Regulierung. Nachweise über erfüllte Anforderungen können im weiteren Verlauf der Prüfung als Evidenzen dienen.",
+                    "en": "For example, requirements resulting from the classification under the AI Act or from sector-specific regulations. Evidence of compliance with these requirements can serve as supporting documentation in the further course of the assessment."
+                },
+                "options": [
+                    {
+                        "label": "Ja, das Modell trainiert kontinuierlich weiter",
+                        "value": 1
+                    },
+                    {
+                        "label": "Ja, aber weiteres Training muss manuell initialisiert werden",
+                        "value": 2
+                    },
+                    {
+                        "label": "Nein",
+                        "value": 3
+                    }
+                ]
+            }
+        ]
+    },
+    "4": {
+        "category": {
+            "de": "Anwendungsfallbeschreibung",
+            "en": "Use Case Description"
+        },
+        "title": {
+            "de": "Anwendungsfallbeschreibung abschließen",
+            "en": "Complete Use Case Description"
+        },
+        "description": {
+            "de": "Vielen Dank für die Beschreibung ihres Anwendungsfalls. Sie können nun den nächsten Prozessschritt anstoßen: die Schutzbedarfsanalyse.\n\nSobald Sie bestätigen, dass die Anwendungsfallbeschreibung korrekt und vollständig erstellt wurde, wir der/die Prüferin darüber informiert, dass die Schutzbedarfsanalyse gestartet werden kann. Den Stand der Prüfung können Sie jederzeit in ihrem Dashboard einsehen. Dort finden Sie auch eine Dokumentation ihrer Anwendungsfallbeschreibung.",
+            "en": "Thank you for describing your use case. You can now initiate the next process step: the protection requirements analysis.\n\nAs soon as you confirm that the use case description has been created correctly and completely, the examiner will be informed that the protection requirements analysis can be started. You can check the status of the review at any time in your dashboard. There you will also find documentation of your use case description."
+        },
+        "fields": []
+    }
+}

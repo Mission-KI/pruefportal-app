@@ -1,0 +1,57 @@
+{
+  "testUser": {
+    "email": "test-user@example.com",
+    "password": "admin123"
+  },
+  "examiner": {
+    "email": "ebay@periscope.de",
+    "password": "admin123",
+    "name": "Lisa Periscope Klein"
+  },
+  "project": {
+    "title": "E2E Test Project - AI Quality Assessment",
+    "description": "Automated test project for validating the MISSION KI assessment workflow. This project tests an AI-powered document classification system for business process automation.",
+    "processTitle": "Document Classification AI",
+    "processDescription": "AI system for automated classification of incoming documents in a business process, using OCR and transformer-based NLP models."
+  },
+  "participants": {
+    "candidate": {
+      "name": "Max Mustermann",
+      "email": "candidate-e2e@example.com"
+    },
+    "examiner": {
+      "name": "Eva Prueferin",
+      "email": "examiner-e2e@example.com"
+    }
+  },
+  "ucd": {
+    "step1": {
+      "ucd[UC_1-1]": "Document Classification System v2.0",
+      "ucd[UC_1-2]": "This AI system automatically classifies incoming business documents (invoices, contracts, correspondence) into predefined categories. It serves mid-sized companies in the logistics sector to streamline their document processing workflows and reduce manual sorting effort.",
+      "ucd[UC_1-3]": "The system uses a combination of OCR for text extraction and transformer-based NLP models for document classification. It processes PDF and image documents, extracting key information and assigning them to appropriate business categories based on content analysis.",
+      "ucd[UC_1-4]": "The system operates on business documents in PDF, JPEG, and PNG formats. Input documents must be in German or English, with a minimum resolution of 150 DPI. Documents should not exceed 50 pages and file size should be under 25MB.",
+      "ucd[UC_1-5]": "The system has reduced accuracy for handwritten documents, documents with significant image noise or low resolution, or documents in languages other than German/English. Multi-column layouts and complex tables may cause parsing errors.",
+      "ucd[UC_1-6]": "The system outputs a JSON structure containing: document category (string), confidence score (0-1), extracted key entities (array of strings), and suggested workflow routing (string identifier)."
+    },
+    "step2": {
+      "ucd[UC_1-7-a]": "The system is designed for office workers and administrative staff with basic computer literacy. No specialized AI or technical training is required, but users should understand the document types common in their business domain.",
+      "ucd[UC_1-7-b]": "Document senders (external partners, customers) may be affected if documents are misclassified, leading to delayed processing. Internal staff processing the documents are directly affected by classification accuracy and workflow efficiency.",
+      "ucd[UC_1-8-a]": "1",
+      "ucd[UC_1-8-b]": "1",
+      "ucd[UC_1-8-c]": "1"
+    },
+    "step3": {
+      "ucd[UC_1-9]": "2",
+      "ucd[UC_1-10]": "The system must comply with GDPR regulations for processing personal data contained in documents. Additionally, sector-specific data retention requirements from the German Commercial Code (HGB) apply to processed business documents.",
+      "ucd[UC_1-11]": "3"
+    }
+  },
+  "vcio": {
+    "evidence": "Automated E2E test evidence: The AI system implements the required quality measures as documented in the technical specification. Testing confirms compliance with the defined criteria.",
+    "level": 2
+  },
+  "pna": {
+    "lowRiskValue": "1",
+    "highRiskValue": "3"
+  }
+}

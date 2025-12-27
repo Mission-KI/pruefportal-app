@@ -1,0 +1,22 @@
+{
+  "approved_packages": {
+    "argparse@2.0.1": {
+      "reason": "Python Software Foundation License ist MIT-kompatibel und erlaubt kommerzielle Nutzung",
+      "license_url": "https://github.com/nodeca/argparse?tab=License-1-ov-file#readme",
+      "approved_by": "saschajunius",
+      "notes": "PSF License ist OSI-approved und GPL-kompatibel"
+    },
+    "spdx-exceptions@2.5.0": {
+      "reason": "CC-BY-3.0 ist ok für SPDX-Metadaten",
+      "license_url": "https://github.com/spdx/license-list-XML",
+      "approved_by": "saschajunius",
+      "notes": "Hinzugefügt am 2025-08-18"
+    }
+  },
+  "global_license_rules": {
+    "CC0-1.0": "Akzeptabel - Public Domain",
+    "CC-BY-4.0": "Akzeptabel für Datensammlungen",
+    "CC-BY-3.0": "Akzeptabel für Metadaten",
+    "Python-2.0": "Python Software Foundation License - MIT-kompatibel"
+  }
+}

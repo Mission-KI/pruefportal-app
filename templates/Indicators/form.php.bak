@@ -1,0 +1,522 @@
+<?php
+
+/**
+ * @var \App\View\AppView $this
+ * @var array $indicators
+ * @var \App\Model\Entity\Process $process
+ * @var \App\Controller\AppController $observables
+ * @var \App\Controller\IndicatorsController $qualityDimension
+ * @var \App\Controller\IndicatorsController $relevances
+ * @var \App\Controller\IndicatorsController $shortTitles
+ * @var \App\Controller\IndicatorsController $vcioConfig
+ */
+$title_for_layout = __('Process') . ': ' . $process->title . ' - ' . __('VCIO-Einstufung');
+$this->assign('title', $title_for_layout);
+
+$this->start('right_sidebar');
+
+$steps = [];
+foreach ($shortTitles as $qualityDimensionKey => $shortTitle) {
+    $status = 'upcoming';
+    $url = ['action' => 'add', $process->id, $qualityDimensionKey];
+
+    if ($qualityDimensionKey === $qualityDimension) {
+        $status = 'current';
+    }
+    if (array_key_exists($vcioConfig[$qualityDimensionKey]['quality_dimension_id'], $indicators)) {
+        $url = false;
+        $status = 'completed';
+    }
+
+    $steps[] = [
+        'title' => $shortTitle,
+        'status' => $status,
+        'url' => $url,
+        'key' => $qualityDimensionKey
+    ];
+}
+
+echo $this->element('molecules/step_navigation', [
+    'title' => __('VCIO-Einstufung'),
+    'steps' => $steps
+]);
+
+$this->end();
+
+// Enable right sidebar by setting a non-empty value
+$this->assign('show_right_sidebar', 'true');
+
+// Reserve space for the right sidebar to prevent content from spreading underneath it
+$this->assign('reserve_sidebar_space', 'true');
+?>
+<!-- indicators form -->
+<h1 class="text-primary display-xs uppercase"><?= $process->title ?></h1>
+<div class="container mx-auto py-8" x-data="indicatorAutoSave()">
+    <?= $this->element('process_status', ['process' => $process]); ?>
+
+    <?= $this->element('molecules/primary_card', [
+        'title' => __('Einstufung des KI-Systems nach der VCIO-Systematik'),
+        'subtitle' => __('VCIO-Einstufung'),
+        'body' => __('Für jede der Qualitätsdimensionen des Qualitätsstandards, bezüglich deren Kriterien ein Schutzbedarf in der vorangegangenen Analyse durch den/die PrüferIn festgestellt wurde, nehmen Sie nun eine Selbsteinstufung des KI-Systems vor und liefern bitte die geforderten Evidenzen, um diese Einstufung zu belegen.'),
+        'escape' => false,
+    ]) ?>
+
+
+    <h2 class="text-xl my-4 text-primary">
+        <?= $this->element('atoms/icon', ['name' => $vcioConfig[$qualityDimension]['icon'], 'size' => 'xl', 'options' => ['class' => 'text-primary']]) ?>
+        <?= $vcioConfig[$qualityDimension]['title'] ?> (<?= $qualityDimension ?>)
+    </h2>
+
+    <?= $this->Form->create(null, [
+        'url' => ['action' => 'add', $process->id, $qualityDimension],
+        'type' => 'file',
+        'class' => 'needs-validation',
+        'id' => 'indicators-form',
+        'novalidate' => true,
+    ]) ?>
+    <?php
+    $formIndex = 0;
+    $levelLabels = [
+        3 => __(' (vollständig erfüllt)'),
+        2 => __(' (wesentlich erfüllt)'),
+        1 => __(' (im Ansatz erfüllt)'),
+        0 => __(' (nicht erfüllt)'),
+    ];
+
+    foreach ($vcioConfig[$qualityDimension]['criteria'] as $criterion):
+        // Only relevant Indicators relating to the CriterionType according to the Criteria are displayed
+        if(array_key_exists($criterion['criterion_type_id'], $relevances) && $relevances[$criterion['criterion_type_id']] !== false):
+            foreach ($criterion['indicators'] as $indicatorKey => $indicatorContent):
+    ?>
+            <div class="mki-form-field-wrapper mb-4">
+                <span class="mki-form-field-index-badge" data-reference="<?= h($indicatorKey) ?>"><?= h($indicatorKey) ?></span>
+                <div class="mki-form-field-label-wrapper flex items-center justify-between mb-2">
+                    <div class="text-brand-deep font-normal text-xl">
+                        <?= h($indicatorContent['title']) ?>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <?php if (!empty($indicatorContent['tooltip'])): ?>
+                            <div x-data="{ open: false }" class="relative inline-block">
+                                <button type="button"
+                                    @click="open = !open"
+                                    @click.away="open = false"
+                                    class="bg-transparent border-none p-0 cursor-pointer flex items-center"
+                                    :class="{ 'text-brand-light-web': open, 'text-gray-500': !open }">
+                                    <?= $this->element('atoms/icon', [
+                                        'name' => 'help-circle',
+                                        'size' => 'sm',
+                                        'options' => ['class' => 'w-5 h-5']
+                                    ]) ?>
+                                </button>
+                                <div x-show="open"
+                                    x-transition
+                                    class="fixed left-[var(--tooltip-left)] -translate-x-1/2 bottom-[var(--tooltip-bottom)] z-[9999] bg-brand-deep text-white p-4 rounded-[var(--radius-md)] shadow-[var(--shadow-lg)] min-w-64 max-w-80"
+                                    x-init="$watch('open', value => {
+                             if (value) {
+                                 const rect = $el.previousElementSibling.getBoundingClientRect();
+                                 $el.style.setProperty('--tooltip-left', rect.left + rect.width / 2 + 'px');
+                                 $el.style.setProperty('--tooltip-bottom', window.innerHeight - rect.top + 8 + 'px');
+                             }
+                         })">
+                                    <div class="absolute left-1/2 -translate-x-1/2 bottom-[-0.5rem] w-0 h-0 border-l-[0.5rem] border-l-transparent border-r-[0.5rem] border-r-transparent border-t-[0.5rem] border-t-brand-deep"></div>
+                                    <div class="text-sm leading-normal">
+                                        <?= $indicatorContent['tooltip'] ?>
+                                    </div>
+                                </div>
+                            </div>
+                        <?php endif; ?>
+                    </div>
+                </div>
+
+                <?php if (array_key_exists('docs_id', $indicatorContent) && $indicatorContent['docs_id'] !== ''): ?>
+                    <div class="mb-4 p-0">
+                        <a class="text-md font-semibold text-primary" href="https://docs.pruefportal.mission-ki.de/indicators/<?= h($indicatorContent['docs_id']) ?>" target="_blank">
+                            <?= $this->element('atoms/icon', ['name' => 'external-link', 'size' => 'sm', 'options' => ['class' => 'w-5 h-5']]) ?>
+                            <?= __('Dokumentation: Relevante Prüfmethoden & weitere Informationen') ?>
+                        </a>
+                    </div>
+                <?php endif; ?>
+
+                <?= $this->element('organisms/vcio_definitions', ['indicatorContent' => $indicatorContent, 'observables' => $observables]) ?>
+
+                <div class="mb-4 p-0">
+                    <h3 class="text-lg font-semibold mb-2 text-primary"><?= __('Selbsteinschätzung') ?></h3>
+                    <?= $this->Form->control('indicators[' . $formIndex . '][title]', ['type' => 'hidden', 'value' => $indicatorKey]) ?>
+
+                    <?= $this->Form->control('indicators[' . $formIndex . '][process_id]', ['type' => 'hidden', 'value' => $process->id]) ?>
+                    <?= $this->Form->control('indicators[' . $formIndex . '][quality_dimension_id]', ['type' => 'hidden', 'value' => $vcioConfig[$qualityDimension]['quality_dimension_id']]) ?>
+                    <?= $this->element('organisms/vcio_selection', ['formIndex' => $formIndex, 'indicatorKey' => $indicatorKey, 'levelLabels' => $levelLabels, 'observables' => $observables, 'levelName' => 'level_candidate']) ?>
+                </div>
+                <div class="mb-4 p-0">
+                    <?= $this->element('molecules/form_field', [
+                        'name' => 'indicators[' . $formIndex . '][evidence]',
+                        'label' => __('Evidence'),
+                        'type' => 'textarea',
+                        'required' => true,
+                        'error_messages' => [__('Please enter Evidences.')],
+                        'atom_element' => 'atoms/form_textarea',
+                        'atom_data' => [
+                            'name' => 'indicators[' . $formIndex . '][evidence]',
+                            'placeholder' => __('Text'),
+                            'required' => true
+                        ]
+                    ]) ?>
+
+                    <div class="mt-4 p-0">
+                        <?= $this->element('molecules/file_upload_with_preview', [
+                            'name' => 'indicators[' . $formIndex . '][attachments]',
+                            'id' => 'indicator-files-' . $formIndex,
+                            'button_label' => __('Dateien anhängen'),
+                            'button_icon' => 'plus-square',
+                            'button_variant' => 'secondary',
+                            'button_size' => 'SM',
+                            'accept' => '.pdf,.doc,.docx,.png,.jpg,.jpeg',
+                            'multiple' => true
+                        ]) ?>
+                    </div>
+                </div>
+            </div>
+    <?php
+            $formIndex++;
+            endforeach;
+        endif;
+    endforeach;
+    ?>
+
+
+    <?= $this->element('atoms/button', [
+        'label' => __('Next step'),
+        'variant' => 'primary',
+        'size' => 'md',
+        'type' => 'submit',
+        'class' => 'px-4 py-2 bg-brand text-white rounded-lg hover:bg-brand-dark transition-colors'
+    ]) ?>
+
+    <?= $this->Form->end() ?>
+
+</div>
+
+<script>
+// Client-side validation on submit
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('indicators-form');
+    if (!form) return;
+
+    // Clear error state when radio button is selected
+    form.querySelectorAll('input[type="radio"]').forEach(radio => {
+        radio.addEventListener('change', function() {
+            const container = this.closest('.mki-form-field-container');
+            if (container) {
+                // Clear error state by dispatching input event
+                this.dispatchEvent(new Event('input', { bubbles: true }));
+            }
+        });
+    });
+
+    form.addEventListener('submit', function(e) {
+        if (!form.checkValidity()) {
+            e.preventDefault();
+            e.stopPropagation();
+            e.stopImmediatePropagation();
+
+            // Trigger Alpine.js validation by dispatching blur events
+            const invalidFields = form.querySelectorAll(':invalid');
+            invalidFields.forEach(field => {
+                field.dispatchEvent(new FocusEvent('blur', { bubbles: true }));
+            });
+
+            // Scroll to first error
+            const firstInvalid = invalidFields[0];
+            if (firstInvalid) {
+                const container = firstInvalid.closest('.mki-form-field-container');
+                if (container) {
+                    container.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            }
+
+            return false;
+        }
+    }, true);
+});
+
+// Alpine.js Auto-Save Component
+function indicatorAutoSave() {
+    return {
+        // Data structure
+        processId: <?= $process->id ?>,
+        qualityDimensionId: '<?= $qualityDimension ?>',
+        originalValues: {},
+        pendingSaves: {},
+        savedFields: {},
+        debounceTimer: null,
+        isOnline: true,
+        saveInProgress: false,
+
+        // Initialize
+        init() {
+            console.log('Auto-save initialized for process', this.processId, 'QD', this.qualityDimensionId);
+            this.captureOriginalValues();
+            this.attachFieldListeners();
+
+            // Online/offline detection
+            window.addEventListener('online', () => this.handleOnline());
+            window.addEventListener('offline', () => this.handleOffline());
+        },
+
+        // Capture initial field values
+        captureOriginalValues() {
+            const form = document.querySelector('#indicators-form');
+            if (!form) return;
+
+            const inputs = form.querySelectorAll('input[type="radio"], input[type="checkbox"], select, textarea');
+            inputs.forEach(input => {
+                if (input.name && input.name.startsWith('indicators[')) {
+                    const fieldName = this.extractFieldName(input.name);
+                    this.originalValues[fieldName + '_' + input.name.split('[')[2]] = this.getFieldValue(input);
+                }
+            });
+
+            console.log('Captured original values:', this.originalValues);
+        },
+
+        // Extract indicator title from field name: indicators[0][title] → indicators[0]
+        extractFieldName(name) {
+            const match = name.match(/indicators\[(\d+)\]/);
+            return match ? match[0] : name;
+        },
+
+        // Get indicator index from field name: indicators[0][title] → 0
+        getIndicatorIndex(name) {
+            const match = name.match(/indicators\[(\d+)\]/);
+            return match ? parseInt(match[1]) : null;
+        },
+
+        // Get field value based on input type
+        getFieldValue(input) {
+            if (input.type === 'checkbox') {
+                return input.checked;
+            } else if (input.type === 'radio') {
+                const checked = document.querySelector(`input[name="${input.name}"]:checked`);
+                return checked ? checked.value : '';
+            } else {
+                return input.value;
+            }
+        },
+
+        // Attach blur listeners to form fields
+        attachFieldListeners() {
+            const form = document.querySelector('#indicators-form');
+            if (!form) return;
+
+            const inputs = form.querySelectorAll('input[type="radio"], input[type="checkbox"], select, textarea');
+            inputs.forEach(input => {
+                if (input.name && input.name.startsWith('indicators[')) {
+                    // Blur event for all fields
+                    input.addEventListener('blur', (e) => this.handleFieldBlur(e));
+
+                    // Change event for radios (immediate feedback)
+                    if (input.type === 'radio') {
+                        input.addEventListener('change', (e) => this.handleFieldBlur(e));
+                    }
+                }
+            });
+
+            console.log('Attached field listeners to', inputs.length, 'inputs');
+        },
+
+        // Handle field blur event
+        handleFieldBlur(event) {
+            const input = event.target;
+            const fieldName = this.extractFieldName(input.name);
+            const indicatorIndex = this.getIndicatorIndex(input.name);
+
+            if (indicatorIndex === null) return;
+
+            const currentValue = this.getFieldValue(input);
+            const originalKey = fieldName + '_' + input.name.split('[')[2];
+            const originalValue = this.originalValues[originalKey];
+
+            // Only queue save if value has changed
+            if (currentValue !== originalValue) {
+                console.log('Field changed:', input.name, 'from', originalValue, 'to', currentValue);
+                this.queueIndicatorSave(indicatorIndex);
+            }
+        },
+
+        // Queue indicator for save with debounce
+        queueIndicatorSave(indicatorIndex) {
+            // Mark as pending
+            this.pendingSaves[indicatorIndex] = true;
+
+            // Clear existing timer
+            if (this.debounceTimer) {
+                clearTimeout(this.debounceTimer);
+            }
+
+            // Set new timer (2 seconds)
+            this.debounceTimer = setTimeout(() => {
+                this.executeBatchSave();
+            }, 2000);
+
+            console.log('Queued indicator', indicatorIndex, 'for save');
+        },
+
+        // Collect indicator data from form
+        collectIndicatorData(indicatorIndex) {
+            const form = document.querySelector('#indicators-form');
+            if (!form) return null;
+
+            const titleInput = form.querySelector(`input[name="indicators[${indicatorIndex}][title]"]`);
+            if (!titleInput) return null;
+
+            const title = titleInput.value;
+            const levelRadio = form.querySelector(`input[name="indicators[${indicatorIndex}][level_candidate]"]:checked`);
+            const evidenceTextarea = form.querySelector(`textarea[name="indicators[${indicatorIndex}][evidence]"]`);
+            const qualityDimensionInput = form.querySelector(`input[name="indicators[${indicatorIndex}][quality_dimension_id]"]`);
+
+            return {
+                title: title,
+                level_candidate: levelRadio ? parseInt(levelRadio.value) : null,
+                evidence: evidenceTextarea ? evidenceTextarea.value : '',
+                quality_dimension_id: qualityDimensionInput ? parseInt(qualityDimensionInput.value) : null
+            };
+        },
+
+        // Execute batch save
+        async executeBatchSave() {
+            const indicesToSave = Object.keys(this.pendingSaves);
+            if (indicesToSave.length === 0) return;
+
+            console.log('Executing batch save for indicators:', indicesToSave);
+
+            // Collect data for all pending indicators
+            const indicatorsData = {};
+            indicesToSave.forEach(index => {
+                const data = this.collectIndicatorData(parseInt(index));
+                if (data && data.title) {
+                    indicatorsData[data.title] = {
+                        level_candidate: data.level_candidate,
+                        evidence: data.evidence,
+                        quality_dimension_id: data.quality_dimension_id
+                    };
+                }
+            });
+
+            if (Object.keys(indicatorsData).length === 0) {
+                console.log('No valid data to save');
+                this.pendingSaves = {};
+                return;
+            }
+
+            // Check if online
+            if (!this.isOnline) {
+                console.log('Offline - saving to localStorage');
+                this.saveToLocalStorage(indicatorsData);
+                this.handleSaveError('Offline - data saved locally');
+                return;
+            }
+
+            // Perform save
+            this.saveInProgress = true;
+            try {
+                await this.autoSaveIndicators(indicatorsData);
+            } catch (error) {
+                console.error('Auto-save failed:', error);
+                this.handleSaveError(error.message || 'Save failed');
+                this.saveToLocalStorage(indicatorsData);
+            } finally {
+                this.saveInProgress = false;
+            }
+        },
+
+        // Auto-save indicators via fetch
+        async autoSaveIndicators(indicatorsData) {
+            const url = `/indicators/save-draft/${this.processId}`;
+            const csrfToken = document.querySelector('input[name="_csrfToken"]')?.value;
+
+            const response = await fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRF-Token': csrfToken || '',
+                    'X-Requested-With': 'XMLHttpRequest'
+                },
+                body: JSON.stringify({
+                    indicators: indicatorsData
+                })
+            });
+
+            if (!response.ok) {
+                const errorData = await response.json().catch(() => ({}));
+                throw new Error(errorData.error || `HTTP ${response.status}`);
+            }
+
+            const result = await response.json();
+            this.handleSaveSuccess(result);
+            return result;
+        },
+
+        // Handle successful save
+        handleSaveSuccess(result) {
+            console.log('Save successful:', result);
+
+            // Mark saved indicators
+            Object.keys(this.pendingSaves).forEach(index => {
+                this.savedFields[index] = true;
+                this.showFieldFeedback(index, 'success');
+            });
+
+            // Clear pending saves
+            this.pendingSaves = {};
+
+            // Update original values to match saved state
+            this.captureOriginalValues();
+
+            // Clear localStorage backup
+            localStorage.removeItem(`indicators_autosave_${this.processId}_${this.qualityDimensionId}`);
+
+            console.log('Saved at', result.timestamp);
+        },
+
+        // Handle save error
+        handleSaveError(errorMessage) {
+            console.error('Save error:', errorMessage);
+
+            // Mark fields with error state
+            Object.keys(this.pendingSaves).forEach(index => {
+                this.savedFields[index] = false;
+                this.showFieldFeedback(index, 'error');
+            });
+
+            // Don't clear pendingSaves - allow retry
+        },
+
+        // Save to localStorage as backup
+        saveToLocalStorage(indicatorsData) {
+            const storageKey = `indicators_autosave_${this.processId}_${this.qualityDimensionId}`;
+            const storageData = {
+                timestamp: new Date().toISOString(),
+                data: indicatorsData
+            };
+
+            try {
+                localStorage.setItem(storageKey, JSON.stringify(storageData));
+                console.log('Saved to localStorage:', storageKey);
+            } catch (error) {
+                console.error('localStorage save failed:', error);
+            }
+        },
+
+        // Handle online/offline events
+        handleOnline() {
+            console.log('Coming online');
+            this.isOnline = true;
+        },
+
+        handleOffline() {
+            console.log('Going offline');
+            this.isOnline = false;
+        }
+    };
+}
+</script>

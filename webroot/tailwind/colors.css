@@ -1,0 +1,480 @@
+/* MISSION KI Design System - Color Utility Classes */
+/* Smart contrast utilities that automatically set the correct text color */
+/* These classes use the color + contrast pairs defined in theme.css */
+
+/* === DEFAULT COLOR UTILITIES === */
+/* These use the default shade for each color family */
+
+.bg-brand {
+  background-color: var(--color-brand);
+  color: var(--color-brand-deep-contrast);
+}
+
+.bg-gray {
+  background-color: var(--color-gray);
+  color: var(--color-gray-contrast);
+}
+
+.bg-error {
+  background-color: var(--color-error);
+  color: var(--color-error-contrast);
+}
+
+.bg-warning {
+  background-color: var(--color-warning);
+  color: var(--color-warning-contrast);
+}
+
+.bg-blue {
+  background-color: var(--color-blue);
+  color: var(--color-blue-contrast);
+}
+
+.bg-success {
+  background-color: var(--color-success);
+  color: var(--color-success-contrast);
+}
+
+/* === BRAND COLOR UTILITIES === */
+
+.bg-primary, .bg-brand-deep {
+  background-color: var(--color-brand-deep);
+  color: var(--color-brand-deep-contrast);
+}
+
+.bg-brand-light {
+  background-color: var(--color-brand-light);
+  color: var(--color-brand-light-contrast);
+}
+
+.bg-brand-light-web {
+  background-color: var(--color-brand-light-web);
+  color: var(--color-brand-light-web-contrast);
+}
+
+/* === BASE COLOR UTILITIES === */
+
+.bg-white {
+  background-color: var(--color-base-white);
+  color: var(--color-base-white-contrast);
+}
+
+.bg-black {
+  background-color: var(--color-base-black);
+  color: var(--color-base-black-contrast);
+}
+
+/* === GRAY COLOR UTILITIES === */
+
+.bg-gray-25 {
+  background-color: var(--color-gray-25);
+  color: var(--color-gray-25-contrast);
+}
+
+.bg-gray-50 {
+  background-color: var(--color-gray-50);
+  color: var(--color-gray-50-contrast);
+}
+
+.bg-gray-100 {
+  background-color: var(--color-gray-100);
+  color: var(--color-gray-100-contrast);
+}
+
+.bg-gray-200 {
+  background-color: var(--color-gray-200);
+  color: var(--color-gray-200-contrast);
+}
+
+.bg-gray-300 {
+  background-color: var(--color-gray-300);
+  color: var(--color-gray-300-contrast);
+}
+
+.bg-gray-400, .bg-disabled {
+  background-color: var(--color-gray-400);
+  color: var(--color-gray-400-contrast);
+}
+
+.bg-gray-500 {
+  background-color: var(--color-gray-500);
+  color: var(--color-gray-500-contrast);
+}
+
+.bg-gray-600 {
+  background-color: var(--color-gray-600);
+  color: var(--color-gray-600-contrast);
+}
+
+.bg-gray-700 {
+  background-color: var(--color-gray-700);
+  color: var(--color-gray-700-contrast);
+}
+
+.bg-gray-800 {
+  background-color: var(--color-gray-800);
+  color: var(--color-gray-800-contrast);
+}
+
+.bg-gray-900 {
+  background-color: var(--color-gray-900);
+  color: var(--color-gray-900-contrast);
+}
+
+.bg-gray-950 {
+  background-color: var(--color-gray-950);
+  color: var(--color-gray-950-contrast);
+}
+
+/* === ERROR COLOR UTILITIES === */
+
+.bg-error-25 {
+  background-color: var(--color-error-25);
+  color: var(--color-error-25-contrast);
+}
+
+.bg-error-50 {
+  background-color: var(--color-error-50);
+  color: var(--color-error-50-contrast);
+}
+
+.bg-error-100 {
+  background-color: var(--color-error-100);
+  color: var(--color-error-100-contrast);
+}
+
+.bg-error-200 {
+  background-color: var(--color-error-200);
+  color: var(--color-error-200-contrast);
+}
+
+.bg-error-300 {
+  background-color: var(--color-error-300);
+  color: var(--color-error-300-contrast);
+}
+
+.bg-error-400 {
+  background-color: var(--color-error-400);
+  color: var(--color-error-400-contrast);
+}
+
+.bg-error-500 {
+  background-color: var(--color-error-500);
+  color: var(--color-error-500-contrast);
+}
+
+.bg-error-600 {
+  background-color: var(--color-error-600);
+  color: var(--color-error-600-contrast);
+}
+
+.bg-error-700 {
+  background-color: var(--color-error-700);
+  color: var(--color-error-700-contrast);
+}
+
+.bg-error-800 {
+  background-color: var(--color-error-800);
+  color: var(--color-error-800-contrast);
+}
+
+.bg-error-900 {
+  background-color: var(--color-error-900);
+  color: var(--color-error-900-contrast);
+}
+
+.bg-error-950 {
+  background-color: var(--color-error-950);
+  color: var(--color-error-950-contrast);
+}
+
+/* === WARNING COLOR UTILITIES === */
+
+.bg-warning-25 {
+  background-color: var(--color-warning-25);
+  color: var(--color-warning-25-contrast);
+}
+
+.bg-warning-50 {
+  background-color: var(--color-warning-50);
+  color: var(--color-warning-50-contrast);
+}
+
+.bg-warning-100 {
+  background-color: var(--color-warning-100);
+  color: var(--color-warning-100-contrast);
+}
+
+.bg-warning-200 {
+  background-color: var(--color-warning-200);
+  color: var(--color-warning-200-contrast);
+}
+
+.bg-warning-300 {
+  background-color: var(--color-warning-300);
+  color: var(--color-warning-300-contrast);
+}
+
+.bg-warning-400 {
+  background-color: var(--color-warning-400);
+  color: var(--color-warning-400-contrast);
+}
+
+.bg-warning-500 {
+  background-color: var(--color-warning-500);
+  color: var(--color-warning-500-contrast);
+}
+
+.bg-warning-600 {
+  background-color: var(--color-warning-600);
+  color: var(--color-warning-600-contrast);
+}
+
+.bg-warning-700 {
+  background-color: var(--color-warning-700);
+  color: var(--color-warning-700-contrast);
+}
+
+.bg-warning-800 {
+  background-color: var(--color-warning-800);
+  color: var(--color-warning-800-contrast);
+}
+
+.bg-warning-900 {
+  background-color: var(--color-warning-900);
+  color: var(--color-warning-900-contrast);
+}
+
+.bg-warning-950 {
+  background-color: var(--color-warning-950);
+  color: var(--color-warning-950-contrast);
+}
+
+/* === BLUE COLOR UTILITIES === */
+
+.bg-blue-25 {
+  background-color: var(--color-blue-25);
+  color: var(--color-blue-25-contrast);
+}
+
+.bg-blue-50 {
+  background-color: var(--color-blue-50);
+  color: var(--color-blue-50-contrast);
+}
+
+.bg-blue-100 {
+  background-color: var(--color-blue-100);
+  color: var(--color-blue-100-contrast);
+}
+
+.bg-blue-200 {
+  background-color: var(--color-blue-200);
+  color: var(--color-blue-200-contrast);
+}
+
+.bg-blue-300 {
+  background-color: var(--color-blue-300);
+  color: var(--color-blue-300-contrast);
+}
+
+.bg-blue-400 {
+  background-color: var(--color-blue-400);
+  color: var(--color-blue-400-contrast);
+}
+
+.bg-blue-500 {
+  background-color: var(--color-blue-500);
+  color: var(--color-blue-500-contrast);
+}
+
+.bg-info {
+  background-color: var(--color-blue);
+  color: var(--color-blue-contrast);
+}
+
+.bg-blue-600 {
+  background-color: var(--color-blue-600);
+  color: var(--color-blue-600-contrast);
+}
+
+.bg-blue-700 {
+  background-color: var(--color-blue-700);
+  color: var(--color-blue-700-contrast);
+}
+
+.bg-blue-800 {
+  background-color: var(--color-blue-800);
+  color: var(--color-blue-800-contrast);
+}
+
+.bg-blue-900 {
+  background-color: var(--color-blue-900);
+  color: var(--color-blue-900-contrast);
+}
+
+.bg-blue-950 {
+  background-color: var(--color-blue-950);
+  color: var(--color-blue-950-contrast);
+}
+
+/* === SUCCESS COLOR UTILITIES === */
+
+.bg-success-25 {
+  background-color: var(--color-success-25);
+  color: var(--color-success-25-contrast);
+}
+
+.bg-success-50 {
+  background-color: var(--color-success-50);
+  color: var(--color-success-50-contrast);
+}
+
+.bg-success-100 {
+  background-color: var(--color-success-100);
+  color: var(--color-success-100-contrast);
+}
+
+.bg-success-200 {
+  background-color: var(--color-success-200);
+  color: var(--color-success-200-contrast);
+}
+
+.bg-success-300 {
+  background-color: var(--color-success-300);
+  color: var(--color-success-300-contrast);
+}
+
+.bg-success-400 {
+  background-color: var(--color-success-400);
+  color: var(--color-success-400-contrast);
+}
+
+.bg-success-500 {
+  background-color: var(--color-success-500);
+  color: var(--color-success-500-contrast);
+}
+
+.bg-success-600 {
+  background-color: var(--color-success-600);
+  color: var(--color-success-600-contrast);
+}
+
+.bg-success-700 {
+  background-color: var(--color-success-700);
+  color: var(--color-success-700-contrast);
+}
+
+.bg-success-800 {
+  background-color: var(--color-success-800);
+  color: var(--color-success-800-contrast);
+}
+
+.bg-success-900 {
+  background-color: var(--color-success-900);
+  color: var(--color-success-900-contrast);
+}
+
+.bg-success-950 {
+  background-color: var(--color-success-950);
+  color: var(--color-success-950-contrast);
+}
+
+/* === TEXT COLOR UTILITIES === */
+/* For when you need to override text color explicitly */
+
+.text-primary {
+  color: var(--color-brand-deep);
+}
+
+.text-white {
+  color: var(--color-base-white);
+}
+
+.text-black {
+  color: var(--color-base-black);
+}
+
+/* Gray text colors */
+.text-gray-400 {
+  color: var(--color-gray-400);
+}
+
+.text-gray-500 {
+  color: var(--color-gray-500);
+}
+
+.text-gray-600 {
+  color: var(--color-gray-600);
+}
+
+.text-gray-700 {
+  color: var(--color-gray-700);
+}
+
+.text-gray-800 {
+  color: var(--color-gray-800);
+}
+
+.text-gray-900 {
+  color: var(--color-gray-900);
+}
+
+/* Semantic text colors */
+.text-error {
+  color: var(--color-error-500);
+}
+
+.text-warning {
+  color: var(--color-warning-500);
+}
+
+.text-info {
+  color: var(--color-blue-500);
+}
+
+.text-success {
+  color: var(--color-success-500);
+}
+
+/* Link colors */
+.text-link {
+  color: var(--color-blue-600);
+}
+
+.text-link:hover {
+  color: var(--color-blue-700);
+}
+
+/* === BORDER COLOR UTILITIES === */
+
+.border-primary {
+  border-color: var(--color-brand-deep);
+}
+
+.border-gray-200 {
+  border-color: var(--color-gray-200);
+}
+
+.border-gray-300 {
+  border-color: var(--color-gray-300);
+}
+
+.border-gray-400 {
+  border-color: var(--color-gray-400);
+}
+
+.border-error {
+  border-color: var(--color-error-500);
+}
+
+.border-warning {
+  border-color: var(--color-warning-500);
+}
+
+.border-info {
+  border-color: var(--color-blue-500);
+}
+
+.border-success {
+  border-color: var(--color-success-500);
+}

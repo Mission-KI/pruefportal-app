@@ -1,0 +1,20 @@
+<div class="text-bg-primary p-3 my-4">
+    <h5>{{category}}</h5>
+    <h2>{{title}}</h2>
+    <p>{{breaklines description}}</p>
+</div>
+{{#each fields}}
+<div class="mb-4">
+    <h4><span class="badge text-bg-primary p-2">{{index}}</span> {{label}}</h4>
+
+    {{#if (or
+              (eq type "radio")
+              (eq type "select"))}}
+        {{#each options}}
+            <p id="{{...name}}" class="options d-none">{{label}}</p>
+        {{/each}}
+    {{else}}
+        <p id="{{name}}"></p>
+    {{/if}}
+</div>
+{{/each}}

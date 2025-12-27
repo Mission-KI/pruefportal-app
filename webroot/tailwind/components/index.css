@@ -1,0 +1,51 @@
+/* MISSION KI Design System - Component Imports */
+/* Modular component system using organized directory structure */
+
+@import "./accordion/index.css";
+@import "./avatar/index.css";
+@import "./button/index.css";
+@import "./card/index.css";
+@import "./form/index.css";
+@import "./icon/index.css";
+@import "./tooltip/index.css";
+@import "./form-navigation.css";
+@import "./overall-assessment/index.css";
+@import "./autosave.css";
+
+/* Accessibility utilities */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* Word breaking utilities */
+.hyphens-auto {
+    hyphens: auto;
+}
+
+.break-words {
+    overflow-wrap: break-word;
+}
+
+.mki-process-status {
+    display: flex;
+    align-items: center;
+    padding-top: 2rem;
+    justify-content: space-evenly;
+    gap: var(--spacing);
+    color: var(--color-primary);
+}
+
+.mki-process-status__link {
+    &.disabled {
+        color: var(--color-disabled);
+    }
+}
+

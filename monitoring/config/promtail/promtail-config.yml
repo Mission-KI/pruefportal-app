@@ -1,0 +1,36 @@
+# Promtail Configuration - Local Development
+# Reads CakePHP logs from backend/logs/
+
+server:
+  http_listen_port: 9080
+  grpc_listen_port: 0
+
+positions:
+  filename: /tmp/positions.yaml
+
+clients:
+  - url: http://loki:3100/loki/api/v1/push
+
+scrape_configs:
+  # CakePHP Application Logs (error.log, debug.log)
+  - job_name: cakephp
+    static_configs:
+      - targets:
+          - localhost
+        labels:
+          job: cakephp
+          app: pruefportal
+          env: local
+          __path__: /var/log/cakephp/*.log
+    pipeline_stages:
+      # CakePHP log format: 2024-01-15 10:30:45 Error: Message
+      - multiline:
+          firstline: '^\d{4}-\d{2}-\d{2}'
+          max_wait_time: 3s
+      - regex:
+          expression: '^(?P<timestamp>\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}) (?P<level>\w+): (?P<message>.*)'
+      - labels:
+          level:
+      - timestamp:
+          format: '2006-01-02 15:04:05'
+          source: timestamp
