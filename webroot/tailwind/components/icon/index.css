@@ -1,0 +1,4 @@
+/* Icon component - modular imports */
+@import "./base.css";
+@import "./sizes.css";
+@import "./animations.css";

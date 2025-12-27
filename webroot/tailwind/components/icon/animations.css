@@ -1,0 +1,68 @@
+@layer components {
+  /* Icon animation utilities */
+
+  /* Spin animation for loading icons */
+  .icon-spin {
+    animation: spin 1s linear infinite;
+  }
+
+  /* Pulse animation for attention */
+  .icon-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  /* Bounce animation */
+  .icon-bounce {
+    animation: bounce 1s infinite;
+  }
+
+  /* Hover animations */
+  @media (hover: hover) {
+    .icon-hover-scale:hover {
+      transform: scale(1.1);
+    }
+
+    .icon-hover-rotate:hover {
+      transform: rotate(15deg);
+    }
+
+    .icon-hover-flip:hover {
+      transform: scaleX(-1);
+    }
+  }
+
+  /* Active state */
+  .icon-active:active {
+    transform: scale(0.95);
+  }
+
+  /* Keyframe definitions */
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
+
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(-25%);
+      animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+    50% {
+      transform: translateY(0);
+      animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+  }
+}

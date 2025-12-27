@@ -1,0 +1,63 @@
+@layer components {
+  /* === ICON SYSTEM === */
+  .icon {
+    /* Base icon styles */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    /* SVG styling - uses currentColor for inheritance */
+    & svg {
+      width: 100%;
+      height: 100%;
+      fill: currentColor;
+
+      /* Handle both fill and stroke icons */
+      & path,
+      & g path {
+        fill: currentColor;
+        stroke: currentColor;
+      }
+
+      /* Some icons use only stroke */
+      &[fill="none"] path,
+      &[fill="none"] g path {
+        fill: none;
+        stroke: currentColor;
+      }
+    }
+
+    /* Ensure proper alignment in text */
+    vertical-align: middle;
+
+    /* Default transition for hover effects */
+    transition: color 200ms ease-in-out, transform 200ms ease-in-out;
+  }
+
+  /* Icon button wrapper for clickable icons */
+  .icon-button {
+    @apply inline-flex items-center justify-center;
+    @apply rounded-lg p-2;
+    @apply transition-colors duration-200;
+    @apply cursor-pointer outline-none;
+
+    @media (hover: hover) {
+      &:hover {
+        @apply bg-gray-100;
+      }
+    }
+
+    &:active {
+      @apply bg-gray-200;
+    }
+
+    &:focus-visible {
+      @apply ring-2 ring-primary ring-offset-2;
+    }
+
+    &:disabled {
+      @apply opacity-50 cursor-not-allowed;
+    }
+  }
+}
