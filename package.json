@@ -1,6 +1,6 @@
 {
     "name": "MISSION_KI",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "description": "### Development Start the database and the backend server with docker: ```bash bash start.sh ``` The application will be available at http://localhost:8070.",
     "main": "index.js",
     "license": "ISC",
