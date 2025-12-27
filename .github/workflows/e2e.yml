@@ -1,0 +1,85 @@
+name: E2E Tests
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  cypress:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          submodules: true
+
+      - name: Copy environment files
+        run: |
+          cp .env.example .env
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build and start containers
+        run: docker compose -f docker-compose.dev.yml up -d --build
+
+      - name: Install PHP dependencies in container
+        run: docker compose -f docker-compose.dev.yml exec --workdir /app server composer install --no-interaction --prefer-dist
+
+      - name: Run database migrations
+        run: docker compose -f docker-compose.dev.yml exec --env DATABASE_URL=postgres://mission_ki_user:mission_ki_password@db:5432/mission_ki_db --workdir /app server bin/cake migrations migrate
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: package-lock.json
+
+      - name: Install frontend dependencies
+        run: npm ci
+
+      - name: Build assets
+        run: npm run build
+
+      - name: Wait for server to be ready
+        run: |
+          for i in {1..60}; do
+            if curl -sSf http://localhost:8070 >/dev/null; then
+              echo "Server is up";
+              if curl -sSf http://localhost:8070/users/login >/dev/null; then
+                echo "Login page accessible"; exit 0;
+              fi
+            fi;
+            sleep 2;
+          done
+          echo "Server failed to start properly" >&2
+          docker compose -f docker-compose.dev.yml logs server
+          exit 1
+
+      - name: Seed database
+        run: docker compose -f docker-compose.dev.yml exec --env DATABASE_URL=postgres://mission_ki_user:mission_ki_password@db:5432/mission_ki_db --workdir /app server composer db:seed
+
+      - name: Run Cypress tests
+        run: npx cypress run --config baseUrl=http://localhost:8070
+
+      - name: Upload Cypress screenshots
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cypress-screenshots
+          path: cypress/screenshots
+          if-no-files-found: ignore
+
+      - name: Upload Cypress videos
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cypress-videos
+          path: cypress/videos
+          if-no-files-found: ignore
+
+      - name: Stop containers
+        if: always()
+        run: docker compose -f docker-compose.dev.yml down -v
