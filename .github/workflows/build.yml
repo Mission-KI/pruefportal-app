@@ -15,32 +15,32 @@ jobs:
 
       - name: Copy environment files
         run: |
-          cp pruefportal-app/.env.example pruefportal-app/.env
+          cp .env.example .env
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
 
       - name: Build and start containers
-        run: docker compose -f pruefportal-app/docker-compose.dev.yml up -d --build
+        run: docker compose -f docker-compose.dev.yml up -d --build
 
       - name: Install PHP dependencies in container
-        run: docker compose -f pruefportal-app/docker-compose.dev.yml exec --workdir /app server composer install --no-interaction --prefer-dist
+        run: docker compose -f docker-compose.dev.yml exec --workdir /app server composer install --no-interaction --prefer-dist
 
       - name: Run database migrations
-        run: docker compose -f pruefportal-app/docker-compose.dev.yml exec --env DATABASE_URL=postgres://mission_ki_user:mission_ki_password@db:5432/mission_ki_db --workdir /app server bin/cake migrations migrate
+        run: docker compose -f docker-compose.dev.yml exec --env DATABASE_URL=postgres://mission_ki_user:mission_ki_password@db:5432/mission_ki_db --workdir /app server bin/cake migrations migrate
 
       - name: Create test database
-        run: docker compose -f pruefportal-app/docker-compose.dev.yml exec db psql -U mission_ki_user -d mission_ki_db -c "CREATE DATABASE mission_ki_db_test OWNER mission_ki_user;"
+        run: docker compose -f docker-compose.dev.yml exec db psql -U mission_ki_user -d mission_ki_db -c "CREATE DATABASE mission_ki_db_test OWNER mission_ki_user;"
 
       - name: Run PHPUnit unit tests
-        run: docker compose -f pruefportal-app/docker-compose.dev.yml exec --workdir /app server php vendor/bin/phpunit tests/TestCase/Model/ --testdox
+        run: docker compose -f docker-compose.dev.yml exec --workdir /app server php vendor/bin/phpunit tests/TestCase/Model/ --testdox
 
       - name: Set up Node.js (for asset build on host)
         uses: actions/setup-node@v4
         with:
           node-version: '20'
           cache: 'npm'
-          cache-dependency-path: pruefportal-app/package-lock.json
+          cache-dependency-path: package-lock.json
 
       - name: Install frontend dependencies
         working-directory: pruefportal-app
@@ -63,11 +63,11 @@ jobs:
             sleep 2;
           done
           echo "Server failed to start properly" >&2
-          docker compose -f pruefportal-app/docker-compose.dev.yml logs server
+          docker compose -f docker-compose.dev.yml logs server
           exit 1
 
       - name: Seed database
-        run: docker compose -f pruefportal-app/docker-compose.dev.yml exec --env DATABASE_URL=postgres://mission_ki_user:mission_ki_password@db:5432/mission_ki_db --workdir /app server composer db:seed
+        run: docker compose -f docker-compose.dev.yml exec --env DATABASE_URL=postgres://mission_ki_user:mission_ki_password@db:5432/mission_ki_db --workdir /app server composer db:seed
 
       - name: Run Cypress tests
         working-directory: pruefportal-app
@@ -78,7 +78,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: cypress-screenshots
-          path: pruefportal-app/cypress/screenshots
+          path: cypress/screenshots
           if-no-files-found: ignore
 
       - name: Upload Cypress videos
@@ -86,9 +86,9 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: cypress-videos
-          path: pruefportal-app/cypress/videos
+          path: cypress/videos
           if-no-files-found: ignore
 
       - name: Stop containers
         if: always()
-        run: docker compose -f pruefportal-app/docker-compose.dev.yml down -v
+        run: docker compose -f docker-compose.dev.yml down -v
