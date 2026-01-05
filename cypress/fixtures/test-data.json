@@ -5,7 +5,7 @@
   },
   "examiner": {
     "email": "ebay@periscope.de",
-    "password": "admin123",
+    "password": "ebay@periscope.de",
     "name": "Lisa Periscope Klein"
   },
   "project": {
@@ -48,7 +48,7 @@
   },
   "vcio": {
     "evidence": "Automated E2E test evidence: The AI system implements the required quality measures as documented in the technical specification. Testing confirms compliance with the defined criteria.",
-    "level": 2
+    "level": 3
   },
   "pna": {
     "lowRiskValue": "1",

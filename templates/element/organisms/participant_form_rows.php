@@ -95,7 +95,8 @@ $compact = $compact ?? false;
                         'attributes' => [
                             ':id' => '`additional-participant-name-${index}`',
                             ':name' => '`additional_participants[${index}][name]`',
-                            'x-model' => 'participant.name'
+                            'x-model' => 'participant.name',
+                            'data-testid' => 'examiner-name-input'
                         ]
                     ],
                     'containerClass' => 'mb-0'
@@ -124,7 +125,8 @@ $compact = $compact ?? false;
                         'attributes' => [
                             ':id' => '`additional-participant-email-${index}`',
                             ':name' => '`additional_participants[${index}][email]`',
-                            'x-model' => 'participant.email'
+                            'x-model' => 'participant.email',
+                            'data-testid' => 'examiner-email-input'
                         ]
                     ],
                     'containerClass' => 'mb-0'

@@ -126,9 +126,7 @@ describe('VCIO Simple Workflow - No Examiner, Skip Validation', () => {
     // ========================================
     cy.log('**PHASE 6: Verify process completion**')
 
-    cy.url().should('include', '/processes/view/', { timeout: 10000 })
-
-    cy.get('.process-status, [class*="status"]').should('exist')
+    cy.get('body').should('contain', 'Abgeschlossen')
 
     cy.log('**TEST COMPLETE: Full workflow without examiner succeeded**')
   })

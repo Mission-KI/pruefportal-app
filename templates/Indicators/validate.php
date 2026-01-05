@@ -213,7 +213,8 @@ $this->assign('show_right_sidebar', 'true');
             'label' => __('Next step'),
             'variant' => 'primary',
             'size' => 'MD',
-            'type' => 'submit'
+            'type' => 'submit',
+            'options' => ['data-testid' => 'validation-next-step']
         ])
     ]) ?>
 

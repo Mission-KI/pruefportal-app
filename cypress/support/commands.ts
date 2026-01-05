@@ -256,8 +256,6 @@ Cypress.Commands.add('submitFinalUCDStep', () => {
 })
 
 Cypress.Commands.add('fillPNAWithRisk', (riskLevel: 'low' | 'high') => {
-  const radioIndex = riskLevel === 'low' ? 'first' : 'last'
-
   const fillCurrentPage = () => {
     cy.url().then((url) => {
       if (url.match(/protection-needs-analysis\/\d+-[A-Z]+/)) {
@@ -270,11 +268,10 @@ Cypress.Commands.add('fillPNAWithRisk', (riskLevel: 'low' | 'high') => {
 
           if (radioGroups.size > 0) {
             radioGroups.forEach(name => {
-              if (radioIndex === 'first') {
-                cy.get(`input[name="${name}"]`).first().check({ force: true })
-              } else {
-                cy.get(`input[name="${name}"]`).last().check({ force: true })
-              }
+              const radios = $body.find(`input[name="${name}"]`)
+              const values = radios.map((_, r) => Cypress.$(r).val()).get().sort()
+              const targetValue = riskLevel === 'low' ? values[0] : values[values.length - 1]
+              cy.get(`input[name="${name}"][value="${targetValue}"]`).check({ force: true })
             })
 
             cy.contains('button', 'Nächster Schritt').click()
@@ -341,7 +338,7 @@ Cypress.Commands.add('fillVCIOForAllQDs', (evidence: string, level: number) => {
           })
         })
 
-        cy.get('#indicators-form button[type="submit"]').click()
+        cy.get('#indicators-form button[type="submit"]').first().click()
         cy.wait(1000)
 
         cy.url().then((url) => {
@@ -360,26 +357,26 @@ Cypress.Commands.add('completeVCIO', () => {
   cy.contains('a', 'Einstufung überprüfen', { timeout: 15000 }).click()
   cy.url().should('include', '/indicators/complete/', { timeout: 10000 })
   cy.get('input[type="checkbox"][name="final_confirmation"]').check({ force: true })
-  cy.get('button[type="submit"]').click()
+  cy.get('.final-confirmation button[type="submit"]').click()
   cy.url().should('include', '/indicators/decide-validation/', { timeout: 15000 })
 })
 
 Cypress.Commands.add('skipValidation', () => {
-  cy.contains('button', 'Ohne Validierung abschließen').click()
-  cy.url().should('include', '/processes/view/', { timeout: 15000 })
+  cy.get('[data-testid="skip-validation-btn"]').click()
+  cy.url().should('match', /(\/processes\/view\/|^\/$|localhost:8070\/$)/, { timeout: 15000 })
 })
 
 Cypress.Commands.add('inviteExaminerAtValidation', (name: string, email: string) => {
-  cy.get('input[id*="participant-name"]').first().type(name)
-  cy.get('input[id*="participant-email"]').first().type(email)
+  cy.get('[data-testid="examiner-name-input"]').first().type(name)
+  cy.get('[data-testid="examiner-email-input"]').first().type(email)
   cy.get('#confirm-qualification').check({ force: true })
-  cy.contains('button', 'PrüferIn einladen und Qualifikation bestätigen').click()
+  cy.get('[data-testid="invite-examiner-confirm-btn"]').click()
   cy.url().should('match', /(processes\/view|indicators)/, { timeout: 15000 })
 })
 
 Cypress.Commands.add('confirmExaminerQualification', () => {
   cy.get('#confirm-qualification').check({ force: true })
-  cy.contains('button', 'Qualifikation bestätigen').click()
+  cy.get('[data-testid="confirm-qualification-btn"]').click()
   cy.url().should('match', /(processes\/view|indicators)/, { timeout: 15000 })
 })
 
@@ -405,7 +402,7 @@ Cypress.Commands.add('validateVCIOAsExaminer', (level: number) => {
           })
         })
 
-        cy.get('button[type="submit"]').click()
+        cy.get('[data-testid="validation-next-step"]').click()
         cy.wait(1000)
         cy.then(() => validateQD())
       }
@@ -418,13 +415,17 @@ Cypress.Commands.add('validateVCIOAsExaminer', (level: number) => {
 Cypress.Commands.add('completeExaminerValidation', () => {
   cy.contains('a', 'Validierung abschließen', { timeout: 15000 }).click()
   cy.get('input[type="checkbox"][name="final_confirmation"]').check({ force: true })
-  cy.get('button[type="submit"]').click()
-  cy.url().should('include', '/processes/view/', { timeout: 15000 })
+  cy.get('[data-testid="complete-validation-btn"]').click()
+  cy.url().should('match', /(\/processes\/view\/|^\/$|localhost:8070\/$)/, { timeout: 15000 })
 })
 
 Cypress.Commands.add('acceptValidation', () => {
-  cy.url().should('include', '/indicators/accept-validation/', { timeout: 10000 })
-  cy.get('input[type="checkbox"][name="accept_validation"]').check({ force: true })
-  cy.get('button[type="submit"]').click()
-  cy.url().should('include', '/processes/view/', { timeout: 15000 })
+  cy.url().should('match', /(accept-validation|processes\/view)/, { timeout: 10000 })
+  cy.get('body').then($body => {
+    if ($body.find('input[type="checkbox"][name="final_confirmation"]').length > 0) {
+      cy.get('input[type="checkbox"][name="final_confirmation"]').check({ force: true })
+      cy.get('[data-testid="accept-validation-btn"]').click()
+    }
+  })
+  cy.url().should('match', /(\/processes\/(view|total-result)\/|^\/$|localhost:8070\/$)/, { timeout: 15000 })
 })

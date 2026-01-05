@@ -48,7 +48,8 @@ $this->assign('title', $title_for_layout);
     <?= $this->Form->button(__('Validierung bestätigen'), [
         'type' => 'submit',
         'class' => 'w-full bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-dark transition-colors disabled:opacity-50 disabled:cursor-not-allowed',
-        'x-bind:disabled' => '!finalConfirmation'
+        'x-bind:disabled' => '!finalConfirmation',
+        'data-testid' => 'accept-validation-btn'
     ]) ?>
 </div>
 <?= $this->Form->end() ?>

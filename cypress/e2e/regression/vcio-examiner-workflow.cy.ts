@@ -13,6 +13,7 @@
  */
 describe('VCIO Examiner Workflow - Examiner from Start', () => {
   let testData: any
+  let processId: string
 
   before(() => {
     cy.fixture('test-data').then((data) => {
@@ -37,8 +38,8 @@ describe('VCIO Examiner Workflow - Examiner from Start', () => {
 
     cy.contains('button', 'PrüferIn hinzufügen').click()
 
-    cy.get('input[id*="participant-name"]').first().type(testData.examiner.name)
-    cy.get('input[id*="participant-email"]').first().type(testData.examiner.email)
+    cy.get('[data-testid="examiner-name-input"]').first().type(testData.examiner.name)
+    cy.get('[data-testid="examiner-email-input"]').first().type(testData.examiner.email)
 
     cy.get('body').then($body => {
       if ($body.find('#accept-disclaimer').length > 0) {
@@ -53,8 +54,13 @@ describe('VCIO Examiner Workflow - Examiner from Start', () => {
 
     cy.url().then((url) => {
       if (url.includes('/processes/start/')) {
+        const match = url.match(/\/processes\/start\/(\d+)/)
+        if (match) processId = match[1]
         cy.get('input[type="checkbox"]').check({ force: true })
         cy.contains('a', 'Prüfprozess beginnen').click()
+      } else {
+        const match = url.match(/\/processes\/view\/(\d+)/)
+        if (match) processId = match[1]
       }
     })
 
@@ -128,13 +134,15 @@ describe('VCIO Examiner Workflow - Examiner from Start', () => {
     // ========================================
     cy.log('**PHASE 6: Examiner validates VCIO**')
 
+    Cypress.session.clearAllSavedSessions()
     cy.clearCookies()
     cy.clearLocalStorage()
 
     cy.login(testData.examiner.email, testData.examiner.password)
 
-    cy.visit('/')
-    cy.contains('a', 'Prüfung fortsetzen', { timeout: 15000 }).click()
+    cy.then(() => {
+      cy.visit(`/indicators/validation/${processId}`)
+    })
 
     cy.validateVCIOAsExaminer(testData.vcio.level)
 
@@ -147,13 +155,15 @@ describe('VCIO Examiner Workflow - Examiner from Start', () => {
     // ========================================
     cy.log('**PHASE 7: Candidate accepts validation**')
 
+    Cypress.session.clearAllSavedSessions()
     cy.clearCookies()
     cy.clearLocalStorage()
 
     cy.login(testData.testUser.email, testData.testUser.password)
 
-    cy.visit('/')
-    cy.contains('a', 'Prüfung fortsetzen', { timeout: 15000 }).click()
+    cy.then(() => {
+      cy.visit(`/indicators/accept-validation/${processId}`)
+    })
 
     cy.acceptValidation()
 
@@ -164,9 +174,9 @@ describe('VCIO Examiner Workflow - Examiner from Start', () => {
     // ========================================
     cy.log('**PHASE 8: Verify process completion**')
 
-    cy.url().should('include', '/processes/view/', { timeout: 10000 })
+    cy.url().should('match', /\/processes\/(view|total-result)\//, { timeout: 10000 })
 
-    cy.get('.process-status, [class*="status"]').should('exist')
+    cy.get('[data-testid="overall-assessment"]').should('exist')
 
     cy.log('**TEST COMPLETE: Examiner workflow from start succeeded**')
   })

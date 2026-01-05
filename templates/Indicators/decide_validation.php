@@ -224,7 +224,8 @@ $this->assign('title', __('Validierungsentscheidung'));
                         'variant' => 'primary',
                         'type' => 'submit',
                         'options' => [
-                            'x-bind:disabled' => '!qualificationConfirmed'
+                            'x-bind:disabled' => '!qualificationConfirmed',
+                            'data-testid' => 'invite-examiner-confirm-btn'
                         ]
                     ]) ?>
                 </div>
@@ -301,7 +302,8 @@ $this->assign('title', __('Validierungsentscheidung'));
                         'variant' => 'primary',
                         'type' => 'submit',
                         'options' => [
-                            'x-bind:disabled' => '!qualificationConfirmed'
+                            'x-bind:disabled' => '!qualificationConfirmed',
+                            'data-testid' => 'confirm-qualification-btn'
                         ]
                     ]) ?>
                 </div>
@@ -336,7 +338,8 @@ $this->assign('title', __('Validierungsentscheidung'));
                         'variant' => 'secondary',
                         'type' => 'submit',
                         'options' => [
-                            'data-confirm' => __('Prozess ohne Validierung abschließen?')
+                            'data-confirm' => __('Prozess ohne Validierung abschließen?'),
+                            'data-testid' => 'skip-validation-btn'
                         ]
                     ]) ?>
                 </div>
@@ -383,7 +386,8 @@ $this->assign('title', __('Validierungsentscheidung'));
                         'variant' => 'primary',
                         'type' => 'submit',
                         'options' => [
-                            'data-confirm' => __('Prozess an PrüferIn übergeben?')
+                            'data-confirm' => __('Prozess an PrüferIn übergeben?'),
+                            'data-testid' => 'proceed-validation-btn'
                         ]
                     ]) ?>
                 </div>

@@ -41,6 +41,7 @@ if (isset($options['class'])) {
     unset($options['class']);
 }
 $options['class'] = implode(' ', $containerClasses);
+$options['data-testid'] = 'overall-assessment';
 ?>
 
 <div<?= $this->Html->templater()->formatAttributes($options) ?>>
