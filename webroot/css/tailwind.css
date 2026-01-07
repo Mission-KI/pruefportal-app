@@ -641,9 +641,6 @@
   .bottom-0 {
     bottom: calc(var(--spacing) * 0);
   }
-  .bottom-4 {
-    bottom: calc(var(--spacing) * 4);
-  }
   .bottom-\[-0\.5rem\] {
     bottom: -0.5rem;
   }
@@ -1129,9 +1126,6 @@
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
   }
-  .animate-pulse {
-    animation: var(--animate-pulse);
-  }
   .animate-spin {
     animation: var(--animate-spin);
   }
@@ -1423,10 +1417,6 @@
     border-left-style: var(--tw-border-style);
     border-left-width: 0.5rem;
   }
-  .border-dashed {
-    --tw-border-style: dashed;
-    border-style: dashed;
-  }
   .border-none {
     --tw-border-style: none;
     border-style: none;
@@ -1472,12 +1462,6 @@
   }
   .border-gray-300 {
     border-color: var(--color-gray-300);
-  }
-  .border-gray-400 {
-    border-color: var(--color-gray-400);
-  }
-  .border-gray-500 {
-    border-color: var(--color-gray-500);
   }
   .border-green-200 {
     border-color: var(--color-green-200);
@@ -1548,14 +1532,6 @@
       background-color: color-mix(in oklab, var(--color-blue-50) 25%, transparent);
     }
   }
-  .bg-blue-50\/50 {
-    background-color: color-mix(in srgb, #EFF4FF 50%, transparent);
-  }
-  @supports (color: color-mix(in lab, red, red)) {
-    .bg-blue-50\/50 {
-      background-color: color-mix(in oklab, var(--color-blue-50) 50%, transparent);
-    }
-  }
   .bg-blue-100 {
     background-color: var(--color-blue-100);
   }
@@ -1573,14 +1549,6 @@
   }
   .bg-brand-light-web {
     background-color: var(--color-brand-light-web);
-  }
-  .bg-brand-light\/30 {
-    background-color: color-mix(in srgb, #D4BBFF 30%, transparent);
-  }
-  @supports (color: color-mix(in lab, red, red)) {
-    .bg-brand-light\/30 {
-      background-color: color-mix(in oklab, var(--color-brand-light) 30%, transparent);
-    }
   }
   .bg-brand-lightest {
     background-color: var(--color-brand-lightest);
@@ -2172,14 +2140,8 @@
   .opacity-30 {
     opacity: 30%;
   }
-  .opacity-35 {
-    opacity: 35%;
-  }
   .opacity-50 {
     opacity: 50%;
-  }
-  .opacity-70 {
-    opacity: 70%;
   }
   .opacity-75 {
     opacity: 75%;
