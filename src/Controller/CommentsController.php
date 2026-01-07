@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
+use App\Service\UploadService;
 use Cake\Datasource\ModelAwareTrait;
 use Cake\Http\Exception\ForbiddenException;
 
@@ -14,6 +15,14 @@ use Cake\Http\Exception\ForbiddenException;
 class CommentsController extends AppController
 {
     use ModelAwareTrait;
+
+    private UploadService $uploadService;
+
+    public function initialize(): void
+    {
+        parent::initialize();
+        $this->uploadService = $this->createUploadService();
+    }
 
     /**
      * Ajax only add method
@@ -90,16 +99,18 @@ class CommentsController extends AppController
                 $files = $this->request->getUploadedFiles();
                 $uploadErrors = [];
                 if (!empty($files['attachments'])) {
-                    $uploadsModel = $this->fetchModel('Uploads');
-                    foreach ($files['attachments'] as $i => $file) {
-                        $upload = $uploadsModel->newEmptyEntity();
-                        $upload = $uploadsModel->patchEntity($upload, [
-                            'file_url' => $file,
-                            'process_id' => null,
-                            'comment_id' => $comment->id,
-                        ]);
-                        if (!$uploadsModel->save($upload)) {
-                            $uploadErrors[] = $file->getClientFilename();
+                    foreach ($files['attachments'] as $file) {
+                        if ($file->getError() === UPLOAD_ERR_OK) {
+                            try {
+                                $this->uploadService->store(
+                                    $file,
+                                    null,
+                                    (int)$comment->id,
+                                    null,
+                                );
+                            } catch (\Exception $e) {
+                                $uploadErrors[] = $file->getClientFilename();
+                            }
                         }
                     }
                 }

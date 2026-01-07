@@ -42,13 +42,21 @@ $cancel_url = $cancel_url ?? null;
              this.formData.files.splice(index, 1);
          },
 
+         syncFilesToInput() {
+             const dataTransfer = new DataTransfer();
+             for (const fileData of this.formData.files) {
+                 dataTransfer.items.add(fileData.file);
+             }
+             this.$refs.commentFiles.files = dataTransfer.files;
+         },
+
          discardForm() {
              this.formData = {
                  reference_id: '',
                  content: '',
                  files: []
              };
-             this.$refs.fileInput.value = '';
+             this.$refs.commentFiles.value = '';
          }
      }">
 
@@ -63,7 +71,8 @@ $cancel_url = $cancel_url ?? null;
     <?= $this->Form->create(null, [
         'url' => $submit_url,
         'type' => 'file',
-        'class' => 'space-y-4'
+        'class' => 'space-y-4',
+        '@submit' => 'syncFilesToInput()'
     ]) ?>
 
     <?= $this->Form->control('reference_id', [
