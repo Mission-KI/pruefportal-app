@@ -5,18 +5,13 @@ set -euo pipefail
 
 # Get script directory and find backend directory with package.json
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-BACKEND_DIR="$(cd "$SCRIPT_DIR/../.." && pwd)"
 
 # Verify package.json exists in backend directory
-if [ ! -f "$BACKEND_DIR/package.json" ]; then
-    echo "Error: package.json not found in $BACKEND_DIR"
+if [ ! -f "package.json" ]; then
+    echo "Error: package.json not found"
     echo "This script should be run from the project root or backend directory"
     exit 1
 fi
-
-# Change to backend directory for npm operations
-cd "$BACKEND_DIR"
-echo "Working in: $(pwd)"
 
 npm config set git-tag-version false
 npm config set sign-git-tag false
@@ -41,8 +36,8 @@ echo "New version: $PACKAGE_VERSION"
 cd "$(git rev-parse --show-toplevel)"
 echo "Git operations from: $(pwd)"
 
-git add backend/package.json backend/package-lock.json
-git commit -m "Bump version to $PACKAGE_VERSION"          
+git add package.json package-lock.json
+git commit -m "Bump version to $PACKAGE_VERSION"
 
 git push
 
