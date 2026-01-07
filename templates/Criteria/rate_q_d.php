@@ -261,30 +261,53 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const excludedClasses = ['js-related-question', 'mki-form-radio']; // Add classes to exclude
     const relatedQuestionClasses = [];
+    const shownQuestionIds = []; // Track which questions have been shown
+    const processedContainers = new Set(); // Track processed containers to avoid duplicates
+
     document.querySelectorAll('.js-related-question').forEach((input) => {
-        input.addEventListener('change', function(e) {
-            const selectedValue = e.target.value;
-            Array.from(e.target.classList).filter(cssClass => !excludedClasses.includes(cssClass)).forEach((relatedQuestionId) => {
-                const otherInput = document.querySelector('input[name=\"criteria['+relatedQuestionId+'][value]\"][value=\"'+selectedValue+'\"]');
-                // related question is on the same page
-                if(otherInput !== null && !otherInput.disabled) {
-                    otherInput.value = selectedValue;
-                    otherInput.checked = true;
-                // } else {
-                //     updateRelatedQuestion(relatedQuestionId, selectedValue); // TODO do I have to check against database?
-                }
+        const container = input.closest('.mki-form-field-container');
+        if (!container || processedContainers.has(container)) return;
+        processedContainers.add(container);
+
+        // Get this question's ID from input name: criteria[TR-Z20][value] -> TR-Z20
+        const nameMatch = input.name.match(/criteria\[([^\]]+)\]/);
+        const questionId = nameMatch ? nameMatch[1] : null;
+
+        // Get related question IDs from CSS classes
+        const relatedIds = Array.from(input.classList).filter(cssClass => !excludedClasses.includes(cssClass));
+
+        // Check if any related question was already shown (same-page duplicate)
+        const shouldHide = relatedIds.some(relatedId => shownQuestionIds.includes(relatedId));
+
+        if (shouldHide) {
+            container.style.display = 'none';
+        } else if (questionId) {
+            shownQuestionIds.push(questionId);
+        }
+
+        // Sync values when a shown question changes - attach to all radios in this container
+        container.querySelectorAll('.js-related-question').forEach((radio) => {
+            radio.addEventListener('change', function(e) {
+                const selectedValue = e.target.value;
+                relatedIds.forEach((relatedQuestionId) => {
+                    const otherInput = document.querySelector('input[name=\"criteria['+relatedQuestionId+'][value]\"][value=\"'+selectedValue+'\"]');
+                    // related question is on the same page
+                    if(otherInput !== null && !otherInput.disabled) {
+                        otherInput.checked = true;
+                    }
+                });
             });
         });
 
-        Array.from(input.classList).filter((cssClass) => !excludedClasses.includes(cssClass)).filter((cssClass) => !excludedClasses.includes(cssClass)).forEach((relatedQuestionId) => {
+        // Handle cross-dimension related questions (check DB)
+        relatedIds.forEach((relatedQuestionId) => {
             if(!relatedQuestionClasses.includes(relatedQuestionId)) {
                 relatedQuestionClasses.push(relatedQuestionId);
-                if(document.getElementById(relatedQuestionId) === null) { // avoid relatedQuestions from the same quality_dimension_id
+                if(document.getElementById(relatedQuestionId) === null) { // relatedQuestion is in a different quality_dimension
                     updateRelatedQuestion(relatedQuestionId, input.value)
                         .then(response => {
                             if(response.success && response.disable) {
                                 // Hide the entire question container instead of disabling
-                                const container = input.closest('.mki-form-field-container');
                                 if (container) {
                                     container.style.display = 'none';
 
