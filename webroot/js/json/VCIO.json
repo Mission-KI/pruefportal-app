@@ -652,7 +652,7 @@
     },
     "MA": {
         "title": "Menschliche Aufsicht und Kontrolle",
-        "short_title": "Menschliche Aufsicht und Kontrolle",
+        "short_title": "Menschliche Aufsicht",
         "quality_dimension_id": 40,
         "icon": "human-oversight",
         "criteria": [
@@ -854,7 +854,7 @@
     },
     "CY": {
         "title": "KI-spezifische Cybersicherheit",
-        "short_title": "KI",
+        "short_title": "Cybersicherheit",
         "quality_dimension_id": 50,
         "icon": "ai-security",
         "criteria": [

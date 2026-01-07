@@ -5,6 +5,7 @@
             "de": "Qualitätsdimension Datenqualität, -schutz und -Governance",
             "en": "Qualitätsdimension Datenqualität, -schutz und -Governance"
         },
+        "short_title": "Datenqualität",
         "icon": "data-quality",
         "questions": [
             [
@@ -272,6 +273,7 @@
             "de": "Qualitätsdimension Nicht-Diskriminierung",
             "en": "Qualitätsdimension Nicht-Diskriminierung"
         },
+        "short_title": "Nicht-Diskriminierung",
         "icon": "non-discrimination",
         "questions": [
             [
@@ -401,6 +403,7 @@
             "de": "Qualitätsdimension Transparenz",
             "en": "Qualitätsdimension Transparenz"
         },
+        "short_title": "Transparenz",
         "icon": "transparency",
         "questions": [
             [
@@ -780,6 +783,7 @@
             "de": "Qualitätsdimension Menschliche Aufsicht und Kontrolle",
             "en": "Qualitätsdimension Menschliche Aufsicht und Kontrolle"
         },
+        "short_title": "Menschliche Aufsicht",
         "icon": "human-oversight",
         "questions": [
             [
@@ -931,6 +935,7 @@
             "de": "Qualitätsdimension KI-spezifische Cybersicherheit",
             "en": "Quality dimension of AI-specific cybersecurity"
         },
+        "short_title": "Cybersicherheit",
         "icon": "ai-security",
         "questions": [
             [
@@ -1363,6 +1368,7 @@
             "de": "Qualitätsdimension Verlässlichkeit",
             "en": "Qualitätsdimension Verlässlichkeit"
         },
+        "short_title": "Verlässlichkeit",
         "icon": "reliability",
         "questions": [
             [],

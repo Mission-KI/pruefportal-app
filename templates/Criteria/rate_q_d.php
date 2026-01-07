@@ -143,21 +143,30 @@ $this->assign('reserve_sidebar_space', 'true');
     'options' => ['class' => 'mb-6 px-3 py-3 bg-white rounded-lg shadow-sm border [&_h3]:!text-brand [&_h3]:mb-3']
 ]) ?>
 
-<?= $this->element('molecules/card', [
+<?php
+$navItems = [];
+foreach ($protectionNeedsAnalysis as $qdKey => $qd) {
+    $qdState = $navigationState[$qdKey] ?? ['isComplete' => false, 'url' => null];
+
+    $status = 'upcoming';
+    if ($qdKey === $quality_dimension) {
+        $status = 'current';
+    } elseif ($qdState['isComplete']) {
+        $status = 'completed';
+    }
+
+    $navItems[] = [
+        'title' => $qd['short_title'],
+        'key' => $qdKey,
+        'status' => $status,
+        'url' => $qdState['url'],
+    ];
+}
+?>
+<?= $this->element('molecules/workflow_navigation', [
     'title' => __('Schutzbedarfsanalyse'),
-    'heading_level' => 'h3',
-    'heading_size' => 'text-md',
-    'heading_weight' => 'font-semibold',
-    'body' => $this->element('molecules/quality_dimension_navigation', [
-        'qualityDimensions' => $protectionNeedsAnalysis,
-        'currentQdId' => $quality_dimension,
-        'processId' => $process->id,
-        'navigationState' => $navigationState ?? [],
-        'currentLanguage' => $currentLanguage
-    ]),
-    'variant' => 'plain',
-    'escape' => false,
-    'options' => ['class' => 'mb-6 px-3 py-3 bg-white rounded-lg shadow-sm border [&_h3]:!text-brand [&_h3]:mb-3']
+    'overview_url' => ['controller' => 'Criteria', 'action' => 'index', $process->id],
+    'items' => $navItems,
 ]) ?>
 
 <?php $this->end(); ?>

@@ -45,7 +45,7 @@ echo $this->element('molecules/card', [
     'options' => ['class' => 'mb-6 px-3 py-3 bg-white rounded-lg shadow-sm border [&_h3]:!text-brand [&_h3]:mb-3']
 ]);
 
-$steps = [];
+$items = [];
 foreach ($shortTitles as $qualityDimensionKey => $shortTitle) {
     $status = 'upcoming';
     $url = ['action' => 'validate', $process->id, $qualityDimensionKey];
@@ -54,21 +54,22 @@ foreach ($shortTitles as $qualityDimensionKey => $shortTitle) {
         $status = 'current';
     }
     if (array_key_exists($vcioConfig[$qualityDimensionKey]['quality_dimension_id'], $indicatorsList)) {
-        $url = false;
         $status = 'completed';
+        $url = ['action' => 'validate', $process->id, $qualityDimensionKey];
     }
 
-    $steps[] = [
+    $items[] = [
         'title' => $shortTitle,
+        'key' => $qualityDimensionKey,
         'status' => $status,
         'url' => $url,
-        'key' => $qualityDimensionKey
     ];
 }
 
-echo $this->element('molecules/step_navigation', [
+echo $this->element('molecules/workflow_navigation', [
     'title' => __('VCIO-Validierung'),
-    'steps' => $steps
+    'overview_url' => ['controller' => 'Indicators', 'action' => 'index', $process->id],
+    'items' => $items,
 ]);
 
 $this->end();
